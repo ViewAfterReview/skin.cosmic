@@ -791,3 +791,33 @@ msgstr ""
 msgctxt "#31169"
 msgid "Artwork related settings."
 msgstr ""
+
+#. Label of skin shortcuts Submenu
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31170"
+msgid "Configure submenu"
+msgstr ""
+
+#. Label of skin shortcuts Background
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31171"
+msgid "Background"
+msgstr ""
+
+# Label of skin shortcuts Widgets
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31172"
+msgid "Widgets"
+msgstr ""
+
+# Label of skin shortcuts Icon
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31173"
+msgid "Set icon"
+msgstr ""
+
+# Label of customize main menu in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31174"
+msgid "Customize main menu"
+msgstr ""
