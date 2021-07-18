@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.cosmic" version="0.1.0" name="Cosmic" provider-name="heppen (nfm886)">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="script.skinshortcuts" version="1.1.4" />
+		<import addon="plugin.video.themoviedb.helper" version="4.3.0" />
+		<import addon="script.embuary.helper" version="2.0.8" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen (nfm886).</summary>
+		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen (nfm886).</summary>
+		<description lang="en_GB">The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate. Apart from the default dark theme, the skin also includes bright variations.</description>
+		<description lang="pl_PL">Skórka została zaprojektowana, aby użytkownik mógł skupić się na konsumpcji mediów. Udostępnia wiele innowacyjnych rozwiązań, które doceni każdy kinoman. Oprócz domyślnego ciemnego motywu, skórka zawiera również jasne wariacje.</description>
+		<platform>all</platform>
+		<license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
+		<forum />
+		<source>https://github.com/nfm886/skin.cosmic/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
