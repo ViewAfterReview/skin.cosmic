@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+
+    <!-- set default path to choose icons from -->
+    <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
+</overrides>
