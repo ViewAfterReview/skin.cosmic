@@ -151,9 +151,9 @@
                         <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
-                    <control type="button" id="4001" description="Choose Widget">
+                    <control type="button" id="402" description="Choose Widget">
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <label>$LOCALIZE[31098]</label>
+                        <label>$LOCALIZE[31175]</label>
                         <label2>$INFO[Container(211).ListItem.Property(path)]</label2>
                         <onclick>SetProperty(custom-grouping,widget)</onclick>
                         <onclick>SendClick(401)</onclick>

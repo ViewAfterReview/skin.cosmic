@@ -821,3 +821,9 @@ msgstr ""
 msgctxt "#31174"
 msgid "Customize main menu"
 msgstr ""
+
+# Label of choosing widget in script skinshortcuts
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31175"
+msgid "Choose widget"
+msgstr ""

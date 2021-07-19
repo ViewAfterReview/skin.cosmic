@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <submenu>
+        <controls>
+            <control type="fixedlist" id="9001">
+                <skinshortcuts>visibility</skinshortcuts>
+                <left>0</left>
+                <top>110</top>
+                <right>0</right>
+                <height>290</height>
+                <ondown>9002</ondown>
+                <onleft>9000</onleft>
+                <orientation>horizontal</orientation>
+                <itemlayout width="360" height="240">
+                    <control type="group">
+                        <left>70</left>
+                        <control type="image">
+                            <width>316</width>
+                            <height>200</height>
+                            <texture>dialogs/dialog-bg-nobo.png</texture>
+                            <bordertexture border="21">overlays/shadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                        </control>
+                        <control type="image">
+                            <centertop>74</centertop>
+                            <left>58</left>
+                            <width>200</width>
+                            <height>$PARAM[icon_height]</height>
+                            <texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
+                            <aspectratio>keep</aspectratio>
+                        </control>
+                        <control type="textbox">
+                            <left>38</left>
+                            <top>106</top>
+                            <width>240</width>
+                            <height>70</height>
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>font25_narrow</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="360" height="240">
+                    <control type="group">
+                        <depth>DepthContentPopout</depth>
+                        <left>70</left>
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
+                        </animation>
+                        <animation type="Unfocus">
+                            <effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
+                        </animation>
+                        <control type="image">
+                            <width>316</width>
+                            <height>200</height>
+                            <texture>dialogs/dialog-bg-nobo.png</texture>
+                            <bordertexture border="21">overlays/shadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                        </control>
+                        <control type="image">
+                            <width>316</width>
+                            <height>200</height>
+                            <texture colordiffuse="button_focus">colors/grey.png</texture>
+                            <bordersize>20</bordersize>
+                            <include>Animation_FocusTextureFade</include>
+                        </control>
+                        <control type="image">
+                            <centertop>74</centertop>
+                            <left>58</left>
+                            <width>200</width>
+                            <height>$PARAM[icon_height]</height>
+                            <texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
+                            <aspectratio>keep</aspectratio>
+                        </control>
+                        <control type="textbox">
+                            <left>38</left>
+                            <top>106</top>
+                            <width>240</width>
+                            <height>70</height>
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>font25_narrow</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <skinshortcuts>items</skinshortcuts>
+                </content>
+            </control>
+        </controls>
+    </submenu>
+
+    <other include="widgets">
+        <!-- We're going to use this template for all widgets with a widgetPath element -->
+        <condition tag="property" attribute="name|widgetPath" />
+
+        <!-- Retrieve the widgetPath and widgetTarget properties -->
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+
+        <!-- For TV Shows, we want to specify the artwork as the tv show poster, otherwise we'll use the icon -->
+        <property name="artwork" tag="property" attribute="name|widgetType" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Icon]</property>
+
+        <controls>
+            <control type="fixedlist" id="9002">
+                <orientation>horizontal</orientation>
+                <top>412.5</top>
+                <onup>9001</onup>
+                <onleft>9000</onleft>
+                <itemlayout width="300" height="400">
+                    <control type="image">
+                        <!-- <include>widgetPosterLayout</include> -->
+                        <texture>$SKINSHORTCUTS[artwork]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="300" height="400">
+                    <control type="image">
+                        <!-- <include>widgetPosterLayout</include> -->
+                        <texture>$SKINSHORTCUTS[artwork]</texture>
+                    </control>
+                </focusedlayout>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+</template>
