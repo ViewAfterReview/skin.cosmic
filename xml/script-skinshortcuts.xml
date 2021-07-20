@@ -282,7 +282,7 @@
                     <control type="button" id="502">
                         <label>$LOCALIZE[31177]</label>
                         <include>DialogSettingButton</include>
-                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget) + !Container(8000).IsUpdating</enable>
+                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget))</enable>
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
                         <onclick>SetProperty(chooseProperty,widgetSortBy)</onclick>
                         <onclick>SendClick(404)</onclick>
@@ -292,7 +292,7 @@
                     <control type="button" id="503">
                         <label>$LOCALIZE[31178]</label>
                         <include>DialogSettingButton</include>
-                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget) + !Container(8000).IsUpdating</enable>
+                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget))</enable>
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
                         <onclick>SetProperty(chooseProperty,widgetSortDirection)</onclick>
                         <onclick>SendClick(404)</onclick>
@@ -302,7 +302,7 @@
                     <control type="button" id="504">
                         <label>$LOCALIZE[31179]</label>
                         <include>DialogSettingButton</include>
-                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget) + !Container(8000).IsUpdating</enable>
+                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget))</enable>
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
                         <onclick>SetProperty(chooseProperty,widgetLimit)</onclick>
                         <onclick>SendClick(404)</onclick>
