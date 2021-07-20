@@ -3,7 +3,7 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|powermenu)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|shutdown)</onload>
 
 	<controls>
 		<control type="button" id="20000">

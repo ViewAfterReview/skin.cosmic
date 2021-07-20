@@ -847,3 +847,9 @@ msgstr ""
 msgctxt "#31179"
 msgid "Limit items"
 msgstr ""
+
+# Label of customize power menu in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31180"
+msgid "Customize shutdown menu"
+msgstr ""

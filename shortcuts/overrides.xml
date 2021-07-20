@@ -3,4 +3,7 @@
 
     <!-- set default path to choose icons from -->
     <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
+
+    <!-- Trick for shutdown menu -->
+    <groupoverride group="shutdown" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
 </overrides>
