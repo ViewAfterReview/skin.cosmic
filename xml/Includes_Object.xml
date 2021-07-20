@@ -12,4 +12,10 @@
             </control>
         </focusedlayout>
     </include>
+
+    <include name="Object_Widget_Content">
+        <definition>
+            <content target="$PARAM[target]">$PARAM[path]</content>
+        </definition>
+    </include>
 </includes>

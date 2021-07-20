@@ -263,6 +263,51 @@
                         <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
+                    <!-- Manage widgets -->
+                    <control type="button" id="406">
+                        <label>$LOCALIZE[31176]</label>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    </control>
+
+                    <!-- Select widget -->
+                    <control type="button" id="312">
+                        <label>$ADDON[script.skinshortcuts 32044]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
+                        <include>DialogSettingButton</include>
+                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <!-- Widget sort by -->
+                    <control type="button" id="502">
+                        <label>$LOCALIZE[31177]</label>
+                        <include>DialogSettingButton</include>
+                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget) + !Container(8000).IsUpdating</enable>
+                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                        <onclick>SetProperty(chooseProperty,widgetSortBy)</onclick>
+                        <onclick>SendClick(404)</onclick>
+                    </control>
+
+                    <!-- Widget sort direction -->
+                    <control type="button" id="503">
+                        <label>$LOCALIZE[31178]</label>
+                        <include>DialogSettingButton</include>
+                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget) + !Container(8000).IsUpdating</enable>
+                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                        <onclick>SetProperty(chooseProperty,widgetSortDirection)</onclick>
+                        <onclick>SendClick(404)</onclick>
+                    </control>
+
+                    <!-- Widget limit items -->
+                    <control type="button" id="504">
+                        <label>$LOCALIZE[31179]</label>
+                        <include>DialogSettingButton</include>
+                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget) + !Container(8000).IsUpdating</enable>
+                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                        <onclick>SetProperty(chooseProperty,widgetLimit)</onclick>
+                        <onclick>SendClick(404)</onclick>
+                    </control>
+
                     <control type="button" id="310" description="Background">
                         <label>$LOCALIZE[31171]</label>
                         <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
@@ -272,129 +317,16 @@
                         <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
-                    <control type="button" id="312">
-                        <label>$LOCALIZE[31176]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="2312">
-                        <label>$LOCALIZE[31177]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.2)]</label2>
-                        <onclick>SetProperty(widgetID,2)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="3312">
-                        <label>$LOCALIZE[31178]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.3)]</label2>
-                        <onclick>SetProperty(widgetID,3)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="4312">
-                        <label>$LOCALIZE[31179]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.4)]</label2>
-                        <onclick>SetProperty(widgetID,4)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="5312">
-                        <label>$LOCALIZE[31180]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.5)]</label2>
-                        <onclick>SetProperty(widgetID,5)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="6312">
-                        <label>$LOCALIZE[31181]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.6)]</label2>
-                        <onclick>SetProperty(widgetID,6)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="7312">
-                        <label>$LOCALIZE[31182]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.7)]</label2>
-                        <onclick>SetProperty(widgetID,7)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="8312">
-                        <label>$LOCALIZE[31183]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.8)]</label2>
-                        <onclick>SetProperty(widgetID,8)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="9312">
-                        <label>$LOCALIZE[31184]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.9)]</label2>
-                        <onclick>SetProperty(widgetID,9)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="10312">
-                        <label>$LOCALIZE[31185]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(widgetName.10)]</label2>
-                        <onclick>SetProperty(widgetID,10)</onclick>
-                        <onclick>SendClick(312)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
                     <control type="button" id="308">
                         <include>DialogSettingButton</include>
                         <label>$LOCALIZE[31175]</label>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
                 </control>
+            </control>
+            <!-- Hidden controls -->
+            <control type="button" id="404">
+                <visible>false</visible>
             </control>
         </control>
     </controls>

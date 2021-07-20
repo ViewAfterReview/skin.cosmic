@@ -48,16 +48,7 @@
 				<include>OpenClose_Right</include>
 				<control type="group" d="800">
 					<include>skinshortcuts-template</include>
-					<include>skinshortcuts-template-widget1</include>
-					<include>skinshortcuts-template-widget2</include>
-					<include>skinshortcuts-template-widget3</include>
-					<include>skinshortcuts-template-widget4</include>
-					<include>skinshortcuts-template-widget5</include>
-					<include>skinshortcuts-template-widget6</include>
-					<include>skinshortcuts-template-widget7</include>
-					<include>skinshortcuts-template-widget8</include>
-					<include>skinshortcuts-template-widget9</include>
-					<include>skinshortcuts-template-widget10</include>
+					<include>skinshortcuts-template-horizontal</include>
 				</control>
 			</control>
 			<control type="group">
@@ -77,7 +68,7 @@
 					<onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
 					<onup>700</onup>
 					<ondown>700</ondown>
-					<onright>9004</onright>
+					<onright>1100</onright>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<focusedlayout height="95">
 						<control type="group">
