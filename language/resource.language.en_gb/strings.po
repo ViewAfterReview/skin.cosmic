@@ -893,3 +893,15 @@ msgstr ""
 msgctxt "#31187"
 msgid "Set horizontal home layout with multiple widgets"
 msgstr ""
+
+# Label of changing profile in Vertical home layout
+#: /xml/SkinSettings.xml
+msgctxt "#31188"
+msgid "Switch Profile"
+msgstr ""
+
+# Label of disabling profile info in Vertical home layout
+#: /xml/SkinSettings.xml
+msgctxt "#31189"
+msgid "Disable profile info"
+msgstr ""

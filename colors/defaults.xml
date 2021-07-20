@@ -5,4 +5,5 @@
 	<color name="dialog_tint">FF242728</color>
 	<color name="button_focus">FF607D8B</color>
 	<color name="selected">FFFF8C00</color>
+	<color name="pure_white">FFFFFFFF</color>
 </colors>
