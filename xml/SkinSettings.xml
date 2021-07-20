@@ -160,6 +160,23 @@
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>
 				</control>
+				<control type="button" id="623">
+					<label>$LOCALIZE[31183]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31184],home)</onclick>
+					<onclick>SetProperty(Dialog.1.Label2,$LOCALIZE[31185],home)</onclick>
+					<onclick>SetProperty(Dialog.1.Icon,special://skin/extras/icons/home.png,home)</onclick>
+					<onclick>SetProperty(Dialog.1.BuiltIn,
+								Skin.Reset(HomeHorizontal) || 
+								Skin.SetBool(HomeVertical),home)</onclick>
+					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31186],home)</onclick>
+					<onclick>SetProperty(Dialog.2.Label2,$LOCALIZE[31187],home)</onclick>
+					<onclick>SetProperty(Dialog.2.Icon,special://skin/extras/icons/home.png,home)</onclick>
+					<onclick>SetProperty(Dialog.2.BuiltIn,
+								Skin.Reset(HomeVertical) || 
+								Skin.SetBool(HomeHorizontal),home)</onclick>
+					<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31183],usedetails=true,window=home)</onclick>
+				</control>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>

@@ -863,3 +863,33 @@ msgstr ""
 msgctxt "#31182"
 msgid "Arial Unicode"
 msgstr ""
+
+# Label of choosing home layout in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31183"
+msgid "Choose home layout"
+msgstr ""
+
+# Vertical home layout label in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31184"
+msgid "Vertical Layout"
+msgstr ""
+
+# Vertical home layout label2 in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31185"
+msgid "Set vertical home layout with multiple widgets"
+msgstr ""
+
+# Horizontal home layout label in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31186"
+msgid "Horizontal Layout"
+msgstr ""
+
+# Horizontal home layout label2 in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31187"
+msgid "Set horizontal home layout with multiple widgets"
+msgstr ""

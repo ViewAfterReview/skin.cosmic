@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Horizontal_Main">
+        <control type="group">
+            <control type="label">
+                <label>Hey, it's me. Horizontal layout :D</label>
+            </control>
+        </control>
+    </include>
+</includes>
