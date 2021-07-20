@@ -117,6 +117,7 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="95">
+						<onright>1100</onright>
 						<control type="image">
 							<left>-3</left>
 							<top>1</top>
