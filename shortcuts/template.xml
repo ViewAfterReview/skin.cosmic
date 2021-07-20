@@ -111,7 +111,7 @@
         <propertyGroup>mainmenuWidgets</propertyGroup>
 
         <controls>
-            <control type="list" id="1$SKINSHORTCUTS[id]00">
+            <control type="fixedlist" id="1$SKINSHORTCUTS[id]00">
                 <orientation>horizontal</orientation>
                 <top>$SKINSHORTCUTS[id]12.5</top>
                 <onup>1$PYTHON[int($SKINSHORTCUTS[id])-1]00</onup>
