@@ -822,8 +822,58 @@ msgctxt "#31174"
 msgid "Customize main menu"
 msgstr ""
 
-# Label of choosing widget in script skinshortcuts
+# Label of restoring main menu in script shortcuts
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31175"
-msgid "Choose widget"
+msgid "Restore main menu items"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31176"
+msgid "Choose widget 1"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31177"
+msgid "Choose widget 2"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31178"
+msgid "Choose widget 3"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31179"
+msgid "Choose widget 4"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31180"
+msgid "Choose widget 5"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31181"
+msgid "Choose widget 6"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31182"
+msgid "Choose widget 7"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31183"
+msgid "Choose widget 8"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31184"
+msgid "Choose widget 9"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31185"
+msgid "Choose widget 10"
 msgstr ""

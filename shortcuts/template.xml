@@ -94,37 +94,351 @@
         </controls>
     </submenu>
 
-    <other include="widgets">
-        <!-- We're going to use this template for all widgets with a widgetPath element -->
+    <other include="widget1">
         <condition tag="property" attribute="name|widgetPath" />
 
-        <!-- Retrieve the widgetPath and widgetTarget properties -->
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
 
-        <!-- For TV Shows, we want to specify the artwork as the tv show poster, otherwise we'll use the icon -->
         <property name="artwork" tag="property" attribute="name|widgetType" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
-        <property name="artwork">$INFO[ListItem.Icon]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
 
         <controls>
             <control type="fixedlist" id="9002">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[content])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>112.5</top>
+                <onup>9001</onup>
+                <ondown>9003</ondown>
+                <onleft>9000</onleft>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget2">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.2" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label2" tag="property" attribute="name|widgetName.2" />
+        <property name="path2" tag="property" attribute="name|widgetPath.2" />
+        <property name="target2" tag="property" attribute="name|widgetTarget.2" />
+        <property name="type2" tag="property" attribute="name|widgetType.2" />
+        <property name="widget2" tag="property" attribute="name|widget.2" />
+        <property name="sortby2" tag="property" attribute="name|widgetSortBy.2" />
+        <property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
+        <property name="limit2" tag="property" attribute="name|widgetLimit.2" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.2" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9003">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>212.5</top>
+                <onup>9002</onup>
+                <ondown>9004</ondown>
+                <onleft>9000</onleft>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target2]">$SKINSHORTCUTS[path2]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget3">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.3" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label3" tag="property" attribute="name|widgetName.3" />
+        <property name="path3" tag="property" attribute="name|widgetPath.3" />
+        <property name="target3" tag="property" attribute="name|widgetTarget.3" />
+        <property name="type3" tag="property" attribute="name|widgetType.3" />
+        <property name="widget3" tag="property" attribute="name|widget.3" />
+        <property name="sortby3" tag="property" attribute="name|widgetSortBy.3" />
+        <property name="sortorder3" tag="property" attribute="name|widgetSortOrder.3" />
+        <property name="limit3" tag="property" attribute="name|widgetLimit.3" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.3" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9004">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>312.5</top>
+                <onup>9003</onup>
+                <ondown>9005</ondown>
+                <onleft>9000</onleft>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target3]">$SKINSHORTCUTS[path3]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget4">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.4" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label4" tag="property" attribute="name|widgetName.4" />
+        <property name="path4" tag="property" attribute="name|widgetPath.4" />
+        <property name="target4" tag="property" attribute="name|widgetTarget.4" />
+        <property name="type4" tag="property" attribute="name|widgetType.4" />
+        <property name="widget4" tag="property" attribute="name|widget.4" />
+        <property name="sortby4" tag="property" attribute="name|widgetSortBy.4" />
+        <property name="sortorder4" tag="property" attribute="name|widgetSortOrder.4" />
+        <property name="limit4" tag="property" attribute="name|widgetLimit.4" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.4" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9005">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
                 <orientation>horizontal</orientation>
                 <top>412.5</top>
-                <onup>9001</onup>
+                <onup>9004</onup>
+                <ondown>9006</ondown>
                 <onleft>9000</onleft>
-                <itemlayout width="300" height="400">
-                    <control type="image">
-                        <!-- <include>widgetPosterLayout</include> -->
-                        <texture>$SKINSHORTCUTS[artwork]</texture>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="300" height="400">
-                    <control type="image">
-                        <!-- <include>widgetPosterLayout</include> -->
-                        <texture>$SKINSHORTCUTS[artwork]</texture>
-                    </control>
-                </focusedlayout>
-                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target4]">$SKINSHORTCUTS[path4]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget5">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.5" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label5" tag="property" attribute="name|widgetName.5" />
+        <property name="path5" tag="property" attribute="name|widgetPath.5" />
+        <property name="target5" tag="property" attribute="name|widgetTarget.5" />
+        <property name="type5" tag="property" attribute="name|widgetType.5" />
+        <property name="widget5" tag="property" attribute="name|widget.5" />
+        <property name="sortby5" tag="property" attribute="name|widgetSortBy.5" />
+        <property name="sortorder5" tag="property" attribute="name|widgetSortOrder.5" />
+        <property name="limit5" tag="property" attribute="name|widgetLimit.5" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.5" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9006">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>512.5</top>
+                <onup>9005</onup>
+                <onleft>9000</onleft>
+                <ondown>9007</ondown>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target5]">$SKINSHORTCUTS[path5]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget6">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.6" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label6" tag="property" attribute="name|widgetName.6" />
+        <property name="path6" tag="property" attribute="name|widgetPath.6" />
+        <property name="target6" tag="property" attribute="name|widgetTarget.6" />
+        <property name="type6" tag="property" attribute="name|widgetType.6" />
+        <property name="widget6" tag="property" attribute="name|widget.6" />
+        <property name="sortby6" tag="property" attribute="name|widgetSortBy.6" />
+        <property name="sortorder6" tag="property" attribute="name|widgetSortOrder.6" />
+        <property name="limit6" tag="property" attribute="name|widgetLimit.6" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.6" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9007">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>612.6</top>
+                <onup>9006</onup>
+                <onleft>9000</onleft>
+                <ondown>9008</ondown>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target6]">$SKINSHORTCUTS[path6]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget7">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.7" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label7" tag="property" attribute="name|widgetName.7" />
+        <property name="path7" tag="property" attribute="name|widgetPath.7" />
+        <property name="target7" tag="property" attribute="name|widgetTarget.7" />
+        <property name="type7" tag="property" attribute="name|widgetType.7" />
+        <property name="widget7" tag="property" attribute="name|widget.7" />
+        <property name="sortby7" tag="property" attribute="name|widgetSortBy.7" />
+        <property name="sortorder7" tag="property" attribute="name|widgetSortOrder.7" />
+        <property name="limit7" tag="property" attribute="name|widgetLimit.7" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.7" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9008">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>712.5</top>
+                <onup>9007</onup>
+                <onleft>9000</onleft>
+                <ondown>9009</ondown>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target7]">$SKINSHORTCUTS[path7]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget8">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.8" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label8" tag="property" attribute="name|widgetName.8" />
+        <property name="path8" tag="property" attribute="name|widgetPath.8" />
+        <property name="target8" tag="property" attribute="name|widgetTarget.8" />
+        <property name="type8" tag="property" attribute="name|widgetType.8" />
+        <property name="widget8" tag="property" attribute="name|widget.8" />
+        <property name="sortby8" tag="property" attribute="name|widgetSortBy.8" />
+        <property name="sortorder8" tag="property" attribute="name|widgetSortOrder.8" />
+        <property name="limit8" tag="property" attribute="name|widgetLimit.8" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.8" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9009">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>812.5</top>
+                <onup>9008</onup>
+                <ondown>9010</ondown>
+                <onleft>9000</onleft>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target8]">$SKINSHORTCUTS[path8]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget9">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.9" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label9" tag="property" attribute="name|widgetName.9" />
+        <property name="path9" tag="property" attribute="name|widgetPath.9" />
+        <property name="target9" tag="property" attribute="name|widgetTarget.9" />
+        <property name="type9" tag="property" attribute="name|widgetType.9" />
+        <property name="widget9" tag="property" attribute="name|widget.9" />
+        <property name="sortby9" tag="property" attribute="name|widgetSortBy.9" />
+        <property name="sortorder9" tag="property" attribute="name|widgetSortOrder.9" />
+        <property name="limit9" tag="property" attribute="name|widgetLimit.9" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.9" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9010">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path2])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>912.5</top>
+                <onup>9009</onup>
+                <ondown>9011</ondown>
+                <onleft>9000</onleft>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target9]">$SKINSHORTCUTS[path9]</content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </other>
+
+    <other include="widget10">
+        <!-- Widget condition: a path is needed -->
+        <condition tag="property" attribute="name|widgetPath.10" />
+        <!-- Retrieve id -->
+        <property name="id" tag="mainmenuid" />
+        <!-- Retrieve properties -->
+        <property name="label10" tag="property" attribute="name|widgetName.10" />
+        <property name="path10" tag="property" attribute="name|widgetPath.10" />
+        <property name="target10" tag="property" attribute="name|widgetTarget.10" />
+        <property name="type10" tag="property" attribute="name|widgetType.10" />
+        <property name="widget10" tag="property" attribute="name|widget.10" />
+        <property name="sortby10" tag="property" attribute="name|widgetSortBy.10" />
+        <property name="sortorder10" tag="property" attribute="name|widgetSortOrder.10" />
+        <property name="limit10" tag="property" attribute="name|widgetLimit.10" />
+
+        <property name="artwork" tag="property" attribute="name|widgetType.10" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+        <property name="artwork">$INFO[ListItem.Art(poster)]</property>
+
+        <controls>
+            <control type="fixedlist" id="9011">
+                <onfocus>Notification(Test, $SKINSHORTCUTS[path10])</onfocus>
+                <orientation>horizontal</orientation>
+                <top>1012.5</top>
+                <onup>90010</onup>
+                <onleft>9000</onleft>
+                <height>400</height>
+                <include content="Object_Widget_Content">
+                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                </include>
+                <content target="$SKINSHORTCUTS[target10]">$SKINSHORTCUTS[path10]</content>
                 <skinshortcuts>visibility</skinshortcuts>
             </control>
         </controls>

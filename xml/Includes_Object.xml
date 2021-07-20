@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Object_Widget_Content">
+        <itemlayout height="400" width="300">
+            <control type="image">
+                <texture>$PARAM[image]</texture>
+            </control>
+        </itemlayout>
+        <focusedlayout height="400" width="300">
+            <control type="image">
+                <texture>$PARAM[image]</texture>
+            </control>
+        </focusedlayout>
+    </include>
+</includes>

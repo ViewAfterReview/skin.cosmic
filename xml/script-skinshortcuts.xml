@@ -8,13 +8,93 @@
             <height>880</height>
             <width>1800</width>
             <animation effect="fade" time="200">VisibleChange</animation>
-            <include content="DialogBackgroundCommons">
-                <param name="width" value="1800" />
-                <param name="height" value="880" />
-                <param name="header_label" value="Customize main menu items" />
-            </include>
+            <control type="group">
+                <control type="image">
+                    <left>-2000</left>
+                    <top>-2000</top>
+                    <width>6000</width>
+                    <height>6000</height>
+                    <animation effect="fade" time="300">VisibleChange</animation>
+                    <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+                    <texture colordiffuse="80FFFFFF">colors/black.png</texture>
+                    <!-- <visible>$PARAM[darken_bg]</visible> -->
+                </control>
+                <control type="button">
+                    <left>-2000</left>
+                    <top>-2000</top>
+                    <width>6000</width>
+                    <height>6000</height>
+                    <texturefocus />
+                    <texturenofocus />
+                    <onclick>Action(close)</onclick>
+                </control>
+                <control type="group">
+                    <!-- <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height> -->
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <right>0</right>
+                        <bottom>0</bottom>
+                        <texture colordiffuse="dialog_tint">colors/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <right>0</right>
+                        <height>70</height>
+                        <texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+                    </control>
+                    <control type="label" id="500">
+                        <left>40</left>
+                        <top>0</top>
+                        <right>100</right>
+                        <height>70</height>
+                        <font>font32_title</font>
+                        <aligny>center</aligny>
+                        <shadowcolor>black</shadowcolor>
+                    </control>
+                    <control type="button" id="22002">
+                        <description>button overlay to avoid closing in dialog area</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <right>0</right>
+                        <bottom>0</bottom>
+                        <texturefocus />
+                        <texturenofocus />
+                        <onclick>noop</onclick>
+                    </control>
+                    <control type="radiobutton">
+                        <right>10</right>
+                        <top>11</top>
+                        <width>48</width>
+                        <height>48</height>
+                        <radiowidth>48</radiowidth>
+                        <radioheight>48</radioheight>
+                        <texturefocus />
+                        <texturenofocus />
+                        <label></label>
+                        <textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+                        <textureradiooffnofocus colordiffuse="EEFFFFFF">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
+                        <textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+                        <textureradioonnofocus colordiffuse="EEFFFFFF">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
+                        <onclick>Action(close)</onclick>
+                        <visible>!Skin.HasSetting(touchmode)</visible>
+                    </control>
+                    <control type="button">
+                        <right>10</right>
+                        <top>11</top>
+                        <width>48</width>
+                        <height>48</height>
+                        <texturefocus>dialogs/close.png</texturefocus>
+                        <texturenofocus>dialogs/close.png</texturenofocus>
+                        <onclick>Action(close)</onclick>
+                        <visible>Skin.HasSetting(touchmode)</visible>
+                    </control>
+                </control>
+            </control>
 
-            <!-- Shortcuts List -->
             <control type="list" id="211">
                 <description>Rules List Control</description>
                 <left>0</left>
@@ -76,13 +156,13 @@
                 </focusedlayout>
             </control>
 
-            <control type="grouplist" id="10000">
+            <control type="grouplist" id="9200">
                 <left>0</left>
                 <top>98</top>
                 <width>527</width>
                 <align>right</align>
                 <itemgap>10</itemgap>
-                <onright>13100</onright>
+                <onright>9100</onright>
                 <onleft>211</onleft>
                 <onup>Control.Move(211,-1)</onup>
                 <ondown>Control.Move(211,1)</ondown>
@@ -129,11 +209,11 @@
                 </control>
             </control>
 
-            <control type="group" id="11000">
+            <control type="group" id="9300">
                 <left>550</left>
                 <top>80</top>
-                <control type="grouplist" id="13100">
-                    <onleft>10000</onleft>
+                <control type="grouplist" id="9100">
+                    <onleft>9200</onleft>
                     <onright>211</onright>
                     <width>1250</width>
                     <height>880</height>
@@ -146,19 +226,10 @@
                     </control>
 
                     <control type="button" id="401" description="Choose Shortcut">
+                        <label>$LOCALIZE[32048]</label>
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <include>DialogSettingButton</include>
                         <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
-                    <control type="button" id="402" description="Choose Widget">
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <label>$LOCALIZE[31175]</label>
-                        <label2>$INFO[Container(211).ListItem.Property(path)]</label2>
-                        <onclick>SetProperty(custom-grouping,widget)</onclick>
-                        <onclick>SendClick(401)</onclick>
-                        <include>DialogSettingButton</include>
-                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
                     <control type="button" id="307" description="Action">
@@ -184,14 +255,6 @@
                         <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
-                    <control type="button" id="406" description="Widgets">
-                        <label>$LOCALIZE[31172]</label>
-                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                        <include>DialogSettingButton</include>
-                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
-                    </control>
-
                     <control type="button" id="405" description="Submenu">
                         <label>$LOCALIZE[31170]</label>
                         <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
@@ -209,12 +272,127 @@
                         <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
-                    <control type="button" id="14101">
-                        <description>Restore main menu items</description>
-                        <width>1250</width>
+                    <control type="button" id="312">
+                        <label>$LOCALIZE[31176]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
                         <include>DialogSettingButton</include>
-                        <label>Restore main menu items</label>
-                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="2312">
+                        <label>$LOCALIZE[31177]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.2)]</label2>
+                        <onclick>SetProperty(widgetID,2)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="3312">
+                        <label>$LOCALIZE[31178]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.3)]</label2>
+                        <onclick>SetProperty(widgetID,3)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="4312">
+                        <label>$LOCALIZE[31179]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.4)]</label2>
+                        <onclick>SetProperty(widgetID,4)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="5312">
+                        <label>$LOCALIZE[31180]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.5)]</label2>
+                        <onclick>SetProperty(widgetID,5)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="6312">
+                        <label>$LOCALIZE[31181]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.6)]</label2>
+                        <onclick>SetProperty(widgetID,6)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="7312">
+                        <label>$LOCALIZE[31182]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.7)]</label2>
+                        <onclick>SetProperty(widgetID,7)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="8312">
+                        <label>$LOCALIZE[31183]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.8)]</label2>
+                        <onclick>SetProperty(widgetID,8)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="9312">
+                        <label>$LOCALIZE[31184]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.9)]</label2>
+                        <onclick>SetProperty(widgetID,9)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="10312">
+                        <label>$LOCALIZE[31185]</label>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetName.10)]</label2>
+                        <onclick>SetProperty(widgetID,10)</onclick>
+                        <onclick>SendClick(312)</onclick>
+                        <include>DialogSettingButton</include>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="308">
+                        <include>DialogSettingButton</include>
+                        <label>$LOCALIZE[31175]</label>
                     </control>
                 </control>
             </control>

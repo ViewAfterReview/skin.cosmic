@@ -4,7 +4,7 @@
 	<backgroundcolor>background</backgroundcolor>
 
 	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|powermenu)</onunload>
 
 	<controls>
 		<include>DefaultBackground</include>
