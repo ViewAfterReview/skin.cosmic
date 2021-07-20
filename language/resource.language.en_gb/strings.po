@@ -853,3 +853,13 @@ msgstr ""
 msgctxt "#31180"
 msgid "Customize shutdown menu"
 msgstr ""
+
+#: /xml/Font.xml
+msgctxt "#31181"
+msgid "Nunito"
+msgstr ""
+
+#: /xml/Font.xml
+msgctxt "#31182"
+msgid "Arial Unicode"
+msgstr ""
