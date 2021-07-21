@@ -35,7 +35,7 @@
                     <label>$PARAM[label]</label>
                     <font>font45_title</font>
                     <shadowcolor>text_shadow</shadowcolor>
-                    <align>right</align>
+                    <align>left</align>
                     <aligny>center</aligny>
                 </control>
                 <visible>Control.HasFocus(9001)</visible>
