@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Object_Widget_Content">
-        <itemlayout height="400" width="300">
+        <itemlayout height="382.5" width="270">
             <control type="image">
                 <right>18</right>
                 <texture>$PARAM[image]</texture>
             </control>
         </itemlayout>
-        <focusedlayout height="400" width="300">
+        <focusedlayout height="382.5" width="270">
             <control type="image">
                 <right>18</right>
                 <texture>$PARAM[image]</texture>
             </control>
+            <include content="Selectbox_Bold">
+                <param name="pad_top" value="-16" />
+                <param name="pad_bottom" value="-16" />
+                <param name="pad_left" value="-16" />
+                <param name="pad_right" value="-5" />
+                <param name="focusbounce" value="true" />
+            </include>
         </focusedlayout>
     </include>
 </includes>
