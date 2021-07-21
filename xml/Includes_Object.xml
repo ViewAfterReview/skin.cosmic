@@ -70,8 +70,9 @@
             <top>150</top>
             <control type="label">
                 <left>150</left>
+                <bottom>60</bottom>
                 <label>$PARAM[title]</label>
-                <font>font52_title</font>
+                <font>font_title_bold</font>
                 <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
             </control>
             <control type="image">
@@ -107,13 +108,13 @@
         <param name="divider" default="true" />
         <param name="visible" default="true" />
         <param name="fallback" default="" />
-        <param name="font" default="font13" />
+        <param name="font" default="font32" />
         <definition>
             <control type="label">
                 <width>auto</width>
                 <label>  |  </label>
-                <height>40</height>
-                <aligny>top</aligny>
+                <height>72</height>
+                <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
                 <!-- <textcolor>$VAR[ColorHighlight]</textcolor> -->
 
@@ -124,8 +125,8 @@
             <control type="label" id="$PARAM[id]">
                 <width>auto</width>
                 <label fallback="$PARAM[fallback]">$PARAM[label]</label>
-                <height>40</height>
-                <aligny>top</aligny>
+                <height>72</height>
+                <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
 
@@ -143,7 +144,7 @@
         <param name="green" default="ff27ae60" />
         <definition>
             <control type="grouplist">
-                <height>40</height>
+                <height>72</height>
                 <orientation>horizontal</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
                 <itemgap>0</itemgap>
@@ -152,7 +153,7 @@
 
                 <include content="Object_Info_Line_Label">
                     <param name="label" value="$VAR[PercentageRating]% Match   " />
-                    <param name="font" value="font_32_title" />
+                    <param name="font" value="font32_title" />
                     <param name="textcolor" value="$PARAM[green]" />
                     <param name="divider" value="false" />
                     <param name="fallback" value="N/A" />
