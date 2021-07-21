@@ -3,19 +3,15 @@
     <include name="Object_Widget_Content">
         <itemlayout height="400" width="300">
             <control type="image">
+                <right>18</right>
                 <texture>$PARAM[image]</texture>
             </control>
         </itemlayout>
         <focusedlayout height="400" width="300">
             <control type="image">
+                <right>18</right>
                 <texture>$PARAM[image]</texture>
             </control>
         </focusedlayout>
-    </include>
-
-    <include name="Object_Widget_Content">
-        <definition>
-            <content target="$PARAM[target]">$PARAM[path]</content>
-        </definition>
     </include>
 </includes>

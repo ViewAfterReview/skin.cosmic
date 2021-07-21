@@ -100,7 +100,7 @@
         </controls>
     </other>
 
-    <submenuOther include="horizontal" level="1">
+    <submenuOther include="vertical" level="1">
         <condition tag="property" attribute="name|widgetPath" />
 
         <property name="id" tag="mainmenuid" />
@@ -113,13 +113,13 @@
         <controls>
             <control type="fixedlist" id="1$SKINSHORTCUTS[id]00">
                 <orientation>horizontal</orientation>
-                <top>$SKINSHORTCUTS[id]12.5</top>
+                <top>$PYTHON[int(450) * int(id)]</top>
                 <onup>1$PYTHON[int($SKINSHORTCUTS[id])-1]00</onup>
                 <ondown>1$PYTHON[int($SKINSHORTCUTS[id])+1]00</ondown>
                 <onleft>9000</onleft>
                 <height>400</height>
                 <include content="Object_Widget_Content">
-                    <param name="label" value="$SKINSHORTCUTS[itemLabel]" />
+                    <!-- <param name="label" value="$SKINSHORTCUTS[label]" /> -->
                     <param name="image" value="$SKINSHORTCUTS[artwork]" />
                 </include>
                 <content limit="$SKINSHORTCUTS[limit]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
@@ -144,6 +144,7 @@
 
         <property name="submenuVisibility" tag="property" attribute="name|submenuVisibility" />
         <property name="label" tag="label" />
+        <property name="label">$INFO[ListItem.Label]</property>
         <property name="background" tag="property" attribute="name|background" />
 
     </propertyGroup>
