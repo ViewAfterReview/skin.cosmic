@@ -1,95 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
-    <submenu>
+    <submenu include="submenu">
         <controls>
             <control type="fixedlist" id="9001">
-                <skinshortcuts>visibility</skinshortcuts>
                 <left>0</left>
-                <top>0</top>
+                <top>145</top>
                 <right>0</right>
-                <height>290</height>
-                <ondown>1100</ondown>
+                <height>1080</height>
                 <onleft>9000</onleft>
-                <orientation>horizontal</orientation>
-                <itemlayout width="360" height="240">
-                    <control type="group">
-                        <left>70</left>
-                        <control type="image">
-                            <width>316</width>
-                            <height>200</height>
-                            <texture>dialogs/dialog-bg-nobo.png</texture>
-                            <bordertexture border="21">overlays/shadow.png</bordertexture>
-                            <bordersize>20</bordersize>
-                        </control>
-                        <control type="image">
-                            <centertop>74</centertop>
-                            <left>58</left>
-                            <width>200</width>
-                            <height>$PARAM[icon_height]</height>
-                            <texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
-                            <aspectratio>keep</aspectratio>
-                        </control>
-                        <control type="textbox">
-                            <left>38</left>
-                            <top>106</top>
-                            <width>240</width>
-                            <height>70</height>
-                            <label>$INFO[ListItem.Label]</label>
-                            <font>font25_narrow</font>
-                            <shadowcolor>text_shadow</shadowcolor>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                        </control>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="360" height="240">
-                    <control type="group">
-                        <depth>DepthContentPopout</depth>
-                        <left>70</left>
-                        <animation type="Focus">
-                            <effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
-                        </animation>
-                        <animation type="Unfocus">
-                            <effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
-                        </animation>
-                        <control type="image">
-                            <width>316</width>
-                            <height>200</height>
-                            <texture>dialogs/dialog-bg-nobo.png</texture>
-                            <bordertexture border="21">overlays/shadow.png</bordertexture>
-                            <bordersize>20</bordersize>
-                        </control>
-                        <control type="image">
-                            <width>316</width>
-                            <height>200</height>
-                            <texture colordiffuse="button_focus">colors/grey.png</texture>
-                            <bordersize>20</bordersize>
-                            <include>Animation_FocusTextureFade</include>
-                        </control>
-                        <control type="image">
-                            <centertop>74</centertop>
-                            <left>58</left>
-                            <width>200</width>
-                            <height>$PARAM[icon_height]</height>
-                            <texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
-                            <aspectratio>keep</aspectratio>
-                        </control>
-                        <control type="textbox">
-                            <left>38</left>
-                            <top>106</top>
-                            <width>240</width>
-                            <height>70</height>
-                            <label>$INFO[ListItem.Label]</label>
-                            <font>font25_narrow</font>
-                            <shadowcolor>text_shadow</shadowcolor>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                        </control>
-                    </control>
-                </focusedlayout>
+                <onright>1100</onright>
+                <orientation>vertical</orientation>
+                <include content="Object_Submenu_Content">
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                </include>
                 <content>
                     <skinshortcuts>items</skinshortcuts>
                 </content>
+                <skinshortcuts>visibility</skinshortcuts>
             </control>
         </controls>
     </submenu>

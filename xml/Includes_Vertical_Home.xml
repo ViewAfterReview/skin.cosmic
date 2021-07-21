@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Vertical_Main">
+        <control type="group" id="5600">
+            <include content="Object_Item_Showcase">
+                <param name="title" value="$INFO[ListItem.Title]" />
+                <param name="plot" value="$VAR[PlotTextBoxVar]" />
+            </include>
+        </control>
         <control type="group">
             <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
             <control type="group" id="2000">
@@ -14,8 +20,8 @@
                     <effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
                 </animation>
                 <include>OpenClose_Right</include>
-                <include>skinshortcuts-template</include>
                 <control type="group" id="3000">
+                    <top>120</top>
                     <include>skinshortcuts-template-vertical</include>
                 </control>
             </control>
@@ -40,11 +46,13 @@
                     <onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
                     <onup>700</onup>
                     <!-- <ondown>700</ondown> -->
+                    <onleft>9001</onleft>
                     <onright>1100</onright>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <focusedlayout height="95">
                         <control type="group">
                             <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
+                            <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                             <control type="image">
                                 <left>-3</left>
                                 <top>1</top>
@@ -71,6 +79,7 @@
                         <onright>1100</onright>
                         <control type="group">
                             <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
+                            <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                             <control type="image">
                                 <left>-3</left>
                                 <top>1</top>
@@ -97,6 +106,7 @@
                         <include>skinshortcuts-mainmenu</include>
                     </content>
                 </control>
+                <include>skinshortcuts-template-submenu</include>
             </control>
             <include>BottomBar</include>
             <control type="group">
@@ -152,7 +162,7 @@
                     <control type="button" id="303">
                         <top>108</top>
                         <left>100</left>
-                        <onup>9001</onup>
+                        <onup>noop</onup>
                         <ondown>9000</ondown>
                         <onleft>noop</onleft>
                         <onright>1100</onright>
