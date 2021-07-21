@@ -96,9 +96,10 @@
                 <top>320</top>
                 <left>150</left>
                 <width>940</width>
-                <height>160</height>
+                <height>140</height>
                 <label>$PARAM[plot]</label>
                 <font>font37</font>
+                <shadowcolor>pure_black</shadowcolor>
                 <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600)</autoscroll>
             </control>
         </control>
@@ -129,6 +130,7 @@
                 <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
+                <shadowcolor>pure_black</shadowcolor>
 
                 <visible>$PARAM[visible]</visible>
             </control>

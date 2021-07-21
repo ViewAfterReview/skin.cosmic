@@ -6,4 +6,5 @@
 	<color name="button_focus">FF607D8B</color>
 	<color name="selected">FFFF8C00</color>
 	<color name="pure_white">FFFFFFFF</color>
+	<color name="pure_black">FF000000</color>
 </colors>
