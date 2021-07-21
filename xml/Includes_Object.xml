@@ -163,7 +163,7 @@
                     <param name="label" value="$INFO[ListItem.Year]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <param name="fallback" value="N/A" />
+                    <!-- <param name="fallback" value="N/A" /> -->
                     <param name="visible" value="!String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,artist) + !String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + [!String.IsEqual(ListItem.DBType,episode) | String.IsEmpty(ListItem.Premiered)]" />
                 </include>
                 <include content="Object_Info_Line_Label">
