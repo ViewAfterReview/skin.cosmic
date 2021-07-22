@@ -21,8 +21,8 @@
                 </animation>
                 <include>OpenClose_Right</include>
                 <control type="grouplist" id="3000">
-                    <top>590</top>
-                    <itemgap>52</itemgap>
+                    <top>515</top>
+                    <itemgap>16</itemgap>
                     <usecontrolcoords>true</usecontrolcoords>
                     <include>skinshortcuts-template-vertical</include>
                 </control>

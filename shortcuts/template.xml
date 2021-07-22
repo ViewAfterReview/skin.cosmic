@@ -39,20 +39,21 @@
         <propertyGroup>mainmenuWidgets</propertyGroup>
 
         <controls>
-            <control type="fixedlist" id="300$SKINSHORTCUTS[id]">
-                <orientation>horizontal</orientation>
-                <itemgap>64</itemgap>
-                <onback>9000</onback>
-                <onleft>9000</onleft>
-                <height>400</height>
-                <include content="Object_Widget_Content">
-                    <!-- <param name="label" value="$SKINSHORTCUTS[label]" /> -->
-                    <param name="image" value="$SKINSHORTCUTS[artwork]" />
-                </include>
-                <content limit="$SKINSHORTCUTS[limit]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
+            <include content="Object_Widget_Label">
+                <param name="groupid" value="$PYTHON[int(id)]$PYTHON[int(id) + 7500]" />
+                <param name="id" value="300$SKINSHORTCUTS[id]" />
+                <param name="label" value="$SKINSHORTCUTS[name]" />
+                <skinshortcuts>visibility</skinshortcuts>
+            </include>
+            <include content="Object_Widget_Content">
+                <!-- <param name="label" value="$SKINSHORTCUTS[label]" /> -->
+                <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                <param name="id" value="300$SKINSHORTCUTS[id]" />
+                <param name="target" value="$SKINSHORTCUTS[target]" />
+                <param name="path" value="$SKINSHORTCUTS[path]" />
                 <onfocus>SetProperty(TMDbHelper.WidgetContainer,300$SKINSHORTCUTS[id],home)</onfocus>
                 <skinshortcuts>visibility</skinshortcuts>
-            </control>
+            </include>
         </controls>
     </submenuOther>
 
