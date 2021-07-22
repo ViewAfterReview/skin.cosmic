@@ -8,7 +8,7 @@
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|shutdown)</onload>
 
 	<!-- set default home layout if none is set -->
-	<onload condition="String.IsEmpty(Window(home).Property(Layout))">SetProperty(Layout,Vertical_Main,home)</onload>
+	<onload condition="!Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Vertical_Main)</onload>
 
 	<controls>
 		<control type="button" id="20000">
@@ -39,7 +39,10 @@
 			<visible>!Player.HasMedia</visible>
 		</control>
 
-		<include condition="String.IsEqual(Window(home).Property(Layout),Vertical_Main)">Vertical_Main</include>
-		<include condition="String.IsEqual(Window(home).Property(Layout),Horizontal_Main)">Horizontal_Main</include>
+		<control type="group">
+			<include>Visible_Fade</include>
+			<include condition="Skin.HasSetting(Vertical_Main)">Vertical_Main</include>
+			<include condition="Skin.HasSetting(Horizontal_Main)">Horizontal_Main</include>
+		</control>
 	</controls>
 </window>

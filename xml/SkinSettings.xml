@@ -167,20 +167,20 @@
 					<onclick>SetProperty(Dialog.1.Label2,$LOCALIZE[31185],home)</onclick>
 					<onclick>SetProperty(Dialog.1.Icon,special://skin/extras/icons/home.png,home)</onclick>
 					<onclick>SetProperty(Dialog.1.BuiltIn,
-								Skin.Reset(HomeHorizontal) || 
-								SetProperty(Layout,Vertical_Main,home),home)</onclick>
+								Skin.Reset(Horizontal_Main) || 
+								Skin.SetBool(Vertical_Main),home)</onclick>
 					<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31186],home)</onclick>
 					<onclick>SetProperty(Dialog.2.Label2,$LOCALIZE[31187],home)</onclick>
 					<onclick>SetProperty(Dialog.2.Icon,special://skin/extras/icons/home.png,home)</onclick>
 					<onclick>SetProperty(Dialog.2.BuiltIn,
-								Skin.Reset(HomeVertical) || 
-								SetProperty(Layout,Horizontal_Main,home),home)</onclick>
+								Skin.Reset(Vertical_Main) || 
+								Skin.SetBool(Horizontal_Main),home)</onclick>
 					<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31183],usedetails=true,window=home)</onclick>
 				</control>
 				<control type="radiobutton" id="624">
 					<label>$LOCALIZE[31189]</label>
 					<include>DefaultSettingButton</include>
-					<enable>String.IsEqual(Window(home).Property(Layout),Vertical_Main)</enable>
+					<enable>Skin.HasSetting(Vertical_Main)</enable>
 					<selected>Skin.HasSetting(DisabledProfileInfo)</selected>
 					<onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
 				</control>
