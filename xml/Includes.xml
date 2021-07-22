@@ -6,6 +6,7 @@
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />
 	<include file="Includes_DialogSelect.xml" />
+	<include file="Includes_Items.xml" />
 	<include file="Includes_MusicInfo.xml" />
 	<include file="Includes_Object.xml" />
 	<include file="Includes_PVR.xml" />
@@ -1578,6 +1579,93 @@
 		</focusedlayout>
 	</include>
 
+	<!-- Highlight Color -->
+	<variable name="ColorHighlight">
+		<value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
+		<value>Highlight</value>
+	</variable>
+
+	<!-- Gradient Color -->
+	<variable name="ColorGradient">
+		<value condition="!Skin.HasSetting(EnableMonochromeHighlight) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
+		<value condition="!Skin.HasSetting(EnableMonochromeHighlight)">Gradient</value>
+		<value>00ffffff</value>
+	</variable>
+
+	<variable name="Label_ColorValue">
+		<value condition="String.IsEqual(Window(Home).Property(colorpick),Highlight) + !String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(colorpick),Gradient) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
+		<value>$LOCALIZE[571]</value>
+	</variable>
+
+	<include name="Dialog_ColorPicker_SwatchLabel">
+		<control type="label">
+			<nested />
+			<align>center</align>
+			<height>20</height>
+			<font>font12</font>
+			<textcolor>pure_white</textcolor>
+		</control>
+	</include>
+
+	<include name="Dialog_ColorPicker_SwatchPreview">
+		<control type="group">
+			<width>86.67</width>
+			<left>$PARAM[left]</left>
+			<include content="Dialog_ColorPicker_SwatchLabel">
+				<left>-10</left>
+				<right>-10</right>
+				<align>center</align>
+				<label>$PARAM[label]</label>
+			</include>
+			<control type="group">
+				<top>40</top>
+				<height>40</height>
+				<control type="image">
+					<texture border="32" colordiffuse="Shadow">common/shadow-20.png</texture>
+					<visible>!Control.HasFocus($PARAM[id])</visible>
+				</control>
+				<control type="button" id="$PARAM[id]">
+					<texturefocus />
+					<texturenofocus />
+					<font />
+					<textcolor>00ffffff</textcolor>
+					<onleft>$PARAM[onleft]</onleft>
+					<onright>$PARAM[onright]</onright>
+					<onup>3012</onup>
+					<ondown>3015</ondown>
+					<onclick>SetProperty(colorpick,$PARAM[color],home)</onclick>
+					<onclick>SetFocus(3110)</onclick>
+				</control>
+				<control type="group">
+					<control type="image">
+						<texture colordiffuse="$VAR[$PARAM[color-var]]" border="20">common/box.png</texture>
+						<visible>!Control.HasFocus(3110) | !String.IsEqual(Window(home).Property(colorpick),$PARAM[color])</visible>
+					</control>
+					<control type="image">
+						<texture colordiffuse="$INFO[Container(3110).ListItem.Label]" border="20">common/box.png</texture>
+						<visible>Control.HasFocus(3110) + String.IsEqual(Window(home).Property(colorpick),$PARAM[color])</visible>
+					</control>
+					<control type="image">
+						<bordersize>20</bordersize>
+						<bordertexture border="32" colordiffuse="Shadow">common/shadow-20.png</bordertexture>
+						<texture border="20" colordiffuse="Selected">common/selectbox.png</texture>
+						<visible>Control.HasFocus($PARAM[id])</visible>
+					</control>
+				</control>
+				<control type="image">
+					<centertop>50%</centertop>
+					<centerleft>50%</centerleft>
+					<width>16</width>
+					<height>16</height>
+					<texture>diffuse/circle.png</texture>
+					<visible>String.IsEqual(Window(Home).Property(colorpick),$PARAM[color])</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<!-- Selectbox -->
 	<include name="Selectbox_Bold">
 		<param name="pad_top" default="" />
 		<param name="pad_bottom" default="" />

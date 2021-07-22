@@ -184,6 +184,29 @@
 					<selected>Skin.HasSetting(DisabledProfileInfo)</selected>
 					<onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
 				</control>
+
+				<control type="button" id="625" description="Highlight colour">
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31194]</label>
+					<label2>$INFO[Skin.String(focuscolor.name)]</label2>
+					<onclick>SetProperty(colorpick,$LOCALIZE[31197],home)</onclick>
+					<onclick>ActivateWindow(1117)</onclick>
+				</control>
+
+				<control type="button" id="626" description="Gradient colour">
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31199]</label>
+					<label2>$INFO[Skin.String(gradientcolor.name)]</label2>
+					<onclick>SetProperty(colorpick,$LOCALIZE[31198],home)</onclick>
+					<onclick>ActivateWindow(1117)</onclick>
+				</control>
+
+				<control type="radiobutton" id="627" description="Monochrome Highlight">
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31195]</label>
+					<onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
+					<selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
+				</control>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>

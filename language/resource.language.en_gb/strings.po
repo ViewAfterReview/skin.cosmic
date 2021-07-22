@@ -925,3 +925,62 @@ msgstr ""
 msgctxt "#31193"
 msgid "Noto Sans"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31194"
+msgid "Highlight colour"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31195"
+msgid "Monochrome highlight"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31196"
+msgid "Choose Palette"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31197"
+msgid "Highlight"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31198"
+msgid "Gradient"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31199"
+msgid "Gradient colour"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31200"
+msgid "Creator"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31201"
+msgid "Watched indicators"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31202"
+msgid "Overlay"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31203"
+msgid "Gradient preview"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31204"
+msgid "Colour"
+msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31205"
+msgid "Value"

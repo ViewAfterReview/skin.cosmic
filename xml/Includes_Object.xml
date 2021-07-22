@@ -360,13 +360,6 @@
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
                 </include>
-
-                <include content="Object_Info_Line_Label">
-                    <param name="id" value="66300" />
-                    <param name="label" value="$VAR[Label_Info_NextAired_Status,, ]$VAR[Label_Info_NextAired_Date]" />
-                    <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBType,tvshow) + $PARAM[nextaired]" />
-                </include>
             </control>
         </definition>
     </include>
