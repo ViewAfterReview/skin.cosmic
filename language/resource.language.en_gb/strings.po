@@ -923,5 +923,5 @@ msgstr ""
 
 #: /xml/Font.xml
 msgctxt "#31193"
-msgid "Roboto"
+msgid "Noto Sans"
 msgstr ""

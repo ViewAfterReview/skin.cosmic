@@ -61,79 +61,10 @@
                         <label>$PARAM[label]</label>
                         <aligny>center</aligny>
                         <textcolor>pure_white</textcolor>
-                        <font>font27</font>
+                        <font>font27_bold</font>
                         <height>24</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                    </control>
-                    <control type="label">
-                        <top>20</top>
-                        <left>15</left>
-                        <width>auto</width>
-                        <label>$PARAM[label]</label>
-                        <aligny>center</aligny>
-                        <include content="Object_Variable_TextColor">
-                            <param name="std" value="main_fg_30" />
-                            <param name="alt" value="main_fg_70" />
-                            <param name="usealt" value="Skin.HasSetting(EnableHighContrastWidgetText)" />
-                        </include>
-                        <font>font27</font>
-                        <height>24</height>
-                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
-                        <visible>![Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])]</visible>
-                    </control>
-                    <control type="label">
-                        <top>20</top>
-                        <width>auto</width>
-                        <label>|</label>
-                        <aligny>center</aligny>
-                        <textcolor>$VAR[ColorHighlight]</textcolor>
-                        <font>font27</font>
-                        <height>24</height>
-                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Label)</visible>
-                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-                    </control>
-                    <control type="label">
-                        <top>20</top>
-                        <width>auto</width>
-                        <label>$INFO[Container($PARAM[id]).ListItem.Label]</label>
-                        <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
-                        <font>font_tiny</font>
-                        <height>24</height>
-                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
-                    </control>
-                    <control type="label">
-                        <top>20</top>
-                        <width>auto</width>
-                        <label>$INFO[Container($PARAM[id]).ListItem.Year, (,)]</label>
-                        <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
-                        <font>font_tiny</font>
-                        <height>24</height>
-                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        <visible>!String.StartsWith(ListItem.FolderPath,favourites://)</visible>
-                        <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
-                        <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Year)</visible>
-                    </control>
-                    <control type="label">
-                        <top>20</top>
-                        <width>auto</width>
-                        <label>$INFO[Container($PARAM[id]).ListItem.TvShowTitle,, - ]$INFO[Container($PARAM[id]).ListItem.Label]</label>
-                        <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
-                        <font>font_tiny</font>
-                        <height>24</height>
-                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        <visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
                     </control>
                     <control type="label">
                         <top>20</top>
@@ -141,22 +72,11 @@
                         <label>$INFO[Container($PARAM[id]).ListItem.ChannelName]$INFO[Container($PARAM[id]).ListItem.Title, - ,]$INFO[Container($PARAM[id]).ListItem.StartTime, - ,]$INFO[Container($PARAM[id]).ListItem.EndTime, - ,]</label>
                         <aligny>center</aligny>
                         <textcolor>pure_white</textcolor>
-                        <font>font_tiny</font>
+                        <font>font27_bold</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
                         <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                    </control>
-                    <control type="label">
-                        <top>20</top>
-                        <width>auto</width>
-                        <label>$PARAM[label2]</label>
-                        <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
-                        <font>font_tiny</font>
-                        <height>24</height>
-                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
                     </control>
                 </control>
             </control>
