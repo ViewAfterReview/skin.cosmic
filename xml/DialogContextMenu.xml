@@ -3,9 +3,7 @@
 	<defaultcontrol>996</defaultcontrol>
 	<include>Animation_DialogPopupOpenClose</include>
 	<coordinates>
-		<left>0</left>
-		<top>0</top>
-		<origin x="50%" y="400">Window.IsActive(Home)</origin>
+		<origin x="50%" y="175" />
 	</coordinates>
 	<controls>
 		<control type="image">
@@ -28,19 +26,24 @@
 		</control>
 		<control type="group">
 			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">conditional</animation>
+			<centertop>50%</centertop>
+			<width>506</width>
+			<height>844</height>
 			<control type="image" id="999">
 				<description>background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>450</width>
-				<height>780</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<top>-24</top>
+				<left>-24</left>
+				<width>506</width>
+				<height>844</height>
+				<bordersize>24</bordersize>
+				<bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
+				<texture border="16" colordiffuse="dialog_tint">common/dialog.png</texture>
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>
 				<left>0</left>
 				<top>0</top>
-				<width>450</width>
+				<width>506</width>
 				<height max="780">auto</height>
 				<usecontrolcoords>true</usecontrolcoords>
 			</control>
@@ -54,11 +57,10 @@
 		<control type="button" id="1000">
 			<description>button template</description>
 			<left>0</left>
-			<top></top>
-			<width>450</width>
-			<height>65</height>
+			<width>458</width>
+			<height>70</height>
 			<align>center</align>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="button_focus">lists/focus-rounded.png</texturefocus>
 			<texturenofocus />
 		</control>
 	</controls>
