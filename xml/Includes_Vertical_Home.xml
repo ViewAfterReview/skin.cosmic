@@ -26,7 +26,7 @@
                     <usecontrolcoords>true</usecontrolcoords>
                     <include>skinshortcuts-template-vertical</include>
                 </control>
-                <control type="group" id="3001">
+                <control type="group" id="2999">
                     <include content="Object_Ratings_Content">
                         <param name="directory" value="colorful" />
                         <param name="align" value="right" />
