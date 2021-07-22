@@ -45,9 +45,10 @@
                 </control>
                 <control type="fixedlist" id="9000">
                     <left>92</left>
-                    <top>345</top>
+                    <top>285</top>
                     <width>462</width>
-                    <bottom>-10</bottom>
+                    <height>750</height>
+                    <bottom>-40</bottom>
                     <movement>7</movement>
                     <focusposition>0</focusposition>
                     <onfocus>ClearProperty(listposition,home)</onfocus>
