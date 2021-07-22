@@ -8,4 +8,5 @@
 	<color name="selected">FFFF8C00</color>
 	<color name="pure_white">FFFFFFFF</color>
 	<color name="pure_black">FF000000</color>
+	<color name="alt_poster">1FDEDEDE</color>
 </colors>

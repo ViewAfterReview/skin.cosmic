@@ -1507,24 +1507,25 @@
 				<left>-5</left>
 				<width>410</width>
 				<height>270</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<top>30</top>
-				<width>240</width>
-				<height>160</height>
+				<width>128</width>
+				<height>128</height>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<align>center</align>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
 				<left>25</left>
 				<top>190</top>
 				<width>350</width>
 				<height>400</height>
+				<font>font32</font>
 				<label>$INFO[ListItem.Label]</label>
 				<align>center</align>
 			</control>
@@ -1542,7 +1543,7 @@
 					<left>-5</left>
 					<width>410</width>
 					<height>270</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -1550,24 +1551,26 @@
 					<left>-5</left>
 					<width>410</width>
 					<height>270</height>
-					<texture colordiffuse="button_focus">colors/grey.png</texture>
+					<texture colordiffuse="button_focus">diffuse/poster-wall.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<include>Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<top>30</top>
-					<width>240</width>
-					<height>160</height>
+					<width>128</width>
+					<height>128</height>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<align>center</align>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
 					<left>25</left>
 					<top>190</top>
 					<width>350</width>
 					<height>400</height>
+					<font>font32</font>
 					<label>$INFO[ListItem.Label]</label>
 					<align>center</align>
 				</control>
