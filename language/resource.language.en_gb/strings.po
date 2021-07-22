@@ -903,7 +903,7 @@ msgstr ""
 # Label of disabling profile info in Vertical home layout
 #: /xml/SkinSettings.xml
 msgctxt "#31189"
-msgid "Disable profile info"
+msgid "Hide Profile info"
 msgstr ""
 
 #: /xml/Includes_Labels.xml
