@@ -43,7 +43,7 @@
                         <width>714</width>
                     </control>
                 </control>
-                <control type="panel" id="9000">
+                <control type="fixedlist" id="9000">
                     <left>92</left>
                     <top>345</top>
                     <width>462</width>
