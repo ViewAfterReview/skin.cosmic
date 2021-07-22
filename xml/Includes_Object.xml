@@ -156,7 +156,7 @@
                 <top>235</top>
                 <left>150</left>
                 <width>940</width>
-                <height>140</height>
+                <height>120</height>
                 <label>$PARAM[plot]</label>
                 <font>font32</font>
                 <shadowcolor>pure_black</shadowcolor>
@@ -165,7 +165,7 @@
         </control>
 
         <control type="group">
-            <top>365</top>
+            <top>345</top>
             <left>150</left>
             <control type="image">
                 <top>61</top>
