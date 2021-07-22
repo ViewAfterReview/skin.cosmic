@@ -20,9 +20,17 @@
                     <effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
                 </animation>
                 <include>OpenClose_Right</include>
-                <control type="group" id="3000">
-                    <top>120</top>
+                <control type="grouplist" id="3000">
+                    <top>520</top>
+                    <itemgap>64</itemgap>
+                    <usecontrolcoords>true</usecontrolcoords>
                     <include>skinshortcuts-template-vertical</include>
+                </control>
+                <control type="group" id="3001">
+                    <include content="Object_Ratings_Content">
+                        <param name="directory" value="colorful" />
+                        <param name="align" value="right" />
+                    </include>
                 </control>
             </control>
             <control type="group">
@@ -47,7 +55,7 @@
                     <onup>700</onup>
                     <!-- <ondown>700</ondown> -->
                     <onleft>9001</onleft>
-                    <onright>1100</onright>
+                    <onright>3000</onright>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <focusedlayout height="95">
                         <control type="group">
@@ -76,7 +84,7 @@
                         </control>
                     </focusedlayout>
                     <itemlayout height="95">
-                        <onright>1100</onright>
+                        <onright>3000</onright>
                         <control type="group">
                             <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
                             <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
@@ -165,7 +173,7 @@
                         <onup>noop</onup>
                         <ondown>9000</ondown>
                         <onleft>noop</onleft>
-                        <onright>1100</onright>
+                        <onright>3000</onright>
                         <align>left</align>
                         <font>font27_narrow</font>
                         <textcolor>button_focus</textcolor>

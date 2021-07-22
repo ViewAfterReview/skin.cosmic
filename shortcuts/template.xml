@@ -39,11 +39,10 @@
         <propertyGroup>mainmenuWidgets</propertyGroup>
 
         <controls>
-            <control type="fixedlist" id="1$SKINSHORTCUTS[id]00">
+            <control type="fixedlist" id="300$SKINSHORTCUTS[id]">
                 <orientation>horizontal</orientation>
-                <top>$PYTHON[int(450) * int(id)]</top>
-                <onup>1$PYTHON[int($SKINSHORTCUTS[id])-1]00</onup>
-                <ondown>1$PYTHON[int($SKINSHORTCUTS[id])+1]00</ondown>
+                <itemgap>64</itemgap>
+                <onback>9000</onback>
                 <onleft>9000</onleft>
                 <height>400</height>
                 <include content="Object_Widget_Content">
@@ -51,6 +50,7 @@
                     <param name="image" value="$SKINSHORTCUTS[artwork]" />
                 </include>
                 <content limit="$SKINSHORTCUTS[limit]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
+                <onfocus>SetProperty(TMDbHelper.WidgetContainer,300$SKINSHORTCUTS[id],home)</onfocus>
                 <skinshortcuts>visibility</skinshortcuts>
             </control>
         </controls>

@@ -3,6 +3,8 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 
+	<onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
+
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|shutdown)</onload>
 
 	<!-- set default home layout if none is set -->

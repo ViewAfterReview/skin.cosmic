@@ -165,7 +165,6 @@
                     <param name="label" value="$INFO[ListItem.Year]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="divider" value="false" />
-                    <!-- <param name="fallback" value="N/A" /> -->
                     <param name="visible" value="!String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,artist) + !String.IsEqual(ListItem.DBType,album) + !String.IsEqual(ListItem.DBType,song) + [!String.IsEqual(ListItem.DBType,episode) | String.IsEmpty(ListItem.Premiered)]" />
                 </include>
                 <include content="Object_Info_Line_Label">
@@ -258,6 +257,224 @@
                     <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="visible" value="String.IsEqual(ListItem.DBType,tvshow) + $PARAM[nextaired]" />
                 </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_Ratings_Content">
+        <param name="directory" default="colorful" />
+        <param name="top" default="460" />
+        <param name="align" default="right" />
+
+        <definition>
+            <control type="grouplist">
+                <top>$PARAM[top]</top>
+                <right>12</right>
+                <height>48</height>
+                <orientation>horizontal</orientation>
+                <align>$PARAM[align]</align>
+                <itemgap>6</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+
+                <control type="image">
+                    <top>0</top>
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/oscar.png</texture>
+                    <visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.Oscars)</visible> -->
+                </control>
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$VAR[Label_Oscars,,   ]</label>
+                    <visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.Oscars)</visible> -->
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/trakt.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.Trakt)</visible> -->
+                </control>
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating), ,   ]</label>
+                    <visible>true</visible>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.Trakt)</visible> -->
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/tmdb.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
+                    <!-- <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible> -->
+                </control>
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating), ,   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
+                    <!-- <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible> -->
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/metacritic.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.Metacritic)</visible> -->
+                </control>
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Metacritic_Rating))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.Metacritic)</visible> -->
+                </control>
+
+                <control type="image">
+                    <top>0</top>
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/popcorn.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/popcorn_spilt.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+                    <visible>!Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
+                </control>
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
+                </control>
+                <control type="image">
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/rtrotten.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),0) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
+                </control>
+                <control type="image">
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/rtfresh.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
+                </control>
+                <control type="image" description="remove the rtfresh texture line for certified logo">
+                    <width>48</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/rtfresh.png</texture>
+                    <texture>flags/$PARAM[directory]/ratings/certified.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
+                </control>
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
+                </control>
+                <control type="image">
+                    <top>1</top>
+                    <width>52</width>
+                    <height>48</height>
+                    <texture>flags/$PARAM[directory]/ratings/imdb.png</texture>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.IMDB)</visible> -->
+                </control>
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Votes), (, $LOCALIZE[205])]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.IMDB)</visible> -->
+                    <!-- <visible>!Skin.HasSetting(Ratings.IMDB.Votes)</visible> -->
+                </control>
+                <!-- <control type="label"> -->
+                <!-- <textcolor>pure_white</textcolor> -->
+                <!-- <top>2</top> -->
+                <!-- <width>auto</width> -->
+                <!-- <height>42</height> -->
+                <!-- <align>right</align> -->
+                <!-- <font>font32</font> -->
+                <!-- <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)]</label> -->
+                <!-- <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible> -->
+                <!-- <visible>!Skin.HasSetting(Ratings.IMDB)</visible> -->
+                <!-- <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible> -->
+                <!-- </control> -->
+                <!-- <control type="label"> -->
+                <!-- <textcolor>pure_white</textcolor> -->
+                <!-- <top>2</top> -->
+                <!-- <width>auto</width> -->
+                <!-- <height>42</height> -->
+                <!-- <align>right</align> -->
+                <!-- <font>font32</font> -->
+                <!-- <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]</label> -->
+                <!-- <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible> -->
+                <!-- <visible>!Skin.HasSetting(Ratings.IMDB)</visible> -->
+                <!-- </control> -->
+                <control type="label">
+                    <textcolor>pure_white</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font32</font>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,]</label>
+                    <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.Top250),0)</visible>
+                    <!-- <visible>!Skin.HasSetting(Ratings.IMDB)</visible> -->
+                    <!-- <visible>!Skin.HasSetting(Ratings.Top250)</visible> -->
+                </control>
             </control>
         </definition>
     </include>
