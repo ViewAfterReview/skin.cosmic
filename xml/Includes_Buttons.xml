@@ -124,7 +124,7 @@
 			</control>
 		</definition>
 	</include>
-	<include name="KeyboardButton">
+	<!-- <include name="KeyboardButton">
 		<width>120</width>
 		<height>120</height>
 		<textoffsety>27</textoffsety>
@@ -133,7 +133,94 @@
 		<align>center</align>
 		<aligny>top</aligny>
 		<font>font45</font>
+	</include> -->
+
+	<!-- Keyboard and Numeric Keys -->
+	<include name="KeyboardButton">
+		<width>85</width>
+		<height>75</height>
+		<include content="ButtonType">
+			<param name="texturenofocus" value="true" />
+			<param name="colordiffuse" value="1fdedede" />
+		</include>
+		<include content="ButtonType">
+			<param name="texturefocus" value="true" />
+		</include>
+		<textoffsetx>0</textoffsetx>
+		<textcolor>pure_white</textcolor>
+		<align>center</align>
+		<focusedcolor>pure_white</focusedcolor>
+		<radioposx>265</radioposx>
+		<radioposy>0</radioposy>
 	</include>
+	<include name="ButtonType">
+		<param name="texture" default="false" />
+		<param name="texturefocus" default="false" />
+		<param name="texturenofocus" default="false" />
+		<param name="alttexturefocus" default="false" />
+		<param name="alttexturenofocus" default="false" />
+		<param name="colordiffuse" default="$VAR[ColorHighlight]" />
+		<definition>
+			<include content="ButtonType_Texture" condition="!Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[texture]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/button-dialog.png" />
+			</include>
+			<include content="ButtonType_TextureFocus" condition="!Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[texturefocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/button-dialog.png" />
+			</include>
+			<include content="ButtonType_TextureNoFocus" condition="!Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[texturenofocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/button-dialog.png" />
+			</include>
+			<include content="ButtonType_AltTextureFocus" condition="!Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[alttexturefocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/button-dialog.png" />
+			</include>
+			<include content="ButtonType_AltTextureNoFocus" condition="!Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[alttexturenofocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/button-dialog.png" />
+			</include>
+
+			<include content="ButtonType_Texture" condition="Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[texture]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/box.png" />
+			</include>
+			<include content="ButtonType_TextureFocus" condition="Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[texturefocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/box.png" />
+			</include>
+			<include content="ButtonType_TextureNoFocus" condition="Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[texturenofocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/box.png" />
+			</include>
+			<include content="ButtonType_AltTextureFocus" condition="Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[alttexturefocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/box.png" />
+			</include>
+			<include content="ButtonType_AltTextureNoFocus" condition="Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[alttexturenofocus]">
+				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
+				<param name="texture" value="common/box.png" />
+			</include>
+		</definition>
+	</include>
+
+	<include name="ButtonType_Texture">
+		<texture colordiffuse="$PARAM[colordiffuse]" border="5">$PARAM[texture]</texture>
+	</include>
+	<include name="ButtonType_TextureFocus">
+		<texturefocus colordiffuse="$PARAM[colordiffuse]" border="5">$PARAM[texture]</texturefocus>
+	</include>
+	<include name="ButtonType_TextureNoFocus">
+		<texturenofocus colordiffuse="$PARAM[colordiffuse]" border="5">$PARAM[texture]</texturenofocus>
+	</include>
+	<include name="ButtonType_AltTextureFocus">
+		<alttexturefocus colordiffuse="$PARAM[colordiffuse]" border="5">$PARAM[texture]</alttexturefocus>
+	</include>
+	<include name="ButtonType_AltTextureNoFocus">
+		<alttexturenofocus colordiffuse="$PARAM[colordiffuse]" border="5">$PARAM[texture]</alttexturenofocus>
+	</include>
+
 	<include name="PlaylistWindowButton">
 		<param name="width">100%</param>
 		<definition>
