@@ -21,11 +21,16 @@
 				<ondown>55</ondown>
 				<viewtype label="$LOCALIZE[31107]">list</viewtype>
 				<focusedlayout height="list_item_height" condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)">
-					<control type="image">
+					<control type="group">
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+						</control>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+						</control>
 						<visible>Control.HasFocus(55)</visible>
 					</control>
 					<control type="image">
@@ -85,11 +90,16 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
-					<control type="image">
+					<control type="group">
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+						</control>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+						</control>
 						<visible>Control.HasFocus(55)</visible>
 					</control>
 					<control type="image">
@@ -149,11 +159,16 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
-					<control type="image">
+					<control type="group">
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+						</control>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+						</control>
 						<visible>Control.HasFocus(55)</visible>
 					</control>
 					<control type="image">
@@ -201,11 +216,16 @@
 	</include>
 	<include name="SongsListLayout">
 		<focusedlayout height="80" condition="Container.Content(songs)">
-			<control type="image">
+			<control type="group">
 				<left>0</left>
 				<right>0</right>
 				<height>80</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+				</control>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+				</control>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="label">
@@ -250,11 +270,16 @@
 	</include>
 	<include name="AddonsListLayout">
 		<focusedlayout height="80" condition="Container.Content(addons)">
-			<control type="image">
+			<control type="group">
 				<left>0</left>
 				<right>0</right>
 				<height>80</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+				</control>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+				</control>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="image">

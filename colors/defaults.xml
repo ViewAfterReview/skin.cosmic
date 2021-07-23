@@ -9,4 +9,7 @@
 	<color name="pure_white">FFFFFFFF</color>
 	<color name="pure_black">FF000000</color>
 	<color name="alt_poster">1FDEDEDE</color>
+	<color name="disabled">40FFFFFF</color>
+	<color name="selected">FF11E7B1</color>
+	<color name="invalid">FFFF0000</color>
 </colors>

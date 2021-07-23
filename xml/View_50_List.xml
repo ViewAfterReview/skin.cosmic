@@ -138,12 +138,17 @@
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)</visible>
 				<focusedlayout height="list_item_height">
-					<control type="image">
+					<control type="group">
 						<left>0</left>
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+						</control>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+						</control>
 						<visible>Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="label">

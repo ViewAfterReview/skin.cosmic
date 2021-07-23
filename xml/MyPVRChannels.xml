@@ -95,12 +95,17 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="70">
-						<control type="image">
+						<control type="group">
 							<left>0</left>
 							<top>0</top>
 							<right>0</right>
 							<height>70</height>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<control type="image">
+								<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+							</control>
+							<control type="image">
+								<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+							</control>
 							<visible>Control.HasFocus(51)</visible>
 						</control>
 						<control type="progress">

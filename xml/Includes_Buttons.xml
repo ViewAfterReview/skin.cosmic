@@ -53,10 +53,12 @@
 			<top>0</top>
 			<height>$PARAM[height]</height>
 			<aligny>center</aligny>
-			<invalidcolor>invalid</invalidcolor>
-			<selectedcolor>selected</selectedcolor>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</texturefocus>
+			<alttexturenofocus />
+			<alttexturefocus />
+			<alttexturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturefocus>
 			<texturenofocus />
+			<texturefocus />
 		</definition>
 	</include>
 	<include name="DialogSettingButton">
@@ -327,12 +329,17 @@
 				<height>70</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
-			<control type="image">
+			<control type="group">
 				<left>0</left>
 				<top>0</top>
 				<width>600</width>
 				<height>70</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+				</control>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+				</control>
 			</control>
 			<control type="label">
 				<left>0</left>

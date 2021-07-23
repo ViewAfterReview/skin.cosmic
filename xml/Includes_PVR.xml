@@ -126,12 +126,17 @@
 				</include>
 			</itemlayout>
 			<focusedlayout height="100">
-				<control type="image">
+				<control type="group">
 					<left>0</left>
 					<top>0</top>
 					<right>0</right>
 					<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<control type="image">
+						<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+					</control>
+					<control type="image">
+						<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+					</control>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="progress">
@@ -221,11 +226,16 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="70" width="470">
-				<control type="image">
+				<control type="group">
 					<left>0</left>
 					<right>0</right>
 					<bottom>0</bottom>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<control type="image">
+						<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+					</control>
+					<control type="image">
+						<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+					</control>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="image">
@@ -621,12 +631,17 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="62" width="60">
-					<control type="image" id="2">
+					<control type="group" id="2">
 						<top>2</top>
 						<left>2</left>
 						<width>54</width>
 						<height>54</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+						</control>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+						</control>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="image" id="2">

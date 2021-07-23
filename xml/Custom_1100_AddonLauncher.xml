@@ -92,11 +92,16 @@
 					<onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<focusedlayout height="95" width="462">
-						<control type="image">
+						<control type="group">
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<control type="image">
+								<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+							</control>
+							<control type="image">
+								<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+							</control>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="image">

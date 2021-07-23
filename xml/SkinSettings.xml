@@ -253,10 +253,15 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="85" width="470">
-					<control type="image">
+					<control type="group">
 						<width>470</width>
 						<height>85</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+						</control>
+						<control type="image">
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+						</control>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">

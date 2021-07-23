@@ -135,8 +135,13 @@
 							</control>
 						</itemlayout>
 						<focusedlayout condition="!Control.IsVisible(2200)" width="700" height="80">
-							<control type="image">
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<control type="group">
+								<control type="image">
+									<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+								</control>
+								<control type="image">
+									<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+								</control>
 								<visible>Control.HasFocus(1103)</visible>
 							</control>
 							<control type="image">
@@ -167,8 +172,13 @@
 							</control>
 						</focusedlayout>
 						<focusedlayout condition="Control.IsVisible(2200)" width="688" height="80">
-							<control type="image">
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<control type="group">
+								<control type="image">
+									<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+								</control>
+								<control type="image">
+									<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+								</control>
 								<visible>Control.HasFocus(1103)</visible>
 							</control>
 							<control type="image">

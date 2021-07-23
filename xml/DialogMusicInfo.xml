@@ -475,12 +475,17 @@
 								</control>
 							</itemlayout>
 							<focusedlayout height="35">
-								<control type="image">
+								<control type="group">
 									<left>0</left>
 									<top>1</top>
 									<width>446</width>
 									<height>33</height>
-									<texture colordiffuse="button_focus">lists/focus.png</texture>
+									<control type="image">
+										<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+									</control>
+									<control type="image">
+										<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+									</control>
 									<visible>Control.HasFocus(41)</visible>
 								</control>
 								<control type="label">
