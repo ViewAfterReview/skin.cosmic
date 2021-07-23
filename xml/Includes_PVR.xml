@@ -631,23 +631,18 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="62" width="60">
-					<control type="group" id="2">
+					<control type="image" id="2">
 						<top>2</top>
 						<left>2</left>
 						<width>54</width>
 						<height>54</height>
-						<control type="image">
-							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
-						</control>
-						<control type="image">
-							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
-						</control>
+						<texture colordiffuse="$VAR[ColorHighlight]">lists/focus.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="image" id="2">
 						<width>58</width>
 						<height>58</height>
-						<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+						<texture border="0" colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>58</width>
