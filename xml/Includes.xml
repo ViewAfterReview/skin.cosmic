@@ -9,6 +9,7 @@
 	<include file="Includes_Items.xml" />
 	<include file="Includes_MusicInfo.xml" />
 	<include file="Includes_Object.xml" />
+	<include file="Includes_OSD.xml" />
 	<include file="Includes_PVR.xml" />
 	<include file="Includes_Horizontal_Home.xml" />
 	<include file="Includes_Vertical_Home.xml" />

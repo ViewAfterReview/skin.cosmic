@@ -32,8 +32,10 @@
 				<label>$VAR[OSDHelpTextVar]</label>
 				<shadowcolor>black</shadowcolor>
 			</control>
+			<include content="LiveTV_OSD" condition="VideoPlayer.Content(livetv)" />
 			<control type="group" id="200">
 				<include>Animation_BottomSlide</include>
+				<visible>!VideoPlayer.Content(livetv)</visible>
 				<control type="grouplist" id="201">
 					<left>20</left>
 					<top>90</top>
@@ -239,6 +241,7 @@
 					<effect type="fade" start="100" end="0" time="300"/>
 				</animation>
 				<visible>Player.SeekEnabled</visible>
+				<visible>!VideoPlayer.Content(livetv)</visible>
 				<control type="button" id="87">
 					<include>HiddenObject</include>
 					<onup>200</onup>
