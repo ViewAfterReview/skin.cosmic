@@ -49,7 +49,7 @@
                         <left>523</left>
                         <control type="label">
                             <left>100</left>
-                            <width>65%</width>
+                            <width>59%</width>
                             <font>font32</font>
                             <label>$INFO[Player.Title]</label>
                         </control>
