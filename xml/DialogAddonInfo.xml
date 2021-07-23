@@ -262,6 +262,8 @@
 						<radioposy>17</radioposy>
 						<radiowidth>100</radiowidth>
 						<font>font12</font>
+						<texturefocus border="21" colordiffuse="$VAR[ColorHighlight]">buttons/button-fo.png</texturefocus>
+						<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 						<visible>Control.IsEnabled(13)</visible>
 					</control>
 					<include content="InfoDialogButton">
