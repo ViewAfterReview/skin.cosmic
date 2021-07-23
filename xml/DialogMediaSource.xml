@@ -94,7 +94,7 @@
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<ondown>12</ondown>
-				<itemgap>-7</itemgap>
+				<itemgap>12</itemgap>
 				<include content="DefaultDialogButton">
 					<param name="id" value="11" />
 					<param name="label" value="$LOCALIZE[1024]" />
@@ -139,6 +139,7 @@
 				<align>center</align>
 				<orientation>horizontal</orientation>
 				<onup>12</onup>
+				<itemgap>12</itemgap>
 				<include content="DefaultDialogButton">
 					<param name="id" value="18" />
 					<param name="label" value="$LOCALIZE[186]" />
