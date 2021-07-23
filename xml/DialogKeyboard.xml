@@ -44,7 +44,7 @@
 				<ondown>3100</ondown>
 				<onup>8000</onup>
 				<textcolor>B3ededed</textcolor>
-				<include content="Defs_ButtonType">
+				<include content="ButtonType">
 					<param name="texturefocus" value="true" />
 				</include>
 			</control>
