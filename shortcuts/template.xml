@@ -52,6 +52,7 @@
                 <param name="target" value="$SKINSHORTCUTS[target]" />
                 <param name="path" value="$SKINSHORTCUTS[path]" />
                 <onfocus>SetProperty(TMDbHelper.WidgetContainer,300$SKINSHORTCUTS[id],home)</onfocus>
+                <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
                 <skinshortcuts>visibility</skinshortcuts>
             </include>
         </controls>
