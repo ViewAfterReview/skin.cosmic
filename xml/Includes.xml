@@ -1579,13 +1579,6 @@
 					<align>center</align>
 				</control>
 			</control>
-			<include content="Selectbox_Bold">
-				<param name="pad_top" value="0" />
-				<param name="pad_bottom" value="-43" />
-				<param name="pad_left" value="-7" />
-				<param name="pad_right" value="-7" />
-				<param name="focusbounce" value="true" />
-			</include>
 		</focusedlayout>
 	</include>
 
