@@ -21,7 +21,7 @@
                             <left>220</left>
                             <width>240</width>
                             <align>center</align>
-                            <font>font_clock</font>
+                            <font>font_pvr_clock</font>
                             <label>$INFO[System.Time]</label>
                         </control>
 

@@ -84,6 +84,11 @@
 			<style>lighten</style>
 		</font>
 		<font>
+			<name>font_pvr_clock</name>
+			<filename>Roboto-Thin.ttf</filename>
+			<size>59</size>
+		</font>
+		<font>
 			<name>font_clock</name>
 			<filename>Roboto-Thin.ttf</filename>
 			<size>70</size>
