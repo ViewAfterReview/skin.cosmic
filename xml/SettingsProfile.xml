@@ -153,6 +153,13 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="9001" />
+				<top>163</top>
+				<height>80</height>
+				<right>0</right>
+				<visible>ControlGroup(9001).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="9001">
 				<visible>Container(9000).Hasfocus(1)</visible>
 				<right>0</right>

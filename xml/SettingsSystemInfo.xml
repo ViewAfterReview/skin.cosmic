@@ -120,6 +120,14 @@
 			<include content="ContentPanel">
 				<param name="width" value="480" />
 			</include>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="9000" />
+				<top>133</top>
+				<width>420</width>
+				<height>80</height>
+				<left>0</left>
+				<visible>ControlGroup(9000).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="9000">
 				<left>0</left>
 				<top>130</top>
@@ -128,6 +136,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onright>60</onright>
+				<itemgap>-5</itemgap>
 				<control type="button" id="95">
 					<description>Button Summary Values</description>
 					<include content="DefaultSettingButton">

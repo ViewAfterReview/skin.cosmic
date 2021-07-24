@@ -23,6 +23,13 @@
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="700" />
+				<top>133</top>
+				<height>80</height>
+				<right>0</right>
+				<visible>ControlGroup(700).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="700">
 				<top>133</top>
 				<left>0</left>
@@ -77,6 +84,13 @@
 					<label2>$VAR[ProfileIdentificationLabel2Var]</label2>
 				</control>
 			</control>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="600" />
+				<top>133</top>
+				<height>80</height>
+				<right>0</right>
+				<visible>ControlGroup(600).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="600">
 				<top>133</top>
 				<left>0</left>
@@ -139,6 +153,13 @@
 					<selected>Skin.HasSetting(show_musicvideoposter)</selected>
 				</control>
 			</control>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="610" />
+				<top>133</top>
+				<height>80</height>
+				<right>0</right>
+				<visible>ControlGroup(610).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="610">
 				<top>133</top>
 				<left>0</left>

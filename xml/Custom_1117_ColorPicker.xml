@@ -204,6 +204,8 @@
                         <ondown condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31202])">3023</ondown>
                         <control type="button" id="3015">
                             <label>$LOCALIZE[31204]: $INFO[Window(Home).Property(colorpick)]</label>
+                            <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
                             <include>DefaultSettingButton</include>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31197])">SetProperty(colorpick,$LOCALIZE[31198],Home)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31198])">SetProperty(colorpick,$LOCALIZE[31197],Home)</onclick>
@@ -214,6 +216,8 @@
                             <textoffsetx>10</textoffsetx>
                             <label>$LOCALIZE[31205]: $VAR[Label_ColorValue]</label>
                             <align>center</align>
+                            <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
                             <include>DefaultSettingButton</include>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31197])">Skin.SetString(focuscolor.name)</onclick>
                             <onclick condition="String.IsEqual(Window(Home).Property(colorpick),$LOCALIZE[31198])">Skin.SetString(gradientcolor.name)</onclick>
@@ -225,6 +229,8 @@
                             <textoffsetx>10</textoffsetx>
                             <label>$LOCALIZE[31196]</label>
                             <align>center</align>
+                            <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
                             <include>DefaultSettingButton</include>
                             <onclick>Skin.ToggleSetting(UseOriginalPalette)</onclick>
                         </control>
@@ -232,6 +238,8 @@
                         <control type="button" id="3012">
                             <label>$LOCALIZE[15067]</label>
                             <align>center</align>
+                            <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
                             <include>DefaultSettingButton</include>
                             <onclick>Action(Close)</onclick>
                         </control>

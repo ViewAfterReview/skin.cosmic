@@ -69,15 +69,21 @@
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 				<textwidth>880</textwidth>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="image" id="11">
@@ -86,15 +92,21 @@
 				<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="edit" id="12">
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 				<textwidth>700</textwidth>
 			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingLabel</include>
 			</control>
 			<control type="grouplist" id="9000">

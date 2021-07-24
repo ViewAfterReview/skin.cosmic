@@ -22,12 +22,19 @@
 			<include content="ContentPanel">
 				<param name="width" value="360" />
 			</include>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="9000" />
+				<top>180</top>
+				<width>300</width>
+				<height>80</height>
+				<visible>ControlGroup(9000).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="9000">
 				<left>0</left>
 				<top>160</top>
 				<onright>50</onright>
 				<onleft>100</onleft>
-				<itemgap>-20</itemgap>
+				<itemgap>-42</itemgap>
 				<control type="button" id="6">
 					<description>Button Network</description>
 					<include content="DefaultSettingButton">

@@ -86,8 +86,9 @@
 			<include content="ContentPanel">
 				<param name="width" value="530" />
 			</include>
-			<include content="SettingsGradient">
+			<include content="DefaultSettingButtonGradient">
 				<param name="id" value="3" />
+				<param name="height" value="85" />
 				<top>130</top>
 				<height>85</height>
 				<width>470</width>
@@ -155,7 +156,7 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]">colors/white.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
 				<texturenofocus />
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
