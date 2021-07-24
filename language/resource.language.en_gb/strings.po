@@ -984,3 +984,208 @@ msgstr ""
 #: /xml/Custom_1117_ColorPicker.xml
 msgctxt "#31205"
 msgid "Value"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31206"
+msgid "Common Shortcut"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31207"
+msgid "Open Submenu"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31208"
+msgid "Default Widgets"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31209"
+msgid "Recently Added Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31210"
+msgid "Recently Played Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31211"
+msgid "Random Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31212"
+msgid "In Progress Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31213"
+msgid "Top Rated Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31214"
+msgid "IMDB Top 250 Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31215"
+msgid "Unwatched Movies"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31216"
+msgid "Movie Nodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31217"
+msgid "Movie Genres"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31218"
+msgid "Movie Sets"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31219"
+msgid "TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31220"
+msgid "Recently Added TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31221"
+msgid "Recently Played TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31222"
+msgid "In Progress TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31223"
+msgid "Random TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31224"
+msgid "Top Rated TV Shows"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31225"
+msgid "TvShow Nodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31226"
+msgid "TvShow Genres"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31227"
+msgid "Recently Added Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31228"
+msgid "Recently Played Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31229"
+msgid "Random Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31230"
+msgid "Unwatched Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31231"
+msgid "In Progress Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31232"
+msgid "Top Rated Episodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31233"
+msgid "Recently Added Albums"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31234"
+msgid "Recently Played Albums"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31235"
+msgid "Top 100 Albums"
+msgstr ""
+
+#: /1080i/overrides.xml
+msgctxt "#31236"
+msgid "Random Albums"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31237"
+msgid "Random Artists"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31238"
+msgid "Music Nodes"
+msgstr ""
+
+#: /1080i/overrides.xml
+msgctxt "#31239"
+msgid "PVR"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31240"
+msgid "Last Played Channels"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31241"
+msgid "Active Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31242"
+msgid "Grouped Active Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31243"
+msgid "Grouped Deleted Recordings"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31244"
+msgid "Video Sources"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31245"
+msgid "Music Sources"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31246"
+msgid "Picture Sources"
+msgstr ""

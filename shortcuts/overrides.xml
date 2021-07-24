@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <overrides>
 
+    <backgroundBrowse>True</backgroundBrowse>
+    <widgetPlaylists>True</widgetPlaylists>
+    <widgetRename>True</widgetRename>
+    <widget label="8">Weather</widget>
+    <widget label="5">Settings</widget>
     <!-- set default path to choose icons from -->
     <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
 
@@ -9,6 +14,40 @@
 
     <!-- Main grouping -->
     <groupings>
+        <node label="32029">
+            <content>common</content>
+            <shortcut label="$LOCALIZE[10821]" type="32021" icon="special://skin/extras/icons/games.png">ActivateWindow(Games)</shortcut>
+            <shortcut label="$LOCALIZE[33060]" type="$LOCALIZE[31206]" icon="special://skin/extras/icons/power.png">ActivateWindow(shutdownmenu)</shortcut>
+            <shortcut label="$LOCALIZE[31207]" type="32021" icon="special://skin/extras/icons/passports.png">SetFocus(9001)</shortcut>
+        </node>
+        <node label="32030">
+            <content>video</content>
+            <node label="32040">
+                <content>playlist-video</content>
+            </node>
+            <node label="32010">
+                <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+                <content>addon-video</content>
+            </node>
+            <node label="32075">
+                <content>videosources</content>
+                <content>upnp-video</content>
+            </node>
+        </node>
+        <node label="32031">
+            <content>music</content>
+            <node label="32040">
+                <content>playlist-audio</content>
+            </node>
+            <node label="32011">
+                <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+                <content>addon-audio</content>
+            </node>
+            <node label="32075">
+                <content>musicsources</content>
+                <content>upnp-music</content>
+            </node>
+        </node>
         <node label="32017" condition="System.GetBool(pvrmanager.enabled)" version="13">
             <content>pvr</content>
             <node label="19023">
@@ -30,18 +69,155 @@
                 <content>pvr-radio</content>
             </node>
         </node>
+        <node label="32020">
+            <content>picturesources</content>
+        </node>
+        <node label="32007">
+            <node label="32009">
+                <shortcut label="10001" type="32021" icon="DefaultAddonProgram.png">ActivateWindow(Programs,Addons,return)</shortcut>
+                <content>addon-program</content>
+            </node>
+            <node label="32010">
+                <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+                <content>addon-video</content>
+            </node>
+            <node label="32011">
+                <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+                <content>addon-audio</content>
+            </node>
+            <node label="32012">
+                <shortcut label="1039" type="32020" icon="DefaultAddonPicture.png">ActivateWindow(Pictures,Addons,return)</shortcut>
+                <content>addon-image</content>
+            </node>
+        </node>
+        <node label="32006">
+            <content>favourite</content>
+        </node>
+        <node label="10004">
+            <content>settings</content>
+        </node>
+        <node label="32054">
+            <content>commands</content>
     </groupings>
 
+    <!-- Video Grouping -->
+    <video-groupings>
+        <node label="32040">
+            <content>playlist-video</content>
+        </node>
+        <node label="32010">
+            <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+            <content>addon-video</content>
+        </node>
+        <content>video</content>
+    </video-groupings>
+
+    <!-- Widget Grouping -->
     <widget-groupings>
-        <node label="$LOCALIZE[31343]">
-            <shortcut widget="LastPlayedChannels" label="$LOCALIZE[31381]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
-            <shortcut widget="AllChannels" label="$LOCALIZE[19287]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/tv/*</shortcut>
-            <shortcut widget="ActiveRecordings" label="$LOCALIZE[31382]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
-            <shortcut widget="GroupedActiveRecordings" label="$LOCALIZE[31383]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=grouped</shortcut>
-            <shortcut widget="DeletedRecordings" label="$LOCALIZE[19184]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=flat</shortcut>
-            <shortcut widget="GroupedDeletedRecordings" label="$LOCALIZE[31384]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=grouped</shortcut>
-            <shortcut widget="Timers" label="$LOCALIZE[19040]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://timers/tv/timers</shortcut>
-            <shortcut widget="TVPVRRecodingWidget" label="TV PVR Recording Widget (must be in first position)" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">TV PVR Recording Widget</shortcut>
+        <node label="$LOCALIZE[31208]">
+            <node label="$LOCALIZE[342]">
+                <shortcut widget="NewMovies" label="$LOCALIZE[31209]" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video">special://skin/playlists/new_movies.xsp</shortcut>
+                <shortcut widget="RecentMovies" label="$LOCALIZE[31210]" icon="DefaultMusicRecentlyPlayed.png" widgetTarget="video">special://skin/playlists/recent_movies.xsp</shortcut>
+                <shortcut widget="RandomMovies" label="$LOCALIZE[31211]" icon="DefaultMovies.png" widgetTarget="video">special://skin/playlists/random_movies.xsp</shortcut>
+                <shortcut widget="InProgressMovies" label="$LOCALIZE[31212]" icon="special://skin/extras/icons/timer.png" widgetTarget="video">special://skin/playlists/inprogress_movies.xsp</shortcut>
+                <shortcut widget="TopRatedMovies" label="$LOCALIZE[31213]" icon="DefaultMusicTop100Albums.png" widgetTarget="video">special://skin/playlists/toprated_movies.xsp</shortcut>
+                <shortcut widget="Top250Movies" label="$LOCALIZE[31214]" icon="DefaultMusicTop100Albums.png" widgetTarget="video">special://skin/playlists/top250_movies.xsp</shortcut>
+                <shortcut widget="UnwatchedMovies" label="$LOCALIZE[31215]" icon="DefaultMovies.png" widgetTarget="video">special://skin/playlists/unwatched_movies.xsp</shortcut>
+                <shortcut widget="MovieNodes" label="$LOCALIZE[31216]" icon="special://skin/extras/icons/title.png" widgetTarget="video">library://video/movies/</shortcut>
+                <shortcut widget="MovieGenres" label="$LOCALIZE[31217]" icon="DefaultGenre.png" widgetTarget="video">library://video/movies/genres.xml</shortcut>
+                <shortcut widget="MovieSets" label="$LOCALIZE[31218]" icon="DefaultSets.png" widgetTarget="video">videodb://movies/sets/</shortcut>
+            </node>
+            <node label="$LOCALIZE[31219]">
+                <shortcut widget="NewTvShows" label="$LOCALIZE[31220]" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video">special://skin/playlists/new_tvshows.xsp</shortcut>
+                <shortcut widget="RecentTvShows" label="$LOCALIZE[31221]" icon="DefaultMusicRecentlyPlayed.png" widgetTarget="video">special://skin/playlists/recent_tvshows.xsp</shortcut>
+                <shortcut widget="InProgress" label="$LOCALIZE[31222]" icon="special://skin/extras/icons/timer.png" widgetTarget="video">library://video/tvshows/inprogressshows.xml</shortcut>
+                <shortcut widget="RandomTvShows" label="$LOCALIZE[31223]" icon="DefaultTVShows.png" widgetTarget="video">special://skin/playlists/random_tvshows.xsp</shortcut>
+                <shortcut widget="TopRatedTvShows" label="$LOCALIZE[31224]" icon="DefaultMusicTop100Albums.png" widgetTarget="video">special://skin/playlists/toprated_tvshows.xsp</shortcut>
+                <shortcut widget="TvShowNodes" label="$LOCALIZE[31225]" icon="special://skin/extras/icons/title.png" widgetTarget="video">library://video/tvshows/</shortcut>
+                <shortcut widget="TvShowGenres" label="$LOCALIZE[31226]" icon="DefaultGenre.png" widgetTarget="video">library://video/tvshows/genres.xml</shortcut>
+            </node>
+            <node label="$LOCALIZE[20360]">
+                <shortcut widget="NewEpisodes" label="$LOCALIZE[31227]" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video">special://skin/playlists/new_episodes.xsp.xsp</shortcut>
+                <shortcut widget="Recent Episodes" label="$LOCALIZE[31228]" icon="DefaultMusicRecentlyPlayed.png" widgetTarget="video">special://skin/playlists/recent_episodes.xsp.xsp</shortcut>
+                <shortcut widget="RandomEpisodes" label="$LOCALIZE[31229]" icon="DefaultTVShows.png" widgetTarget="video">special://skin/playlists/random_episodes.xsp.xsp</shortcut>
+                <shortcut widget="UnwatchedEpisodes" label="$LOCALIZE[31230]" icon="DefaultTVShows.png" widgetTarget="video">special://skin/playlists/unwatched_episodes.xsp.xsp</shortcut>
+                <shortcut widget="InProgressEpisodes" label="$LOCALIZE[31231]" icon="special://skin/extras/icons/timer.png" widgetTarget="video">special://skin/playlists/inprogress_episodes.xsp.xsp</shortcut>
+                <shortcut widget="TopRatedEpisodes" label="$LOCALIZE[31232]" icon="DefaultMusicTop100Albums.png" widgetTarget="video">special://skin/playlists/toprated_episodes.xsp.xsp</shortcut>
+                
+            </node>
+            <node label="$LOCALIZE[249]">
+                <shortcut widget="NewAlbums" label="$LOCALIZE[31233]" icon="DefaultMusicRecentlyAdded.png" widgetTarget="music">musicdb://recentlyaddedalbums/</shortcut>
+                <shortcut widget="RecentAlbums" label="$LOCALIZE[31234]" icon="DefaultMusicRecentlyPlayed.png" widgetTarget="music">musicdb://recentlyplayedalbums/</shortcut>
+                <shortcut widget="TopAlbums" label="$LOCALIZE[31235]" icon="DefaultMusicTop100Albums.png" widgetTarget="music">musicdb://top100/albums/</shortcut>
+                <shortcut widget="RandomAlbums" label="$LOCALIZE[31236]" icon="DefaultMusicAlbums.png" widgetTarget="music">special://skin/playlists/random_albums.xsp</shortcut>
+                <shortcut widget="RandomArtists" label="$LOCALIZE[31237]" icon="DefaultMusicArtists.png" widgetTarget="music">special://skin/playlists/random_artists.xsp</shortcut>
+                <shortcut widget="MusicNodes" label="$LOCALIZE[31238]" icon="special://skin/extras/icons/title.png" widgetTarget="music">library://music/</shortcut>
+            </node>
+            <node label="$LOCALIZE[31239]">
+                <shortcut widget="LastPlayedChannels" label="$LOCALIZE[31240]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
+                <shortcut widget="AllChannels" label="$LOCALIZE[19287]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/tv/*</shortcut>
+                <shortcut widget="ActiveRecordings" label="$LOCALIZE[31241]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
+                <shortcut widget="GroupedActiveRecordings" label="$LOCALIZE[31242]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=grouped</shortcut>
+                <shortcut widget="DeletedRecordings" label="$LOCALIZE[19184]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=flat</shortcut>
+                <shortcut widget="GroupedDeletedRecordings" label="$LOCALIZE[31243]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=grouped</shortcut>
+                <shortcut widget="Timers" label="$LOCALIZE[19040]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://timers/tv/timers</shortcut>
+                <shortcut widget="TVPVRRecodingWidget" label="TV PVR Recording Widget (must be in first position)" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">TV PVR Recording Widget</shortcut>
+            </node>
+            <node label="$LOCALIZE[29921]">
+                <content>widgets</content>
+                <shortcut widget="VideoSources" label="$LOCALIZE[31244]" icon="DefaultVideo.png" widgetTarget="video">sources://video/</shortcut>
+                <shortcut widget="MusicSources" label="$LOCALIZE[31245]" icon="DefaultMusicSongs.png" widgetTarget="music">sources://music/</shortcut>
+                <shortcut widget="PictureSources" label="$LOCALIZE[31246]" icon="DefaultPicture.png" widgetTarget="pictures">sources://pictures/</shortcut>
+            </node>
+            <node label="$LOCALIZE[1036]">
+                <shortcut widget="VideoSources" label="$LOCALIZE[1036]" icon="special://skin/extras/icons/favourites2.png" widgetTarget="video">favourites://</shortcut>
+            </node>
+        </node>
+        <node label="32007">
+            <node label="32010">
+                <content>addon-video</content>
+            </node>
+            <node label="32011">
+                <content>addon-audio</content>
+            </node>
+            <node label="32012">
+                <content>addon-image</content>
+            </node>
+            <node label="32009">
+                <content>addon-program-plugin</content>
+            </node>
+            <shortcut label="10001" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="program" widgetTarget="programs">addons://sources/executable/</shortcut>
+            <shortcut label="20244" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="program" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps/</shortcut>
+            <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png" widget="addon" widgetType="video" widgetTarget="video">addons://sources/video/</shortcut>
+            <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png" widget="addon" widgetType="music" widgetTarget="music">addons://sources/audio/</shortcut>
+            <shortcut label="1039" type="32020" icon="DefaultAddonPicture.png" widget="addon" widgetType="picture" widgetTarget="pictures">addons://sources/image/</shortcut>
+        </node>
+        <node label="32030">
+            <content>video</content>
+            <node label="32040">
+                <content>playlist-video</content>
+            </node>
+            <node label="32010">
+                <content>addon-video</content>
+            </node>
+            <node label="32075">
+                <content>videosources</content>
+            </node>
+        </node>
+        <node label="32031">
+            <content>music</content>
+            <node label="32040">
+                <content>playlist-audio</content>
+            </node>
+            <node label="32011">
+                <content>addon-audio</content>
+            </node>
+            <node label="32075">
+                <content>musicsources</content>
+            </node>
+        </node>
+        <node label="32020">
+            <content>picturesources</content>
         </node>
     </widget-groupings>
 
