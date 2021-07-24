@@ -86,6 +86,9 @@
         <param name="controltype" default="fixedlist" />
         <param name="id" default="5610" />
         <param name="target" default="" />
+        <param name="sortby" default="" />
+        <param name="sortdirection" default="" />
+        <param name="limit" default="" />
         <param name="path" default="" />
         <definition>
             <control type="$PARAM[controltype]" id="$PARAM[id]">
@@ -117,13 +120,16 @@
                 </focusedlayout>
                 <include content="Object_Widget_Content_Path">
                     <param name="target" value="$PARAM[target]" />
+                    <param name="sortby" value="$PARAM[sortby]" />
+                    <param name="sortdirection" value="$PARAM[sortdirection]" />
+                    <param name="limit" value="$PARAM[limit]" />
                     <param name="path" value="$PARAM[path]" />
                 </include>
             </control>
         </definition>
     </include>
     <include name="Object_Widget_Content_Path">
-        <content target="$PARAM[target]">$PARAM[path]</content>
+        <content target="$PARAM[target]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortdirection]" limit="$PARAM[limit]">$PARAM[path]</content>
     </include>
     <include name="Object_Item_Showcase">
         <control type="group">

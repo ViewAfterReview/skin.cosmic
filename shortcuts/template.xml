@@ -33,8 +33,8 @@
 
         <property name="id" tag="mainmenuid" />
         <property name="sortby" tag="property" attribute="name|widgetSortBy" />
-        <property name="limit" tag="property" attribute="name|widgetLimit" />
         <property name="sortdirection" tag="property" attribute="name|widgetSortDirection" />
+        <property name="limit" tag="property" attribute="name|widgetLimit" />
 
         <propertyGroup>mainmenuWidgets</propertyGroup>
 
@@ -50,6 +50,9 @@
                 <param name="image" value="$SKINSHORTCUTS[artwork]" />
                 <param name="id" value="300$SKINSHORTCUTS[id]" />
                 <param name="target" value="$SKINSHORTCUTS[target]" />
+                <param name="sortby" value="$SKINSHORTCUTS[sortby]" />
+                <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
+                <param name="limit" value="$SKINSHORTCUTS[limit]" />
                 <param name="path" value="$SKINSHORTCUTS[path]" />
                 <onfocus>SetProperty(TMDbHelper.WidgetContainer,300$SKINSHORTCUTS[id],home)</onfocus>
                 <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
