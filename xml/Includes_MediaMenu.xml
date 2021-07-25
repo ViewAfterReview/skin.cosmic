@@ -8,9 +8,9 @@
 		<radioposx>370</radioposx>
 		<aligny>center</aligny>
 		<invalidcolor>invalid</invalidcolor>
-		<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+		<texturefocus />
 		<texturenofocus />
-		<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
+		<alttexturefocus />
 		<alttexturenofocus></alttexturenofocus>
 	</include>
 	<include name="PVRQuickNavItemsCommon">
@@ -301,7 +301,7 @@
 		</control>
 	</include>
 	<include name="MediaMenuNowPlaying">
-        <param name="left">5</param>
+		<param name="left">5</param>
 		<definition>
 			<control type="grouplist" id="14100">
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
