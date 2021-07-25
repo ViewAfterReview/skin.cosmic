@@ -278,7 +278,7 @@
 				<height>110</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]">lists/focus.png</texturefocus>
+				<texturefocus />
 				<texturenofocus />
 				<textoffsetx>40</textoffsetx>
 				<textoffsety>35</textoffsety>

@@ -122,9 +122,18 @@
 				<include content="ContentPanel">
 					<param name="width" value="550" />
 				</include>
+				<include content="DefaultSettingButtonGradient">
+					<param name="id" value="9000" />
+					<param name="height" value="110" />
+					<top>120</top>
+					<width>490</width>
+					<height>110</height>
+					<!-- <right>0</right> -->
+					<visible>ControlGroup(9000).HasFocus()</visible>
+				</include>
 				<control type="grouplist" id="9000">
 					<orientation>vertical</orientation>
-					<itemgap>-8.5</itemgap>
+					<itemgap>0</itemgap>
 					<left>0</left>
 					<top>120</top>
 					<onup>9000</onup>
@@ -138,9 +147,9 @@
 						<aligny>top</aligny>
 						<textoffsetx>40</textoffsetx>
 						<texturenofocus />
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<alttexturenofocus></alttexturenofocus>
-						<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
+						<texturefocus />
+						<alttexturenofocus />
+						<alttexturefocus />
 						<textoffsety>35</textoffsety>
 						<label>$LOCALIZE[31032]: $LOCALIZE[584]</label>
 						<altlabel>$LOCALIZE[31032]: $LOCALIZE[585]</altlabel>
@@ -154,7 +163,7 @@
 						<height>110</height>
 						<aligny>top</aligny>
 						<texturenofocus />
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+						<texturefocus />
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>35</textoffsety>
 					</control>
