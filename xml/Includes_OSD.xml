@@ -111,8 +111,8 @@
                         </control>
                     </control>
                     <control type="image">
-                        <top>-8</top>
-                        <right>260</right>
+                        <top>0</top>
+                        <right>240</right>
                         <width>192</width>
                         <height>auto</height>
                         <aspectratio>keep</aspectratio>
