@@ -67,16 +67,16 @@
 
                             <control type="label">
                                 <top>62</top>
-                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
-                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
+                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
                                 <font>font27</font>
                                 <label>$INFO[VideoPlayer.EndTime, - ,]</label>
                             </control>
 
                             <control type="progress">
                                 <top>76</top>
-                                <include content="12hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
-                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <include content="12hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
+                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
                                 <height>12</height>
                                 <width>200</width>
                                 <info>PVR.EpgEventProgress</info>
@@ -94,8 +94,8 @@
 
                             <control type="label">
                                 <top>98</top>
-                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
-                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
+                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
                                 <font>font27</font>
                                 <label>$INFO[VideoPlayer.NextEndTime, - ,]</label>
                             </control>

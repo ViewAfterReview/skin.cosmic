@@ -10,7 +10,7 @@
 	<!-- set default home layout if none is set -->
 	<onload condition="!Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Vertical_Main)</onload>
 	<!-- check locale for pvr osd spacing -->
-	<onload>RunScript(script.embuary.helper,action=getkodisetting,setting=locale.country)</onload>
+	<onload>RunScript(script.embuary.helper,action=getkodisetting,setting=locale.use24hourclock)</onload>
 
 	<controls>
 		<control type="button" id="20000">
