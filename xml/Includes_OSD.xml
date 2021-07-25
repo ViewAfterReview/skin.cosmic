@@ -103,7 +103,7 @@
                             <control type="label">
                                 <top>98</top>
                                 <include content="12hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
-                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
                                 <width>45%</width>
                                 <font>font27</font>
                                 <label>$INFO[VideoPlayer.NextTitle]</label>
