@@ -149,7 +149,7 @@
 		<param name="width">270</param>
 		<param name="height">70</param>
 		<param name="wrapmultiline">false</param>
-		<param name="font">font25_title</param>
+		<param name="font">font23_narrow</param>
 		<param name="onclick"></param>
 		<param name="visible">true</param>
 		<definition>
@@ -168,7 +168,7 @@
 				<include content="ButtonType">
 					<param name="alttexturefocus" value="true" />
 				</include>
-				<texturenofocus colordiffuse="1Fededed" border="5">common/box.png</texturenofocus>
+				<texturenofocus colordiffuse="dialog_tint" border="5">common/box.png</texturenofocus>
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>

@@ -115,7 +115,7 @@
 				<orientation>vertical</orientation>
 				<width>300</width>
 				<height>300</height>
-				<itemgap>-10</itemgap>
+				<itemgap>10</itemgap>
 				<onleft>5</onleft>
 				<onright>3</onright>
 				<include content="DefaultDialogButton">
