@@ -122,11 +122,11 @@
 	<include name="DefaultSettingLabel">
 		<left>0</left>
 		<top>0</top>
-		<height>75</height>
+		<height>80</height>
 		<label></label>
-		<align>center</align>
+		<!-- <align>center</align> -->
 		<aligny>center</aligny>
-		<font>font25_title</font>
+		<font>font23_narrow</font>
 		<textcolor>grey</textcolor>
 	</include>
 	<include name="SettingsItemCommon">

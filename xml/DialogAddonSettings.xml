@@ -14,18 +14,25 @@
 				<param name="header_label" value="" />
 				<param name="header_id" value="2" />
 			</include>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="3" />
+				<top>100</top>
+				<left>29</left>
+				<width>400</width>
+				<height>80</height>
+			</include>
 			<control type="grouplist" id="3">
 				<description>Categories Area</description>
 				<left>29</left>
 				<top>80</top>
 				<width>400</width>
-				<height>596</height>
-				<itemgap>-25</itemgap>
+				<height>600</height>
+				<itemgap>-40</itemgap>
 				<orientation>vertical</orientation>
 				<onleft>9000</onleft>
 				<onright>5</onright>
-				<onup>20</onup>
-				<ondown>20</ondown>
+				<onup>3</onup>
+				<ondown>3</ondown>
 			</control>
 			<control type="button" id="10">
 				<description>Default Category Button</description>
@@ -35,21 +42,30 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font25_title</font>
-				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+				<texturefocus />
+				<texturenofocus />
 			</control>
 			<control type="image">
 				<left>410</left>
 				<top>80</top>
 				<width>1100</width>
 				<height>740</height>
-				<texture border="40">buttons/dialogbutton-nofo.png</texture>
+				<!-- <texture border="40">buttons/dialogbutton-nofo.png</texture> -->
 			</control>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="5" />
+				<top>107</top>
+				<left>429</left>
+				<width>1060</width>
+				<height>70</height>
+				<visible>ControlGroup(5).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<left>429</left>
 				<top>100</top>
 				<width>1060</width>
-				<height>700</height>
+				<height>720</height>
 				<pagecontrol>60</pagecontrol>
 				<onleft>3</onleft>
 				<onright>60</onright>
@@ -69,44 +85,27 @@
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 				<textwidth>880</textwidth>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
-			<control type="image" id="11">
-				<description>separator image</description>
-				<height>3</height>
-				<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-			</control>
 			<control type="edit" id="12">
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 				<textwidth>700</textwidth>
 			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingLabel</include>
 			</control>
 			<control type="grouplist" id="9000">
