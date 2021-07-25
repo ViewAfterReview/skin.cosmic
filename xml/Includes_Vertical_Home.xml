@@ -178,7 +178,7 @@
                         <onright>3000</onright>
                         <align>left</align>
                         <font>font27_narrow</font>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[ColorHighlight]</textcolor>
                         <label>$LOCALIZE[31188]</label>
                         <onclick>ActivateWindow(LoginScreen.xml)</onclick>
                         <focusedcolor>pure_white</focusedcolor>
