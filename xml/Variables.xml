@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="BackgroundOverlay">
+		<!-- <value condition="Window.IsVisible(Home)"></value> -->
+		<value condition="!Window.IsVisible(Home) | Window.IsVisible(movieinformation)">37FFFFFF</value>
+	</variable>
+	<variable name="HighlightOverlay">
+		<value condition="!Window.IsVisible(Home)">$VAR[ColorHighlight]</value>
+	</variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>

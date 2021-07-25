@@ -1158,7 +1158,6 @@
 				<visible>Player.HasAudio + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Visualisation.Enabled</visible>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(Vertical_Main)</visible>
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 				<control type="group">
@@ -1172,19 +1171,34 @@
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<control type="multiimage">
-						<randomize>true</randomize>
-						<width>1920</width>
+					<control type="image" id="32111">
+						<include>FullScreenDimensions</include>
 						<aspectratio>scale</aspectratio>
-						<fadetime>600</fadetime>
-						<imagepath background="true">$VAR[MediaFanartVar]</imagepath>
+						<fadetime>400</fadetime>
+						<animation effect="fade" time="400">VisibleChange</animation>
+						<texture background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[MediaFanartVar]</texture>
+						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
+					</control>
+					<control type="image">
+						<left>-3</left>
+						<top>0</top>
+						<right>1193</right>
+						<height>100%</height>
+						<aspectratio aligny="center">scale</aspectratio>
+						<fadetime>400</fadetime>
+						<include>OpenClose_Left</include>
+						<animation effect="fade" time="400">VisibleChange</animation>
+						<texture background="true" colordiffuse="$VAR[HighlightOverlay]">$VAR[PosterVar]</texture>
+						<visible>!Control.IsVisible(32111)</visible>
 					</control>
 					<control type="multiimage">
-						<randomize>true</randomize>
+						<left>0</left>
+						<top>0</top>
 						<width>1920</width>
 						<height>1080</height>
-						<aspectratio>scale</aspectratio>
-						<fadetime>600</fadetime>
+						<aspectratio aligny="center">scale</aspectratio>
+						<fadetime>400</fadetime>
+						<animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
 						<visible>Window.IsVisible(Home)</visible>
 					</control>
