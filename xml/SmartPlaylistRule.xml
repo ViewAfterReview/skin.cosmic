@@ -21,6 +21,15 @@
 				<include>SettingsLabelCommon</include>
 				<label>$LOCALIZE[21422]</label>
 			</control>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="9001" />
+				<param name="height" value="100" />
+				<top>120</top>
+				<left>30</left>
+				<height>60</height>
+				<width>900</width>
+				<visible>ControlGroup(9001).HasFocus() + !ControlGroup(9002).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="9001">
 				<left>30</left>
 				<top>100</top>
@@ -44,12 +53,16 @@
 					<control type="edit" id="17">
 						<description>Value Button</description>
 						<width>600</width>
+						<height>60</height>
+						<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
 						<include>SettingsItemCommon</include>
 						<hinttext>$LOCALIZE[31103]</hinttext>
 					</control>
 					<control type="button" id="20">
 						<description>Browse Button</description>
 						<width>300</width>
+						<height>60</height>
+						<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
 						<include>SettingsItemCommon</include>
 						<align>center</align>
 						<label>$LOCALIZE[1024]</label>
