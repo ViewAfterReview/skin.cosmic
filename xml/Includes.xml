@@ -829,14 +829,32 @@
 					<texture colordiffuse="$VAR[ColorGradient]" border="5">common/header-bar-white-gradient.png</texture>
 				</control>
 			</control>
+			<control type="radiobutton">
+				<left>7</left>
+				<top>-7</top>
+				<width>80</width>
+				<height>80</height>
+				<radiowidth>80</radiowidth>
+				<radioheight>80</radioheight>
+				<texturefocus />
+				<texturenofocus />
+				<label></label>
+				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="EEFFFFFF">special://skin/extras/icons/kodi.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="EEFFFFFF">special://skin/extras/icons/kodi.png</textureradioonnofocus>
+				<onclick>Action(close)</onclick>
+				<visible>!Skin.HasSetting(touchmode)</visible>
+			</control>
 			<control type="label" id="$PARAM[header_id]">
-				<left>40</left>
+				<left>92</left>
 				<top>0</top>
 				<right>100</right>
 				<height>70</height>
 				<font>font32_title</font>
 				<label>$PARAM[header_label]</label>
 				<aligny>center</aligny>
+				<align>center</align>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="button" id="22002">
@@ -848,23 +866,6 @@
 				<texturefocus />
 				<texturenofocus />
 				<onclick>noop</onclick>
-			</control>
-			<control type="radiobutton">
-				<right>10</right>
-				<top>11</top>
-				<width>48</width>
-				<height>48</height>
-				<radiowidth>48</radiowidth>
-				<radioheight>48</radioheight>
-				<texturefocus />
-				<texturenofocus />
-				<label></label>
-				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="EEFFFFFF">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
-				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="EEFFFFFF">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
-				<onclick>Action(close)</onclick>
-				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>
 			<control type="button">
 				<right>10</right>
