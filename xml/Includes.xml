@@ -817,12 +817,17 @@
 				<bottom>0</bottom>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
-			<control type="image">
+			<control type="group">
 				<left>0</left>
 				<top>0</top>
 				<right>0</right>
 				<height>70</height>
-				<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorHighlight]" border="5">common/header-bar.png</texture>
+				</control>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorGradient]" border="5">common/header-bar-white-gradient.png</texture>
+				</control>
 			</control>
 			<control type="label" id="$PARAM[header_id]">
 				<left>40</left>

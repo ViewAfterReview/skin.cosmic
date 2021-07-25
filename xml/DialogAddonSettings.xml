@@ -31,8 +31,8 @@
 				<orientation>vertical</orientation>
 				<onleft>9000</onleft>
 				<onright>5</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
+				<onup>20</onup>
+				<ondown>20</ondown>
 			</control>
 			<control type="button" id="10">
 				<description>Default Category Button</description>
@@ -54,10 +54,10 @@
 			</control>
 			<include content="DefaultSettingButtonGradient">
 				<param name="id" value="5" />
-				<top>107</top>
+				<top>100</top>
 				<left>429</left>
 				<width>1060</width>
-				<height>70</height>
+				<height>80</height>
 				<visible>ControlGroup(5).HasFocus()</visible>
 			</include>
 			<control type="grouplist" id="5">
@@ -140,7 +140,6 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
-				<texturenofocus />
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
@@ -149,6 +148,8 @@
 				<onright>5</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus />
 				<textureradioonfocus>icons/settings.png</textureradioonfocus>
 				<textureradioonnofocus>icons/settings.png</textureradioonnofocus>
 				<textureradioofffocus>icons/settings.png</textureradioofffocus>
