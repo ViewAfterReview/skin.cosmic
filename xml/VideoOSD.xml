@@ -31,6 +31,7 @@
 				<height>50</height>
 				<label>$VAR[OSDHelpTextVar]</label>
 				<shadowcolor>black</shadowcolor>
+				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 			<include content="LiveTV_OSD" condition="VideoPlayer.Content(livetv)" />
 			<control type="group" id="200">
