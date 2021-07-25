@@ -45,78 +45,84 @@
                     </control>
 
                     <control type="group">
-                        <top>12</top>
+                        <top>18</top>
                         <left>523</left>
+                        <animation effect="slide" start="0" end="0,-26" time="200" condition="ControlGroup(201).HasFocus">Conditional</animation>
                         <control type="label">
+                            <top>15</top>
                             <left>100</left>
                             <width>59%</width>
                             <font>font32</font>
                             <label>$INFO[Player.Title]</label>
                         </control>
 
-                        <control type="image">
-                            <top>-8</top>
-                            <left>960</left>
-                            <width>192</width>
-                            <height>auto</height>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$INFO[Player.Icon]</texture>
+                        <control type="group">
+                            <left>30</left>
+                            <control type="label">
+                                <top>62</top>
+                                <left>68</left>
+                                <font>font27</font>
+                                <label>$INFO[VideoPlayer.StartTime]</label>
+                            </control>
+
+                            <control type="label">
+                                <top>62</top>
+                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
+                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <font>font27</font>
+                                <label>$INFO[VideoPlayer.EndTime, - ,]</label>
+                            </control>
+
+                            <control type="progress">
+                                <top>76</top>
+                                <include content="12hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
+                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <height>12</height>
+                                <width>200</width>
+                                <info>PVR.EpgEventProgress</info>
+                            </control>
+                        </control>
+
+                        <control type="group">
+                            <left>30</left>
+                            <control type="label">
+                                <top>98</top>
+                                <left>68</left>
+                                <font>font27</font>
+                                <label>$INFO[VideoPlayer.NextStartTime]</label>
+                            </control>
+
+                            <control type="label">
+                                <top>98</top>
+                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
+                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <font>font27</font>
+                                <label>$INFO[VideoPlayer.NextEndTime, - ,]</label>
+                            </control>
+
+                            <control type="label">
+                                <top>98</top>
+                                <include content="12hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
+                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),24h) | String.Contains(Window(home).Property(locale.country),Central Europe)"></include>
+                                <width>45%</width>
+                                <font>font27</font>
+                                <label>$INFO[VideoPlayer.NextTitle]</label>
+                            </control>
                         </control>
                     </control>
-
-                    <control type="group">
-                        <left>30</left>
-                        <control type="label">
-                            <top>62</top>
-                            <left>593</left>
-                            <font>font27</font>
-                            <label>$INFO[VideoPlayer.StartTime]</label>
-                        </control>
-
-                        <control type="label">
-                            <top>62</top>
-                            <left>658</left>
-                            <font>font27</font>
-                            <label>$INFO[VideoPlayer.EndTime, - ,]</label>
-                        </control>
-
-                        <control type="progress">
-                            <top>76</top>
-                            <left>758</left>
-                            <height>12</height>
-                            <width>200</width>
-                            <info>PVR.EpgEventProgress</info>
-                        </control>
-                    </control>
-
-                    <control type="group">
-                        <left>30</left>
-                        <control type="label">
-                            <top>98</top>
-                            <left>593</left>
-                            <font>font27</font>
-                            <label>$INFO[VideoPlayer.NextStartTime]</label>
-                        </control>
-
-                        <control type="label">
-                            <top>98</top>
-                            <left>658</left>
-                            <font>font27</font>
-                            <label>$INFO[VideoPlayer.NextEndTime, - ,]</label>
-                        </control>
-
-                        <control type="label">
-                            <top>98</top>
-                            <left>758</left>
-                            <width>35%</width>
-                            <font>font27</font>
-                            <label>$INFO[VideoPlayer.NextTitle]</label>
-                        </control>
+                    <control type="image">
+                        <top>-8</top>
+                        <right>260</right>
+                        <width>192</width>
+                        <height>auto</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Player.Icon]</texture>
                     </control>
                 </control>
 
                 <control type="group" id="200">
                     <include>Animation_BottomSlide</include>
+                    <animation effect="fade" start="0" end="100" time="400" condition="ControlGroup(201).HasFocus">Conditional</animation>
                     <control type="grouplist" id="201">
                         <top>40</top>
                         <width>100%</width>

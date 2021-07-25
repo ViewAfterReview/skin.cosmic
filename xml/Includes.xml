@@ -1746,4 +1746,20 @@
 			</control>
 		</definition>
 	</include>
+
+	<include name="12hrClockSpacing">
+		<left>183</left>
+	</include>
+
+	<include name="12hrClockSpacing2">
+		<left>333</left>
+	</include>
+
+	<include name="24hrClockSpacing">
+		<left>133</left>
+	</include>
+
+	<include name="24hrClockSpacing2">
+		<left>238</left>
+	</include>
 </includes>
