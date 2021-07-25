@@ -17,17 +17,25 @@
 		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="5" />
+				<param name="height" value="80" />
+				<top>133</top>
+				<bottom>137</bottom>
+				<height>80</height>
+				<left>470</left>
+				<visible>ControlGroup(5).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<top>133</top>
 				<left>470</left>
 				<pagecontrol>60</pagecontrol>
 				<right>0</right>
-				<bottom>137</bottom>
+				<height>800</height>
+				<itemgap>0</itemgap>
 				<onleft>3</onleft>
-				<onright>60</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
+				<usecontrolcoords>true</usecontrolcoords>
 			</control>
 			<control type="image">
 				<left>470</left>
@@ -62,21 +70,20 @@
 			<include>DefaultSettingButton</include>
 			<aligny>center</aligny>
 		</control>
-		<control type="image" id="11">
+		<!-- <control type="image" id="11">
 			<description>separator image</description>
-			<height>3</height>
+			<height>5</height>
 			<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		</control>
+		</control> -->
 		<control type="label" id="14">
 			<description>Default Label</description>
-			<width>1450</width>
-			<textoffsetx>45</textoffsetx>
+			<textoffsetx>90</textoffsetx>
 			<top>0</top>
-			<height>50</height>
+			<height>80</height>
 			<label></label>
-			<align>center</align>
+			<align>left</align>
 			<aligny>center</aligny>
-			<font>font25_title</font>
+			<font>font12</font>
 			<textcolor>grey</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
@@ -118,7 +125,7 @@
 				<texturenofocus />
 			</control>
 		</control>
-		<control type="group">
+		<!-- <control type="group">
 			<right>0</right>
 			<top>133</top>
 			<bottom>137</bottom>
@@ -139,7 +146,7 @@
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 				<hitrect x="0" y="0" w="60" h="100%" />
 			</control>
-		</control>
+		</control> -->
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
 		</include>
