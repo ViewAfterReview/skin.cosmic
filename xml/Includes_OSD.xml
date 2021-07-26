@@ -58,19 +58,12 @@
 
                         <control type="group">
                             <left>30</left>
+                            <width>31%</width>
                             <control type="label">
                                 <top>62</top>
                                 <left>68</left>
                                 <font>font27</font>
-                                <label>$INFO[VideoPlayer.StartTime]</label>
-                            </control>
-
-                            <control type="label">
-                                <top>62</top>
-                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
-                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
-                                <font>font27</font>
-                                <label>$INFO[VideoPlayer.EndTime, - ,]</label>
+                                <label>$INFO[VideoPlayer.StartTime]$INFO[VideoPlayer.EndTime, - ,]</label>
                             </control>
 
                             <include content="ProgressGradient">
@@ -79,6 +72,7 @@
                                 <top>76</top>
                                 <width>200</width>
                                 <height>12</height>
+                                <right>0</right>
                                 <info>PVR.EpgEventProgress</info>
                                 <include content="12hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
                                 <include content="24hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
@@ -87,27 +81,18 @@
 
                         <control type="group">
                             <left>30</left>
+                            <width>900</width>
                             <control type="label">
+                                <width>26%</width>
                                 <top>98</top>
                                 <left>68</left>
                                 <font>font27</font>
-                                <label>$INFO[VideoPlayer.NextStartTime]</label>
+                                <label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, - ,]</label>
                             </control>
-
                             <control type="label">
-                                <top>98</top>
-                                <include content="12hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
-                                <include content="24hrClockSpacing" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
-                                <font>font27</font>
-                                <label>$INFO[VideoPlayer.NextEndTime, - ,]</label>
-                            </control>
-
-                            <control type="label">
-                                <top>98</top>
-                                <include content="12hrClockSpacing2" condition="String.Contains(Window(home).property(locale.country),12h)"></include>
-                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
-                                <width>45%</width>
-                                <font>font27</font>
+                                <top>93</top>
+                                <left>26%</left>
+                                <width>74%</width>
                                 <label>$INFO[VideoPlayer.NextTitle]</label>
                             </control>
                         </control>
@@ -116,7 +101,7 @@
                         <top>0</top>
                         <right>240</right>
                         <width>192</width>
-                        <height>auto</height>
+                        <height>192</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[Player.Icon]</texture>
                     </control>
