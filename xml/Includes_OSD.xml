@@ -73,14 +73,16 @@
                                 <label>$INFO[VideoPlayer.EndTime, - ,]</label>
                             </control>
 
-                            <control type="progress">
+                            <include content="ProgressGradient">
+                                <param name="id" value="29999" />
+                                <param name="top" value="76" />
                                 <top>76</top>
+                                <width>200</width>
+                                <height>12</height>
+                                <info>PVR.EpgEventProgress</info>
                                 <include content="12hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
                                 <include content="24hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
-                                <height>12</height>
-                                <width>200</width>
-                                <info>PVR.EpgEventProgress</info>
-                            </control>
+                            </include>
                         </control>
 
                         <control type="group">
