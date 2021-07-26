@@ -285,12 +285,14 @@
 			<animation effect="slide" end="0,-20" time="150" condition="VideoPlayer.Content(LiveTV)">conditional</animation>
 			<top>20</top>
 			<height>380</height>
+
 			<control type="image">
-				<left>0</left>
-				<width>100%</width>
-				<height>240</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<left>-40</left>
+				<width>120%</width>
+				<height>380</height>
+				<texture flipy="false">frame/osdfade.png</texture>
 			</control>
+
 			<control type="image">
 				<left>20</left>
 				<top>20</top>
