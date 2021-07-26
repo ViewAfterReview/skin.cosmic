@@ -56,43 +56,46 @@
                             <label>$INFO[Player.Title]</label>
                         </control>
 
-                        <control type="group">
-                            <left>30</left>
-                            <width>31%</width>
+                        <control type="grouplist">
+                            <top>62</top>
+                            <left>99</left>
+                            <width>900</width>
+                            <itemgap>12</itemgap>
+                            <orientation>horizontal</orientation>
+                            <usecontrolcoords>true</usecontrolcoords>
                             <control type="label">
-                                <top>62</top>
-                                <left>68</left>
+                                <width>auto</width>
                                 <font>font27</font>
                                 <label>$INFO[VideoPlayer.StartTime]$INFO[VideoPlayer.EndTime, - ,]</label>
                             </control>
 
-                            <include content="ProgressGradient">
-                                <param name="id" value="29999" />
-                                <param name="top" value="76" />
-                                <top>76</top>
-                                <width>200</width>
-                                <height>12</height>
-                                <right>0</right>
-                                <info>PVR.EpgEventProgress</info>
-                                <include content="12hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),12h)"></include>
-                                <include content="24hrClockSpacing2" condition="String.Contains(Window(home).Property(locale.use24hourclock),24h)"></include>
-                            </include>
+                            <control type="group">
+                                <top>9</top>
+                                <width>480</width>
+                                <include content="ProgressGradient">
+                                    <param name="id" value="29999" />
+                                    <param name="top" value="0" />
+                                    <width>480</width>
+                                    <height>16</height>
+                                    <right>0</right>
+                                    <info>PVR.EpgEventProgress</info>
+                                </include>
+                            </control>
                         </control>
 
-                        <control type="group">
-                            <left>30</left>
+                        <control type="grouplist">
+                            <top>98</top>
+                            <left>99</left>
                             <width>900</width>
+                            <itemgap>12</itemgap>
+                            <orientation>horizontal</orientation>
                             <control type="label">
-                                <width>26%</width>
-                                <top>98</top>
-                                <left>68</left>
+                                <width>auto</width>
                                 <font>font27</font>
                                 <label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, - ,]</label>
                             </control>
                             <control type="label">
-                                <top>93</top>
-                                <left>26%</left>
-                                <width>74%</width>
+                                <font>font27</font>
                                 <label>$INFO[VideoPlayer.NextTitle]</label>
                             </control>
                         </control>
