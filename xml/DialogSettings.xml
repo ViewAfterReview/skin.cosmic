@@ -22,6 +22,14 @@
 				<height>790</height>
 				<texture border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
+			<include content="DefaultSettingButtonGradient">
+				<param name="id" value="5" />
+				<top>100</top>
+				<height>80</height>
+				<width>1160</width>
+				<left>29</left>
+				<visible>ControlGroup(5).HasFocus()</visible>
+			</include>
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<left>29</left>
@@ -36,36 +44,21 @@
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
-			<control type="image" id="11">
-				<description>separator image</description>
-				<height>3</height>
-				<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-			</control>
 			<control type="edit" id="12">
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>
-				<texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-				<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</alttexturefocus>
 				<include>DefaultSettingButton</include>
 				<textwidth>800</textwidth>
 			</control>
