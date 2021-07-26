@@ -70,7 +70,7 @@
                             </control>
 
                             <control type="group">
-                                <top>9</top>
+                                <top>11</top>
                                 <width>480</width>
                                 <include content="ProgressGradient">
                                     <param name="id" value="29999" />
