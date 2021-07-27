@@ -67,9 +67,20 @@
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                     </control>
                     <control type="label">
+                        <top>3</top>
+                        <width>auto</width>
+                        <label> | </label>
+                        <aligny>center</aligny>
+                        <textcolor>$VAR[ColorHighlight]</textcolor>
+                        <font>font37</font>
+                        <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+                        <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
+                        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                    </control>
+                    <control type="label">
                         <top>20</top>
                         <width>auto</width>
-                        <label>$INFO[Container($PARAM[id]).ListItem.ChannelName]$INFO[Container($PARAM[id]).ListItem.Title, - ,]$INFO[Container($PARAM[id]).ListItem.StartTime, - ,]$INFO[Container($PARAM[id]).ListItem.EndTime, - ,]</label>
+                        <label>$INFO[Container($PARAM[id]).ListItem.ChannelName]</label>
                         <aligny>center</aligny>
                         <textcolor>pure_white</textcolor>
                         <font>font27_bold</font>
@@ -77,6 +88,13 @@
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
                         <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                    </control>
+                    <control type="group">
+                        <include>SmallBusySpinner</include>
+                        <top>10</top>
+                        <left>18</left>
+                        <visible>Container($PARAM[id]).IsUpdating</visible>
+                        <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
                 </control>
             </control>
