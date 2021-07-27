@@ -24,7 +24,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture border="5" colordiffuse="dialog_tint">common/box.png</texture>
 			</control>
-			<control type="label" id="311">
+			<!-- <control type="label" id="311">
 				<description>Heading</description>
 				<left>30</left>
 				<right>30</right>
@@ -33,7 +33,7 @@
 				<align>center</align>
 				<font>font13</font>
 				<textcolor>FFededed</textcolor>
-			</control>
+			</control> -->
 			<control type="edit" id="312">
 				<description>Edit Text</description>
 				<left>10</left>
