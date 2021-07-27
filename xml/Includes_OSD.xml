@@ -103,6 +103,7 @@
                             </control>
                             <control type="label">
                                 <font>font27</font>
+                                <width>680</width>
                                 <label>$INFO[VideoPlayer.NextTitle]</label>
                             </control>
                         </control>
