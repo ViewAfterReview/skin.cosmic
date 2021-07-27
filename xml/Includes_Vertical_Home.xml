@@ -171,7 +171,7 @@
                     </control>
                     <control type="button" id="303">
                         <top>108</top>
-                        <left>100</left>
+                        <left>80</left>
                         <onup>noop</onup>
                         <ondown>9000</ondown>
                         <onleft>noop</onleft>
@@ -183,7 +183,6 @@
                         <onclick>ActivateWindow(LoginScreen.xml)</onclick>
                         <focusedcolor>pure_white</focusedcolor>
                         <texturefocus />
-                        <texturenofocus colordiffuse="pure_white" />
                         <visible>Control.IsVisible(9000)</visible>
                     </control>
                 </control>
