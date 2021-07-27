@@ -144,11 +144,11 @@
 				<onright>3</onright>
 				<include content="DefaultDialogButton">
 					<param name="id" value="5" />
-					<param name="label" value="" />
+					<param name="label" value="$LOCALIZE[21452]" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="8" />
-					<param name="label" value="" />
+					<param name="label" value="$LOCALIZE[186]" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="7" />

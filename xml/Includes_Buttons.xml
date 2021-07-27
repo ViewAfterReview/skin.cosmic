@@ -115,8 +115,8 @@
 			<aligny>center</aligny>
 			<invalidcolor>invalid</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
-			<texturefocus colordiffuse="$VAR[ColorHighlight]">lists/focus.png</texturefocus>
-			<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
+			<texturefocus />
+			<texturenofocus />
 		</definition>
 	</include>
 	<include name="DefaultSettingLabel">

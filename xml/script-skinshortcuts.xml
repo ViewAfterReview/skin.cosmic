@@ -27,12 +27,17 @@
                         <bottom>0</bottom>
                         <texture colordiffuse="dialog_tint">colors/white.png</texture>
                     </control>
-                    <control type="image">
+                    <control type="group">
                         <left>0</left>
                         <top>0</top>
                         <right>0</right>
                         <height>70</height>
-                        <texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+                        <control type="image">
+                            <texture colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texture>
+                        </control>
+                        <control type="image">
+                            <texture colordiffuse="$VAR[ColorGradient]" border="5">common/white-gradient-rounded.png</texture>
+                        </control>
                     </control>
                     <control type="label" id="500">
                         <left>40</left>
@@ -85,7 +90,10 @@
                 </itemlayout>
                 <focusedlayout width="550" height="70">
                     <control type="image">
-                        <texture border="5" colordiffuse="button_focus">common/white.png</texture>
+                        <texture colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texture>
+                    </control>
+                    <control type="image">
+                        <texture colordiffuse="$VAR[ColorGradient]" border="5">common/white-gradient-rounded.png</texture>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -93,7 +101,7 @@
                         <right>260</right>
                         <scroll>false</scroll>
                         <info>ListItem.Label</info>
-                        <textcolor>red</textcolor>
+                        <textcolor>pure_white</textcolor>
                         <animation effect="fade" start="100" end="50" condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">Conditional</animation>
                         <animation effect="slide" end="48" condition="!String.IsEqual(Window.Property(groupname),shutdown)">Conditional</animation>
                     </control>
@@ -135,34 +143,42 @@
                     <height>32</height>
                     <font/>
                     <texturenofocus>buttons/cross.png</texturenofocus>
-                    <texturefocus colordiffuse="red">buttons/cross.png</texturefocus>
+                    <texturefocus colordiffuse="ffe17055">buttons/cross.png</texturefocus>
                 </control>
                 <control type="button" id="301" description="Add">
                     <width>32</width>
                     <height>32</height>
                     <font/>
                     <texturenofocus>buttons/plus.png</texturenofocus>
-                    <texturefocus colordiffuse="red">buttons/plus.png</texturefocus>
+                    <texturefocus colordiffuse="ffe17055">buttons/plus.png</texturefocus>
                 </control>
                 <control type="button" id="303" description="Up">
                     <width>32</width>
                     <height>32</height>
                     <font/>
                     <texturenofocus flipy="true">buttons/down.png</texturenofocus>
-                    <texturefocus colordiffuse="red" flipy="true">buttons/down.png</texturefocus>
+                    <texturefocus colordiffuse="ffe17055" flipy="true">buttons/down.png</texturefocus>
                 </control>
                 <control type="button" id="304" description="Down">
                     <width>32</width>
                     <height>32</height>
                     <font/>
                     <texturenofocus>buttons/down.png</texturenofocus>
-                    <texturefocus colordiffuse="red">buttons/down.png</texturefocus>
+                    <texturefocus colordiffuse="ffe17055">buttons/down.png</texturefocus>
                 </control>
             </control>
 
             <control type="group">
                 <left>550</left>
                 <top>80</top>
+                <include content="DefaultSettingButtonGradient">
+                    <param name="id" value="9100" />
+                    <param name="height" value="70" />
+                    <top>0</top>
+                    <height>70</height>
+                    <right>0</right>
+                    <visible>ControlGroup(9100).HasFocus()</visible>
+                </include>
                 <control type="grouplist" id="9100">
                     <onleft>9200</onleft>
                     <onright>noop</onright>
