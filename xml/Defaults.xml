@@ -38,14 +38,16 @@
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="togglebutton">
-		<texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-		<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
-		<alttexturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</alttexturefocus>
-		<alttexturenofocus border="21">buttons/button-nofo.png</alttexturenofocus>
+		<selectedcolor>$VAR[ColorHighlight]</selectedcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<texturefocus colordiffuse="1F181818">common/white.png</texturefocus>
+		<texturenofocus/>
+		<alttexturefocus colordiffuse="1F181818">common/white.png</alttexturefocus>
+		<alttexturenofocus/>
+		<pulseonselect>false</pulseonselect>
 		<textcolor>white</textcolor>
 		<font>font13</font>
-		<disabledcolor>disabled</disabledcolor>
-		<pulseonselect>no</pulseonselect>
+		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="textbox">
 		<align>left</align>
