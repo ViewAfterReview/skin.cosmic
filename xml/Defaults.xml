@@ -27,8 +27,6 @@
 		<disabledcolor>disabled</disabledcolor>
 	</default>
 	<default type="button">
-		<align>center</align>
-		<aligny>center</aligny>
 		<font>font13</font>
 		<textoffsetx>30</textoffsetx>
 		<textcolor>white</textcolor>
