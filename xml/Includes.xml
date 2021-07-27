@@ -1895,4 +1895,64 @@
 			</control>
 		</definition>
 	</include>
+
+	<include name="DialogBusy">
+		<control type="group">
+			<depth>DepthMax</depth>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>80</width>
+			<height>80</height>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>80</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
+					<aspectratio>keep</aspectratio>
+					<animation effect="fade" condition="true" start="0" end="75" pulse="true" time="1000">Conditional</animation>
+				</control>
+			</control>
+			<control type="progress" id="10">
+				<include>HiddenObject</include>
+			</control>
+		</control>
+	</include>
+
+	<include name="MinimalDialogBusy">
+		<control type="group">
+			<depth>DepthMax</depth>
+			<bottom>20</bottom>
+			<left>20</left>
+			<width>80</width>
+			<height>80</height>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>80</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
+					<aspectratio>keep</aspectratio>
+					<animation effect="fade" condition="true" start="0" end="75" pulse="true" time="1000">Conditional</animation>
+				</control>
+			</control>
+			<control type="progress" id="10">
+				<include>HiddenObject</include>
+			</control>
+		</control>
+	</include>
 </includes>

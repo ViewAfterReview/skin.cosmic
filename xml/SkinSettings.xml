@@ -271,6 +271,13 @@
 						<onclick>Skin.ToggleSetting(KenBurnsEffect)</onclick>
 						<selected>Skin.HasSetting(KenBurnsEffect)</selected>
 					</control>
+
+					<control type="radiobutton" id="709" description="Minimize loading spinner">
+						<label>$LOCALIZE[31249]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(MinimalDialogBusy)</onclick>
+						<selected>Skin.HasSetting(MinimalDialogBusy)</selected>
+					</control>
 				</control>
 			</control>
 			<control type="group">
