@@ -89,7 +89,7 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<left>880</left>
-				<top>147</top>
+				<top>167</top>
 				<orientation>vertical</orientation>
 				<onleft>10</onleft>
 				<onright>10</onright>
