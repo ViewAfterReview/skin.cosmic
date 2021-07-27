@@ -311,7 +311,7 @@
 			</control>
 			<control type="group">
 				<visible>VideoPlayer.HasEPG</visible>
-				<control type="progress">
+				<!-- <control type="progress">
 					<left>0</left>
 					<top>$PARAM[epg_bar_top]</top>
 					<width>100%</width>
@@ -320,8 +320,19 @@
 					<info>PVR.TimeshiftProgressPlayPos</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
-				</control>
-				<control type="progress">
+				</control> -->
+				<include content="ProgressGradient">
+					<param name="id" value="498" />
+					<param name="top" value="55" />
+					<left>0</left>
+					<top>55</top>
+					<width>100%</width>
+					<height>16</height>
+					<height>$PARAM[epg_bar_height]</height>
+					<info2>PVR.TimeshiftProgressEpgStart</info2>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+				</include>
+				<!-- <control type="progress">
 					<left>0</left>
 					<top>$PARAM[epg_bar_top]</top>
 					<width>100%</width>
@@ -330,9 +341,20 @@
 					<info>PVR.TimeshiftProgressEpgEnd</info>
 					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
 					<midtexture>colors/white50.png</midtexture>
-				</control>
+				</control> -->
+				<!-- <include content="ProgressGradient">
+					<param name="id" value="498" />
+					<param name="top" value="55" />
+					<left>0</left>
+					<top>55</top>
+					<width>100%</width>
+					<height>16</height>
+					<height>$PARAM[epg_bar_height]</height>
+					<info2>PVR.TimeshiftProgressPlayPos</info2>
+					<info>PVR.TimeshiftProgressEpgEnd</info>
+				</include> -->
 			</control>
-			<control type="progress">
+			<!-- <control type="progress">
 				<left>0</left>
 				<top>$PARAM[ts_bar_top]</top>
 				<width>100%</width>
@@ -342,12 +364,24 @@
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 				<midtexture>colors/white70.png</midtexture>
 				<visible>Player.SeekEnabled</visible>
-			</control>
+			</control> -->
+			<include content="ProgressGradient">
+				<param name="id" value="498" />
+				<param name="top" value="55" />
+				<left>0</left>
+				<top>55</top>
+				<width>100%</width>
+				<height>16</height>
+				<height>$PARAM[ts_bar_height]</height>
+				<info2>PVR.TimeshiftProgressBufferStart</info2>
+				<info>PVR.TimeshiftProgressBufferEnd</info>
+				<visible>Player.SeekEnabled</visible>
+			</include>
 		</control>
 		<control type="group">
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Player.ChannelPreviewActive</visible>
-			<control type="progress">
+			<!-- <control type="progress">
 				<left>0</left>
 				<top>70</top>
 				<width>100%</width>
@@ -355,7 +389,16 @@
 				<info>PVR.EpgEventProgress</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
-			</control>
+			</control> -->
+			<include content="ProgressGradient">
+				<param name="id" value="498" />
+				<param name="top" value="70" />
+				<left>0</left>
+				<top>70</top>
+				<width>100%</width>
+				<height>16</height>
+				<info>PVR.EpgEventProgress</info>
+			</include>
 		</control>
 	</include>
 	<include name="PVRInfoPanel">
