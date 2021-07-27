@@ -168,7 +168,7 @@
 				<include content="ButtonType">
 					<param name="alttexturefocus" value="true" />
 				</include>
-				<texturenofocus colordiffuse="dialog_tint" border="5">common/box.png</texturenofocus>
+				<texturenofocus colordiffuse="FF131313" border="5">common/box.png</texturenofocus>
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>
