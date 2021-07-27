@@ -259,6 +259,13 @@
 						<onclick>Skin.ToggleSetting(EnableMonochromeHighlight)</onclick>
 						<selected>Skin.HasSetting(EnableMonochromeHighlight)</selected>
 					</control>
+
+					<control type="radiobutton" id="708" description="Animate background using Ken Burns Effect">
+						<label>$LOCALIZE[31247]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(KenBurnsEffect)</onclick>
+						<selected>Skin.HasSetting(KenBurnsEffect)</selected>
+					</control>
 				</control>
 			</control>
 			<control type="group">

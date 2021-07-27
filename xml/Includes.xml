@@ -1184,6 +1184,8 @@
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[MediaFanartVar]</texture>
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
+						<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+						<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
 					</control>
 					<control type="image">
 						<left>-3</left>
