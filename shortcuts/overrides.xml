@@ -21,40 +21,40 @@
     <propertySettings property="widgetTarget" buttonID="9902" title="Widget Content Type" />
 
     <!-- Widget Sort -->
-    <property property="widgetSortby">name</property>
-    <property property="widgetSortby">random</property>
-    <property property="widgetSortby">dateadded</property>
-    <property property="widgetSortby">lastplayed</property>
-    <property property="widgetSortby">playcount</property>
-    <property property="widgetSortby">year</property>
-    <property property="widgetSortby">rating</property>
-    <property property="widgetSortby">userrating</property>
-    <property property="widgetSortby">votes</property>
-    <property property="widgetSortby">genre</property>
-    <property property="widgetSortby">country</property>
-    <property property="widgetSortby">studio</property>
-    <property property="widgetSortby">playlistorder</property>
-    <property property="widgetSortby">episodenumber</property>
-    <property property="widgetSortby">season</property>
-    <property property="widgetSortby">numberofepisodes</property>
-    <property property="widgetSortby">numberofwatchedepisodes</property>
-    <property property="widgetSortby">tvshowstatus</property>
-    <property property="widgetSortby">tvshowtitle</property>
-    <property property="widgetSortby">file</property>
-    <property property="widgetSortby">title</property>
-    <property property="widgetSortby">tracknumber</property>
-    <property property="widgetSortby">time</property>
-    <property property="widgetSortby">artist</property>
-    <property property="widgetSortby">album</property>
-    <property property="widgetSortby">lastupdated</property>
-    <property property="widgetSortby">lastused</property>
-    
-    <propertySettings property="widgetSortby" buttonID="502" title="Widget Sort Method" />
+    <property property="widgetSortBy">name</property>
+    <property property="widgetSortBy">random</property>
+    <property property="widgetSortBy">dateadded</property>
+    <property property="widgetSortBy">lastplayed</property>
+    <property property="widgetSortBy">playcount</property>
+    <property property="widgetSortBy">year</property>
+    <property property="widgetSortBy">rating</property>
+    <property property="widgetSortBy">userrating</property>
+    <property property="widgetSortBy">votes</property>
+    <property property="widgetSortBy">genre</property>
+    <property property="widgetSortBy">country</property>
+    <property property="widgetSortBy">studio</property>
+    <property property="widgetSortBy">playlistorder</property>
+    <property property="widgetSortBy">episodenumber</property>
+    <property property="widgetSortBy">season</property>
+    <property property="widgetSortBy">numberofepisodes</property>
+    <property property="widgetSortBy">numberofwatchedepisodes</property>
+    <property property="widgetSortBy">tvshowstatus</property>
+    <property property="widgetSortBy">tvshowtitle</property>
+    <property property="widgetSortBy">file</property>
+    <property property="widgetSortBy">title</property>
+    <property property="widgetSortBy">tracknumber</property>
+    <property property="widgetSortBy">time</property>
+    <property property="widgetSortBy">artist</property>
+    <property property="widgetSortBy">album</property>
+    <property property="widgetSortBy">lastupdated</property>
+    <property property="widgetSortBy">lastused</property>
+
+    <propertySettings property="widgetSortBy" buttonID="502" title="Widget Sort Method" />
 
     <!-- Widget Direction -->
-    <property property="widgetSortorder">ascending</property>
-    <property property="widgetSortorder">descending</property>
-    <propertySettings property="widgetSortorder" buttonID="503" title="Widget Sort Direction" />
+    <property property="widgetSortDirection">ascending</property>
+    <property property="widgetSortDirection">descending</property>
+    <propertySettings property="widgetSortDirection" buttonID="503" title="Widget Sort Direction" />
 
     <!-- Widget Limit -->
     <property property="widgetLimit" label="10 ">$NUMBER[10]</property>
@@ -277,7 +277,7 @@
                 <shortcut widget="UnwatchedEpisodes" label="$LOCALIZE[31230]" icon="DefaultTVShows.png" widgetTarget="video">special://skin/playlists/unwatched_episodes.xsp.xsp</shortcut>
                 <shortcut widget="InProgressEpisodes" label="$LOCALIZE[31231]" icon="special://skin/extras/icons/timer.png" widgetTarget="video">special://skin/playlists/inprogress_episodes.xsp.xsp</shortcut>
                 <shortcut widget="TopRatedEpisodes" label="$LOCALIZE[31232]" icon="DefaultMusicTop100Albums.png" widgetTarget="video">special://skin/playlists/toprated_episodes.xsp.xsp</shortcut>
-                
+
             </node>
             <node label="$LOCALIZE[249]">
                 <shortcut widget="NewAlbums" label="$LOCALIZE[31233]" icon="DefaultMusicRecentlyAdded.png" widgetTarget="music">musicdb://recentlyaddedalbums/</shortcut>
