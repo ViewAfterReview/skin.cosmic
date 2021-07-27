@@ -202,6 +202,11 @@
 					<pagecontrol>60</pagecontrol>
 					<ondown>610</ondown>
 					<visible>Container(9000).HasFocus(2)</visible>
+					<control type="button" id="620" description="Debugging">
+						<label>$LOCALIZE[31248]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleDebug()</onclick>
+					</control>
 					<control type="button" id="621">
 						<label>$LOCALIZE[31174]</label>
 						<include>DefaultSettingButton</include>
