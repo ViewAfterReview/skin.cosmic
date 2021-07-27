@@ -47,7 +47,6 @@
 		<pulseonselect>false</pulseonselect>
 		<textcolor>white</textcolor>
 		<font>font13</font>
-		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="textbox">
 		<align>left</align>
