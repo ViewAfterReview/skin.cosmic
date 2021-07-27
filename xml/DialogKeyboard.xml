@@ -13,7 +13,7 @@
 			<height>522</height>
 			<width>1530</width>
 			<control type="image">
-				<texture border="16" colordiffuse="background">common/dialog.png</texture>
+				<texture border="16" colordiffuse="dialog_tint">common/dialog.png</texture>
 			</control>
 
 			<control type="image">
@@ -22,7 +22,7 @@
 				<right>10</right>
 				<height>75</height>
 				<aspectratio>stretch</aspectratio>
-				<texture border="5" colordiffuse="background">common/box.png</texture>
+				<texture border="5" colordiffuse="dialog_tint">common/box.png</texture>
 			</control>
 			<control type="label" id="311">
 				<description>Heading</description>
