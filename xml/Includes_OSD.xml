@@ -538,7 +538,7 @@
                     <onright condition="!Player.Paused">StepForward</onright>
                     <onright condition="Player.Paused">PlayerControl(FrameAdvance(1))</onright>
                 </control>
-                <control type="slider">
+                <!-- <control type="slider">
                     <top>-5</top>
                     <left>0</left>
                     <width>100%</width>
@@ -551,8 +551,8 @@
                     <ondown>200</ondown>
                     <action>seek</action>
                     <visible>!Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-                </control>
-                <control type="slider">
+                </control> -->
+                <!-- <control type="slider">
                     <top>-5</top>
                     <left>0</left>
                     <width>100%</width>
@@ -565,8 +565,8 @@
                     <ondown>200</ondown>
                     <action>seek</action>
                     <visible>Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-                </control>
-                <control type="slider">
+                </control> -->
+                <!-- <control type="slider">
                     <top>-5</top>
                     <left>0</left>
                     <width>100%</width>
@@ -579,8 +579,8 @@
                     <ondown>200</ondown>
                     <action>pvr.seek</action>
                     <visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-                </control>
-                <control type="slider">
+                </control> -->
+                <!-- <control type="slider">
                     <top>-5</top>
                     <left>0</left>
                     <width>100%</width>
@@ -593,7 +593,7 @@
                     <ondown>200</ondown>
                     <action>pvr.seek</action>
                     <visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-                </control>
+                </control> -->
             </control>
         </definition>
     </include>

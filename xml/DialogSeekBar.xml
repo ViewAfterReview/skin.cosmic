@@ -244,7 +244,7 @@
 						<param name="id" value="400" />
 					</include>
 				</control>
-				<control type="slider" id="401">
+				<!-- <control type="slider" id="401">
 					<left>0</left>
 					<top>65</top>
 					<width>100%</width>
@@ -253,7 +253,7 @@
 					<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled</visible>
-				</control>
+				</control> -->
 			</control>
 			<control type="ranges">
 				<left>0</left>
