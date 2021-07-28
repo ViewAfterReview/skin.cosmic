@@ -316,26 +316,75 @@
 
     <include name="Video_OSD">
         <definition>
-            <control type="image">
-                <height>400</height>
-                <bottom>0</bottom>
-                <texture>common/dim-osd.png</texture>
-            </control>
             <control type="group" id="200">
                 <include>Animation_BottomSlide</include>
                 <visible>!VideoPlayer.Content(livetv)</visible>
+                <control type="grouplist" id="199">
+                    <left>260</left>
+                    <top>90</top>
+                    <width>1800</width>
+                    <height>135</height>
+                    <!-- <align>right</align> -->
+                    <itemgap>10</itemgap>
+                    <scrolltime tween="sine">200</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <onup>87</onup>
+                    <ondown condition="Control.HasFocus(70043)">11104</ondown>
+                    <ondown condition="Control.HasFocus(704)">12104</ondown>
+                    <ondown condition="Control.HasFocus(255)">13103</ondown>
+                    <onleft>202</onleft>
+                    <onright>600</onright>
+                    <control type="radiobutton" id="804">
+                        <include content="OSDButton">
+                            <param name="texture" value="osd/fullscreen/buttons/home.png"/>
+                        </include>
+                        <onclick>PlayerControl(ShowVideoMenu)</onclick>
+                        <visible>VideoPlayer.HasMenu</visible>
+                    </control>
+                    <control type="radiobutton" id="70040">
+                        <include content="OSDButton">
+                            <param name="texture" value="osd/fullscreen/buttons/channels.png"/>
+                        </include>
+                        <onclick>Dialog.Close(VideoOSD)</onclick>
+                        <onclick>ActivateWindow(PVROSDChannels)</onclick>
+                        <visible>VideoPlayer.Content(livetv)</visible>
+                    </control>
+                    <control type="radiobutton" id="70041">
+                        <include content="OSDButton">
+                            <param name="texture" value="osd/fullscreen/buttons/guide.png"/>
+                        </include>
+                        <onclick>Dialog.Close(VideoOSD)</onclick>
+                        <onclick>ActivateWindow(pvrchannelguide)</onclick>
+                        <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
+                    </control>
+                    <control type="radiobutton" id="70042">
+                        <include content="OSDButton">
+                            <param name="texture" value="osd/fullscreen/buttons/playlist.png"/>
+                        </include>
+                        <onclick>Dialog.Close(all, true)</onclick>
+                        <onclick>ActivateWindow(videoplaylist)</onclick>
+                        <visible>Integer.IsGreater(Playlist.Length(video),1)</visible>
+                    </control>
+                    <control type="radiobutton" id="70043">
+                        <include content="OSDButton">
+                            <param name="texture" value="osd/fullscreen/buttons/information.png"/>
+                        </include>
+                        <onclick>Info</onclick>
+                    </control>
+                </control>
                 <control type="grouplist" id="201">
                     <left>20</left>
                     <top>90</top>
                     <width>100%</width>
                     <height>135</height>
                     <itemgap>10</itemgap>
+                    <align>center</align>
                     <scrolltime tween="sine">200</scrolltime>
                     <orientation>horizontal</orientation>
                     <onup>87</onup>
                     <ondown>noop</ondown>
-                    <onleft>70048</onleft>
-                    <onright>804</onright>
+                    <onleft>199</onleft>
+                    <onright>202</onright>
                     <control type="radiobutton" id="600">
                         <include content="OSDButton">
                             <param name="texture" value="osd/fullscreen/buttons/previous.png"/>
@@ -361,7 +410,7 @@
                             <height>74</height>
                             <label></label>
                             <font></font>
-                            <texturefocus colordiffuse="button_focus">osd/fullscreen/buttons/button-fo.png</texturefocus>
+                            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/fullscreen/buttons/button-fo.png</texturefocus>
                             <texturenofocus />
                             <onleft>601</onleft>
                             <onright>603</onright>
@@ -419,8 +468,9 @@
                         <visible>VideoPlayer.Content(livetv)</visible>
                     </control>
                 </control>
+
                 <control type="grouplist" id="202">
-                    <right>20</right>
+                    <right>260</right>
                     <top>90</top>
                     <width>1800</width>
                     <height>135</height>
@@ -433,44 +483,7 @@
                     <ondown condition="Control.HasFocus(704)">12104</ondown>
                     <ondown condition="Control.HasFocus(255)">13103</ondown>
                     <onleft>608</onleft>
-                    <onright>600</onright>
-                    <control type="radiobutton" id="804">
-                        <include content="OSDButton">
-                            <param name="texture" value="osd/fullscreen/buttons/home.png"/>
-                        </include>
-                        <onclick>PlayerControl(ShowVideoMenu)</onclick>
-                        <visible>VideoPlayer.HasMenu</visible>
-                    </control>
-                    <control type="radiobutton" id="70040">
-                        <include content="OSDButton">
-                            <param name="texture" value="osd/fullscreen/buttons/channels.png"/>
-                        </include>
-                        <onclick>Dialog.Close(VideoOSD)</onclick>
-                        <onclick>ActivateWindow(PVROSDChannels)</onclick>
-                        <visible>VideoPlayer.Content(livetv)</visible>
-                    </control>
-                    <control type="radiobutton" id="70041">
-                        <include content="OSDButton">
-                            <param name="texture" value="osd/fullscreen/buttons/guide.png"/>
-                        </include>
-                        <onclick>Dialog.Close(VideoOSD)</onclick>
-                        <onclick>ActivateWindow(pvrchannelguide)</onclick>
-                        <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
-                    </control>
-                    <control type="radiobutton" id="70042">
-                        <include content="OSDButton">
-                            <param name="texture" value="osd/fullscreen/buttons/playlist.png"/>
-                        </include>
-                        <onclick>Dialog.Close(all, true)</onclick>
-                        <onclick>ActivateWindow(videoplaylist)</onclick>
-                        <visible>Integer.IsGreater(Playlist.Length(video),1)</visible>
-                    </control>
-                    <control type="radiobutton" id="70043">
-                        <include content="OSDButton">
-                            <param name="texture" value="osd/fullscreen/buttons/information.png"/>
-                        </include>
-                        <onclick>Info</onclick>
-                    </control>
+                    <onright>199</onright>
                     <control type="radiobutton" id="70044">
                         <include content="OSDButton">
                             <param name="texture" value="osd/fullscreen/buttons/bookmarks.png"/>
@@ -538,62 +551,6 @@
                     <onright condition="!Player.Paused">StepForward</onright>
                     <onright condition="Player.Paused">PlayerControl(FrameAdvance(1))</onright>
                 </control>
-                <!-- <control type="slider">
-                    <top>-5</top>
-                    <left>0</left>
-                    <width>100%</width>
-                    <height>26</height>
-                    <texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-                    <textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-                    <textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
-                    <info>Player.Progress</info>
-                    <onup>200</onup>
-                    <ondown>200</ondown>
-                    <action>seek</action>
-                    <visible>!Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-                </control> -->
-                <!-- <control type="slider">
-                    <top>-5</top>
-                    <left>0</left>
-                    <width>100%</width>
-                    <height>26</height>
-                    <texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-                    <textureslidernib colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernib>
-                    <textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
-                    <info>Player.Progress</info>
-                    <onup>200</onup>
-                    <ondown>200</ondown>
-                    <action>seek</action>
-                    <visible>Control.HasFocus(87) + !VideoPlayer.Content(LiveTV)</visible>
-                </control> -->
-                <!-- <control type="slider">
-                    <top>-5</top>
-                    <left>0</left>
-                    <width>100%</width>
-                    <height>26</height>
-                    <texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-                    <textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-                    <textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
-                    <info>PVR.TimeshiftProgressPlayPos</info>
-                    <onup>200</onup>
-                    <ondown>200</ondown>
-                    <action>pvr.seek</action>
-                    <visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-                </control> -->
-                <!-- <control type="slider">
-                    <top>-5</top>
-                    <left>0</left>
-                    <width>100%</width>
-                    <height>26</height>
-                    <texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-                    <textureslidernib colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernib>
-                    <textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
-                    <info>PVR.TimeshiftProgressPlayPos</info>
-                    <onup>200</onup>
-                    <ondown>200</ondown>
-                    <action>pvr.seek</action>
-                    <visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
-                </control> -->
             </control>
         </definition>
     </include>
