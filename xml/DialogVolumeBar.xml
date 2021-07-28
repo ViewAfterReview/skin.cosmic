@@ -46,14 +46,6 @@
 				<textcolor>$VAR[ColorHighlight]</textcolor>
 				<label>$INFO[Control.GetLabel(29999)]</label>
 			</control>
-			<control type="image">
-				<left>12</left>
-				<top>5</top>
-				<width>88</width>
-				<height>88</height>
-				<texture>osd/buffer-bg.png</texture>
-				<visible>Window.IsActive(fullscreenvideo) | Window.IsActive(FullscreenGame) | Window.IsActive(slideshow)</visible>
-			</control>
 		</control>
 	</controls>
 </window>
