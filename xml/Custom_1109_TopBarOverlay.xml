@@ -159,6 +159,17 @@
 				<righttexture>colors/white.png</righttexture>
 				<info>Player.Chapters</info>
 			</control>
+			<control type="label" id="40000">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>50%</width>
+				<height>1080</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$VAR[SeekLabel]</label>
+				<font>WeatherTemp</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
 		</control>
 		<control type="group">
 			<visible>!VideoPlayer.Content(livetv)</visible>

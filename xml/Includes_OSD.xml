@@ -329,7 +329,7 @@
                     <scrolltime tween="sine">200</scrolltime>
                     <orientation>horizontal</orientation>
                     <onup>87</onup>
-                    <ondown condition="Control.HasFocus(70043)">11104</ondown>
+                    <!-- <ondown condition="Control.HasFocus(70043)">11104</ondown> -->
                     <ondown condition="Control.HasFocus(704)">12104</ondown>
                     <ondown condition="Control.HasFocus(255)">13103</ondown>
                     <onleft>202</onleft>
@@ -365,12 +365,12 @@
                         <onclick>ActivateWindow(videoplaylist)</onclick>
                         <visible>Integer.IsGreater(Playlist.Length(video),1)</visible>
                     </control>
-                    <control type="radiobutton" id="70043">
+                    <!-- <control type="radiobutton" id="70043">
                         <include content="OSDButton">
                             <param name="texture" value="osd/fullscreen/buttons/information.png"/>
                         </include>
                         <onclick>Info</onclick>
-                    </control>
+                    </control> -->
                 </control>
                 <control type="grouplist" id="201">
                     <left>20</left>
@@ -479,7 +479,7 @@
                     <scrolltime tween="sine">200</scrolltime>
                     <orientation>horizontal</orientation>
                     <onup>87</onup>
-                    <ondown condition="Control.HasFocus(70043)">11104</ondown>
+                    <!-- <ondown condition="Control.HasFocus(70043)">11104</ondown> -->
                     <ondown condition="Control.HasFocus(704)">12104</ondown>
                     <ondown condition="Control.HasFocus(255)">13103</ondown>
                     <onleft>608</onleft>
