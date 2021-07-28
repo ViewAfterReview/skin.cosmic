@@ -184,7 +184,7 @@
 					<width>270</width>
 					<height>382.5</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Player.Art(poster)]</texture>
+					<texture>$VAR[SeekbarPoster]</texture>
 				</control>
 				<control type="label">
 					<left>380</left>
