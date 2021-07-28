@@ -175,6 +175,35 @@
 				<font>WeatherTemp</font>
 				<shadowcolor>black</shadowcolor>
 			</control>
+
+			<control type="group">
+				<control type="image">
+					<left>60</left>
+					<top>-400</top>
+					<width>270</width>
+					<height>382.5</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Player.Art(poster)]</texture>
+				</control>
+				<control type="label">
+					<left>380</left>
+					<top>-260</top>
+					<right>20</right>
+					<height>160</height>
+					<font>font52_title</font>
+					<label>$INFO[Player.Title]</label>
+				</control>
+				<control type="textbox">
+					<left>380</left>
+					<top>-180</top>
+					<right>20</right>
+					<height>160</height>
+					<label fallback="19055">$INFO[VideoPlayer.Plot]</label>
+					<align>justify</align>
+					<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
+				</control>
+			</control>
+
 			<control type="group">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 				<control type="group">
@@ -300,7 +329,7 @@
 				<texture flipy="false">frame/osdfade.png</texture>
 			</control>
 
-			<control type="image">
+			<!-- <control type="image">
 				<left>20</left>
 				<top>20</top>
 				<width>200</width>
@@ -317,7 +346,7 @@
 				<align>justify</align>
 				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 				<visible>String.IsEmpty(PVR.EpgEventIcon)</visible>
-			</control>
+			</control> -->
 			<control type="textbox">
 				<left>240</left>
 				<top>10</top>
