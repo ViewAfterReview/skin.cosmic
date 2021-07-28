@@ -10,13 +10,21 @@
 			<height>700</height>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="600" />
-				<param name="height" value="80" />
+				<!-- <param name="height" value="80" /> -->
 				<param name="header_label" value="$LOCALIZE[5]" />
 				<param name="header_id" value="" />
 			</include>
 			<control type="group">
 				<left>0</left>
 				<top>80</top>
+				<include content="DefaultSettingButtonGradient">
+					<param name="id" value="5000" />
+					<param name="height" value="70" />
+					<top>0</top>
+					<height>70</height>
+					<right>0</right>
+					<visible>ControlGroup(5000).HasFocus()</visible>
+				</include>
 				<control type="grouplist" id="5000">
 					<width>600</width>
 					<height>700</height>
