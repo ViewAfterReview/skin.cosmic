@@ -164,7 +164,7 @@
 				<shadowcolor>black</shadowcolor>
 				<visible>!Player.ChannelPreviewActive | VideoPlayer.HasEpg</visible>
 			</control>
-			<control type="label" id="40000">
+			<!-- <control type="label" id="40000">
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
 				<width>50%</width>
@@ -174,7 +174,7 @@
 				<label>$VAR[SeekLabel]</label>
 				<font>WeatherTemp</font>
 				<shadowcolor>black</shadowcolor>
-			</control>
+			</control> -->
 
 			<control type="group">
 				<control type="image">
