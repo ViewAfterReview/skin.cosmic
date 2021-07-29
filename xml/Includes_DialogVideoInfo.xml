@@ -6,8 +6,15 @@
             <control type="grouplist" id="100">
                 <!-- <height>9999</height> -->
 
-                <control type="list" id="10051">
-                    <height>500</height>
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="11051" />
+                    <param name="id" value="50" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Cast" />
+                    <visible>Control.IsVisible(50)</visible>
+                </include>
+                <control type="list" id="50">
+                    <height>480</height>
                     <orientation>horizontal</orientation>
                     <itemlayout width="260" height="400">
                         <include content="InfoDialogItemLayout">
@@ -23,11 +30,19 @@
                             <param name="label2" value="$INFO[ListItem.Label2]" />
                         </include>
                     </focusedlayout>
-                    <content target="videos">$VAR[Def_Cast_List]</content>
+                    <!-- <content target="videos">$VAR[Def_Cast_List]</content> -->
                 </control>
 
+
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="11052" />
+                    <param name="id" value="10052" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Sets" />
+                    <visible>Control.IsVisible(10052)</visible>
+                </include>
                 <control type="list" id="10052">
-                    <height>500</height>
+                    <height>480</height>
                     <orientation>horizontal</orientation>
                     <itemlayout width="260" height="400">
                         <include content="InfoDialogItemLayout">
@@ -46,8 +61,16 @@
                     <content target="videos">$VAR[Def_Set_List]</content>
                 </control>
 
+
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="11053" />
+                    <param name="id" value="10053" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Similar" />
+                    <visible>Control.IsVisible(10053)</visible>
+                </include>
                 <control type="list" id="10053">
-                    <height>500</height>
+                    <height>480</height>
                     <orientation>horizontal</orientation>
                     <itemlayout width="260" height="400">
                         <include content="InfoDialogItemLayout">
@@ -66,8 +89,16 @@
                     <content target="videos">$VAR[Def_Similar_List]</content>
                 </control>
 
+
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="11054" />
+                    <param name="id" value="10054" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Director" />
+                    <visible>Control.IsVisible(10054)</visible>
+                </include>
                 <control type="list" id="10054">
-                    <height>500</height>
+                    <height>480</height>
                     <orientation>horizontal</orientation>
                     <itemlayout width="260" height="400">
                         <include content="InfoDialogItemLayout">
@@ -86,8 +117,15 @@
                     <content target="videos">$VAR[Def_Director_List]</content>
                 </control>
 
-                <control type="list" id="10054">
-                    <height>500</height>
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="11055" />
+                    <param name="id" value="10055" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Studio" />
+                    <visible>Control.IsVisible(10055)</visible>
+                </include>
+                <control type="list" id="10055">
+                    <height>480</height>
                     <orientation>horizontal</orientation>
                     <itemlayout width="260" height="400">
                         <include content="InfoDialogItemLayout">
