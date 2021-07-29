@@ -9,7 +9,6 @@
 			<!-- <height>2000</height> -->
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
 
 			<include>DialogVideoInfo</include>
 		</control>

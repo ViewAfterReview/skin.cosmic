@@ -6,7 +6,107 @@
             <control type="grouplist" id="100">
                 <!-- <height>9999</height> -->
 
-                <include content="InfoDialogPoster">
+                <control type="list" id="10051">
+                    <height>500</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="260" height="400">
+                        <include content="InfoDialogItemLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="260" height="400">
+                        <include content="InfoDialogFocusedLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </focusedlayout>
+                    <content target="videos">$VAR[Def_Cast_List]</content>
+                </control>
+
+                <control type="list" id="10052">
+                    <height>500</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="260" height="400">
+                        <include content="InfoDialogItemLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="260" height="400">
+                        <include content="InfoDialogFocusedLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </focusedlayout>
+                    <content target="videos">$VAR[Def_Set_List]</content>
+                </control>
+
+                <control type="list" id="10053">
+                    <height>500</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="260" height="400">
+                        <include content="InfoDialogItemLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="260" height="400">
+                        <include content="InfoDialogFocusedLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </focusedlayout>
+                    <content target="videos">$VAR[Def_Similar_List]</content>
+                </control>
+
+                <control type="list" id="10054">
+                    <height>500</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="260" height="400">
+                        <include content="InfoDialogItemLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="260" height="400">
+                        <include content="InfoDialogFocusedLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </focusedlayout>
+                    <content target="videos">$VAR[Def_Director_List]</content>
+                </control>
+
+                <control type="list" id="10054">
+                    <height>500</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="260" height="400">
+                        <include content="InfoDialogItemLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="260" height="400">
+                        <include content="InfoDialogFocusedLayout">
+                            <param name="icon" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </focusedlayout>
+                    <content target="videos">$VAR[Def_Studio_List]</content>
+                </control>
+
+                <!-- <include content="InfoDialogPoster">
                     <param name="id" value="10051" />
                     <param name="groupid" value="11051" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
@@ -15,6 +115,7 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Cast_List]" />
                     <param name="target" value="videos" />
+                    <param name="limit" value="25" />
                 </include>
 
                 <include content="InfoDialogPoster">
@@ -26,6 +127,7 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Set_List]" />
                     <param name="target" value="videos" />
+                    <param name="limit" value="25" />
                 </include>
 
                 <include content="InfoDialogPoster">
@@ -37,6 +139,7 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Similar_List]" />
                     <param name="target" value="videos" />
+                    <param name="limit" value="25" />
                 </include>
 
                 <include content="InfoDialogPoster">
@@ -48,6 +151,7 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Director_List]" />
                     <param name="target" value="videos" />
+                    <param name="limit" value="25" />
                 </include>
 
                 <include content="InfoDialogPoster">
@@ -59,9 +163,10 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Studio_List]" />
                     <param name="target" value="videos" />
-                </include>
+                    <param name="limit" value="25" />
+                </include> -->
 
-                <include content="InfoDialogPoster">
+                <!-- <include content="InfoDialogPoster">
                     <param name="id" value="10056" />
                     <param name="groupid" value="11056" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
@@ -70,6 +175,7 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Crew_List]" />
                     <param name="target" value="videos" />
+                    <param name="limit" value="25" />
                 </include>
 
                 <include content="InfoDialogPoster">
@@ -81,6 +187,7 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Recommended_List]" />
                     <param name="target" value="videos" />
+                    <param name="limit" value="25" />
                 </include>
 
                 <include content="InfoDialogPoster">
@@ -92,6 +199,7 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Genre_List]" />
                     <param name="target" value="videos" />
+                    <param name="limit" value="25" />
                 </include>
 
                 <include content="InfoDialogPoster">
@@ -103,7 +211,8 @@
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Posters_List]" />
                     <param name="target" value="images" />
-                </include>
+                    <param name="limit" value="25" />
+                </include> -->
             </control>
 
         </control>

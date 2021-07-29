@@ -64,68 +64,12 @@
 						<visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
 						<visible>!$PARAM[uselabel2]</visible>
 					</control>
-					<control type="label">
-						<top>20</top>
-						<width>auto</width>
-						<label>$INFO[Container($PARAM[id]).ListItem.Year, (,)]</label>
-						<aligny>center</aligny>
-						<textcolor>pure_white</textcolor>
-						<font>font_tiny</font>
-						<height>24</height>
-						<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-						<visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-						<visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-						<visible>!String.StartsWith(ListItem.FolderPath,favourites://)</visible>
-						<visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
-						<visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Year)</visible>
-						<visible>!$PARAM[uselabel2]</visible>
-						<visible>!Skin.HasSetting(HomeMultiFlixView)</visible>
-					</control>
 					<control type="group">
 						<include>SmallBusySpinner</include>
 						<top>10</top>
 						<left>18</left>
 						<visible>Container($PARAM[id]).IsUpdating</visible>
 						<visible>$PARAM[spinner-visible]</visible>
-					</control>
-					<control type="label">
-						<top>20</top>
-						<width>auto</width>
-						<label>$INFO[Container($PARAM[id]).ListItem.TvShowTitle,, - ]$INFO[Container($PARAM[id]).ListItem.Label]</label>
-						<aligny>center</aligny>
-						<textcolor>pure_white</textcolor>
-						<font>font_tiny</font>
-						<height>24</height>
-						<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-						<visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-						<visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-						<visible>String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
-						<visible>!$PARAM[uselabel2]</visible>
-					</control>
-					<control type="label">
-						<top>20</top>
-						<width>auto</width>
-						<label>$INFO[Container($PARAM[id]).ListItem.ChannelName]$INFO[Container($PARAM[id]).ListItem.Title, - ,]$INFO[Container($PARAM[id]).ListItem.StartTime, - ,]$INFO[Container($PARAM[id]).ListItem.EndTime, - ,]</label>
-						<aligny>center</aligny>
-						<textcolor>pure_white</textcolor>
-						<font>font_tiny</font>
-						<height>24</height>
-						<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-						<visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-						<visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-						<visible>!$PARAM[uselabel2]</visible>
-					</control>
-					<control type="label">
-						<top>20</top>
-						<width>auto</width>
-						<label>$PARAM[label2]</label>
-						<aligny>center</aligny>
-						<textcolor>pure_white</textcolor>
-						<font>font_tiny</font>
-						<height>24</height>
-						<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
-						<visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
-						<visible>$PARAM[uselabel2]</visible>
 					</control>
 				</control>
 			</control>
@@ -269,6 +213,7 @@
 		</definition>
 	</include>
 	<include name="InfoDialogPoster">
+		<param name="visible" default="true" />
 		<definition>
 			<include content="InfoDialogLabel">
 				<param name="groupid" value="$PARAM[groupid]" />
@@ -284,7 +229,8 @@
 				<param name="label2" value="$PARAM[label2]" />
 				<param name="itemwidth" value="293" />
 				<param name="itemheight" value="561" />
-				<content limit="25" target="$PARAM[target]">$PARAM[content]</content>
+				<content limit="$PARAM[limit]" target="$PARAM[target]">$PARAM[content]</content>
+				<visible>$PARAM[visible]</visible>
 			</include>
 		</definition>
 	</include>
