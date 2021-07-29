@@ -191,7 +191,7 @@
 	</include>
 	<include name="InfoDialogWallContainer">
 		<definition>
-			<control type="list" id="$PARAM[id]">
+			<control type="fixedlist" id="$PARAM[id]">
 				<nested />
 				<scrolltime tween="quadratic">400</scrolltime>
 				<orientation>horizontal</orientation>

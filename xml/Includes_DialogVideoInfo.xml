@@ -105,12 +105,12 @@
 
             <include content="InfoDialogLabel">
                 <param name="groupid" value="1051" />
-                <param name="id" value="50" />
+                <param name="id" value="10051" />
                 <param name="label" value="$INFO[ListItem.Label]" />
                 <param name="altlabel" value="Cast" />
                 <param name="left" value="700" />
                 <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(50)" />
+                <param name="visible" value="Control.HasFocus(10051)" />
             </include>
 
             <include content="InfoDialogLabel">
@@ -153,6 +153,46 @@
                 <param name="visible" value="Control.HasFocus(10055)" />
             </include>
 
+            <include content="InfoDialogLabel">
+                <param name="groupid" value="1056" />
+                <param name="id" value="10056" />
+                <param name="label" value="$INFO[ListItem.Label]" />
+                <param name="altlabel" value="Crew" />
+                <param name="left" value="700" />
+                <param name="top" value="950" />
+                <param name="visible" value="Control.HasFocus(10056)" />
+            </include>
+
+            <include content="InfoDialogLabel">
+                <param name="groupid" value="1057" />
+                <param name="id" value="10057" />
+                <param name="label" value="$INFO[ListItem.Label]" />
+                <param name="altlabel" value="Recommended" />
+                <param name="left" value="700" />
+                <param name="top" value="950" />
+                <param name="visible" value="Control.HasFocus(10057)" />
+            </include>
+
+            <include content="InfoDialogLabel">
+                <param name="groupid" value="1058" />
+                <param name="id" value="10058" />
+                <param name="label" value="$INFO[ListItem.Label]" />
+                <param name="altlabel" value="Genre" />
+                <param name="left" value="700" />
+                <param name="top" value="950" />
+                <param name="visible" value="Control.HasFocus(10058)" />
+            </include>
+
+            <include content="InfoDialogLabel">
+                <param name="groupid" value="1059" />
+                <param name="id" value="10059" />
+                <param name="label" value="$INFO[ListItem.Label]" />
+                <param name="altlabel" value="Posters" />
+                <param name="left" value="700" />
+                <param name="top" value="950" />
+                <param name="visible" value="Control.HasFocus(10059)" />
+            </include>
+
             <control type="grouplist" id="100">
                 <onup>99</onup>
                 <top>620</top>
@@ -160,7 +200,7 @@
                 <height>382.5</height>
                 <!-- <width>1300</width> -->
                 <include content="InfoDialogPoster">
-                    <param name="id" value="50" />
+                    <param name="id" value="10051" />
                     <param name="groupid" value="1051" />
                     <param name="labelid" value="11051" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
@@ -233,7 +273,7 @@
                     <param name="limit" value="25" />
                 </include>
 
-                <!-- <include content="InfoDialogPoster">
+                <include content="InfoDialogPoster">
                     <param name="id" value="10056" />
                     <param name="groupid" value="11056" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
@@ -279,7 +319,8 @@
                     <param name="content" value="$VAR[Def_Posters_List]" />
                     <param name="target" value="images" />
                     <param name="limit" value="25" />
-                </include> -->
+                </include>
+
             </control>
 
         </control>
