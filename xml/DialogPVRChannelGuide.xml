@@ -14,9 +14,11 @@
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
 				<include>OpenClose_Left</include>
-				<include content="ContentPanel">
-					<param name="width" value="840" />
-				</include>
+				<control type="image">
+					<width>780</width>
+					<texture background="true">lists/panel.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+				</control>
 				<control type="fixedlist" id="11">
 					<left>0</left>
 					<width>1900</width>
@@ -126,7 +128,14 @@
 				<texture flipy="true">frame/InfoBar.png</texture>
 			</control>
 			<control type="group">
-				<include>Animation_TopSlide</include>
+				<animation type="WindowOpen" reversible="False">
+					<effect type="fade" start="0" end="100" time="300"/>
+					<effect type="slide" start="0,-200" end="0,0" time="300" delay="300" tween="cubic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="False">
+					<effect type="fade" start="100" end="0" time="300"/>
+					<effect type="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="out" />
+				</animation>
 				<control type="image">
 					<left>0</left>
 					<width>780</width>
