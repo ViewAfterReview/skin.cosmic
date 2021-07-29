@@ -4,56 +4,105 @@
 
         <control type="group">
             <control type="grouplist" id="100">
-                <!-- <height>1080</height> -->
+                <!-- <height>9999</height> -->
 
                 <include content="InfoDialogPoster">
-                    <param name="id" value="51" />
-                    <param name="groupid" value="5100" />
+                    <param name="id" value="10051" />
+                    <param name="groupid" value="11051" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Cast" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Cast_List]" />
+                    <param name="target" value="videos" />
                 </include>
 
                 <include content="InfoDialogPoster">
-                    <param name="id" value="52" />
-                    <param name="groupid" value="5200" />
+                    <param name="id" value="10052" />
+                    <param name="groupid" value="11052" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Sets" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Set_List]" />
+                    <param name="target" value="videos" />
                 </include>
 
                 <include content="InfoDialogPoster">
-                    <param name="id" value="53" />
-                    <param name="groupid" value="5300" />
+                    <param name="id" value="10053" />
+                    <param name="groupid" value="11053" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Similar" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Similar_List]" />
+                    <param name="target" value="videos" />
                 </include>
 
                 <include content="InfoDialogPoster">
-                    <param name="id" value="54" />
-                    <param name="groupid" value="5400" />
+                    <param name="id" value="10054" />
+                    <param name="groupid" value="11054" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Director" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Director_List]" />
+                    <param name="target" value="videos" />
                 </include>
 
                 <include content="InfoDialogPoster">
-                    <param name="id" value="55" />
-                    <param name="groupid" value="5500" />
+                    <param name="id" value="10055" />
+                    <param name="groupid" value="11055" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Studio" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Studio_List]" />
+                    <param name="target" value="videos" />
+                </include>
+
+                <include content="InfoDialogPoster">
+                    <param name="id" value="10056" />
+                    <param name="groupid" value="11056" />
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="altlabel" value="Crew" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="label2" value="$INFO[ListItem.Label2]" />
+                    <param name="content" value="$VAR[Def_Crew_List]" />
+                    <param name="target" value="videos" />
+                </include>
+
+                <include content="InfoDialogPoster">
+                    <param name="id" value="10057" />
+                    <param name="groupid" value="11057" />
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="altlabel" value="Recommended" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="label2" value="$INFO[ListItem.Label2]" />
+                    <param name="content" value="$VAR[Def_Recommended_List]" />
+                    <param name="target" value="videos" />
+                </include>
+
+                <include content="InfoDialogPoster">
+                    <param name="id" value="10058" />
+                    <param name="groupid" value="11058" />
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="altlabel" value="Genre" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="label2" value="$INFO[ListItem.Label2]" />
+                    <param name="content" value="$VAR[Def_Genre_List]" />
+                    <param name="target" value="videos" />
+                </include>
+
+                <include content="InfoDialogPoster">
+                    <param name="id" value="10059" />
+                    <param name="groupid" value="11059" />
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="altlabel" value="Posters" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="label2" value="$INFO[ListItem.Label2]" />
+                    <param name="content" value="$VAR[Def_Posters_List]" />
+                    <param name="target" value="images" />
                 </include>
             </control>
 

@@ -244,7 +244,7 @@
 	</include>
 	<include name="InfoDialogWallContainer">
 		<definition>
-			<control type="panel" id="$PARAM[id]">
+			<control type="list" id="$PARAM[id]">
 				<nested />
 				<scrolltime tween="quadratic">400</scrolltime>
 				<orientation>horizontal</orientation>
@@ -284,7 +284,7 @@
 				<param name="label2" value="$PARAM[label2]" />
 				<param name="itemwidth" value="293" />
 				<param name="itemheight" value="561" />
-				<content limit="25" target="videos">$PARAM[content]</content>
+				<content limit="25" target="$PARAM[target]">$PARAM[content]</content>
 			</include>
 		</definition>
 	</include>
