@@ -126,12 +126,12 @@
 		<control type="group">
 			<left>68</left>
 			<top>10</top>
-			<animation type="Focus">
+			<!-- <animation type="Focus">
 				<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,65" />
 			</animation>
 			<animation type="Unfocus">
 				<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,65" />
-			</animation>
+			</animation> -->
 			<control type="image">
 				<left>15</left>
 				<top>-10</top>
@@ -227,8 +227,8 @@
 				<param name="icon" value="$PARAM[icon]" />
 				<param name="label" value="$PARAM[label]" />
 				<param name="label2" value="$PARAM[label2]" />
-				<param name="itemwidth" value="293" />
-				<param name="itemheight" value="561" />
+				<param name="itemwidth" value="270" />
+				<param name="itemheight" value="382.5" />
 				<content limit="$PARAM[limit]" target="$PARAM[target]">$PARAM[content]</content>
 				<visible>$PARAM[visible]</visible>
 			</include>

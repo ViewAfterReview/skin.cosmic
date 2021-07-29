@@ -397,6 +397,7 @@
         <definition>
             <control type="grouplist">
                 <top>$PARAM[top]</top>
+                <left>$PARAM[left]</left>
                 <right>12</right>
                 <height>48</height>
                 <orientation>horizontal</orientation>

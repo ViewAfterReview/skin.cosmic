@@ -2,150 +2,115 @@
 <includes>
     <include name="DialogVideoInfo">
 
-        <control type="group">
+        <control type="group" id="98">
+
+            <control type="group">
+                <control type="image">
+                    <top>-120</top>
+                    <left>-5</left>
+                    <width>620</width>
+                    <height>1400</height>
+                    <texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
+                    <bordertexture border="21">overlays/shadow.png</bordertexture>
+                    <bordersize>20</bordersize>
+                </control>
+                <control type="image">
+                    <left>20</left>
+                    <width>570</width>
+                    <height>830</height>
+                    <centertop>50%</centertop>
+                    <texture>$INFO[ListItem.Art(poster)]</texture>
+                    <bordertexture border="21">overlays/shadow.png</bordertexture>
+                    <bordersize>20</bordersize>
+                </control>
+            </control>
+
+            <control type="group">
+                <left>570</left>
+                <control type="group">
+                    <top>60</top>
+                    <control type="label">
+                        <left>150</left>
+                        <bottom>60</bottom>
+                        <label>$INFO[ListItem.Title]</label>
+                        <font>font_title_bold</font>
+                        <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                    </control>
+                    <control type="image">
+                        <top>-940</top>
+                        <left>150</left>
+                        <width>480</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$VAR[ClearLogoHome]</texture>
+                        <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <top>185</top>
+                    <left>150</left>
+                    <include>Object_Info_Line</include>
+                </control>
+
+                <control type="group">
+                    <include content="Object_Ratings_Content">
+                        <param name="directory" value="colorful" />
+                        <param name="align" value="left" />
+                        <param name="top" value="255" />
+                        <param name="left" value="145" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <control type="textbox">
+                        <top>325</top>
+                        <left>150</left>
+                        <width>940</width>
+                        <height>120</height>
+                        <label>$INFO[ListItem.Plot]</label>
+                        <font>font32</font>
+                        <shadowcolor>pure_black</shadowcolor>
+                        <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(99)</autoscroll>
+                    </control>
+                </control>
+            </control>
+
+            <control type="grouplist" id="99">
+                <top>500</top>
+                <left>690</left>
+                <height>142</height>
+                <ondown>100</ondown>
+                <orientation>horizontal</orientation>
+                <include content="InfoDialogButton">
+                    <param name="id" value="8" />
+                    <param name="icon" value="special://skin/extras/icons/play3.png" />
+                    <param name="label" value="Play" />
+                </include>
+                <include content="InfoDialogButton">
+                    <param name="id" value="11" />
+                    <param name="icon" value="special://skin/extras/icons/film.png" />
+                    <param name="label" value="Trailer" />
+                </include>
+                <include content="InfoDialogButton">
+                    <param name="id" value="13" />
+                    <param name="icon" value="special://skin/extras/icons/search.png" />
+                    <param name="label" value="Search" />
+                </include>
+                <include content="InfoDialogButton">
+                    <param name="id" value="8898" />
+                    <param name="icon" value="special://skin/extras/icons/settings.png" />
+                    <param name="label" value="Manage" />
+                </include>
+            </control>
+
             <control type="grouplist" id="100">
-                <!-- <height>9999</height> -->
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="11051" />
+                <onup>99</onup>
+                <top>620</top>
+                <left>620</left>
+                <height>430</height>
+                <!-- <width>1300</width> -->
+                <include content="InfoDialogPoster">
                     <param name="id" value="50" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Cast" />
-                    <visible>Control.IsVisible(50)</visible>
-                </include>
-                <control type="list" id="50">
-                    <height>480</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="260" height="400">
-                        <include content="InfoDialogItemLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </itemlayout>
-                    <focusedlayout width="260" height="400">
-                        <include content="InfoDialogFocusedLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </focusedlayout>
-                    <!-- <content target="videos">$VAR[Def_Cast_List]</content> -->
-                </control>
-
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="11052" />
-                    <param name="id" value="10052" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Sets" />
-                    <visible>Control.IsVisible(10052)</visible>
-                </include>
-                <control type="list" id="10052">
-                    <height>480</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="260" height="400">
-                        <include content="InfoDialogItemLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </itemlayout>
-                    <focusedlayout width="260" height="400">
-                        <include content="InfoDialogFocusedLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </focusedlayout>
-                    <content target="videos">$VAR[Def_Set_List]</content>
-                </control>
-
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="11053" />
-                    <param name="id" value="10053" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Similar" />
-                    <visible>Control.IsVisible(10053)</visible>
-                </include>
-                <control type="list" id="10053">
-                    <height>480</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="260" height="400">
-                        <include content="InfoDialogItemLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </itemlayout>
-                    <focusedlayout width="260" height="400">
-                        <include content="InfoDialogFocusedLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </focusedlayout>
-                    <content target="videos">$VAR[Def_Similar_List]</content>
-                </control>
-
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="11054" />
-                    <param name="id" value="10054" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Director" />
-                    <visible>Control.IsVisible(10054)</visible>
-                </include>
-                <control type="list" id="10054">
-                    <height>480</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="260" height="400">
-                        <include content="InfoDialogItemLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </itemlayout>
-                    <focusedlayout width="260" height="400">
-                        <include content="InfoDialogFocusedLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </focusedlayout>
-                    <content target="videos">$VAR[Def_Director_List]</content>
-                </control>
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="11055" />
-                    <param name="id" value="10055" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Studio" />
-                    <visible>Control.IsVisible(10055)</visible>
-                </include>
-                <control type="list" id="10055">
-                    <height>480</height>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="260" height="400">
-                        <include content="InfoDialogItemLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </itemlayout>
-                    <focusedlayout width="260" height="400">
-                        <include content="InfoDialogFocusedLayout">
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="$INFO[ListItem.Label2]" />
-                        </include>
-                    </focusedlayout>
-                    <content target="videos">$VAR[Def_Studio_List]</content>
-                </control>
-
-                <!-- <include content="InfoDialogPoster">
-                    <param name="id" value="10051" />
                     <param name="groupid" value="11051" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Cast" />
@@ -202,7 +167,7 @@
                     <param name="content" value="$VAR[Def_Studio_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
-                </include> -->
+                </include>
 
                 <!-- <include content="InfoDialogPoster">
                     <param name="id" value="10056" />
