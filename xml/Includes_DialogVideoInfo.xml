@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="DialogVideoInfo">
+
+        <control type="group">
+            <control type="grouplist" id="100">
+                <control type="group">
+                    <include content="InfoDialogWallContainer">
+                        <param name="id" value="51" />
+                        <param name="icon" value="$INFO[ListItem.Icon]" />
+                        <param name="label" value="$INFO[ListItem.Label]" />
+                        <param name="label2" value="$INFO[ListItem.Label2]" />
+                        <param name="itemwidth" value="293" />
+                        <param name="itemheight" value="561" />
+                        <param name="top" value="100" />
+                        <ondown>52</ondown>
+                        <content limit="25" target="videos">$VAR[Def_Cast_List]</content>
+                    </include>
+                </control>
+
+                <control type="group">
+                    <include content="InfoDialogWallContainer">
+                        <param name="id" value="52" />
+                        <param name="icon" value="$INFO[ListItem.Icon]" />
+                        <param name="label" value="$INFO[ListItem.Label]" />
+                        <param name="label2" value="$INFO[ListItem.Label2]" />
+                        <param name="itemwidth" value="293" />
+                        <param name="itemheight" value="561" />
+                        <param name="top" value="500" />
+                        <onup>51</onup>
+                        <ondown>53</ondown>
+                        <content limit="25" target="videos">$VAR[Def_Set_List]</content>
+                    </include>
+                </control>
+
+                <control type="group">
+                    <include content="InfoDialogWallContainer">
+                        <param name="id" value="53" />
+                        <param name="icon" value="$INFO[ListItem.Icon]" />
+                        <param name="label" value="$INFO[ListItem.Label]" />
+                        <param name="label2" value="$INFO[ListItem.Label2]" />
+                        <param name="itemwidth" value="293" />
+                        <param name="itemheight" value="561" />
+                        <param name="top" value="700" />
+                        <onup>52</onup>
+                        <ondown>54</ondown>
+                        <content limit="25" target="videos">$VAR[Def_Similar_List]</content>
+                    </include>
+                </control>
+
+                <control type="group">
+                    <include content="InfoDialogWallContainer">
+                        <param name="id" value="54" />
+                        <param name="icon" value="$INFO[ListItem.Icon]" />
+                        <param name="label" value="$INFO[ListItem.Label]" />
+                        <param name="label2" value="$INFO[ListItem.Label2]" />
+                        <param name="itemwidth" value="293" />
+                        <param name="itemheight" value="561" />
+                        <param name="top" value="1000" />
+                        <onup>53</onup>
+                        <ondown>55</ondown>
+                        <content limit="25" target="videos">$VAR[Def_Director_List]</content>
+                    </include>
+                </control>
+
+                <control type="group">
+                    <include content="InfoDialogWallContainer">
+                        <param name="id" value="55" />
+                        <param name="icon" value="$INFO[ListItem.Icon]" />
+                        <param name="label" value="$INFO[ListItem.Label]" />
+                        <param name="label2" value="$INFO[ListItem.Label2]" />
+                        <param name="itemwidth" value="293" />
+                        <param name="itemheight" value="561" />
+                        <param name="top" value="1400" />
+                        <onup>54</onup>
+                        <content limit="25" target="videos">$VAR[Def_Studio_List]</content>
+                    </include>
+                </control>
+            </control>
+
+        </control>
+
+    </include>
+</includes>

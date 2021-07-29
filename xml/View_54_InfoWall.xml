@@ -1,5 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="InfoDialogItemLayout">
+		<control type="group">
+			<left>68</left>
+			<top>$PARAM[top]</top>
+			<control type="image">
+				<left>15</left>
+				<top>-10</top>
+				<width>290</width>
+				<height>475</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>-10</top>
+				<width>290</width>
+				<height>400</height>
+				<texture background="true">$PARAM[icon]</texture>
+				<aspectratio>scale</aspectratio>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="group">
+				<left>29</left>
+				<top>375</top>
+				<control type="label">
+					<width>260</width>
+					<label>$PARAM[label]</label>
+					<font>font10</font>
+					<shadowcolor>50000000</shadowcolor>
+					<textoffsetx>10</textoffsetx>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<top>28</top>
+					<width>260</width>
+					<label>$PARAM[label2]</label>
+					<font>font12</font>
+					<shadowcolor>50000000</shadowcolor>
+					<textoffsetx>10</textoffsetx>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="InfoDialogFocusedLayout">
+		<control type="group">
+			<left>68</left>
+			<top>$PARAM[top]</top>
+			<animation type="Focus">
+				<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,65" />
+			</animation>
+			<animation type="Unfocus">
+				<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,65" />
+			</animation>
+			<control type="image">
+				<left>15</left>
+				<top>-10</top>
+				<width>290</width>
+				<height>475</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<left>11</left>
+				<top>-14</top>
+				<width>297</width>
+				<height>478</height>
+				<texture colordiffuse="button_focus">colors/grey.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<animation effect="fade" start="0" end="100" time="200" tween="sine">Focus</animation>
+				<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>-10</top>
+				<width>290</width>
+				<height>400</height>
+				<texture background="true">$PARAM[icon]</texture>
+				<aspectratio>scale</aspectratio>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="group">
+				<left>29</left>
+				<top>375</top>
+				<control type="label">
+					<width>260</width>
+					<label>$PARAM[label]</label>
+					<font>font10</font>
+					<shadowcolor>50000000</shadowcolor>
+					<textoffsetx>10</textoffsetx>
+					<scroll>true</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<top>28</top>
+					<width>260</width>
+					<label>$PARAM[label2]</label>
+					<font>font12</font>
+					<shadowcolor>50000000</shadowcolor>
+					<textoffsetx>10</textoffsetx>
+					<scroll>true</scroll>
+					<align>center</align>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="InfoDialogWallContainer">
+		<definition>
+			<control type="panel" id="$PARAM[id]">
+				<nested />
+				<scrolltime tween="quadratic">400</scrolltime>
+				<orientation>horizontal</orientation>
+				<height>800</height>
+				<visible>true</visible>
+				<top>$PARAM[top]</top>
+				<itemlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
+					<include content="InfoDialogItemLayout">
+						<param name="icon" value="$PARAM[icon]" />
+						<param name="label" value="$PARAM[label]" />
+						<param name="label2" value="$PARAM[label2]" />
+					</include>
+				</itemlayout>
+				<focusedlayout width="$PARAM[itemwidth]" height="$PARAM[itemheight]">
+					<include content="InfoDialogFocusedLayout">
+						<param name="icon" value="$PARAM[icon]" />
+						<param name="label" value="$PARAM[label]" />
+						<param name="label2" value="$PARAM[label2]" />
+					</include>
+				</focusedlayout>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoWallPictureLayout">
 		<param name="focused">false</param>
 		<definition>
