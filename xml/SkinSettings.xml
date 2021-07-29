@@ -278,6 +278,13 @@
 						<onclick>Skin.ToggleSetting(MinimalDialogBusy)</onclick>
 						<selected>Skin.HasSetting(MinimalDialogBusy)</selected>
 					</control>
+
+					<control type="radiobutton" id="710" description="Disable extended info">
+						<label>$LOCALIZE[31250]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(DisableExtendedInfo)</onclick>
+						<selected>Skin.HasSetting(DisableExtendedInfo)</selected>
+					</control>
 				</control>
 			</control>
 			<control type="group">

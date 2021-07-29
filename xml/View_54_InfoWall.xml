@@ -3,7 +3,7 @@
 	<include name="InfoDialogItemLayout">
 		<control type="group">
 			<left>68</left>
-			<top>$PARAM[top]</top>
+			<top>10</top>
 			<control type="image">
 				<left>15</left>
 				<top>-10</top>
@@ -50,7 +50,7 @@
 	<include name="InfoDialogFocusedLayout">
 		<control type="group">
 			<left>68</left>
-			<top>$PARAM[top]</top>
+			<top>10</top>
 			<animation type="Focus">
 				<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,65" />
 			</animation>
