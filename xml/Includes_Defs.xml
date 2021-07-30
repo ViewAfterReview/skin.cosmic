@@ -36,10 +36,10 @@
     </variable>
 
     <variable name="Def_Studio_List">
-        <value condition="[!Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,tvshow)] + !Container(1053).IsUpdating">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=tv&amp;with_companies=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;with_id=True&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</value>
-        <value condition="[Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,tvshow)] + !Container(1053).IsUpdating">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</value>
-        <value condition="!Skin.HasSetting(DisableExtendedInfo) + !Container(1053).IsUpdating">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;with_id=True&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</value>
-        <value condition="Skin.HasSetting(DisableExtendedInfo) + !Container(1053).IsUpdating">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</value>
+        <value condition="[!Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,tvshow)] + !Container(1054).IsUpdating">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=tv&amp;with_companies=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;with_id=True&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</value>
+        <value condition="[Skin.HasSetting(DisableExtendedInfo) + String.IsEqual(ListItem.DBType,tvshow)] + !Container(1054).IsUpdating">videodb://tvshows/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22tvshows%22%7d</value>
+        <value condition="!Skin.HasSetting(DisableExtendedInfo) + !Container(1054).IsUpdating">plugin://plugin.video.themoviedb.helper?info=discover&amp;type=movie&amp;with_companies=$INFO[Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID)]&amp;with_id=True&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</value>
+        <value condition="Skin.HasSetting(DisableExtendedInfo) + !Container(1054).IsUpdating">videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22studio%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[ListItem.Studio]%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d</value>
     </variable>
 
     <variable name="Def_Crew_List">
@@ -47,7 +47,7 @@
     </variable>
 
     <variable name="Def_Recommended_List">
-        <value condition="!Container(1055).IsUpdating">plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;type=$VAR[TMDB_TYPE]&amp;$VAR[INFO_QUERY]&amp;nextpage=false</value>
+        <value condition="!Container(1056).IsUpdating">plugin://plugin.video.themoviedb.helper/?info=recommendations&amp;type=$VAR[TMDB_TYPE]&amp;$VAR[INFO_QUERY]&amp;nextpage=false</value>
     </variable>
 
     <variable name="Def_Genre_List">
