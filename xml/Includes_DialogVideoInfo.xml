@@ -186,14 +186,14 @@
                         <control type="label">
                             <top>240</top>
                             <font>font27_bold</font>
-                            <label>Tagline</label>
+                            <label>Premiere</label>
                         </control>
                         <control type="label">
                             <top>280</top>
                             <width>460</width>
                             <height>50</height>
                             <wrapmultiline>true</wrapmultiline>
-                            <label>$INFO[ListItem.Tagline]</label>
+                            <label>$INFO[ListItem.Premiered]</label>
                         </control>
                     </control>
                 </control>
