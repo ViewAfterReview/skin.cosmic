@@ -103,6 +103,86 @@
                 </include>
             </control>
 
+            <control type="group" id="10049">
+                <animation effect="fade" start="100" end="0" time="200" easing="inout" condition="ControlGroup(100).HasFocus">Conditional</animation>
+                <top>660</top>
+                <left>710</left>
+                <height>382.5</height>
+
+                <control type="group">
+                    <control type="group">
+                        <control type="label">
+                            <font>font27_bold</font>
+                            <label>Studio</label>
+                        </control>
+                        <control type="label">
+                            <top>40</top>
+                            <label>$INFO[Listitem.Studio]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <top>120</top>
+                            <font>font27_bold</font>
+                            <label>Country</label>
+                        </control>
+                        <control type="label">
+                            <top>160</top>
+                            <label>$INFO[ListItem.Country]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <top>240</top>
+                            <font>font27_bold</font>
+                            <label>Genre</label>
+                        </control>
+                        <control type="label">
+                            <top>280</top>
+                            <label>$INFO[ListItem.Genre]</label>
+                        </control>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <left>550</left>
+                    <control type="group">
+                        <control type="label">
+                            <font>font27_bold</font>
+                            <label>Director</label>
+                        </control>
+                        <control type="label">
+                            <top>40</top>
+                            <label>$INFO[ListItem.Director]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <top>120</top>
+                            <font>font27_bold</font>
+                            <label>Writer</label>
+                        </control>
+                        <control type="label">
+                            <top>160</top>
+                            <label>$INFO[ListItem.Writer]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <top>240</top>
+                            <font>font27_bold</font>
+                            <label>Tagline</label>
+                        </control>
+                        <control type="label">
+                            <top>280</top>
+                            <label>$INFO[ListItem.Tagline]</label>
+                        </control>
+                    </control>
+                </control>
+
+            </control>
+
+
             <include content="InfoDialogLabel">
                 <param name="groupid" value="1051" />
                 <param name="id" value="10051" />
@@ -199,6 +279,24 @@
                 <left>610</left>
                 <height>382.5</height>
                 <!-- <width>1300</width> -->
+
+                <animation effect="slide" start="0,0" end="0,600" time="200" tween="cubic" easing="inout" condition="!ControlGroup(100).HasFocus">Conditional</animation>
+
+
+                <!-- <include content="InfoDialogPoster">
+                    <param name="id" value="10050" />
+                    <param name="groupid" value="1050" />
+                    <param name="labelid" value="11050" />
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="altlabel" value="Cast" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="label2" value="$INFO[ListItem.Label2]" />
+                    <param name="content" value="$VAR[Def_Cast_List]" />
+                    <param name="target" value="videos" />
+                    <param name="limit" value="25" />
+                    <param name="visible" value="false" />
+                </include> -->
+
                 <include content="InfoDialogPoster">
                     <param name="id" value="10051" />
                     <param name="groupid" value="1051" />
