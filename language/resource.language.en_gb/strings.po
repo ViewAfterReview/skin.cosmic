@@ -1209,3 +1209,13 @@ msgstr ""
 msgctxt "#31250"
 msgid "Disable online information"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31251"
+msgid "Enable blur"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31252"
+msgid "Disable blur on home"
+msgstr ""

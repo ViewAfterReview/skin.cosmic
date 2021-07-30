@@ -285,6 +285,21 @@
 						<onclick>Skin.ToggleSetting(DisableExtendedInfo)</onclick>
 						<selected>Skin.HasSetting(DisableExtendedInfo)</selected>
 					</control>
+
+					<control type="radiobutton" id="711" description="Enable blur">
+						<label>$LOCALIZE[31251]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(TMDbHelper.EnableBlur)</onclick>
+						<selected>Skin.HasSetting(TMDbHelper.EnableBlur)</selected>
+					</control>
+
+					<control type="radiobutton" id="712" description="Enable blur, no home">
+						<label>$LOCALIZE[31252]</label>
+						<include>DefaultSettingButton</include>
+						<enable>Skin.HasSetting(TMDbHelper.EnableBlur)</enable>
+						<onclick>Skin.ToggleSetting(DontBlurHome)</onclick>
+						<selected>Skin.HasSetting(DontBlurHome)</selected>
+					</control>
 				</control>
 			</control>
 			<control type="group">

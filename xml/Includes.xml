@@ -1184,7 +1184,7 @@
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[MediaFanartVar]</texture>
+						<texture background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</texture>
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
 						<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
 						<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
@@ -1210,7 +1210,7 @@
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
-						<visible>Window.IsVisible(Home)</visible>
+						<visible>Window.IsVisible(Home) + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
 					</control>
 				</control>
 			</control>
