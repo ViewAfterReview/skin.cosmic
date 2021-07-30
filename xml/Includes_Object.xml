@@ -43,9 +43,10 @@
         </focusedlayout>
     </include>
     <include name="Object_Widget_Label">
+        <param name="top" default="0" />
         <definition>
             <control type="group" id="$PARAM[groupid]">
-                <top>0</top>
+                <top>$PARAM[top]</top>
                 <height>52</height>
                 <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
                 <nested />
@@ -109,40 +110,57 @@
         <param name="limit" default="" />
         <param name="path" default="" />
         <definition>
-            <control type="$PARAM[controltype]" id="$PARAM[id]">
+            <control type="group" id="$PARAM[groupid]">
                 <nested />
-                <orientation>horizontal</orientation>
-                <onleft>9000</onleft>
-                <onback>9000</onback>
-                <height>400</height>
-                <itemlayout height="382.5" width="270">
-                    <control type="image">
-                        <right>18</right>
-                        <aspectratio>scale</aspectratio>
-                        <texture>$PARAM[image]</texture>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="382.5" width="270">
-                    <control type="image">
-                        <right>18</right>
-                        <aspectratio>scale</aspectratio>
-                        <texture>$PARAM[image]</texture>
-                    </control>
-                    <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-16" />
-                        <param name="pad_bottom" value="-16" />
-                        <param name="pad_left" value="-15" />
-                        <param name="pad_right" value="-4" />
-                        <param name="focusbounce" value="true" />
-                    </include>
-                </focusedlayout>
-                <include content="Object_Widget_Content_Path">
-                    <param name="target" value="$PARAM[target]" />
-                    <param name="sortby" value="$PARAM[sortby]" />
-                    <param name="sortdirection" value="$PARAM[sortdirection]" />
-                    <param name="limit" value="$PARAM[limit]" />
-                    <param name="path" value="$PARAM[path]" />
+                <include content="Object_Widget_Label">
+                    <param name="labelgid" value="$PARAM[labelgid]" />
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="$PARAM[name]" />
+                    <param name="top" value="0" />
                 </include>
+                <control type="$PARAM[controltype]" id="$PARAM[id]">
+                    <orientation>horizontal</orientation>
+                    <top>70</top>
+                    <onleft>9000</onleft>
+                    <onback>9000</onback>
+                    <height>9999</height>
+                    <onup>$PARAM[upid]</onup>
+                    <ondown>$PARAM[downid]</ondown>
+
+                    <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
+
+                    <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
+                    <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
+
+                    <itemlayout height="382.5" width="270">
+                        <control type="image">
+                            <right>18</right>
+                            <aspectratio>scale</aspectratio>
+                            <texture>$PARAM[image]</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="382.5" width="270">
+                        <control type="image">
+                            <right>18</right>
+                            <aspectratio>scale</aspectratio>
+                            <texture>$PARAM[image]</texture>
+                        </control>
+                        <include content="Selectbox_Bold">
+                            <param name="pad_top" value="-16" />
+                            <param name="pad_bottom" value="-16" />
+                            <param name="pad_left" value="-15" />
+                            <param name="pad_right" value="-4" />
+                            <param name="focusbounce" value="true" />
+                        </include>
+                    </focusedlayout>
+                    <include content="Object_Widget_Content_Path">
+                        <param name="target" value="$PARAM[target]" />
+                        <param name="sortby" value="$PARAM[sortby]" />
+                        <param name="sortdirection" value="$PARAM[sortdirection]" />
+                        <param name="limit" value="$PARAM[limit]" />
+                        <param name="path" value="$PARAM[path]" />
+                    </include>
+                </control>
             </control>
         </definition>
     </include>

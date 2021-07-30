@@ -39,14 +39,11 @@
         <propertyGroup>mainmenuWidgets</propertyGroup>
 
         <controls>
-            <include content="Object_Widget_Label">
-                <param name="groupid" value="$PYTHON[int(id)]$PYTHON[int(id) + 7500]" />
-                <param name="id" value="300$SKINSHORTCUTS[id]" />
-                <param name="label" value="$SKINSHORTCUTS[name]" />
-                <skinshortcuts>visibility</skinshortcuts>
-            </include>
             <include content="Object_Widget_Content">
                 <!-- <param name="label" value="$SKINSHORTCUTS[label]" /> -->
+                <param name="labelgid" value="$PYTHON[int(id)]$PYTHON[int(id) + 6500]" />
+                <param name="name" value="$SKINSHORTCUTS[name]" />
+                <param name="groupid" value="$PYTHON[int(id)]$PYTHON[int(id) + 7500]" />
                 <param name="image" value="$SKINSHORTCUTS[artwork]" />
                 <param name="id" value="300$SKINSHORTCUTS[id]" />
                 <param name="target" value="$SKINSHORTCUTS[target]" />
@@ -54,8 +51,8 @@
                 <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
                 <param name="limit" value="$SKINSHORTCUTS[limit]" />
                 <param name="path" value="$SKINSHORTCUTS[path]" />
-                <onfocus>SetProperty(TMDbHelper.WidgetContainer,300$SKINSHORTCUTS[id],home)</onfocus>
-                <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
+                <param name="upid" value="300$PYTHON[int(id) - 1]" />
+                <param name="downid" value="300$PYTHON[int(id) + 1]" />
                 <skinshortcuts>visibility</skinshortcuts>
             </include>
         </controls>

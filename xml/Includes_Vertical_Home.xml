@@ -23,8 +23,10 @@
                 <include>OpenClose_Right</include>
                 <control type="grouplist" id="3000">
                     <top>515</top>
-                    <itemgap>16</itemgap>
+                    <height>9999</height>
+                    <itemgap>460</itemgap>
                     <usecontrolcoords>true</usecontrolcoords>
+                    <include>Animation_Widget_Slide</include>
                     <include>skinshortcuts-template-vertical</include>
                 </control>
                 <control type="group" id="2999">
