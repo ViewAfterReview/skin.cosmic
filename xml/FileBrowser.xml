@@ -16,10 +16,10 @@
 			</include>
 			<control type="grouplist" id="9000">
 				<left>990</left>
-				<top>85</top>
+				<top>105</top>
 				<width>400</width>
 				<height>400</height>
-				<itemgap>20</itemgap>
+				<itemgap>10</itemgap>
 				<orientation>vertical</orientation>
 				<onleft>450</onleft>
 				<onright>450</onright>
