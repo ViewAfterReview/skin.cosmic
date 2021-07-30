@@ -202,12 +202,11 @@
             </control>
             <control type="grouplist" id="100">
                 <onup>99</onup>
-                <top>75</top>
+                <top>35</top>
                 <left>20</left>
-                <height>925</height>
+                <height>975</height>
                 <width>1720</width>
                 <itemgap>52</itemgap>
-                <usecontrolcoords>true</usecontrolcoords>
 
                 <animation effect="slide" start="0,0" end="0,1080" time="200" tween="cubic" easing="inout" condition="!ControlGroup(100).HasFocus">Conditional</animation>
 
@@ -224,17 +223,17 @@
                     <scrolltime tween="quadratic">400</scrolltime>
                     <orientation>horizontal</orientation>
                     <top>0</top>
-                    <height>382.5</height>
+                    <height>407</height>
                     <visible>true</visible>
                     <scrolltime tween="sine" easing="out">200</scrolltime>
-                    <itemlayout width="270" height="382.5">
+                    <itemlayout width="270" height="427">
                         <include content="InfoDialogItemLayout">
                             <param name="icon" value="$INFO[ListItem.Icon]" />
                             <param name="label" value="$INFO[ListItem.Label]" />
                             <param name="label2" value="$INFO[ListItem.Label2]" />
                         </include>
                     </itemlayout>
-                    <focusedlayout width="270" height="382.5">
+                    <focusedlayout width="270" height="427">
                         <include content="InfoDialogFocusedLayout">
                             <param name="icon" value="$INFO[ListItem.Icon]" />
                             <param name="label" value="$INFO[ListItem.Label]" />
@@ -243,20 +242,9 @@
                     </focusedlayout>
                 </control>
 
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1052" />
-                    <param name="id" value="10052" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Sets" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
-                    <param name="visible" value="true" />
-                </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10052" />
-                    <param name="groupid" value="1052" />
-                    <param name="labelid" value="11052" />
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1052" />
+                    <param name="groupid" value="10052" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Sets" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -264,21 +252,14 @@
                     <param name="content" value="$VAR[Def_Set_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Set) | ListItem.IsCollection" />
                 </include>
 
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1053" />
-                    <param name="id" value="10053" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Similar" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
-                    <param name="visible" value="true" />
-                </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10053" />
-                    <param name="groupid" value="1053" />
-                    <param name="labelid" value="11053" />
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1053" />
+                    <param name="groupid" value="10053" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Similar" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -286,21 +267,14 @@
                     <param name="content" value="$VAR[Def_Similar_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.IMDBNumber)" />
                 </include>
 
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1054" />
-                    <param name="id" value="10054" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Director" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
-                    <param name="visible" value="true" />
-                </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10054" />
-                    <param name="groupid" value="1054" />
-                    <param name="labelid" value="11054" />
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1054" />
+                    <param name="groupid" value="10054" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Director" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -308,21 +282,14 @@
                     <param name="content" value="$VAR[Def_Director_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Director)" />
                 </include>
 
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1055" />
-                    <param name="id" value="10055" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Studio" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
-                    <param name="visible" value="true" />
-                </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10055" />
-                    <param name="groupid" value="1055" />
-                    <param name="labelid" value="11055" />
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1055" />
+                    <param name="groupid" value="10055" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Studio" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -330,20 +297,14 @@
                     <param name="content" value="$VAR[Def_Studio_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Studio)" />
                 </include>
 
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1056" />
-                    <param name="id" value="10056" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Crew" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
-                    <param name="visible" value="true" />
-                </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10056" />
-                    <param name="groupid" value="11056" />
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1056" />
+                    <param name="groupid" value="10056" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Crew" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -351,20 +312,14 @@
                     <param name="content" value="$VAR[Def_Crew_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
-                </include>
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1057" />
-                    <param name="id" value="10057" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Recommended" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
                     <param name="visible" value="true" />
                 </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10057" />
-                    <param name="groupid" value="11057" />
+
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1057" />
+                    <param name="groupid" value="10057" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Recommended" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -372,20 +327,14 @@
                     <param name="content" value="$VAR[Def_Recommended_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
-                </include>
-
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1058" />
-                    <param name="id" value="10058" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Genre" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
                     <param name="visible" value="true" />
                 </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10058" />
-                    <param name="groupid" value="11058" />
+
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1058" />
+                    <param name="groupid" value="10058" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Genre" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -393,20 +342,14 @@
                     <param name="content" value="$VAR[Def_Genre_List]" />
                     <param name="target" value="videos" />
                     <param name="limit" value="25" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Genre)" />
                 </include>
 
-                <include content="InfoDialogLabel">
-                    <param name="groupid" value="1059" />
-                    <param name="id" value="10059" />
-                    <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Posters" />
-                    <param name="left" value="80" />
-                    <param name="top" value="0" />
-                    <param name="visible" value="true" />
-                </include>
-                <include content="InfoDialogPoster">
-                    <param name="id" value="10059" />
-                    <param name="groupid" value="11059" />
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1059" />
+                    <param name="groupid" value="10059" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="Posters" />
                     <param name="label" value="$INFO[ListItem.Label]" />
@@ -414,8 +357,10 @@
                     <param name="content" value="$VAR[Def_Posters_List]" />
                     <param name="target" value="images" />
                     <param name="limit" value="25" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
+                    <param name="visible" value="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)" />
                 </include>
-
             </control>
         </control>
     </include>
