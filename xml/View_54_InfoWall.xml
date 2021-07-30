@@ -6,15 +6,13 @@
 		<param name="spinner-visible" default="true" />
 		<definition>
 			<control type="group" id="$PARAM[groupid]">
-				<top>52</top>
-				<height>52</height>
+				<top>0</top>
 				<visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
 				<visible>$PARAM[visible]</visible>
 				<nested />
 				<control type="grouplist">
 					<top>$PARAM[top]</top>
 					<left>$PARAM[left]</left>
-					<height>52</height>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<itemgap>10</itemgap>

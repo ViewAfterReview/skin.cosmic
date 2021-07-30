@@ -1,308 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="DialogVideoInfo">
+        <control type="group">
+            <control type="group" id="98">
 
-        <control type="group" id="98">
-
-            <control type="group">
-                <control type="image">
-                    <top>-120</top>
-                    <left>-5</left>
-                    <width>620</width>
-                    <height>1400</height>
-                    <texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
-                    <bordertexture border="21">overlays/shadow.png</bordertexture>
-                    <bordersize>20</bordersize>
-                </control>
-                <control type="image">
-                    <left>20</left>
-                    <width>570</width>
-                    <height>830</height>
-                    <centertop>50%</centertop>
-                    <texture>$INFO[ListItem.Art(poster)]</texture>
-                    <bordertexture border="21">overlays/shadow.png</bordertexture>
-                    <bordersize>20</bordersize>
-                </control>
-            </control>
-
-            <control type="group">
-                <left>570</left>
                 <control type="group">
-                    <top>60</top>
-                    <control type="label">
-                        <left>150</left>
-                        <bottom>60</bottom>
-                        <label>$INFO[ListItem.Title]</label>
-                        <font>font_title_bold</font>
-                        <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                    <control type="image">
+                        <top>-120</top>
+                        <left>-5</left>
+                        <width>620</width>
+                        <height>1400</height>
+                        <texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
+                        <bordertexture border="21">overlays/shadow.png</bordertexture>
+                        <bordersize>20</bordersize>
                     </control>
                     <control type="image">
-                        <top>-940</top>
-                        <left>150</left>
-                        <width>480</width>
-                        <aspectratio>keep</aspectratio>
-                        <texture background="true">$VAR[ClearLogoHome]</texture>
-                        <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                        <left>20</left>
+                        <width>570</width>
+                        <height>830</height>
+                        <centertop>50%</centertop>
+                        <texture>$INFO[ListItem.Art(poster)]</texture>
+                        <bordertexture border="21">overlays/shadow.png</bordertexture>
+                        <bordersize>20</bordersize>
                     </control>
                 </control>
 
                 <control type="group">
-                    <top>185</top>
-                    <left>150</left>
-                    <include>Object_Info_Line</include>
+                    <left>570</left>
+                    <control type="group">
+                        <top>60</top>
+                        <control type="label">
+                            <left>150</left>
+                            <bottom>60</bottom>
+                            <label>$INFO[ListItem.Title]</label>
+                            <font>font_title_bold</font>
+                            <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                        </control>
+                        <control type="image">
+                            <top>-940</top>
+                            <left>150</left>
+                            <width>480</width>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$VAR[ClearLogoHome]</texture>
+                            <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                        </control>
+                    </control>
+
+                    <control type="group">
+                        <top>185</top>
+                        <left>150</left>
+                        <include>Object_Info_Line</include>
+                    </control>
+
+                    <control type="group">
+                        <include content="Object_Ratings_Content">
+                            <param name="directory" value="colorful" />
+                            <param name="align" value="left" />
+                            <param name="top" value="255" />
+                            <param name="left" value="145" />
+                        </include>
+                    </control>
+
+                    <control type="group">
+                        <control type="textbox">
+                            <top>325</top>
+                            <left>150</left>
+                            <width>940</width>
+                            <height>120</height>
+                            <label>$INFO[ListItem.Plot]</label>
+                            <font>font32</font>
+                            <shadowcolor>pure_black</shadowcolor>
+                            <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(99)</autoscroll>
+                        </control>
+                    </control>
                 </control>
 
-                <control type="group">
-                    <include content="Object_Ratings_Content">
-                        <param name="directory" value="colorful" />
-                        <param name="align" value="left" />
-                        <param name="top" value="255" />
-                        <param name="left" value="145" />
+                <animation effect="fade" start="100" end="0" time="200" easing="inout" condition="ControlGroup(100).HasFocus">Conditional</animation>
+
+                <control type="grouplist" id="99">
+                    <top>500</top>
+                    <left>690</left>
+                    <height>142</height>
+                    <ondown>100</ondown>
+                    <orientation>horizontal</orientation>
+                    <include content="InfoDialogButton">
+                        <param name="id" value="8" />
+                        <param name="icon" value="special://skin/extras/icons/play3.png" />
+                        <param name="label" value="Play" />
+                    </include>
+                    <include content="InfoDialogButton">
+                        <param name="id" value="11" />
+                        <param name="icon" value="special://skin/extras/icons/film.png" />
+                        <param name="label" value="Trailer" />
+                    </include>
+                    <include content="InfoDialogButton">
+                        <param name="id" value="13" />
+                        <param name="icon" value="special://skin/extras/icons/search.png" />
+                        <param name="label" value="Search" />
+                    </include>
+                    <include content="InfoDialogButton">
+                        <param name="id" value="8898" />
+                        <param name="icon" value="special://skin/extras/icons/settings.png" />
+                        <param name="label" value="Manage" />
                     </include>
                 </control>
 
-                <control type="group">
-                    <control type="textbox">
-                        <top>325</top>
-                        <left>150</left>
-                        <width>940</width>
-                        <height>120</height>
-                        <label>$INFO[ListItem.Plot]</label>
-                        <font>font32</font>
-                        <shadowcolor>pure_black</shadowcolor>
-                        <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(99)</autoscroll>
+                <control type="group" id="10049">
+                    <top>660</top>
+                    <left>710</left>
+                    <height>382.5</height>
+
+                    <control type="group">
+                        <control type="group">
+                            <control type="label">
+                                <font>font27_bold</font>
+                                <label>Studio</label>
+                            </control>
+                            <control type="label">
+                                <top>40</top>
+                                <width>460</width>
+                                <height>50</height>
+                                <wrapmultiline>true</wrapmultiline>
+                                <label>$INFO[Listitem.Studio]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <control type="label">
+                                <top>120</top>
+                                <font>font27_bold</font>
+                                <label>Country</label>
+                            </control>
+                            <control type="label">
+                                <top>160</top>
+                                <width>460</width>
+                                <height>50</height>
+                                <wrapmultiline>true</wrapmultiline>
+                                <label>$INFO[ListItem.Country]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <control type="label">
+                                <top>240</top>
+                                <font>font27_bold</font>
+                                <label>Genre</label>
+                            </control>
+                            <control type="label">
+                                <top>280</top>
+                                <width>460</width>
+                                <height>50</height>
+                                <wrapmultiline>true</wrapmultiline>
+                                <label>$INFO[ListItem.Genre]</label>
+                            </control>
+                        </control>
+                    </control>
+
+                    <control type="group">
+                        <left>550</left>
+                        <control type="group">
+                            <control type="label">
+                                <font>font27_bold</font>
+                                <label>Director</label>
+                            </control>
+                            <control type="label">
+                                <top>40</top>
+                                <width>460</width>
+                                <height>50</height>
+                                <wrapmultiline>true</wrapmultiline>
+                                <label>$INFO[ListItem.Director]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <control type="label">
+                                <top>120</top>
+                                <font>font27_bold</font>
+                                <label>Writer</label>
+                            </control>
+                            <control type="label">
+                                <top>160</top>
+                                <width>460</width>
+                                <height>50</height>
+                                <wrapmultiline>true</wrapmultiline>
+                                <label>$INFO[ListItem.Writer]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <control type="label">
+                                <top>240</top>
+                                <font>font27_bold</font>
+                                <label>Premiere</label>
+                            </control>
+                            <control type="label">
+                                <top>280</top>
+                                <width>460</width>
+                                <height>50</height>
+                                <wrapmultiline>true</wrapmultiline>
+                                <label>$INFO[ListItem.Premiered]</label>
+                            </control>
+                        </control>
                     </control>
                 </control>
             </control>
-
-            <control type="grouplist" id="99">
-                <top>500</top>
-                <left>690</left>
-                <height>142</height>
-                <ondown>100</ondown>
-                <orientation>horizontal</orientation>
-                <include content="InfoDialogButton">
-                    <param name="id" value="8" />
-                    <param name="icon" value="special://skin/extras/icons/play3.png" />
-                    <param name="label" value="Play" />
-                </include>
-                <include content="InfoDialogButton">
-                    <param name="id" value="11" />
-                    <param name="icon" value="special://skin/extras/icons/film.png" />
-                    <param name="label" value="Trailer" />
-                </include>
-                <include content="InfoDialogButton">
-                    <param name="id" value="13" />
-                    <param name="icon" value="special://skin/extras/icons/search.png" />
-                    <param name="label" value="Search" />
-                </include>
-                <include content="InfoDialogButton">
-                    <param name="id" value="8898" />
-                    <param name="icon" value="special://skin/extras/icons/settings.png" />
-                    <param name="label" value="Manage" />
-                </include>
-            </control>
-
-            <control type="group" id="10049">
-                <animation effect="fade" start="100" end="0" time="200" easing="inout" condition="ControlGroup(100).HasFocus">Conditional</animation>
-                <top>660</top>
-                <left>710</left>
-                <height>382.5</height>
-
-                <control type="group">
-                    <control type="group">
-                        <control type="label">
-                            <font>font27_bold</font>
-                            <label>Studio</label>
-                        </control>
-                        <control type="label">
-                            <top>40</top>
-                            <width>460</width>
-                            <height>50</height>
-                            <wrapmultiline>true</wrapmultiline>
-                            <label>$INFO[Listitem.Studio]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <control type="label">
-                            <top>120</top>
-                            <font>font27_bold</font>
-                            <label>Country</label>
-                        </control>
-                        <control type="label">
-                            <top>160</top>
-                            <width>460</width>
-                            <height>50</height>
-                            <wrapmultiline>true</wrapmultiline>
-                            <label>$INFO[ListItem.Country]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <control type="label">
-                            <top>240</top>
-                            <font>font27_bold</font>
-                            <label>Genre</label>
-                        </control>
-                        <control type="label">
-                            <top>280</top>
-                            <width>460</width>
-                            <height>50</height>
-                            <wrapmultiline>true</wrapmultiline>
-                            <label>$INFO[ListItem.Genre]</label>
-                        </control>
-                    </control>
-                </control>
-
-                <control type="group">
-                    <left>550</left>
-                    <control type="group">
-                        <control type="label">
-                            <font>font27_bold</font>
-                            <label>Director</label>
-                        </control>
-                        <control type="label">
-                            <top>40</top>
-                            <width>460</width>
-                            <height>50</height>
-                            <wrapmultiline>true</wrapmultiline>
-                            <label>$INFO[ListItem.Director]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <control type="label">
-                            <top>120</top>
-                            <font>font27_bold</font>
-                            <label>Writer</label>
-                        </control>
-                        <control type="label">
-                            <top>160</top>
-                            <width>460</width>
-                            <height>50</height>
-                            <wrapmultiline>true</wrapmultiline>
-                            <label>$INFO[ListItem.Writer]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <control type="label">
-                            <top>240</top>
-                            <font>font27_bold</font>
-                            <label>Premiere</label>
-                        </control>
-                        <control type="label">
-                            <top>280</top>
-                            <width>460</width>
-                            <height>50</height>
-                            <wrapmultiline>true</wrapmultiline>
-                            <label>$INFO[ListItem.Premiered]</label>
-                        </control>
-                    </control>
-                </control>
-
-            </control>
-
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1051" />
-                <param name="id" value="50" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Cast" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(50)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1052" />
-                <param name="id" value="10052" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Sets" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10052)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1053" />
-                <param name="id" value="10053" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Similar" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10053)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1054" />
-                <param name="id" value="10054" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Director" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10054)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1055" />
-                <param name="id" value="10055" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Studio" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10055)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1056" />
-                <param name="id" value="10056" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Crew" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10056)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1057" />
-                <param name="id" value="10057" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Recommended" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10057)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1058" />
-                <param name="id" value="10058" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Genre" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10058)" />
-            </include>
-
-            <include content="InfoDialogLabel">
-                <param name="groupid" value="1059" />
-                <param name="id" value="10059" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="altlabel" value="Posters" />
-                <param name="left" value="700" />
-                <param name="top" value="950" />
-                <param name="visible" value="Control.HasFocus(10059)" />
-            </include>
-
             <control type="grouplist" id="100">
                 <onup>99</onup>
-                <top>620</top>
-                <left>610</left>
-                <height>382.5</height>
-                <!-- <width>1300</width> -->
+                <top>75</top>
+                <left>20</left>
+                <height>925</height>
+                <width>1720</width>
+                <itemgap>52</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
 
-                <animation effect="slide" start="0,0" end="0,600" time="200" tween="cubic" easing="inout" condition="!ControlGroup(100).HasFocus">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,1080" time="200" tween="cubic" easing="inout" condition="!ControlGroup(100).HasFocus">Conditional</animation>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1051" />
+                    <param name="id" value="50" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Cast" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <control type="list" id="50">
                     <scrolltime tween="quadratic">400</scrolltime>
                     <orientation>horizontal</orientation>
+                    <top>0</top>
                     <height>382.5</height>
                     <visible>true</visible>
                     <scrolltime tween="sine" easing="out">200</scrolltime>
@@ -323,6 +244,15 @@
                 </control>
 
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1052" />
+                    <param name="id" value="10052" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Sets" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10052" />
                     <param name="groupid" value="1052" />
@@ -336,6 +266,15 @@
                     <param name="limit" value="25" />
                 </include>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1053" />
+                    <param name="id" value="10053" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Similar" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10053" />
                     <param name="groupid" value="1053" />
@@ -349,6 +288,15 @@
                     <param name="limit" value="25" />
                 </include>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1054" />
+                    <param name="id" value="10054" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Director" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10054" />
                     <param name="groupid" value="1054" />
@@ -362,6 +310,15 @@
                     <param name="limit" value="25" />
                 </include>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1055" />
+                    <param name="id" value="10055" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Studio" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10055" />
                     <param name="groupid" value="1055" />
@@ -375,6 +332,15 @@
                     <param name="limit" value="25" />
                 </include>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1056" />
+                    <param name="id" value="10056" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Crew" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10056" />
                     <param name="groupid" value="11056" />
@@ -387,6 +353,15 @@
                     <param name="limit" value="25" />
                 </include>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1057" />
+                    <param name="id" value="10057" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Recommended" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10057" />
                     <param name="groupid" value="11057" />
@@ -399,6 +374,15 @@
                     <param name="limit" value="25" />
                 </include>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1058" />
+                    <param name="id" value="10058" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Genre" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10058" />
                     <param name="groupid" value="11058" />
@@ -411,6 +395,15 @@
                     <param name="limit" value="25" />
                 </include>
 
+                <include content="InfoDialogLabel">
+                    <param name="groupid" value="1059" />
+                    <param name="id" value="10059" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="Posters" />
+                    <param name="left" value="80" />
+                    <param name="top" value="0" />
+                    <param name="visible" value="true" />
+                </include>
                 <include content="InfoDialogPoster">
                     <param name="id" value="10059" />
                     <param name="groupid" value="11059" />
@@ -424,8 +417,6 @@
                 </include>
 
             </control>
-
         </control>
-
     </include>
 </includes>
