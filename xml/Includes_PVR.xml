@@ -564,10 +564,9 @@
 				<left>0</left>
 				<top>$PARAM[control_top]</top>
 				<right>20</right>
-				<bottom>333</bottom>
 				<orientation>$PARAM[control_orientation]</orientation>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime tween="linear" easing="out">100</scrolltime>
 				<timeblocks>34</timeblocks>
 				<rulerunit>6</rulerunit>
 				<onleft>9000</onleft>
@@ -575,14 +574,14 @@
 				<onup>$PARAM[control_onupdown_id]</onup>
 				<ondown>$PARAM[control_onupdown_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
-				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="button_focus">$PARAM[progress_texture]</progresstexture>
+				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="$VAR[ColorHighlight]">$PARAM[progress_texture]</progresstexture>
 				<rulerdatelayout width="1700" height="45" condition="$PARAM[has_rulerdate_layout]">
 					<control type="label">
 						<width>1700</width>
 						<height>45</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[ColorHighlight]</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -594,15 +593,15 @@
 						<font>font12</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>10</textoffsetx>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[ColorHighlight]</textcolor>
 					</control>
 				</rulerlayout>
-				<channellayout height="62" width="$PARAM[channel_width]">
+				<channellayout height="100" width="$PARAM[channel_width]">
 					<control type="label">
 						<left>2</left>
 						<top>-2</top>
 						<width>90</width>
-						<height>60</height>
+						<height>100</height>
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 						<align>center</align>
@@ -611,49 +610,59 @@
 					<control type="label" id="1">
 						<left>83</left>
 						<top>-2</top>
-						<height>60</height>
+						<height>100</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<aligny>center</aligny>
 						<textoffsetx>10</textoffsetx>
 					</control>
 				</channellayout>
-				<focusedchannellayout height="62" width="$PARAM[channel_width]">
+				<focusedchannellayout height="100" width="$PARAM[channel_width]">
 					<control type="label">
 						<left>2</left>
 						<top>-2</top>
 						<width>90</width>
-						<height>60</height>
+						<height>100</height>
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[ColorHighlight]</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
 					<control type="label" id="1">
 						<left>83</left>
 						<top>-2</top>
-						<height>60</height>
+						<height>100</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.ChannelName]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[ColorHighlight]</textcolor>
 						<aligny>center</aligny>
 						<textoffsetx>10</textoffsetx>
 					</control>
 				</focusedchannellayout>
-				<itemlayout height="62" width="60">
+				<itemlayout height="100" width="120">
 					<control type="image" id="2">
-						<width>58</width>
-						<height>58</height>
+						<width>118</width>
+						<height>98</height>
 						<texture border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
 					</control>
 					<control type="label" id="1">
-						<left>6</left>
+						<left>15</left>
+						<right>15</right>
 						<top>0</top>
 						<height>36</height>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label" id="3">
+						<left>15</left>
+						<right>15</right>
+						<top>40</top>
+						<height>36</height>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<label>$INFO[ListItem.Genre]</label>
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
@@ -662,7 +671,7 @@
 						<width>16</width>
 						<height>16</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="button_focus">icons/pvr/premiere.png</texture>
+						<texture colordiffuse="$VAR[ColorHighlight]">icons/pvr/premiere.png</texture>
 					</control>
 					<control type="image">
 						<left>6</left>
@@ -673,34 +682,46 @@
 						<animation effect="slide" start="0,0" end="19,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
 					</control>
 				</itemlayout>
-				<focusedlayout height="62" width="60">
+				<focusedlayout height="100" width="120">
 					<control type="image" id="2">
 						<top>2</top>
 						<left>2</left>
-						<width>54</width>
-						<height>54</height>
-						<texture colordiffuse="$VAR[ColorHighlight]">lists/focus.png</texture>
+						<width>116</width>
+						<height>94</height>
+						<texture border="20" colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="image" id="2">
-						<width>58</width>
-						<height>58</height>
-						<texture border="0" colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
+						<width>118</width>
+						<height>96</height>
+						<texture border="20" colordiffuse="$VAR[ColorGradient]">common/white-gradient.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>58</width>
-						<height>58</height>
+						<height>96</height>
 						<top>0</top>
 						<texture border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
 						<visible>!Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="label" id="1">
-						<left>6</left>
+						<left>15</left>
+						<right>15</right>
 						<top>0</top>
 						<height>36</height>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label" id="3">
+						<left>15</left>
+						<right>15</right>
+						<top>40</top>
+						<height>36</height>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Genre]</label>
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>

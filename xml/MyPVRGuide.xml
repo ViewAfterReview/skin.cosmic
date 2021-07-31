@@ -14,15 +14,7 @@
 				<include>OpenClose_Right</include>
 				<include>Visible_Right</include>
 				<control type="group">
-					<top>140</top>
 					<depth>DepthContentPanel</depth>
-					<control type="image">
-						<left>0</left>
-						<top>-10</top>
-						<width>100%</width>
-						<bottom>336</bottom>
-						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
-					</control>
 					<control type="group">
 						<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 						<control type="image">
@@ -37,7 +29,7 @@
 							<top>0</top>
 							<width>364</width>
 							<height>50</height>
-							<texture colordiffuse="button_focus">colors/white.png</texture>
+							<texture colordiffuse="$VAR[ColorHighlight]">colors/white.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
 						<control type="image">
@@ -94,7 +86,7 @@
 								<top>0</top>
 								<width>366</width>
 								<height>50</height>
-								<texture colordiffuse="button_focus">colors/white.png</texture>
+								<texture colordiffuse="$VAR[ColorHighlight]">colors/white.png</texture>
 								<animation effect="fade" end="30" condition="true">Conditional</animation>
 								<visible>!Control.HasFocus(11)</visible>
 							</control>
@@ -168,7 +160,7 @@
 						</include>
 					</control>
 				</control>
-				<control type="group">
+				<!-- <control type="group">
 					<bottom>30</bottom>
 					<height>300</height>
 					<control type="image">
@@ -194,7 +186,7 @@
 							<width>30%</width>
 							<height>30</height>
 							<align>right</align>
-							<label>[COLOR button_focus]$INFO[ListItem.StartTime,[COLOR grey]$LOCALIZE[555]:[/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR button_focus] - ,[/COLOR]]</label>
+							<label>[COLOR $VAR[ColorHighlight]]$INFO[ListItem.StartTime,[COLOR grey]$LOCALIZE[555]:[/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR $VAR[ColorHighlight]] - ,[/COLOR]]</label>
 						</control>
 						<control type="label">
 							<top>35</top>
@@ -220,16 +212,9 @@
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
-				</control>
+				</control> -->
 			</control>
 			<include>PVRChannelNumberInput</include>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRGuideVar]" />
-				<param name="sublabel" value="" />
-			</include>
-			<include content="BottomBar">
-				<param name="info_visible" value="true" />
-			</include>
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<include content="PVRSideBar">
