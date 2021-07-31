@@ -231,7 +231,7 @@
                 <width>54</width>
                 <height>54</height>
                 <texture colordiffuse="ff000000">indicator/genre2.png</texture>
-                <visible>String.IsEmpty(ListItem.Studio)</visible>
+                <visible>String.IsEmpty(ListItem.Studio) + !String.IsEmpty(ListItem.Genre)</visible>
             </control>
             <control type="label">
                 <top>10</top>

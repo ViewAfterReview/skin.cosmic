@@ -3,7 +3,6 @@
 	<defaultcontrol always="true">99</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
-	<onload>SetProperty(TMDBHelper.Info.OriginalPath,$INFO[ListItem.FolderPath],home)</onload>
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
