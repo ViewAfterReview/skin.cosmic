@@ -63,6 +63,11 @@
     <property property="widgetLimit" label="100 ">$NUMBER[100]</property>
     <propertySettings property="widgetLimit" buttonID="504" title="Widget Item Limit" />
 
+    <!-- Widget Aspect -->
+    <property property="widgetAspect">poster</property>
+    <property property="widgetAspect">landscape</property>
+    <propertySettings property="widgetAspect" buttonID="505" title="Widget Aspect" />
+
     <!-- Icon Overrides -->
     <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
     <icon labelID="radio">special://skin/extras/icons/radio.png</icon>

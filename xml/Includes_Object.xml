@@ -109,6 +109,8 @@
         <param name="sortdirection" default="" />
         <param name="limit" default="" />
         <param name="path" default="" />
+        <param name="postercondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),poster)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),poster)]" />
+        <param name="landscapecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),landscape)]" />
         <definition>
             <control type="group" id="$PARAM[groupid]">
                 <nested />
@@ -132,14 +134,36 @@
                     <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
                     <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
 
-                    <itemlayout height="382.5" width="270">
+                    <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                         <control type="image">
                             <right>18</right>
                             <aspectratio>scale</aspectratio>
                             <texture>$PARAM[image]</texture>
                         </control>
                     </itemlayout>
-                    <focusedlayout height="382.5" width="270">
+                    <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
+                        <control type="image">
+                            <right>18</right>
+                            <aspectratio>scale</aspectratio>
+                            <texture>$PARAM[image]</texture>
+                        </control>
+                        <include content="Selectbox_Bold">
+                            <param name="pad_top" value="-16" />
+                            <param name="pad_bottom" value="-16" />
+                            <param name="pad_left" value="-15" />
+                            <param name="pad_right" value="-4" />
+                            <param name="focusbounce" value="true" />
+                        </include>
+                    </focusedlayout>
+
+                    <itemlayout height="382.5" width="600" condition="$PARAM[landscapecondition]">
+                        <control type="image">
+                            <right>18</right>
+                            <aspectratio>scale</aspectratio>
+                            <texture>$PARAM[image]</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="382.5" width="600" condition="$PARAM[landscapecondition]">
                         <control type="image">
                             <right>18</right>
                             <aspectratio>scale</aspectratio>
