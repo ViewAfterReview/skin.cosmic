@@ -1210,7 +1210,7 @@
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
-						<visible>Window.IsVisible(Home) + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
+						<visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
 					</control>
 				</control>
 			</control>
