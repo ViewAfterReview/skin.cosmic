@@ -573,6 +573,7 @@
 				<onright>60</onright>
 				<onup>$PARAM[control_onupdown_id]</onup>
 				<ondown>$PARAM[control_onupdown_id]</ondown>
+				<onback>11</onback>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
 				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="$VAR[ColorHighlight]">$PARAM[progress_texture]</progresstexture>
 				<rulerdatelayout width="1700" height="45" condition="$PARAM[has_rulerdate_layout]">
