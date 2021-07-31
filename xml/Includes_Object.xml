@@ -136,18 +136,10 @@
 
                     <!-- Posters aspect ratio -->
                     <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
-                        <control type="image">
-                            <right>18</right>
-                            <aspectratio>scale</aspectratio>
-                            <texture>$VAR[Image_Poster]</texture>
-                        </control>
+                        <include content="ViewPosterItemLayout"></include>
                     </itemlayout>
                     <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
-                        <control type="image">
-                            <right>18</right>
-                            <aspectratio>scale</aspectratio>
-                            <texture>$VAR[Image_Poster]</texture>
-                        </control>
+                        <include content="ViewPosterItemLayout"></include>
                         <include content="Selectbox_Bold">
                             <param name="pad_top" value="-16" />
                             <param name="pad_bottom" value="-16" />

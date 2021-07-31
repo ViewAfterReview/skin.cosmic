@@ -158,22 +158,42 @@
 		</definition>
 	</include>
 
+	<include name="ViewPosterItemLayout">
+		<definition>
+			<control type="image">
+				<top>-16</top>
+				<left>-16</left>
+				<width>290</width>
+				<height>422.5</height>
+				<aspectratio>scale</aspectratio>
+				<texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+				<bordertexture border="32">common/dark-shadow-24.png</bordertexture>
+				<bordersize>24</bordersize>
+			</control>
+			<control type="image">
+				<right>18</right>
+				<aspectratio>scale</aspectratio>
+				<texture>$VAR[Image_Poster]</texture>
+			</control>
+		</definition>
+	</include>
 	<include name="ViewLandscapeItemLayout">
 		<param name="iconheight" default="350" />
 		<definition>
 			<control type="group">
 				<control type="image">
-					<top>16</top>
-					<left>16</left>
-					<width>550</width>
-					<height>318</height>
+					<top>-8</top>
+					<left>-8</left>
+					<width>598</width>
+					<height>366</height>
 					<aspectratio>scale</aspectratio>
 					<texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+					<bordertexture border="32">common/dark-shadow-24.png</bordertexture>
+					<bordersize>24</bordersize>
 				</control>
 				<control type="image">
 					<right>18</right>
 					<height>$PARAM[iconheight]</height>
-					<!-- <width>600</width> -->
 					<aspectratio>scale</aspectratio>
 					<texture>$VAR[Image_Landscape]</texture>
 					<bordersize>15</bordersize>
