@@ -81,7 +81,7 @@
                     <control type="label">
                         <top>20</top>
                         <width>auto</width>
-                        <label>$INFO[Container($PARAM[id]).ListItem.ChannelName]</label>
+                        <label>$INFO[ListItem.ChannelName]</label>
                         <aligny>center</aligny>
                         <textcolor>pure_white</textcolor>
                         <font>font27_bold</font>
