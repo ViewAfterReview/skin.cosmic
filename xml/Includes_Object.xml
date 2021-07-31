@@ -134,6 +134,7 @@
                     <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
                     <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
 
+                    <!-- Posters aspect ratio -->
                     <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                         <control type="image">
                             <right>18</right>
@@ -156,60 +157,18 @@
                         </include>
                     </focusedlayout>
 
+                    <!-- Landscape aspect ratio -->
                     <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                        <control type="image">
-                            <top>28</top>
-                            <right>22</right>
-                            <width>560</width>
-                            <height>318</height>
-                            <aspectratio>scale</aspectratio>
-                            <texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                        </control>
-                        <control type="image">
-                            <right>18</right>
-                            <width>570</width>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$VAR[Image_Landscape]</texture>
-                            <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        </control>
-                        <control type="image">
-                            <right>18</right>
-                            <centerleft>50%</centerleft>
-                            <width>400</width>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$VAR[Image_Landscape]</texture>
-                            <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        </control>
+                        <include content="ViewLandscapeItemLayout"></include>
                     </itemlayout>
                     <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                        <control type="image">
-                            <top>28</top>
-                            <right>22</right>
-                            <width>560</width>
-                            <height>318</height>
-                            <aspectratio>scale</aspectratio>
-                            <texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                        </control>
-                        <control type="image">
-                            <right>18</right>
-                            <width>570</width>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$VAR[Image_Landscape]</texture>
-                            <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        </control>
-                        <control type="image">
-                            <right>18</right>
-                            <centerleft>50%</centerleft>
-                            <width>400</width>
-                            <aspectratio>keep</aspectratio>
-                            <texture>$VAR[Image_Landscape]</texture>
-                            <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        </control>
+                        <include content="ViewLandscapeItemLayout"></include>
+
                         <include content="Selectbox_Bold">
-                            <param name="pad_top" value="7" />
-                            <param name="pad_bottom" value="7" />
-                            <param name="pad_left" value="-6" />
-                            <param name="pad_right" value="-2" />
+                            <param name="pad_top" value="-7" />
+                            <param name="pad_bottom" value="18" />
+                            <param name="pad_left" value="-7" />
+                            <param name="pad_right" value="10" />
                             <param name="focusbounce" value="true" />
                         </include>
                     </focusedlayout>
