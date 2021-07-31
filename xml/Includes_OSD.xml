@@ -231,6 +231,15 @@
                             <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
                         </control>
+                        <control type="radiobutton" id="70042">
+                            <include content="PVROSDButton">
+                                <param name="texture" value="special://skin/extras/icons/playlist.png"/>
+                            </include>
+                            <onclick>Dialog.Close(all, true)</onclick>
+                            <onclick>ActivateWindow(tvguide)</onclick>
+                            <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
+                            <visible>ControlGroup(201).HasFocus</visible>
+                        </control>
                         <control type="radiobutton" id="70043">
                             <include content="PVROSDButton">
                                 <param name="texture" value="osd/fullscreen/buttons/information.png"/>
