@@ -136,7 +136,7 @@
 		</animation>
 	</include>
 	<include name="Animation_Widget_Slide">
-		<animation effect="slide" end="0,-460" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,0">Conditional</animation>
+		<animation effect="slide" end="0,-460" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,0)">Conditional</animation>
 		<animation effect="slide" end="0,-460" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,1)">Conditional</animation>
 		<animation effect="slide" end="0,-460" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,2)">Conditional</animation>
 		<animation effect="slide" end="0,-460" time="600" tween="cubic" easing="inout" reversible="true" condition="Integer.IsGreater(Container(3000).Position,3)">Conditional</animation>
