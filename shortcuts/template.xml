@@ -8,7 +8,7 @@
                 <right>0</right>
                 <height>1080</height>
                 <onleft>9000</onleft>
-                <onright>1100</onright>
+                <onright>3000</onright>
                 <orientation>vertical</orientation>
                 <include content="Object_Submenu_Content">
                     <param name="icon" value="$INFO[ListItem.Icon]" />
