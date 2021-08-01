@@ -199,6 +199,7 @@
 					<top>-180</top>
 					<right>20</right>
 					<height>160</height>
+					<width>66%</width>
 					<label fallback="19055">$INFO[VideoPlayer.Plot]</label>
 					<align>justify</align>
 					<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
