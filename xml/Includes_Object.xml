@@ -193,7 +193,7 @@
                 <left>150</left>
                 <width>480</width>
                 <aspectratio>keep</aspectratio>
-                <texture background="true">$VAR[ClearLogoHome]</texture>
+                <texture background="true">$VAR[Image_ClearLogo]</texture>
                 <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
             </control>
         </control>
