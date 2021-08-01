@@ -58,7 +58,7 @@
                     <left>695</left>
                     <width>500</width>
                     <scroll>true</scroll>
-                    <label>$INFO[Container(56).ListItem.Studio]</label>
+                    <label fallback="-">$INFO[Container(56).ListItem.Studio]</label>
                 </control>
 
                 <control type="label">
@@ -73,7 +73,7 @@
                     <width>500</width>
                     <height>20</height>
                     <scroll>true</scroll>
-                    <label>$INFO[Container(56).ListItem.Director]</label>
+                    <label fallback="-">$INFO[Container(56).ListItem.Director]</label>
                 </control>
 
                 <control type="label">
@@ -88,7 +88,7 @@
                     <width>500</width>
                     <height>20</height>
                     <scroll>true</scroll>
-                    <label>$INFO[Container(56).ListItem.Genre]</label>
+                    <label fallback="-">$INFO[Container(56).ListItem.Genre]</label>
                 </control>
 
                 <control type="label">
@@ -103,7 +103,7 @@
                     <width>500</width>
                     <height>20</height>
                     <scroll>true</scroll>
-                    <label>$INFO[Container(56).ListItem.Country]</label>
+                    <label fallback="-">$INFO[Container(56).ListItem.Country]</label>
                 </control>
             </control>
             <control type="group">
