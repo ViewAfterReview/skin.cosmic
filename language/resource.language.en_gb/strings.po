@@ -1224,3 +1224,68 @@ msgstr ""
 msgctxt "#31253"
 msgid "Widget Aspect ratio"
 msgstr ""
+
+#: /xml/View_56_Posters.xml
+msgctxt "#31254"
+msgid "Posters Showcase"
+msgstr ""
+
+#: /xml/View_56_Posters.xml
+msgctxt "#31255"
+msgid "Genre"
+msgstr ""
+
+#: /xml/View_56_Posters.xml
+msgctxt "#31256"
+msgid "Studio"
+msgstr ""
+
+#: /xml/View_56_Posters.xml
+msgctxt "#31257"
+msgid "Director"
+msgstr ""
+
+#: /xml/View_56_Posters.xml
+msgctxt "#31258"
+msgid "Country"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31259"
+msgid "Writer"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31260"
+msgid "Premiere"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31261"
+msgid "Cast"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31262"
+msgid "Sets"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31263"
+msgid "Similar"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31264"
+msgid "Crew"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31265"
+msgid "Recommended"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31266"
+msgid "Posters"
+msgstr ""

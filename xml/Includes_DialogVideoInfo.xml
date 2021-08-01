@@ -114,7 +114,7 @@
                         <control type="group">
                             <control type="label">
                                 <font>font27_bold</font>
-                                <label>Studio</label>
+                                <label>$LOCALIZE[31256]</label>
                             </control>
                             <control type="label">
                                 <top>40</top>
@@ -128,7 +128,7 @@
                             <control type="label">
                                 <top>120</top>
                                 <font>font27_bold</font>
-                                <label>Country</label>
+                                <label>$LOCALIZE[31258]</label>
                             </control>
                             <control type="label">
                                 <top>160</top>
@@ -142,7 +142,7 @@
                             <control type="label">
                                 <top>240</top>
                                 <font>font27_bold</font>
-                                <label>Genre</label>
+                                <label>$LOCALIZE[31255]</label>
                             </control>
                             <control type="label">
                                 <top>280</top>
@@ -159,7 +159,7 @@
                         <control type="group">
                             <control type="label">
                                 <font>font27_bold</font>
-                                <label>Director</label>
+                                <label>$LOCALIZE[31257]</label>
                             </control>
                             <control type="label">
                                 <top>40</top>
@@ -173,7 +173,7 @@
                             <control type="label">
                                 <top>120</top>
                                 <font>font27_bold</font>
-                                <label>Writer</label>
+                                <label>$LOCALIZE[31259]</label>
                             </control>
                             <control type="label">
                                 <top>160</top>
@@ -187,7 +187,7 @@
                             <control type="label">
                                 <top>240</top>
                                 <font>font27_bold</font>
-                                <label>Premiere</label>
+                                <label>$LOCALIZE[31260]</label>
                             </control>
                             <control type="label">
                                 <top>280</top>
@@ -214,7 +214,7 @@
                     <param name="groupid" value="1051" />
                     <param name="id" value="50" />
                     <param name="label" value="$INFO[ListItem.Label]" />
-                    <param name="altlabel" value="Cast" />
+                    <param name="altlabel" value="$LOCALIZE[31261]" />
                     <param name="left" value="80" />
                     <param name="top" value="0" />
                     <param name="visible" value="true" />
@@ -246,7 +246,7 @@
                     <param name="id" value="1052" />
                     <param name="groupid" value="10052" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Sets" />
+                    <param name="altlabel" value="$LOCALIZE[31262]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Set_List]" />
@@ -261,7 +261,7 @@
                     <param name="id" value="1053" />
                     <param name="groupid" value="10053" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Similar" />
+                    <param name="altlabel" value="$LOCALIZE[31263]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Similar_List]" />
@@ -276,7 +276,7 @@
                     <param name="id" value="1054" />
                     <param name="groupid" value="10054" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Director" />
+                    <param name="altlabel" value="$LOCALIZE[31257]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Director_List]" />
@@ -291,7 +291,7 @@
                     <param name="id" value="1055" />
                     <param name="groupid" value="10055" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Studio" />
+                    <param name="altlabel" value="$LOCALIZE[31256]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Studio_List]" />
@@ -306,7 +306,7 @@
                     <param name="id" value="1056" />
                     <param name="groupid" value="10056" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Crew" />
+                    <param name="altlabel" value="$LOCALIZE[31264]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Crew_List]" />
@@ -321,7 +321,7 @@
                     <param name="id" value="1057" />
                     <param name="groupid" value="10057" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Recommended" />
+                    <param name="altlabel" value="$LOCALIZE[31265]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Recommended_List]" />
@@ -336,7 +336,7 @@
                     <param name="id" value="1058" />
                     <param name="groupid" value="10058" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Genre" />
+                    <param name="altlabel" value="$LOCALIZE[31255]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Genre_List]" />
@@ -351,7 +351,7 @@
                     <param name="id" value="1059" />
                     <param name="groupid" value="10059" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
-                    <param name="altlabel" value="Posters" />
+                    <param name="altlabel" value="$LOCALIZE[31266]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
                     <param name="content" value="$VAR[Def_Posters_List]" />
