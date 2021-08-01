@@ -1222,7 +1222,7 @@ msgstr ""
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31253"
-msgid "Widget Aspect ratio"
+msgid "Aspect ratio"
 msgstr ""
 
 #: /xml/View_56_Posters.xml

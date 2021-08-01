@@ -64,8 +64,8 @@
     <propertySettings property="widgetLimit" buttonID="504" title="Widget Item Limit" />
 
     <!-- Widget Aspect -->
-    <property property="widgetAspect">poster</property>
-    <property property="widgetAspect">landscape</property>
+    <property property="widgetAspect">Poster</property>
+    <property property="widgetAspect">Landscape</property>
     <propertySettings property="widgetAspect" buttonID="505" title="Widget Aspect" />
 
     <!-- Icon Overrides -->

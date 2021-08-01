@@ -36,7 +36,7 @@
         <property name="sortdirection" tag="property" attribute="name|widgetSortDirection" />
         <property name="limit" tag="property" attribute="name|widgetLimit" />
         <property name="aspect" tag="property" attribute="name|widgetAspect" />
-        <property name="aspect">poster</property>
+        <property name="aspect">Poster</property>
 
         <propertyGroup>mainmenuWidgets</propertyGroup>
 
@@ -55,8 +55,8 @@
                 <param name="path" value="$SKINSHORTCUTS[path]" />
                 <param name="upid" value="300$PYTHON[int(id) - 1]" />
                 <param name="downid" value="300$PYTHON[int(id) + 1]" />
-                <param name="postercondition" value="$PYTHON['true' if aspect in 'poster' else 'false']" />
-                <param name="landscapecondition" value="$PYTHON['true' if aspect in 'landscape' else 'false']" />
+                <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
+                <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
                 <skinshortcuts>visibility</skinshortcuts>
             </include>
         </controls>
