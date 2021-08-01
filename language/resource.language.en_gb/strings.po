@@ -1222,5 +1222,5 @@ msgstr ""
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31253"
-msgid "Widget aspect"
+msgid "Widget Aspect ratio"
 msgstr ""
