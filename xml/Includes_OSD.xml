@@ -3,10 +3,10 @@
     <include name="LiveTV_OSD">
         <definition>
             <control type="group" id="200">
-                <include>Animation_BottomSlide</include>
+                <include>Animation_DialogPopupOpenClose</include>
                 <width>1920</width>
                 <control type="group">
-                    <include>Animation_BottomSlide</include>
+                    <include>Animation_DialogPopupOpenClose</include>
                     <top>-100</top>
                     <control type="image">
                         <width>80%</width>
