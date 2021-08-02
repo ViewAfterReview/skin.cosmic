@@ -113,7 +113,8 @@
 
 					<control type="label" id="31">
 						<top>90</top>
-						<left>146</left>
+						<right>90</right>
+						<align>right</align>
 						<font>font27_narrow</font>
 						<textcolor>ffdedede</textcolor>
 					</control>
