@@ -1289,3 +1289,13 @@ msgstr ""
 msgctxt "#31266"
 msgid "Posters"
 msgstr ""
+
+#: /xml/Includes_Items.xml
+msgctxt "#31267"
+msgid "Locked View"
+msgstr ""
+
+#: /xml/Includes_Items.xml
+msgctxt "#31268"
+msgid "Unlocked View"
+msgstr ""

@@ -11,6 +11,9 @@
 				<param name="list_id" value="502" />
 				<param name="viewtype_label" value="$LOCALIZE[20445]" />
 			</include>
+			<include content="View_Forced">
+				<param name="string" value="$LOCALIZE[20445]" />
+			</include>
 		</control>
 		<control type="group">
 			<depth>DepthContentPanel</depth>

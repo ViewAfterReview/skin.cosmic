@@ -46,6 +46,9 @@
 					<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(games)</visible>
 					<preloaditems>1</preloaditems>
 					<viewtype label="20021">icon</viewtype>
+					<include content="View_Forced">
+						<param name="string" value="$LOCALIZE[20021]" />
+					</include>
 					<itemlayout width="317">
 						<control type="group">
 							<left>-220</left>

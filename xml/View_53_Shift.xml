@@ -61,6 +61,9 @@
 					<onright>53</onright>
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
+					<include content="View_Forced">
+						<param name="string" value="$LOCALIZE[31100]" />
+					</include>
 					<itemlayout width="370">
 						<control type="image">
 							<depth>DepthContentPopout</depth>

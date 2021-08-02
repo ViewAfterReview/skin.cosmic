@@ -20,6 +20,9 @@
 				<onup>55</onup>
 				<ondown>55</ondown>
 				<viewtype label="$LOCALIZE[31107]">list</viewtype>
+				<include content="View_Forced">
+					<param name="string" value="$LOCALIZE[31107]" />
+				</include>
 				<focusedlayout height="list_item_height" condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)">
 					<control type="group">
 						<left>0</left>
