@@ -94,7 +94,7 @@
                         <include>SmallBusySpinner</include>
                         <top>10</top>
                         <left>18</left>
-                        <visible>Container($PARAM[id]).IsUpdating</visible>
+                        <visible>Container($PARAM[groupid]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
                 </control>
@@ -115,7 +115,6 @@
             <control type="group" id="$PARAM[groupid]">
                 <nested />
                 <include content="Object_Widget_Label">
-                    <param name="labelgid" value="$PARAM[labelgid]" />
                     <param name="id" value="$PARAM[id]" />
                     <param name="label" value="$PARAM[name]" />
                     <param name="top" value="0" />

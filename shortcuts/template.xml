@@ -43,7 +43,6 @@
         <controls>
             <include content="Object_Widget_Content">
                 <!-- <param name="label" value="$SKINSHORTCUTS[label]" /> -->
-                <param name="labelgid" value="$PYTHON[int(id)]$PYTHON[int(id) + 6500]" />
                 <param name="name" value="$SKINSHORTCUTS[name]" />
                 <param name="groupid" value="$PYTHON[int(id)]$PYTHON[int(id) + 7500]" />
                 <param name="image" value="$SKINSHORTCUTS[artwork]" />
