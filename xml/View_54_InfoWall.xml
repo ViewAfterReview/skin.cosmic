@@ -86,8 +86,9 @@
 				<width>290</width>
 				<height>400</height>
 				<texture background="true">$PARAM[icon]</texture>
+				<bordertexture border="32">common/dark-shadow-24.png</bordertexture>
+				<bordersize>24</bordersize>
 				<aspectratio>scale</aspectratio>
-				<bordersize>20</bordersize>
 			</control>
 		</control>
 	</include>
