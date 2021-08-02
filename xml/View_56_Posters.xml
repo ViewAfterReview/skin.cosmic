@@ -50,9 +50,9 @@
             <control type="textbox">
                 <left>695</left>
                 <top>235</top>
-                <height>125</height>
+                <height>145</height>
                 <right>115</right>
-                <autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+                <autoscroll time="3000" delay="7000" repeat="5000">Control.HasFocus(56)</autoscroll>
                 <label>$VAR[PlotTextBoxVar]</label>
                 <shadowcolor>text_shadow</shadowcolor>
                 <visible>![ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)]</visible>
