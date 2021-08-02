@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="BackgroundOverlay">
-		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home)">$VAR[ColorHighlight]</value>
+		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home)">37FFFFFF</value>
 		<value condition="Window.IsVisible(Home)"></value>
 	</variable>
 	<variable name="HighlightOverlay">
-		<value condition="!Window.IsVisible(Home)">$VAR[ColorHighlight]</value>
+		<value condition="!Window.IsVisible(Home)">37FFFFFF</value>
 	</variable>
 	<variable name="Image_ClearLogo">
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
