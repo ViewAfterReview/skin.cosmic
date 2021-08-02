@@ -193,6 +193,16 @@
 					<height>160</height>
 					<font>font52_title</font>
 					<label>$INFO[Player.Title]</label>
+					<visible>String.IsEmpty(Player.Art(clearlogo)) + String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
+				</control>
+				<control type="image">
+					<left>380</left>
+					<top>-780</top>
+					<right>20</right>
+					<width>480</width>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$VAR[Image_ClearLogo]</texture>
+					<visible>!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
 				</control>
 				<control type="textbox">
 					<left>380</left>
