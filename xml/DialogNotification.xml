@@ -8,7 +8,6 @@
 			<right>0</right>
 			<width>800</width>
 			<include>OpenClose_Right</include>
-			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
 
 			<control type="grouplist">
 				<orientation>vertical</orientation>
