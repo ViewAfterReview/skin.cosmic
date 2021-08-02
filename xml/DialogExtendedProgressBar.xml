@@ -59,7 +59,7 @@
 						<centertop>50%</centertop>
 						<height>128</height>
 						<orientation>horizontal</orientation>
-						<itemgap>16</itemgap>
+						<itemgap>32</itemgap>
 						<align>right</align>
 						<usecontrolcoords>true</usecontrolcoords>
 						<control type="group">

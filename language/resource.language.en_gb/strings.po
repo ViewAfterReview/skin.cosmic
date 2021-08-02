@@ -1291,11 +1291,11 @@ msgid "Posters"
 msgstr ""
 
 #: /xml/Includes_Items.xml
-msgctxt "#31267"
+msgctxt "#31269"
 msgid "Locked View"
 msgstr ""
 
 #: /xml/Includes_Items.xml
-msgctxt "#31268"
+msgctxt "#31270"
 msgid "Unlocked View"
 msgstr ""
