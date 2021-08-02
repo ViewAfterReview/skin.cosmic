@@ -63,6 +63,7 @@
 						<align>right</align>
 						<usecontrolcoords>true</usecontrolcoords>
 						<control type="group">
+							<right>32</right>
 							<control type="image" description="Back">
 								<right>0</right>
 								<centertop>50%</centertop>
