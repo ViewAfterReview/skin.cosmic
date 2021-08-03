@@ -416,12 +416,12 @@ msgid "Contributors"
 msgstr "Współpracownicy"
 
 msgctxt "#31129"
-msgid "General settings applying to all areas of the skin."
-msgstr "Ogólne ustawienia mające zastosowanie we wszystkich obszarach skóry."
+msgid "Just a description and debugging option"
+msgstr "Po prostu opis skórki i opcja debugowania"
 
 msgctxt "#31130"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Umożliwia dostosowanie menu startowego do własnych upodobań."
+msgid "The place from where you should start"
+msgstr "Miejsce, od którego powinieneś zacząć"
 
 msgctxt "#31131"
 msgid "Choose skin fanart pack"
