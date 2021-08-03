@@ -1181,7 +1181,7 @@
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<control type="image" id="32111">
-						<include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(TMDbHelper.EnableBlur)">FullScreenDimensions</include>
+						<include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]">FullScreenDimensions</include>
 						<left>500</left>
 						<width>1420</width>
 						<height>780</height>
