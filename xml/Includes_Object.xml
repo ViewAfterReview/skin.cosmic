@@ -43,22 +43,22 @@
         </focusedlayout>
     </include>
     <include name="Object_SubmenuHorizontal_Content">
-        <itemlayout width="360" height="95">
+        <itemlayout width="384" height="95">
             <control type="group">
                 <control type="image">
-                    <left>38</left>
+                    <left>0</left>
                     <top>995</top>
-                    <width>360</width>
+                    <width>384</width>
                     <height>95</height>
                     <texture colordiffuse="44FFFFFF">common/white.png</texture>
                 </control>
                 <control type="textbox">
-                    <left>38</left>
+                    <left>0</left>
                     <top>995</top>
-                    <width>360</width>
+                    <width>384</width>
                     <height>95</height>
                     <label>$PARAM[label]</label>
-                    <font>font37</font>
+                    <font>font32</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -66,22 +66,22 @@
                 <visible>true</visible>
             </control>
         </itemlayout>
-        <focusedlayout width="360" height="95">
+        <focusedlayout width="384" height="95">
             <control type="group">
                 <control type="image">
-                    <left>38</left>
+                    <left>0</left>
                     <top>995</top>
-                    <width>360</width>
+                    <width>384</width>
                     <height>95</height>
                     <texture colordiffuse="37FFFFFF">common/white.png</texture>
                 </control>
                 <control type="textbox">
-                    <left>38</left>
+                    <left>0</left>
                     <top>995</top>
-                    <width>360</width>
+                    <width>384</width>
                     <height>95</height>
                     <label>$PARAM[label]</label>
-                    <font>font37</font>
+                    <font>font32_title</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -175,7 +175,7 @@
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                     </control>
                     <control type="label">
-                        <top>3</top>
+                        <top>-20</top>
                         <width>auto</width>
                         <label> | </label>
                         <aligny>center</aligny>

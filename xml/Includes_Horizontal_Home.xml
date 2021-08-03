@@ -65,32 +65,30 @@
             </control>
         </control>
         <control type="group">
-            <control type="fixedlist" id="9000">
+            <control type="panel" id="9000">
                 <width>1920</width>
                 <height>180</height>
                 <bottom>0</bottom>
                 <movement>6</movement>
                 <focusposition>0</focusposition>
-                <onfocus>ClearProperty(listposition,home)</onfocus>
-                <onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
                 <ondown>9001</ondown>
                 <onup>3000</onup>
                 <orientation>horizontal</orientation>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
-                <focusedlayout height="95" width="320">
+                <focusedlayout height="95" width="384">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
-                        <width>320</width>
+                        <width>384</width>
                         <height>95</height>
                         <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                     </control>
                     <control type="group">
                         <control type="image">
-                            <left>-3</left>
-                            <top>1</top>
-                            <width>95</width>
-                            <height>95</height>
+                            <left>20</left>
+                            <width>64</width>
+                            <height>64</height>
+                            <centertop>50%</centertop>
                             <texture>$INFO[ListItem.Art(thumb)]</texture>
                         </control>
                     </control>
@@ -99,28 +97,28 @@
                             <left>104</left>
                             <top>0</top>
                             <height>95</height>
-                            <width>560</width>
+                            <width>284</width>
                             <aligny>center</aligny>
-                            <font>font45_title</font>
+                            <font>font32_title</font>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>text_shadow</shadowcolor>
                         </control>
                     </control>
                 </focusedlayout>
-                <itemlayout height="95" width="320">
+                <itemlayout height="95" width="384">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
-                        <width>320</width>
+                        <width>384</width>
                         <height>95</height>
                         <texture colordiffuse="44FFFFFF">common/white.png</texture>
                     </control>
                     <control type="group">
                         <control type="image">
-                            <left>-3</left>
-                            <top>1</top>
-                            <width>95</width>
-                            <height>95</height>
+                            <left>20</left>
+                            <centertop>50%</centertop>
+                            <width>64</width>
+                            <height>64</height>
                             <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
                         </control>
                     </control>
@@ -129,9 +127,9 @@
                             <left>104</left>
                             <top>0</top>
                             <height>95</height>
-                            <width>560</width>
+                            <width>284</width>
                             <aligny>center</aligny>
-                            <font>font37</font>
+                            <font>font32</font>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>text_shadow</shadowcolor>
                         </control>
