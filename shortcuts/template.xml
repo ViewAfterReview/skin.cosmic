@@ -22,6 +22,31 @@
         </controls>
     </submenu>
 
+    <submenu include="submenuHorizontal">
+        <controls>
+            <control type="list" id="9001">
+                <left>0</left>
+                <top>0</top>
+                <right>0</right>
+                <bottom>0</bottom>
+                <height>1080</height>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+                <orientation>horizontal</orientation>
+                <include content="Object_SubmenuHorizontal_Content">
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                </include>
+                <content>
+                    <skinshortcuts>items</skinshortcuts>
+                </content>
+                <skinshortcuts>visibility</skinshortcuts>
+            </control>
+        </controls>
+    </submenu>
+
     <other>
         <controls>
             <description>This is a fake template which is needed to trick Skin Shortcuts into building the submenuOther templates</description>
@@ -42,7 +67,38 @@
 
         <controls>
             <include content="Object_Widget_Content">
-                <!-- <param name="label" value="$SKINSHORTCUTS[label]" /> -->
+                <param name="name" value="$SKINSHORTCUTS[name]" />
+                <param name="groupid" value="$PYTHON[int(id)]$PYTHON[int(id) + 7500]" />
+                <param name="image" value="$SKINSHORTCUTS[artwork]" />
+                <param name="id" value="300$SKINSHORTCUTS[id]" />
+                <param name="target" value="$SKINSHORTCUTS[target]" />
+                <param name="sortby" value="$SKINSHORTCUTS[sortby]" />
+                <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
+                <param name="limit" value="$SKINSHORTCUTS[limit]" />
+                <param name="path" value="$SKINSHORTCUTS[path]" />
+                <param name="upid" value="300$PYTHON[int(id) - 1]" />
+                <param name="downid" value="300$PYTHON[int(id) + 1]" />
+                <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
+                <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
+                <skinshortcuts>visibility</skinshortcuts>
+            </include>
+        </controls>
+    </submenuOther>
+
+    <submenuOther include="horizontal" level="1">
+        <condition tag="property" attribute="name|widgetPath" />
+
+        <property name="id" tag="mainmenuid" />
+        <property name="sortby" tag="property" attribute="name|widgetSortBy" />
+        <property name="sortdirection" tag="property" attribute="name|widgetSortDirection" />
+        <property name="limit" tag="property" attribute="name|widgetLimit" />
+        <property name="aspect" tag="property" attribute="name|widgetAspect" />
+        <property name="aspect">Poster</property>
+
+        <propertyGroup>mainmenuWidgets</propertyGroup>
+
+        <controls>
+            <include content="Object_Widget_Content_Horizontal">
                 <param name="name" value="$SKINSHORTCUTS[name]" />
                 <param name="groupid" value="$PYTHON[int(id)]$PYTHON[int(id) + 7500]" />
                 <param name="image" value="$SKINSHORTCUTS[artwork]" />

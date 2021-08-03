@@ -15,6 +15,11 @@
 			<style>lighten</style>
 		</font>
 		<font>
+			<name>font_topbar_horiz</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
 			<name>font13</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>30</size>

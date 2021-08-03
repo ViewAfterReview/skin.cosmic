@@ -84,9 +84,9 @@
 									<texture colordiffuse="$VAR[ColorGradient]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
 									<animation effect="fade" end="66" condition="true">Conditional</animation>
 									<aspectratio align="center" aligny="center">keep</aspectratio>
-									<include content="ProgressColorFade">
+									<!-- <include content="ProgressColorFade">
 										<param name="id" value="$PARAM[progress-id]" />
-									</include>
+									</include> -->
 								</control>
 							</control>
 							<control type="image">

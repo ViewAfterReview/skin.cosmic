@@ -2,8 +2,154 @@
 <includes>
     <include name="Horizontal_Main">
         <control type="group">
-            <control type="label">
-                <label>Hey, it's me. Horizontal layout :D</label>
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>48</height>
+            <control type="group">
+                <control type="image">
+                    <top>-32</top>
+                    <left>-200</left>
+                    <width>200%</width>
+                    <height>92</height>
+                    <texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
+                    <bordertexture border="21">overlays/shadow.png</bordertexture>
+                    <bordersize>20</bordersize>
+                </control>
+            </control>
+            <control type="group">
+                <control type="group">
+                    <include>WidgetHorizontalLabel</include>
+                </control>
+                <control type="label">
+                    <height>40</height>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <font>font_topbar_horiz</font>
+                    <label>$INFO[Weather.Temperature,   ,]   &#x2022;$INFO[System.Date,   ,]   &#x2022;$INFO[System.Time,   ,]   </label>
+                </control>
+            </control>
+        </control>
+        <control type="group" id="5600">
+            <include content="Object_Item_Showcase">
+                <param name="title" value="$INFO[ListItem.Title]" />
+                <param name="plot" value="$VAR[PlotTextBoxVar]" />
+                <param name="top" value="75" />
+            </include>
+            <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
+        </control>
+        <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+        <control type="group" id="2000">
+            <animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
+                <effect type="slide" end="0,20" time="60" tween="sine" />
+                <effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
+            </animation>
+            <animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
+                <effect type="slide" end="0,-20" time="60" tween="sine" />
+                <effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
+            </animation>
+            <include>OpenClose_Right</include>
+            <control type="grouplist" id="3000">
+                <top>480</top>
+                <height>460</height>
+                <itemgap>0</itemgap>
+                <usecontrolcoords>false</usecontrolcoords>
+                <include>skinshortcuts-template-horizontal</include>
+            </control>
+            <control type="group" id="2999">
+                <include content="Object_Ratings_Content">
+                    <param name="directory" value="colorful" />
+                    <param name="align" value="right" />
+                    <param name="top" value="425" />
+                </include>
+            </control>
+        </control>
+        <control type="group">
+            <control type="fixedlist" id="9000">
+                <width>1920</width>
+                <height>180</height>
+                <bottom>0</bottom>
+                <movement>6</movement>
+                <focusposition>0</focusposition>
+                <onfocus>ClearProperty(listposition,home)</onfocus>
+                <onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
+                <ondown>9001</ondown>
+                <onup>3000</onup>
+                <orientation>horizontal</orientation>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <focusedlayout height="95" width="320">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>320</width>
+                        <height>95</height>
+                        <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+                    </control>
+                    <control type="group">
+                        <control type="image">
+                            <left>-3</left>
+                            <top>1</top>
+                            <width>95</width>
+                            <height>95</height>
+                            <texture>$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <left>104</left>
+                            <top>0</top>
+                            <height>95</height>
+                            <width>560</width>
+                            <aligny>center</aligny>
+                            <font>font45_title</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <shadowcolor>text_shadow</shadowcolor>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <itemlayout height="95" width="320">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>320</width>
+                        <height>95</height>
+                        <texture colordiffuse="44FFFFFF">common/white.png</texture>
+                    </control>
+                    <control type="group">
+                        <control type="image">
+                            <left>-3</left>
+                            <top>1</top>
+                            <width>95</width>
+                            <height>95</height>
+                            <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <left>104</left>
+                            <top>0</top>
+                            <height>95</height>
+                            <width>560</width>
+                            <aligny>center</aligny>
+                            <font>font37</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <shadowcolor>text_shadow</shadowcolor>
+                        </control>
+                    </control>
+                </itemlayout>
+                <content>
+                    <include>skinshortcuts-mainmenu</include>
+                </content>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>0</left>
+                    <top>995</top>
+                    <width>1920</width>
+                    <height>95</height>
+                    <texture colordiffuse="37FFFFFF">common/white.png</texture>
+                </control>
+                <include>skinshortcuts-template-submenuHorizontal</include>
             </control>
         </control>
     </include>

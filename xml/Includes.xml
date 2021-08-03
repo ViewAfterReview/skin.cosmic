@@ -1181,7 +1181,7 @@
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<control type="image" id="32111">
-						<include condition="!Window.IsVisible(Home)">FullScreenDimensions</include>
+						<include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main)">FullScreenDimensions</include>
 						<left>500</left>
 						<width>1420</width>
 						<height>780</height>
@@ -1216,6 +1216,7 @@
 						<animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
 						<visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
+						<visible>Skin.HasSetting(Vertical_Main)</visible>
 					</control>
 				</control>
 			</control>
@@ -1992,5 +1993,128 @@
 
 	<include name="View_Forced">
 		<visible>[Container.Content(games) + [String.IsEqual(Skin.String(Skin.ForcedView.games),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.games))]] | [Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies))]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets))]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes))]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors))]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists))]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums))]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs))]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons))]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres))]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.images))]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos))]] | [Container.Content() + [String.IsEqual(Skin.String(Skin.ForcedView.),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.))]] | [Container.Content(tags) + [String.IsEqual(Skin.String(Skin.ForcedView.tags),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.tags))]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.years))]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries))]] | [Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios))]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists))]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors))]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.files))]] | [Container.Content(mixed) + [String.IsEqual(Skin.String(Skin.ForcedView.mixed),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.mixed))]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.unknown))]] | [!Container.Content(games) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(actors) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(addons) + !Container.Content(genres) + !Container.Content(images) + !Container.Content(videos) + !Container.Content() + !Container.Content(tags) + !Container.Content(years) + !Container.Content(countries) + !Container.Content(studios) + !Container.Content(playlists) + !Container.Content(musicvideos) + !Container.Content(directors) + !Container.Content(files) + !Container.Content(mixed) + !Container.Content(unknown)] | Window.IsVisible(MyPlaylist.xml)</visible>
+	</include>
+
+	<include name="WidgetHorizontalLabel">
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3001" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3002" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3003" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3004" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3005" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3006" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3007" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3008" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3009" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3010" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3011" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3012" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3013" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3014" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3015" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3016" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3017" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3018" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3019" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
+		<include content="Object_WidgetHorizontal_Label">
+			<param name="groupid" value="8000" />
+			<param name="id" value="3020" />
+			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
+			<param name="top" value="0" />
+		</include>
 	</include>
 </includes>
