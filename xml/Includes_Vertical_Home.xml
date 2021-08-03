@@ -11,7 +11,6 @@
         <control type="group">
             <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
             <control type="group" id="2000">
-                <left>122</left>
                 <animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
                     <effect type="slide" end="0,20" time="60" tween="sine" />
                     <effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
@@ -21,6 +20,7 @@
                     <effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
                 </animation>
                 <include>OpenClose_Right</include>
+                <left>122</left>
                 <control type="grouplist" id="3000">
                     <top>515</top>
                     <height>9999</height>
@@ -54,8 +54,6 @@
                     <bottom>-40</bottom>
                     <movement>7</movement>
                     <focusposition>0</focusposition>
-                    <onfocus>ClearProperty(listposition,home)</onfocus>
-                    <onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
                     <onup>700</onup>
                     <!-- <ondown>700</ondown> -->
                     <onleft>9001</onleft>
@@ -88,7 +86,6 @@
                         </control>
                     </focusedlayout>
                     <itemlayout height="95">
-                        <onright>3000</onright>
                         <control type="group">
                             <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
                             <animation effect="slide" start="0,0" end="-82,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
@@ -119,30 +116,6 @@
                     </content>
                 </control>
                 <include>skinshortcuts-template-submenu</include>
-            </control>
-            <include>BottomBar</include>
-            <control type="group">
-                <depth>DepthBars</depth>
-                <bottom>0</bottom>
-                <height>70</height>
-                <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                <control type="rss">
-                    <animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-                    <left>0</left>
-                    <bottom>0</bottom>
-                    <height>39</height>
-                    <width>100%</width>
-                    <font>font12</font>
-                    <urlset>1</urlset>
-                    <hitrect x="-100" y="0" w="1" h="1" />
-                    <titlecolor>button_focus</titlecolor>
-                    <textcolor>button_focus</textcolor>
-                    <shadowcolor>text_shadow</shadowcolor>
-                    <headlinecolor>FFC0C0C0</headlinecolor>
-                    <visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
-                    <animation effect="fade" time="300">VisibleChange</animation>
-                </control>
             </control>
             <control type="group">
                 <depth>DepthBars</depth>

@@ -594,7 +594,7 @@
 	</variable>
 	<variable name="BlurBackground">
 		<value condition="Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
-		<value condition="Skin.HasSetting(DontBlurHome) + [Skin.HasSetting(TMDbHelper.EnableBlur) + [!Window.IsVisible(Home) | Window.IsVisible(DialogVideoInfo.xml)]]">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
+		<value condition="Skin.HasSetting(DontBlurHome) + [Skin.HasSetting(TMDbHelper.EnableBlur) + [!Window.IsVisible(Home) | $EXP[infodialog_active]]]">$INFO[Window(Home).Property(TMDbHelper.ListItem.BlurImage)]</value>
 		<value>$VAR[MediaFanartVar]</value>
 	</variable>
 	<variable name="WeatherFanartVar">

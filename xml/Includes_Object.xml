@@ -227,6 +227,9 @@
                     <param name="top" value="0" />
                 </include>
                 <control type="$PARAM[controltype]" id="$PARAM[id]">
+                    <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
+                    <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
+
                     <orientation>horizontal</orientation>
                     <top>70</top>
                     <onleft>9000</onleft>
@@ -235,9 +238,6 @@
                     <onup>$PARAM[upid]</onup>
                     <ondown>$PARAM[downid]</ondown>
 
-                    <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
-
-                    <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
                     <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
 
                     <!-- Posters aspect ratio -->
