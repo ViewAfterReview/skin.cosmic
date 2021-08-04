@@ -22,7 +22,7 @@
 						<width>auto</width>
 						<label>$PARAM[altlabel]</label>
 						<aligny>center</aligny>
-						<textcolor>pure_white</textcolor>
+						<textcolor>dialog_fg_100</textcolor>
 						<font>font13</font>
 						<height>24</height>
 						<visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
@@ -56,7 +56,7 @@
 						<width>auto</width>
 						<label>$INFO[Container($PARAM[id]).ListItem.Label]</label>
 						<aligny>center</aligny>
-						<textcolor>pure_white</textcolor>
+						<textcolor>dialog_fg_100</textcolor>
 						<font>font_tiny</font>
 						<height>24</height>
 						<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>

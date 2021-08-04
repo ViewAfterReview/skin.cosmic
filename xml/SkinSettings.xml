@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
-	<backgroundcolor>main_bg_100</backgroundcolor>
+	<backgroundcolor>Background</backgroundcolor>
 
 	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|shutdown)</onunload>
@@ -17,7 +17,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="bg_overlay">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
+			<imagepath background="true" colordiffuse="30FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
 			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
 		</control>
 
@@ -61,7 +61,7 @@
 					<width>800</width>
 					<height>480</height>
 					<font>font_clock</font>
-					<textcolor>pure_white</textcolor>
+					<textcolor>dialog_fg_100</textcolor>
 					<align>center</align>
 					<label>$LOCALIZE[31271]</label>
 					<visible>Container(9000).HasFocus(1)</visible>
@@ -73,7 +73,7 @@
 					<width>800</width>
 					<height>480</height>
 					<font>font37</font>
-					<textcolor>pure_white</textcolor>
+					<textcolor>dialog_fg_100</textcolor>
 					<label>31278</label>
 					<align>center</align>
 					<visible>Container(9000).HasFocus(1)</visible>
@@ -100,6 +100,7 @@
 					<control type="button" id="603" description="Toggle debugging">
 						<label>$LOCALIZE[31248]</label>
 						<include>DefaultSettingButton</include>
+						<enable>false</enable>
 						<onclick>Skin.ToggleDebug()</onclick>
 					</control>
 				</control>

@@ -143,7 +143,7 @@
                         <left>108</left>
                         <label>$INFO[System.ProfileName]</label>
                         <font>font45_title</font>
-                        <textcolor>pure_white</textcolor>
+                        <textcolor>dialog_fg_100</textcolor>
                         <visible>Control.HasFocus(9000) | Control.IsVisible(9000)</visible>
                     </control>
                     <control type="button" id="303">
@@ -158,7 +158,7 @@
                         <textcolor>$VAR[ColorHighlight]</textcolor>
                         <label>$LOCALIZE[31188]</label>
                         <onclick>ActivateWindow(LoginScreen.xml)</onclick>
-                        <focusedcolor>pure_white</focusedcolor>
+                        <focusedcolor>dialog_fg_100</focusedcolor>
                         <texturefocus />
                         <visible>Control.IsVisible(9000)</visible>
                     </control>

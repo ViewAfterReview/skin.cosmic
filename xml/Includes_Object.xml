@@ -109,7 +109,7 @@
                         <width>auto</width>
                         <label>$PARAM[label]</label>
                         <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
+                        <textcolor>dialog_fg_100</textcolor>
                         <font>font27_bold</font>
                         <height>24</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
@@ -131,7 +131,7 @@
                         <width>auto</width>
                         <label>$INFO[ListItem.ChannelName]</label>
                         <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
+                        <textcolor>dialog_fg_100</textcolor>
                         <font>font27_bold</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -168,7 +168,7 @@
                         <width>auto</width>
                         <label>$PARAM[label]</label>
                         <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
+                        <textcolor>dialog_fg_100</textcolor>
                         <font>font_topbar_horiz</font>
                         <height>42</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
@@ -190,7 +190,7 @@
                         <width>auto</width>
                         <label>$INFO[ListItem.ChannelName]</label>
                         <aligny>center</aligny>
-                        <textcolor>pure_white</textcolor>
+                        <textcolor>dialog_fg_100</textcolor>
                         <font>font_topbar_horiz</font>
                         <height>42</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -378,7 +378,7 @@
                         <height>120</height>
                         <label>$PARAM[plot]</label>
                         <font>font32</font>
-                        <shadowcolor>pure_black</shadowcolor>
+                        <shadowcolor>shadow</shadowcolor>
                         <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600)</autoscroll>
                     </control>
                 </control>
@@ -463,7 +463,7 @@
                 <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
-                <shadowcolor>pure_black</shadowcolor>
+                <shadowcolor>shadow</shadowcolor>
 
                 <visible>$PARAM[visible]</visible>
             </control>
@@ -473,7 +473,7 @@
     <include name="Object_Info_Line">
         <param name="label" default="" />
         <param name="nextaired" default="true" />
-        <param name="textcolor" default="pure_white" />
+        <param name="textcolor" default="dialog_fg_100" />
         <param name="container" default="" />
         <param name="uid" default="661" />
         <param name="green" default="ff27ae60" />
@@ -612,7 +612,7 @@
                     <!-- <visible>!Skin.HasSetting(Ratings.Oscars)</visible> -->
                 </control>
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>
@@ -631,7 +631,7 @@
                     <!-- <visible>!Skin.HasSetting(Ratings.Trakt)</visible> -->
                 </control>
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>
@@ -652,7 +652,7 @@
                     <!-- <visible>Skin.HasSetting(Ratings.TheMovieDB)</visible> -->
                 </control>
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>
@@ -671,7 +671,7 @@
                     <!-- <visible>!Skin.HasSetting(Ratings.Metacritic)</visible> -->
                 </control>
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>
@@ -701,7 +701,7 @@
                     <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
                 </control>
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>
@@ -740,7 +740,7 @@
                     <!-- <visible>!Skin.HasSetting(Ratings.RottenTomatoes)</visible> -->
                 </control>
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>
@@ -759,7 +759,7 @@
                     <!-- <visible>!Skin.HasSetting(Ratings.IMDB)</visible> -->
                 </control>
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>
@@ -771,7 +771,7 @@
                     <!-- <visible>!Skin.HasSetting(Ratings.IMDB.Votes)</visible> -->
                 </control>
                 <!-- <control type="label"> -->
-                <!-- <textcolor>pure_white</textcolor> -->
+                <!-- <textcolor>dialog_fg_100</textcolor> -->
                 <!-- <top>2</top> -->
                 <!-- <width>auto</width> -->
                 <!-- <height>42</height> -->
@@ -783,7 +783,7 @@
                 <!-- <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible> -->
                 <!-- </control> -->
                 <!-- <control type="label"> -->
-                <!-- <textcolor>pure_white</textcolor> -->
+                <!-- <textcolor>dialog_fg_100</textcolor> -->
                 <!-- <top>2</top> -->
                 <!-- <width>auto</width> -->
                 <!-- <height>42</height> -->
@@ -794,7 +794,7 @@
                 <!-- <visible>!Skin.HasSetting(Ratings.IMDB)</visible> -->
                 <!-- </control> -->
                 <control type="label">
-                    <textcolor>pure_white</textcolor>
+                    <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
                     <height>42</height>

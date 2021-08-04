@@ -1764,7 +1764,7 @@
 			<align>center</align>
 			<height>20</height>
 			<font>font12</font>
-			<textcolor>pure_white</textcolor>
+			<textcolor>dialog_fg_100</textcolor>
 		</control>
 	</include>
 

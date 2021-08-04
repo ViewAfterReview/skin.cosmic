@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1100">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<backgroundcolor>main_bg_100</backgroundcolor>
+	<backgroundcolor>Background</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="multiimage">
@@ -13,7 +13,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="bg_overlay">$VAR[AddonsFanartVar]</imagepath>
+			<imagepath background="true" colordiffuse="30FFFFFF">$VAR[AddonsFanartVar]</imagepath>
 			<visible>!Player.HasMedia</visible>
 		</control>
 		<control type="group">
@@ -277,8 +277,8 @@
 					<textureradioonnofocus>icons/submenu/updatelibrary.png</textureradioonnofocus>
 					<textureradioofffocus>icons/submenu/updatelibrary.png</textureradioofffocus>
 					<textureradiooffnofocus>icons/submenu/updatelibrary.png</textureradiooffnofocus>
-					<textureradioondisabled colordiffuse="disabled">icons/submenu/updatelibrary.png</textureradioondisabled>
-					<textureradiooffdisabled colordiffuse="disabled">icons/submenu/updatelibrary.png</textureradiooffdisabled>
+					<textureradioondisabled colordiffuse="dialog_fg_30">icons/submenu/updatelibrary.png</textureradioondisabled>
+					<textureradiooffdisabled colordiffuse="dialog_fg_30">icons/submenu/updatelibrary.png</textureradiooffdisabled>
 				</control>
 				<control type="radiobutton" id="803">
 					<width>120</width>

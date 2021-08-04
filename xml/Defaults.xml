@@ -15,7 +15,7 @@
 		<align>left</align>
 		<font>font13</font>
 		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 		<selectedcolor>selected</selectedcolor>
 		<scroll>false</scroll>
 		<scrollspeed>40</scrollspeed>
@@ -24,14 +24,14 @@
 		<align>left</align>
 		<font>font13</font>
 		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 	</default>
 	<default type="button">
 		<aligny>center</aligny>
 		<font>font13</font>
 		<textoffsetx>30</textoffsetx>
 		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 		<selectedcolor>$VAR[ColorHighlight]</selectedcolor>
 		<texturefocus colordiffuse="1F181818">common/white.png</texturefocus>
 		<texturenofocus />
@@ -39,7 +39,7 @@
 	</default>
 	<default type="togglebutton">
 		<selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 		<texturefocus colordiffuse="1F181818">common/white.png</texturefocus>
 		<texturenofocus />
 		<alttexturefocus colordiffuse="1F181818">common/white.png</alttexturefocus>
@@ -61,19 +61,19 @@
 		<overlaytexture />
 	</default>
 	<default type="spincontrol">
-		<textureup colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureup>
-		<texturedown colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedown>
+		<textureup colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-up.png</textureup>
+		<texturedown colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-down.png</texturedown>
 		<textureupfocus>buttons/spinctrl/arrow-light-up.png</textureupfocus>
 		<texturedownfocus>buttons/spinctrl/arrow-light-down.png</texturedownfocus>
-		<textureupdisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
-		<texturedowndisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
+		<textureupdisabled colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
 		<align>right</align>
 		<width>77</width>
 		<height>33</height>
 		<font>font13</font>
 		<reverse>yes</reverse>
 		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 		<subtype>text</subtype>
 		<textoffsetx>-5</textoffsetx>
 		<textoffsety>0</textoffsety>
@@ -84,15 +84,15 @@
 		<spinheight>60</spinheight>
 		<texturefocus border="40" colordiffuse="Highlight">buttons/button-fo.png</texturefocus>
 		<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
-		<textureup colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureup>
-		<texturedown colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedown>
+		<textureup colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-up.png</textureup>
+		<texturedown colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-down.png</texturedown>
 		<textureupfocus>buttons/spinctrl/arrow-light-up.png</textureupfocus>
 		<texturedownfocus>buttons/spinctrl/arrow-light-down.png</texturedownfocus>
-		<textureupdisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
-		<texturedowndisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
+		<textureupdisabled colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
 		<font>font13</font>
 		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
 		<reverse>yes</reverse>
@@ -105,13 +105,13 @@
 		<textureradioonnofocus>buttons/radio-button-on.png</textureradioonnofocus>
 		<textureradioofffocus>buttons/radio-button-off.png</textureradioofffocus>
 		<textureradiooffnofocus>buttons/radio-button-off.png</textureradiooffnofocus>
-		<textureradioondisabled colordiffuse="disabled">buttons/radio-button-on.png</textureradioondisabled>
-		<textureradiooffdisabled colordiffuse="disabled">buttons/radio-button-off.png</textureradiooffdisabled>
+		<textureradioondisabled colordiffuse="dialog_fg_30">buttons/radio-button-on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="dialog_fg_30">buttons/radio-button-off.png</textureradiooffdisabled>
 		<texturefocus border="21" colordiffuse="Highlight">buttons/button-fo.png</texturefocus>
 		<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<align>left</align>
 		<aligny>center</aligny>
@@ -149,7 +149,7 @@
 		<textureslidernibfocus colordiffuse="Highlight">buttons/slider-nib.png</textureslidernibfocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 	</default>
 	<default type="mover">
 		<texturefocus border="40" colordiffuse="Highlight">buttons/button-fo.png</texturefocus>
@@ -167,7 +167,7 @@
 		<textcolor>white</textcolor>
 		<focusedcolor>selected</focusedcolor>
 		<selectedcolor>$VAR[ColorHighlight]</selectedcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>dialog_fg_30</disabledcolor>
 		<texturefocus colordiffuse="ff0e0e0e" border="5">common/box.png</texturefocus>
 		<texturenofocus />
 		<pulseonselect>false</pulseonselect>

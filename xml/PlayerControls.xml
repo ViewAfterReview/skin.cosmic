@@ -147,8 +147,8 @@
 					<textureradioonnofocus>osd/fullscreen/buttons/random-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="Highlight">osd/fullscreen/buttons/random-off.png</textureradioofffocus>
 					<textureradiooffnofocus>osd/fullscreen/buttons/random-off.png</textureradiooffnofocus>
-					<textureradioondisabled colordiffuse="disabled">osd/fullscreen/buttons/random-on.png</textureradioondisabled>
-					<textureradiooffdisabled colordiffuse="disabled">osd/fullscreen/buttons/random-off.png</textureradiooffdisabled>
+					<textureradioondisabled colordiffuse="dialog_fg_30">osd/fullscreen/buttons/random-on.png</textureradioondisabled>
+					<textureradiooffdisabled colordiffuse="dialog_fg_30">osd/fullscreen/buttons/random-off.png</textureradiooffdisabled>
 					<texturefocus />
 					<width>125</width>
 					<height>123</height>

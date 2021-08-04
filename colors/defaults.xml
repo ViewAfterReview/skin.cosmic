@@ -46,8 +46,6 @@
 	<color name="shadow">55ffffff</color>
 
 	<!-- Old references... -->
-	<color name="pure_white">FFFFFFFF</color>
-	<color name="pure_black">FF000000</color>
-	<color name="disabled">40FFFFFF</color>
 	<color name="invalid">FFFF0000</color>
+	<color name="text_shadow">22000000</color>
 </colors>
