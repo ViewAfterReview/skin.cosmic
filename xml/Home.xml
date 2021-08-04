@@ -9,6 +9,9 @@
 
 	<!-- set default home layout if none is set -->
 	<onload condition="!Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Vertical_Main)</onload>
+	<!-- set default highlight/gradient colours -->
+	<onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff00695c)</onload>
+	<onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ffffe082)</onload>
 
 	<controls>
 		<control type="button" id="20000">
