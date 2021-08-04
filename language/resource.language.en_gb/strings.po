@@ -819,7 +819,7 @@ msgstr ""
 # Label of customize main menu in skin settings
 #: /xml/SkinSettings.xml
 msgctxt "#31174"
-msgid "Customize main menu"
+msgid "Customize main menu & widgets"
 msgstr ""
 
 # Label of restoring main menu in script shortcuts
@@ -867,7 +867,7 @@ msgstr ""
 # Label of choosing home layout in skin settings
 #: /xml/SkinSettings.xml
 msgctxt "#31183"
-msgid "Choose home layout"
+msgid "Switch home layout"
 msgstr ""
 
 # Vertical home layout label in skin settings
@@ -903,7 +903,7 @@ msgstr ""
 # Label of disabling profile info in Vertical home layout
 #: /xml/SkinSettings.xml
 msgctxt "#31189"
-msgid "Hide Profile info"
+msgid "Hide Profile info in Vertical layout"
 msgstr ""
 
 #: /xml/Includes_Labels.xml
