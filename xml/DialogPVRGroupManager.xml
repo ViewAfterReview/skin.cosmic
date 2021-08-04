@@ -102,7 +102,7 @@
 					<label>$LOCALIZE[31089]: [COLOR white]$INFO[Container(13).NumItems][/COLOR]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>Highlight</textcolor>
 				</control>
 				<control type="image">
 					<left>0</left>

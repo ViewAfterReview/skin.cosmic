@@ -175,14 +175,14 @@
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>Highlight</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>Highlight</textcolor>
 				<label>: [COLOR white]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
 			</control>
 		</control>
@@ -319,7 +319,7 @@
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
 					<info>PVR.TimeshiftProgressPlayPos</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-					<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
+					<midtexture colordiffuse="Highlight">colors/white.png</midtexture>
 				</control> -->
 				<include content="ProgressGradient">
 					<param name="id" value="498" />
@@ -388,7 +388,7 @@
 				<height>16</height>
 				<info>PVR.EpgEventProgress</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
+				<midtexture colordiffuse="Highlight">colors/white.png</midtexture>
 			</control> -->
 			<include content="ProgressGradient">
 				<param name="id" value="498" />
@@ -532,7 +532,7 @@
 				<height>40</height>
 				<aligny>center</aligny>
 				<label>$PARAM[label]:</label>
-				<textcolor>button_focus</textcolor>
+				<textcolor>Highlight</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
@@ -731,7 +731,7 @@
 						<width>16</width>
 						<height>16</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="button_focus">icons/pvr/premiere.png</texture>
+						<texture colordiffuse="Highlight">icons/pvr/premiere.png</texture>
 					</control>
 					<control type="image">
 						<left>6</left>

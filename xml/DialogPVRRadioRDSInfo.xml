@@ -27,7 +27,7 @@
 				<top>180</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>Highlight</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[179]</label>
 			</control>
@@ -38,31 +38,31 @@
 				<height>315</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29901]"/>
+					<param name="label" value="$LOCALIZE[29901]" />
 					<param name="value" value="RDS.Band" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[557]"/>
+					<param name="label" value="$LOCALIZE[557]" />
 					<param name="value" value="RDS.Artist" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[556]"/>
+					<param name="label" value="$LOCALIZE[556]" />
 					<param name="value" value="RDS.Title" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29903]"/>
+					<param name="label" value="$LOCALIZE[29903]" />
 					<param name="value" value="RDS.Composer" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29905]"/>
+					<param name="label" value="$LOCALIZE[29905]" />
 					<param name="value" value="RDS.Conductor" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[558]"/>
+					<param name="label" value="$LOCALIZE[558]" />
 					<param name="value" value="RDS.Album" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[569]"/>
+					<param name="label" value="$LOCALIZE[569]" />
 					<param name="value" value="RDS.Comment" />
 				</include>
 			</control>
@@ -79,7 +79,7 @@
 				<top>595</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>Highlight</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29909]</label>
 			</control>
@@ -90,15 +90,15 @@
 				<height>135</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29910]"/>
+					<param name="label" value="$LOCALIZE[29910]" />
 					<param name="value" value="RDS.PhoneStudio" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29911]"/>
+					<param name="label" value="$LOCALIZE[29911]" />
 					<param name="value" value="RDS.EmailStudio" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29912]"/>
+					<param name="label" value="$LOCALIZE[29912]" />
 					<param name="value" value="RDS.SMSStudio" />
 				</include>
 			</control>
@@ -115,7 +115,7 @@
 				<top>180</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>Highlight</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29908]</label>
 			</control>
@@ -126,31 +126,31 @@
 				<height>315</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[19030]"/>
+					<param name="label" value="$LOCALIZE[19030]" />
 					<param name="value" value="RDS.ProgNow" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[19031]"/>
+					<param name="label" value="$LOCALIZE[19031]" />
 					<param name="value" value="RDS.ProgNext" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29902]"/>
+					<param name="label" value="$LOCALIZE[29902]" />
 					<param name="value" value="RDS.ProgStyle" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[19148]"/>
+					<param name="label" value="$LOCALIZE[19148]" />
 					<param name="value" value="RDS.ProgStation" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29906]"/>
+					<param name="label" value="$LOCALIZE[29906]" />
 					<param name="value" value="RDS.ProgHost" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29907]"/>
+					<param name="label" value="$LOCALIZE[29907]" />
 					<param name="value" value="RDS.ProgEditStaff" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29914]"/>
+					<param name="label" value="$LOCALIZE[29914]" />
 					<param name="value" value="RDS.ProgHomepage" />
 				</include>
 			</control>
@@ -167,7 +167,7 @@
 				<top>595</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>Highlight</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29913]</label>
 			</control>
@@ -178,11 +178,11 @@
 				<height>135</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29910]"/>
+					<param name="label" value="$LOCALIZE[29910]" />
 					<param name="value" value="RDS.PhoneHotline" />
 				</include>
 				<include content="RDSInfoLine">
-					<param name="label" value="$LOCALIZE[29911]"/>
+					<param name="label" value="$LOCALIZE[29911]" />
 					<param name="value" value="RDS.EmailHotline" />
 				</include>
 			</control>
@@ -200,7 +200,7 @@
 				<control type="label">
 					<width>780</width>
 					<height>25</height>
-					<textcolor>button_focus</textcolor>
+					<textcolor>Highlight</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[29915]</label>
 				</control>
@@ -209,7 +209,7 @@
 					<width>780</width>
 					<height>170</height>
 					<align>justify</align>
-					<label>$INFO[RDS.InfoNews,[COLOR button_focus]$LOCALIZE[29916]:[/COLOR] ,[CR]]$INFO[RDS.InfoNewsLocal,[COLOR button_focus]$LOCALIZE[29917]:[/COLOR] ,[CR]]$INFO[RDS.InfoStock,[COLOR button_focus]$LOCALIZE[29920]:[/COLOR] ,[CR]]$INFO[RDS.InfoSport,[COLOR button_focus]$LOCALIZE[29918]:[/COLOR] ,[CR]]$INFO[RDS.Infolottery,[COLOR button_focus]$LOCALIZE[29919]:[/COLOR] ,[CR]]$INFO[RDS.InfoWeather,[COLOR button_focus]$LOCALIZE[400]:[/COLOR] ,[CR]]$INFO[RDS.InfoCinema,$[COLOR button_focus]LOCALIZE[19602]:[/COLOR] ,[CR]]$INFO[RDS.InfoHoroscope,[COLOR button_focus]$LOCALIZE[29922]:[/COLOR] ,[CR]]$INFO[RDS.InfoOther,[COLOR button_focus]$LOCALIZE[29921]:[/COLOR] ,[CR]]</label>
+					<label>$INFO[RDS.InfoNews,[COLOR Highlight]$LOCALIZE[29916]:[/COLOR] ,[CR]]$INFO[RDS.InfoNewsLocal,[COLOR Highlight]$LOCALIZE[29917]:[/COLOR] ,[CR]]$INFO[RDS.InfoStock,[COLOR Highlight]$LOCALIZE[29920]:[/COLOR] ,[CR]]$INFO[RDS.InfoSport,[COLOR Highlight]$LOCALIZE[29918]:[/COLOR] ,[CR]]$INFO[RDS.Infolottery,[COLOR Highlight]$LOCALIZE[29919]:[/COLOR] ,[CR]]$INFO[RDS.InfoWeather,[COLOR Highlight]$LOCALIZE[400]:[/COLOR] ,[CR]]$INFO[RDS.InfoCinema,$[COLOR Highlight]LOCALIZE[19602]:[/COLOR] ,[CR]]$INFO[RDS.InfoHoroscope,[COLOR Highlight]$LOCALIZE[29922]:[/COLOR] ,[CR]]$INFO[RDS.InfoOther,[COLOR Highlight]$LOCALIZE[29921]:[/COLOR] ,[CR]]</label>
 					<autoscroll delay="5000" time="3000" repeat="10000">true</autoscroll>
 				</control>
 			</control>
@@ -227,7 +227,7 @@
 				<control type="label">
 					<width>780</width>
 					<height>25</height>
-					<textcolor>button_focus</textcolor>
+					<textcolor>Highlight</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[14304]</label>
 				</control>

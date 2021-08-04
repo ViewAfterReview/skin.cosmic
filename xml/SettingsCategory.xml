@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>main_bg_100</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="multiimage">
@@ -22,7 +22,7 @@
 			<top>100</top>
 			<include>OpenClose_Right</include>
 			<control type="image">
-				<texture colordiffuse="dialog_tint" border="5">common/box.png</texture>
+				<texture colordiffuse="dialog_bg_100" border="5">common/box.png</texture>
 				<bordertexture border="24">common/shadow-dialog-24.png</bordertexture>
 				<bordersize>24</bordersize>
 				<width>1500</width>

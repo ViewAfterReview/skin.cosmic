@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>main_bg_100</backgroundcolor>
 
 	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|shutdown)</onunload>
@@ -28,7 +28,7 @@
 			<top>100</top>
 			<include>OpenClose_Right</include>
 			<control type="image">
-				<texture colordiffuse="dialog_tint" border="5">common/box.png</texture>
+				<texture colordiffuse="dialog_bg_100" border="5">common/box.png</texture>
 				<bordertexture border="24">common/shadow-dialog-24.png</bordertexture>
 				<bordersize>24</bordersize>
 				<width>1500</width>

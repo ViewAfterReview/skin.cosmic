@@ -325,29 +325,29 @@
 				<control type="group">
 					<visible>Player.SeekEnabled + VideoPlayer.HasEPG</visible>
 					<include content="PVRProgress">
-						<param name="ts_bar_top" value="70"/>
-						<param name="epg_bar_top" value="78"/>
-						<param name="ts_bar_height" value="8"/>
-						<param name="epg_bar_height" value="8"/>
+						<param name="ts_bar_top" value="70" />
+						<param name="epg_bar_top" value="78" />
+						<param name="ts_bar_height" value="8" />
+						<param name="epg_bar_height" value="8" />
 					</include>
 				</control>
 				<control type="group">
 					<visible>Player.SeekEnabled + !VideoPlayer.HasEPG</visible>
 					<include content="PVRProgress">
-						<param name="ts_bar_top" value="70"/>
-						<param name="ts_bar_height" value="16"/>
+						<param name="ts_bar_top" value="70" />
+						<param name="ts_bar_height" value="16" />
 					</include>
 				</control>
 				<control type="group">
 					<visible>!Player.SeekEnabled + VideoPlayer.HasEPG</visible>
 					<include content="PVRProgress">
-						<param name="epg_bar_top" value="70"/>
-						<param name="epg_bar_height" value="16"/>
+						<param name="epg_bar_top" value="70" />
+						<param name="epg_bar_height" value="16" />
 					</include>
 				</control>
 				<control type="group">
 					<visible>!Player.SeekEnabled + !VideoPlayer.HasEPG</visible>
-					<include content="PVRProgress"/>
+					<include content="PVRProgress" />
 				</control>
 				<control type="slider" id="403">
 					<left>0</left>
@@ -355,8 +355,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-					<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="Highlight">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="Highlight">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled + !Player.ChannelPreviewActive</visible>
 				</control>
 			</control>
@@ -402,8 +402,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-					<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="Highlight">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="Highlight">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled</visible>
 				</control> -->
 			</control>

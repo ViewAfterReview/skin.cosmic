@@ -37,7 +37,7 @@
 				<height>844</height>
 				<bordersize>24</bordersize>
 				<bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
-				<texture border="16" colordiffuse="dialog_tint">common/dialog.png</texture>
+				<texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
 			</control>
 			<include content="DefaultSettingButtonGradient">
 				<param name="id" value="996" />

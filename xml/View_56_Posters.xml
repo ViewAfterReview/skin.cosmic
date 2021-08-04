@@ -173,7 +173,7 @@
                                     <left>228</left>
                                     <width>64</width>
                                     <height>64</height>
-                                    <texture colordiffuse="primary_background">indicator/corner.png</texture>
+                                    <texture colordiffuse="main_bg_100">indicator/corner.png</texture>
                                 </control>
                                 <control type="image">
                                     <top>9</top>

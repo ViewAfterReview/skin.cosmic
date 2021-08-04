@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>main_bg_100</backgroundcolor>
 	<onload condition="System.AddonIsEnabled(script.artistslideshow) + !Skin.HasSetting(hide_background_fanart)">RunScript(script.artistslideshow)</onload>
 	<controls>
 		<control type="visualisation" id="2">

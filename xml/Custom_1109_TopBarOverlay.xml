@@ -43,7 +43,7 @@
 				<height>60</height>
 				<align>right</align>
 				<font>font30_title</font>
-				<label>$INFO[player.chapter,[COLOR button_focus]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount,/]</label>
+				<label>$INFO[player.chapter,[COLOR Highlight]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount,/]</label>
 				<visible>!VideoPlayer.Content(LiveTV) + player.chaptercount</visible>
 			</control>
 			<control type="label">
@@ -53,7 +53,7 @@
 				<height>60</height>
 				<align>right</align>
 				<font>font30_title</font>
-				<label>[COLOR button_focus]$LOCALIZE[31026][/COLOR] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+				<label>[COLOR Highlight]$LOCALIZE[31026][/COLOR] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
 				<visible>VideoPlayer.Content(LiveTV) + PVR.IsTimeShift</visible>
 			</control>
 			<control type="progress" description="cache">
@@ -97,8 +97,8 @@
 				<width>100%</width>
 				<height>26</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="Highlight">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="Highlight">colors/white.png</textureslidernibfocus>
 				<info>Player.Seekbar</info>
 				<visible>!VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.DisplayAfterSeek]</visible>
 			</control>
@@ -107,24 +107,24 @@
 				<control type="group">
 					<visible>Player.SeekEnabled + VideoPlayer.HasEPG</visible>
 					<include content="PVRProgress">
-						<param name="ts_bar_top" value="55"/>
-						<param name="epg_bar_top" value="63"/>
-						<param name="ts_bar_height" value="8"/>
-						<param name="epg_bar_height" value="8"/>
+						<param name="ts_bar_top" value="55" />
+						<param name="epg_bar_top" value="63" />
+						<param name="ts_bar_height" value="8" />
+						<param name="epg_bar_height" value="8" />
 					</include>
 				</control>
 				<control type="group">
 					<visible>Player.SeekEnabled + !VideoPlayer.HasEPG</visible>
 					<include content="PVRProgress">
-						<param name="ts_bar_top" value="55"/>
-						<param name="ts_bar_height" value="16"/>
+						<param name="ts_bar_top" value="55" />
+						<param name="ts_bar_height" value="16" />
 					</include>
 				</control>
 				<control type="group">
 					<visible>!Player.SeekEnabled + VideoPlayer.HasEPG</visible>
 					<include content="PVRProgress">
-						<param name="epg_bar_top" value="55"/>
-						<param name="epg_bar_height" value="16"/>
+						<param name="epg_bar_top" value="55" />
+						<param name="epg_bar_height" value="16" />
 					</include>
 				</control>
 			</control>
@@ -134,8 +134,8 @@
 				<width>100%</width>
 				<height>26</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="Highlight">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="Highlight">colors/white.png</textureslidernibfocus>
 				<info>PVR.TimeShiftSeekbar</info>
 				<visible>VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
 			</control>

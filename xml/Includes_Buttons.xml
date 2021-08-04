@@ -443,7 +443,7 @@
 				<top>0</top>
 				<width>600</width>
 				<height>70</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="dialog_bg_100">colors/white.png</texture>
 			</control>
 			<control type="label">
 				<left>0</left>
@@ -463,7 +463,7 @@
 				<top>0</top>
 				<width>600</width>
 				<height>70</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="dialog_bg_100">colors/white.png</texture>
 			</control>
 			<control type="group">
 				<left>0</left>

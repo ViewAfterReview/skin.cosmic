@@ -117,7 +117,7 @@
 							<top>16</top>
 							<width>393</width>
 							<height>228</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="Highlight">buttons/thumbnail_focused.png</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -145,7 +145,7 @@
 							<top>0</top>
 							<width>446</width>
 							<height>385</height>
-							<pagecontrol/>
+							<pagecontrol />
 							<itemlayout height="75">
 								<control type="label">
 									<left>10</left>
@@ -153,7 +153,7 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR button_focus],[/COLOR]]</label>
+									<label>$INFO[ListItem.Label,[COLOR Highlight],[/COLOR]]</label>
 								</control>
 								<control type="label">
 									<left>10</left>
@@ -178,7 +178,7 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR button_focus],[/COLOR]]</label>
+									<label>$INFO[ListItem.Label,[COLOR Highlight],[/COLOR]]</label>
 									<scroll>false</scroll>
 								</control>
 								<control type="label">

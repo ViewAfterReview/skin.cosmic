@@ -25,7 +25,7 @@
                         <top>0</top>
                         <right>0</right>
                         <bottom>0</bottom>
-                        <texture colordiffuse="dialog_tint">colors/white.png</texture>
+                        <texture colordiffuse="dialog_bg_100">colors/white.png</texture>
                     </control>
                     <control type="group">
                         <left>0</left>
@@ -141,28 +141,28 @@
                 <control type="button" id="302" description="Delete">
                     <width>32</width>
                     <height>32</height>
-                    <font/>
+                    <font />
                     <texturenofocus>buttons/cross.png</texturenofocus>
                     <texturefocus colordiffuse="ffe17055">buttons/cross.png</texturefocus>
                 </control>
                 <control type="button" id="301" description="Add">
                     <width>32</width>
                     <height>32</height>
-                    <font/>
+                    <font />
                     <texturenofocus>buttons/plus.png</texturenofocus>
                     <texturefocus colordiffuse="ffe17055">buttons/plus.png</texturefocus>
                 </control>
                 <control type="button" id="303" description="Up">
                     <width>32</width>
                     <height>32</height>
-                    <font/>
+                    <font />
                     <texturenofocus flipy="true">buttons/down.png</texturenofocus>
                     <texturefocus colordiffuse="ffe17055" flipy="true">buttons/down.png</texturefocus>
                 </control>
                 <control type="button" id="304" description="Down">
                     <width>32</width>
                     <height>32</height>
-                    <font/>
+                    <font />
                     <texturenofocus>buttons/down.png</texturenofocus>
                     <texturefocus colordiffuse="ffe17055">buttons/down.png</texturefocus>
                 </control>

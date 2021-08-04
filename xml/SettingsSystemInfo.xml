@@ -23,7 +23,7 @@
 			<top>100</top>
 			<include>OpenClose_Right</include>
 			<control type="image">
-				<texture colordiffuse="dialog_tint" border="5">common/box.png</texture>
+				<texture colordiffuse="dialog_bg_100" border="5">common/box.png</texture>
 				<bordertexture border="24">common/shadow-dialog-24.png</bordertexture>
 				<bordersize>24</bordersize>
 				<width>1500</width>
