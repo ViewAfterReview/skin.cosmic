@@ -199,7 +199,7 @@
                     </control>
                     <control type="group">
                         <include>SmallBusySpinner</include>
-                        <top>10</top>
+                        <!-- <top>10</top> -->
                         <left>18</left>
                         <visible>Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id])</visible>

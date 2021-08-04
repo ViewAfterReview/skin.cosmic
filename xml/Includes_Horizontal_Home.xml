@@ -19,7 +19,7 @@
             </control>
             <control type="group">
                 <control type="group">
-                    <include>widgetNameLabelHoriz</include>
+                    <include>WidgetHorizontalLabel</include>
                 </control>
                 <control type="label">
                     <height>40</height>
