@@ -1197,7 +1197,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31248"
-msgid "Enable Debugging"
+msgid "Enable/Disable debugging"
 msgstr ""
 
 #: /xml/SkinSettings.xml
