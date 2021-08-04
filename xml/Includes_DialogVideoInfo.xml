@@ -10,7 +10,7 @@
                         <left>-5</left>
                         <width>620</width>
                         <height>1400</height>
-                        <texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
+                        <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
                         <bordertexture border="21">overlays/shadow.png</bordertexture>
                         <bordersize>20</bordersize>
                     </control>

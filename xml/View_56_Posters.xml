@@ -194,7 +194,7 @@
                     <left>0</left>
                     <width>650</width>
                     <height>130%</height>
-                    <texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
+                    <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
                     <bordertexture border="21">overlays/shadow.png</bordertexture>
                     <bordersize>20</bordersize>
                 </control>

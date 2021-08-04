@@ -12,7 +12,7 @@
                     <left>-200</left>
                     <width>200%</width>
                     <height>92</height>
-                    <texture colordiffuse="alt_poster">diffuse/poster-wall.png</texture>
+                    <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
                     <bordertexture border="21">overlays/shadow.png</bordertexture>
                     <bordersize>20</bordersize>
                 </control>
