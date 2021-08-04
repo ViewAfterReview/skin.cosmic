@@ -21,11 +21,13 @@
                 </animation>
                 <include>OpenClose_Right</include>
                 <left>122</left>
+                <control type="group">
+                    <include>WidgetVerticalLabel</include>
+                </control>
                 <control type="grouplist" id="3000">
-                    <top>515</top>
+                    <top>595</top>
                     <height>9999</height>
-                    <itemgap>460</itemgap>
-                    <usecontrolcoords>true</usecontrolcoords>
+                    <usecontrolcoords>false</usecontrolcoords>
                     <include>Animation_Widget_Slide</include>
                     <include>skinshortcuts-template-vertical</include>
                 </control>

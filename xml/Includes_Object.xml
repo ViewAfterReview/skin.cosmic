@@ -58,7 +58,7 @@
                     <width>384</width>
                     <height>95</height>
                     <label>$PARAM[label]</label>
-                    <font>font32</font>
+                    <font>font27</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -81,7 +81,7 @@
                     <width>384</width>
                     <height>95</height>
                     <label>$PARAM[label]</label>
-                    <font>font32_title</font>
+                    <font>font27</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -142,7 +142,7 @@
                         <include>SmallBusySpinner</include>
                         <top>10</top>
                         <left>18</left>
-                        <visible>Container($PARAM[groupid]).IsUpdating</visible>
+                        <visible>Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
                 </control>
@@ -201,7 +201,7 @@
                         <include>SmallBusySpinner</include>
                         <top>10</top>
                         <left>18</left>
-                        <visible>Container($PARAM[groupid]).IsUpdating</visible>
+                        <visible>Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id])</visible>
                     </control>
                 </control>
@@ -219,65 +219,57 @@
         <param name="postercondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Poster)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Poster)]" />
         <param name="landscapecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Landscape)]" />
         <definition>
-            <control type="group" id="$PARAM[groupid]">
+            <control type="$PARAM[controltype]" id="$PARAM[id]">
                 <nested />
-                <include content="Object_Widget_Label">
-                    <param name="id" value="$PARAM[id]" />
-                    <param name="label" value="$PARAM[name]" />
-                    <param name="top" value="0" />
-                </include>
-                <control type="$PARAM[controltype]" id="$PARAM[id]">
-                    <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
-                    <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
 
-                    <orientation>horizontal</orientation>
-                    <top>70</top>
-                    <onleft>9000</onleft>
-                    <onback>9000</onback>
-                    <height>9999</height>
-                    <onup>$PARAM[upid]</onup>
-                    <ondown>$PARAM[downid]</ondown>
+                <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
+                <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
 
-                    <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
+                <orientation>horizontal</orientation>
+                <!-- <top>70</top> -->
+                <onleft>9000</onleft>
+                <onback>9000</onback>
+                <height>460</height>
 
-                    <!-- Posters aspect ratio -->
-                    <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
-                        <include content="ViewPosterItemLayout"></include>
-                    </itemlayout>
-                    <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
-                        <include content="ViewPosterItemLayout"></include>
-                        <include content="Selectbox_Bold">
-                            <param name="pad_top" value="-16" />
-                            <param name="pad_bottom" value="-16" />
-                            <param name="pad_left" value="-15" />
-                            <param name="pad_right" value="-4" />
-                            <param name="focusbounce" value="true" />
-                        </include>
-                    </focusedlayout>
+                <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
 
-                    <!-- Landscape aspect ratio -->
-                    <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                        <include content="ViewLandscapeItemLayout"></include>
-                    </itemlayout>
-                    <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                        <include content="ViewLandscapeItemLayout"></include>
-
-                        <include content="Selectbox_Bold">
-                            <param name="pad_top" value="-7" />
-                            <param name="pad_bottom" value="18" />
-                            <param name="pad_left" value="-7" />
-                            <param name="pad_right" value="10" />
-                            <param name="focusbounce" value="true" />
-                        </include>
-                    </focusedlayout>
-                    <include content="Object_Widget_Content_Path">
-                        <param name="target" value="$PARAM[target]" />
-                        <param name="sortby" value="$PARAM[sortby]" />
-                        <param name="sortdirection" value="$PARAM[sortdirection]" />
-                        <param name="limit" value="$PARAM[limit]" />
-                        <param name="path" value="$PARAM[path]" />
+                <!-- Posters aspect ratio -->
+                <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
+                    <include content="ViewPosterItemLayout"></include>
+                </itemlayout>
+                <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
+                    <include content="ViewPosterItemLayout"></include>
+                    <include content="Selectbox_Bold">
+                        <param name="pad_top" value="-16" />
+                        <param name="pad_bottom" value="-16" />
+                        <param name="pad_left" value="-15" />
+                        <param name="pad_right" value="-4" />
+                        <param name="focusbounce" value="true" />
                     </include>
-                </control>
+                </focusedlayout>
+
+                <!-- Landscape aspect ratio -->
+                <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
+                    <include content="ViewLandscapeItemLayout"></include>
+                </itemlayout>
+                <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
+                    <include content="ViewLandscapeItemLayout"></include>
+
+                    <include content="Selectbox_Bold">
+                        <param name="pad_top" value="-7" />
+                        <param name="pad_bottom" value="18" />
+                        <param name="pad_left" value="-7" />
+                        <param name="pad_right" value="10" />
+                        <param name="focusbounce" value="true" />
+                    </include>
+                </focusedlayout>
+                <include content="Object_Widget_Content_Path">
+                    <param name="target" value="$PARAM[target]" />
+                    <param name="sortby" value="$PARAM[sortby]" />
+                    <param name="sortdirection" value="$PARAM[sortdirection]" />
+                    <param name="limit" value="$PARAM[limit]" />
+                    <param name="path" value="$PARAM[path]" />
+                </include>
             </control>
         </definition>
     </include>
@@ -303,7 +295,7 @@
                 <height>460</height>
 
                 <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
-                <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
+                <onfocus>SetProperty(widgetNameLabelHoriz,$PARAM[name],home)</onfocus>
 
                 <!-- Posters aspect ratio -->
                 <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">

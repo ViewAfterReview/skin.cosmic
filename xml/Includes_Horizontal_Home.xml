@@ -19,7 +19,7 @@
             </control>
             <control type="group">
                 <control type="group">
-                    <include>WidgetHorizontalLabel</include>
+                    <include>widgetNameLabelHoriz</include>
                 </control>
                 <control type="label">
                     <height>40</height>
@@ -99,7 +99,7 @@
                             <height>95</height>
                             <width>284</width>
                             <aligny>center</aligny>
-                            <font>font32_title</font>
+                            <font>font32</font>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>text_shadow</shadowcolor>
                         </control>

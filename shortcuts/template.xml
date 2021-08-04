@@ -67,20 +67,21 @@
 
         <controls>
             <include content="Object_Widget_Content">
-                <param name="name" value="$SKINSHORTCUTS[name]" />
-                <param name="groupid" value="$PYTHON[int(id) + 7601]" />
-                <param name="image" value="$SKINSHORTCUTS[artwork]" />
                 <param name="id" value="$PYTHON[int(id) + 7501]" />
                 <param name="target" value="$SKINSHORTCUTS[target]" />
                 <param name="sortby" value="$SKINSHORTCUTS[sortby]" />
                 <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
                 <param name="limit" value="$SKINSHORTCUTS[limit]" />
                 <param name="path" value="$SKINSHORTCUTS[path]" />
-                <param name="upid" value="$PYTHON[int(id) + 7500]" />
-                <param name="downid" value="$PYTHON[int(id) + 7502]" />
+                <param name="image" value="$SKINSHORTCUTS[artwork]" />
                 <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
                 <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
                 <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
+
+                <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PYTHON[int(id) + 7501],home)</onfocus>
+                <onfocus>SetProperty(widgetMovementPosition,$SKINSHORTCUTS[id],home)</onfocus>
+                <onfocus>SetProperty(widgetNameLabel,$SKINSHORTCUTS[name],home)</onfocus>
+
                 <skinshortcuts>visibility</skinshortcuts>
             </include>
         </controls>
@@ -109,8 +110,6 @@
                 <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
                 <param name="limit" value="$SKINSHORTCUTS[limit]" />
                 <param name="path" value="$SKINSHORTCUTS[path]" />
-                <param name="upid" value="$PYTHON[int(id) + 7500]" />
-                <param name="downid" value="$PYTHON[int(id) + 7502]" />
                 <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
                 <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
                 <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
