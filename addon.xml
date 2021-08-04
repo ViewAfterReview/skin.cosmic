@@ -7,19 +7,23 @@
 		<import addon="plugin.video.themoviedb.helper" version="4.3.0" />
 		<import addon="script.embuary.helper" version="2.0.8" />
 		<import addon="resource.images.studios.white" version="0.0.28" />
+		<import addon="resource.images.studios.coloured" version="0.0.20" />
+		<import addon="resource.images.weathericons.white" version="0.0.6" />
+		<import addon="resource.images.moviegenreicons.transparent" version="0.0.6" />
+		<import addon="resource.images.moviecountryicons.maps" version="0.0.1" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen (nfm886).</summary>
-		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen (nfm886).</summary>
+		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
+		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>
 		<description lang="en_GB">The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate. Apart from the default dark theme, the skin also includes bright variations.</description>
 		<description lang="pl_PL">Skórka została zaprojektowana, aby użytkownik mógł skupić się na konsumpcji mediów. Udostępnia wiele innowacyjnych rozwiązań, które doceni każdy kinoman. Oprócz domyślnego ciemnego motywu, skórka zawiera również jasne wariacje.</description>
 		<platform>all</platform>
 		<license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
-		<forum />
-		<source>https://github.com/nfm886/skin.cosmic/</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=363714</forum>
+		<source>https://github.com/nfm886/skin.cosmic</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
