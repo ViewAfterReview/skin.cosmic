@@ -100,7 +100,6 @@
 					<control type="button" id="603" description="Toggle debugging">
 						<label>$LOCALIZE[31248]</label>
 						<include>DefaultSettingButton</include>
-						<enable>false</enable>
 						<onclick>Skin.ToggleDebug()</onclick>
 					</control>
 				</control>
