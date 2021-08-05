@@ -72,6 +72,7 @@
                                 <height>95</height>
                                 <texture colordiffuse="dialog_fg_100">$INFO[ListItem.Art(thumb)]</texture>
                             </control>
+                            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306])</visible>
                         </control>
                         <control type="group">
                             <animation effect="slide" start="0,0" end="-714,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
@@ -86,6 +87,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                                 <shadowcolor>text_shadow</shadowcolor>
                             </control>
+                            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307])</visible>
                         </control>
                     </focusedlayout>
                     <itemlayout height="95">
@@ -99,6 +101,7 @@
                                 <height>95</height>
                                 <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
                             </control>
+                            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306])</visible>
                         </control>
                         <control type="group">
                             <animation effect="slide" start="0,0" end="-714,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(303)">Conditional</animation>
@@ -112,6 +115,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                                 <shadowcolor>text_shadow</shadowcolor>
                             </control>
+                            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307])</visible>
                         </control>
                     </itemlayout>
                     <content>

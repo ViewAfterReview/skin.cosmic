@@ -1464,3 +1464,23 @@ msgstr ""
 msgctxt "#31303"
 msgid "Miscellaneous"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31304"
+msgid "Menu style"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31305"
+msgid "Icons only"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31306"
+msgid "Icons & Text"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31307"
+msgid "Text only"
+msgstr ""

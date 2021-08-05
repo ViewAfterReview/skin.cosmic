@@ -152,14 +152,27 @@
 								Skin.SetBool(Horizontal_Main),home)</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31183],usedetails=true,window=home)</onclick>
 					</control>
-					<control type="radiobutton" id="704" description="Hide Profile Info">
+					<control type="button" id="704" description="Home Menu Style">
+						<include>DefaultSettingButton</include>
+						<label>$LOCALIZE[31304]</label>
+						<label2>$INFO[Skin.String(MenuStyle)]</label2>
+
+						<onclick>SetProperty(Context.1.Label,$LOCALIZE[31305])</onclick>
+						<onclick>SetProperty(Context.1.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31305]))</onclick>
+						<onclick>SetProperty(Context.2.Label,$LOCALIZE[31306])</onclick>
+						<onclick>SetProperty(Context.2.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31306]))</onclick>
+						<onclick>SetProperty(Context.3.Label,$LOCALIZE[31307])</onclick>
+						<onclick>SetProperty(Context.3.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31307]))</onclick>
+						<onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
+					</control>
+					<control type="radiobutton" id="705" description="Hide Profile Info">
 						<label>$LOCALIZE[31189]</label>
 						<include>DefaultSettingButton</include>
 						<enable>Skin.HasSetting(Vertical_Main)</enable>
 						<selected>Skin.HasSetting(DisabledProfileInfo)</selected>
 						<onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
 					</control>
-					<control type="label" id="705">
+					<control type="label" id="706">
 						<textoffsetx>30</textoffsetx>
 						<width>470</width>
 						<height>80</height>
@@ -168,7 +181,7 @@
 						<font>font27</font>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="706" description="Customize shutdown menu">
+					<control type="button" id="707" description="Customize shutdown menu">
 						<label>$LOCALIZE[31180]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>

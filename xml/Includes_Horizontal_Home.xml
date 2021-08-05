@@ -91,18 +91,22 @@
                             <centertop>50%</centertop>
                             <texture>$INFO[ListItem.Art(thumb)]</texture>
                         </control>
+                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306])</visible>
                     </control>
                     <control type="group">
                         <control type="label">
-                            <left>104</left>
+                            <left>84</left>
                             <top>0</top>
                             <height>95</height>
-                            <width>284</width>
+                            <width>300</width>
+                            <scroll>true</scroll>
                             <aligny>center</aligny>
+                            <align>left</align>
                             <font>font32</font>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>text_shadow</shadowcolor>
                         </control>
+                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307])</visible>
                     </control>
                 </focusedlayout>
                 <itemlayout height="95" width="384">
@@ -121,18 +125,22 @@
                             <height>64</height>
                             <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
                         </control>
+                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306])</visible>
                     </control>
                     <control type="group">
                         <control type="label">
-                            <left>104</left>
+                            <left>84</left>
                             <top>0</top>
                             <height>95</height>
-                            <width>284</width>
+                            <width>300</width>
+                            <scroll>true</scroll>
                             <aligny>center</aligny>
+                            <align>left</align>
                             <font>font32</font>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>text_shadow</shadowcolor>
                         </control>
+                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307])</visible>
                     </control>
                 </itemlayout>
                 <content>
