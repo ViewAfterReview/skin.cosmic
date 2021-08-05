@@ -32,7 +32,9 @@
 
 	<!-- Backing Panels and Furniture -->
 	<color name="PosterBack">ff333333</color>
-	<color name="AltPosterBack">ff333333</color>
+	<color name="AltPosterBack">1fdedede</color>
+
+	<color name="selected">FF181818</color>
 
 	<!-- Old references... -->
 	<color name="black">FF000000</color>
