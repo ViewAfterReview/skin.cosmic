@@ -1359,3 +1359,53 @@ msgstr ""
 msgctxt "#31282"
 msgid "Manage your dependencies or restore skin defaults"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31283"
+msgid "Auto close OSD controls after delay (in seconds)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31284"
+msgid "Reset"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31285"
+msgid "3 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31286"
+msgid "5 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31287"
+msgid "10 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31288"
+msgid "12 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31289"
+msgid "15 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31290"
+msgid "20 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31291"
+msgid "30 seconds"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31292"
+msgid "60 seconds"
+msgstr ""

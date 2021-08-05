@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+    <include name="OSD_Button_OnFocus">
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31285])">AlarmClock(osd_timeout,SetFocus(99220),00:03,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31286])">AlarmClock(osd_timeout,SetFocus(99220),00:05,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31287])">AlarmClock(osd_timeout,SetFocus(99220),00:10,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31288])">AlarmClock(osd_timeout,SetFocus(99220),00:12,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31289])">AlarmClock(osd_timeout,SetFocus(99220),00:15,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31290])">AlarmClock(osd_timeout,SetFocus(99220),00:20,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31291])">AlarmClock(osd_timeout,SetFocus(99220),00:30,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31292])">AlarmClock(osd_timeout,SetFocus(99220),01:00,silent)</onfocus>
+        <onunfocus>CancelAlarm(osd_timeout,true)</onunfocus>
+    </include>
     <include name="LiveTV_OSD">
         <definition>
             <control type="group" id="200">
@@ -139,6 +150,7 @@
                             </include>
                             <onclick>PlayerControl(Previous)</onclick>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="group" id="698">
                             <width>48</width>
@@ -159,6 +171,7 @@
                                 <onup>87</onup>
                                 <ondown>noop</ondown>
                                 <onclick>PlayerControl(Play)</onclick>
+                                <include>OSD_Button_OnFocus</include>
                             </control>
                             <control type="image">
                                 <left>0</left>
@@ -175,6 +188,7 @@
                             </include>
                             <onclick>PlayerControl(Stop)</onclick>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="607">
                             <include content="PVROSDButton">
@@ -183,6 +197,7 @@
                             <onclick>PlayerControl(Next)</onclick>
                             <visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | PVR.IsTimeShift</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="608">
                             <textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
@@ -204,6 +219,7 @@
                             <visible>PVR.CanRecordPlayingChannel</visible>
                             <visible>VideoPlayer.Content(livetv)</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="804">
                             <include content="PVROSDButton">
@@ -212,6 +228,7 @@
                             <onclick>PlayerControl(ShowVideoMenu)</onclick>
                             <visible>VideoPlayer.HasMenu</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70040">
                             <include content="PVROSDButton">
@@ -221,6 +238,7 @@
                             <onclick>ActivateWindow(PVROSDChannels)</onclick>
                             <visible>VideoPlayer.Content(livetv)</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70041">
                             <include content="PVROSDButton">
@@ -230,6 +248,7 @@
                             <onclick>ActivateWindow(pvrchannelguide)</onclick>
                             <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70042">
                             <include content="PVROSDButton">
@@ -239,6 +258,7 @@
                             <onclick>ActivateWindow(tvguide)</onclick>
                             <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70043">
                             <include content="PVROSDButton">
@@ -246,6 +266,7 @@
                             </include>
                             <onclick>Info</onclick>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70044">
                             <include content="PVROSDButton">
@@ -254,6 +275,7 @@
                             <onclick>ActivateWindow(videobookmarks)</onclick>
                             <visible>!VideoPlayer.Content(livetv)</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70045">
                             <include content="PVROSDButton">
@@ -263,6 +285,7 @@
                             <onclick>ActivateWindow(Teletext)</onclick>
                             <visible>VideoPlayer.HasTeletext</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70046">
                             <include content="PVROSDButton">
@@ -271,6 +294,7 @@
                             <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
                             <visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.HasSubtitles</visible>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70047">
                             <include content="PVROSDButton">
@@ -281,6 +305,7 @@
                             <onclick>SetProperty(settingslist_header,$LOCALIZE[36501],home)</onclick>
                             <onclick>ActivateWindow(1101)</onclick>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="radiobutton" id="70048">
                             <include content="PVROSDButton">
@@ -290,6 +315,7 @@
                             <onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
                             <onclick>ActivateWindow(1101)</onclick>
                             <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                     </control>
                 </control>
@@ -301,6 +327,7 @@
                 <onleft>StepBack</onleft>
                 <onright condition="!Player.Paused">StepForward</onright>
                 <onright condition="Player.Paused">PlayerControl(FrameAdvance(1))</onright>
+                <include>OSD_Button_OnFocus</include>
             </control>
             <!-- Hidden control to trigger buttons to show -->
             <control type="button" id="602">
@@ -319,6 +346,7 @@
                 <onright>SetFocus(201)</onright>
                 <onright>SetFocus(604)</onright>
                 <visible>VideoPlayer.Content(livetv)</visible>
+                <include>OSD_Button_OnFocus</include>
             </control>
         </definition>
     </include>
@@ -349,6 +377,7 @@
                         </include>
                         <onclick>PlayerControl(ShowVideoMenu)</onclick>
                         <visible>VideoPlayer.HasMenu</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="70040">
                         <include content="OSDButton">
@@ -357,6 +386,7 @@
                         <onclick>Dialog.Close(VideoOSD)</onclick>
                         <onclick>ActivateWindow(PVROSDChannels)</onclick>
                         <visible>VideoPlayer.Content(livetv)</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="70041">
                         <include content="OSDButton">
@@ -365,6 +395,7 @@
                         <onclick>Dialog.Close(VideoOSD)</onclick>
                         <onclick>ActivateWindow(pvrchannelguide)</onclick>
                         <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="70042">
                         <include content="OSDButton">
@@ -373,6 +404,7 @@
                         <onclick>Dialog.Close(all, true)</onclick>
                         <onclick>ActivateWindow(videoplaylist)</onclick>
                         <visible>Integer.IsGreater(Playlist.Length(video),1)</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <!-- <control type="radiobutton" id="70043">
                         <include content="OSDButton">
@@ -400,6 +432,7 @@
                         </include>
                         <onclick>PlayerControl(Previous)</onclick>
                         <visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="601">
                         <include content="OSDButton">
@@ -407,6 +440,7 @@
                         </include>
                         <onclick>PlayerControl(Rewind)</onclick>
                         <visible>Player.SeekEnabled + !VideoPlayer.Content(livetv)</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="group" id="698">
                         <width>76</width>
@@ -426,6 +460,7 @@
                             <onup>87</onup>
                             <ondown>noop</ondown>
                             <onclick>PlayerControl(Play)</onclick>
+                            <include>OSD_Button_OnFocus</include>
                         </control>
                         <control type="image">
                             <left>0</left>
@@ -441,6 +476,7 @@
                             <param name="texture" value="osd/fullscreen/buttons/stop.png" />
                         </include>
                         <onclick>PlayerControl(Stop)</onclick>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="606">
                         <include content="OSDButton">
@@ -448,6 +484,7 @@
                         </include>
                         <onclick>PlayerControl(Forward)</onclick>
                         <visible>Player.SeekEnabled + !VideoPlayer.Content(livetv)</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="607">
                         <include content="OSDButton">
@@ -455,6 +492,7 @@
                         </include>
                         <onclick>PlayerControl(Next)</onclick>
                         <visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | PVR.IsTimeShift</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="608">
                         <textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
@@ -475,6 +513,7 @@
                         <onclick>PVR.ToggleRecordPlayingChannel</onclick>
                         <visible>PVR.CanRecordPlayingChannel</visible>
                         <visible>VideoPlayer.Content(livetv)</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                 </control>
 
@@ -499,6 +538,7 @@
                         </include>
                         <onclick>ActivateWindow(videobookmarks)</onclick>
                         <visible>!VideoPlayer.Content(livetv)</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="70045">
                         <include content="OSDButton">
@@ -507,6 +547,7 @@
                         <onclick>Dialog.Close(VideoOSD)</onclick>
                         <onclick>ActivateWindow(Teletext)</onclick>
                         <visible>VideoPlayer.HasTeletext</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="70046">
                         <include content="OSDButton">
@@ -514,6 +555,7 @@
                         </include>
                         <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
                         <visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.HasSubtitles</visible>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="70047">
                         <include content="OSDButton">
@@ -523,6 +565,7 @@
                         <onclick>SetProperty(settingslist_content,3d,home)</onclick>
                         <onclick>SetProperty(settingslist_header,$LOCALIZE[36501],home)</onclick>
                         <onclick>ActivateWindow(1101)</onclick>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                     <control type="radiobutton" id="70048">
                         <include content="OSDButton">
@@ -531,6 +574,7 @@
                         <onclick>SetProperty(settingslist_content,osd,home)</onclick>
                         <onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
                         <onclick>ActivateWindow(1101)</onclick>
+                        <include>OSD_Button_OnFocus</include>
                     </control>
                 </control>
             </control>

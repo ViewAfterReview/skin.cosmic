@@ -14,6 +14,11 @@
 			<texturenofocus />
 			<onclick>Action(close)</onclick>
 		</control>
+		<control type="button" id="99220">
+			<include>HiddenObject</include>
+			<onfocus>SetFocus(15)</onfocus>
+			<onfocus condition="Window.IsVisible(videoosd)">Action(Close)</onfocus>
+		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackOSDButton</include>
 		<control type="group" id="200">
 			<include>Animation_BottomSlide</include>
