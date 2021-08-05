@@ -29,7 +29,7 @@
         <action>ActivateWindow(Videos)</action>
     </shortcut>
     <shortcut>
-        <label>31103</label>
+        <label>31275</label>
         <label2>Common Shortcut</label2>
         <defaultID>livetv</defaultID>
         <icon>special://skin/extras/icons/livetv.png</icon>
