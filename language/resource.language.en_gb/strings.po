@@ -1337,7 +1337,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31278"
-msgid "The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate. Apart from the default dark theme, the skin also includes bright variations."
+msgid "The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate."
 msgstr ""
 
 #: /xml/Variables.xml

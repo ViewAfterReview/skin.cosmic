@@ -18,8 +18,8 @@
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
 		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>
-		<description lang="en_GB">The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate. Apart from the default dark theme, the skin also includes bright variations.</description>
-		<description lang="pl_PL">Skórka została zaprojektowana, aby użytkownik mógł skupić się na konsumpcji mediów. Udostępnia wiele innowacyjnych rozwiązań, które doceni każdy kinoman. Oprócz domyślnego ciemnego motywu, skórka zawiera również jasne wariacje.</description>
+		<description lang="en_GB">The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate.</description>
+		<description lang="pl_PL">Skórka została zaprojektowana, aby użytkownik mógł skupić się na konsumpcji mediów. Udostępnia wiele innowacyjnych rozwiązań, które doceni każdy kinoman.</description>
 		<platform>all</platform>
 		<license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
 		<forum>https://forum.kodi.tv/showthread.php?tid=363714</forum>
