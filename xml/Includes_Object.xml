@@ -350,6 +350,8 @@
                     <control type="label">
                         <left>150</left>
                         <bottom>60</bottom>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
                         <label>$PARAM[title]</label>
                         <font>font_title_bold</font>
                         <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
@@ -376,9 +378,10 @@
                         <left>150</left>
                         <width>940</width>
                         <height>120</height>
+                        <textcolor>white</textcolor>
                         <label>$PARAM[plot]</label>
                         <font>font32</font>
-                        <shadowcolor>shadow</shadowcolor>
+                        <shadowcolor>black</shadowcolor>
                         <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600)</autoscroll>
                     </control>
                 </control>
