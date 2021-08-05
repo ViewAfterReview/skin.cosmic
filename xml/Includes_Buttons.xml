@@ -158,6 +158,7 @@
 				<height>$PARAM[height]</height>
 				<label>$PARAM[label]</label>
 				<font>$PARAM[font]</font>
+				<textcolor>dialog_fg_70</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<onclick>$PARAM[onclick]</onclick>
 				<wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
@@ -168,7 +169,7 @@
 				<include content="ButtonType">
 					<param name="alttexturefocus" value="true" />
 				</include>
-				<texturenofocus colordiffuse="FF131313" border="5">common/box.png</texturenofocus>
+				<!-- <texturenofocus colordiffuse="main_bg_30" border="5">common/box.png</texturenofocus> -->
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>

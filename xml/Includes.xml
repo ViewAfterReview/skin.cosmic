@@ -855,10 +855,10 @@
 				<right>100</right>
 				<height>70</height>
 				<font>font32_title</font>
+				<textcolor>B3ededed</textcolor>
 				<label>$PARAM[header_label]</label>
 				<aligny>center</aligny>
 				<align>center</align>
-				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="button" id="22002">
 				<description>button overlay to avoid closing in dialog area</description>
