@@ -453,7 +453,7 @@
                 <height>72</height>
                 <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
-                <!-- <textcolor>$VAR[ColorHighlight]</textcolor> -->
+                <textcolor>$VAR[ColorHighlight]</textcolor>
 
                 <visible>!String.IsEmpty(Control.GetLabel($PARAM[id]))</visible>
                 <visible>$PARAM[divider]</visible>
@@ -466,7 +466,7 @@
                 <aligny>bottom</aligny>
                 <font>$PARAM[font]</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
-                <shadowcolor>shadow</shadowcolor>
+                <shadowcolor>black</shadowcolor>
 
                 <visible>$PARAM[visible]</visible>
             </control>
