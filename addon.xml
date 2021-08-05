@@ -16,6 +16,10 @@
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
+		<news>
+			1.0.0
+			- First alpha release. Treat it as a preview...
+		</news>
 		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
 		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>
 		<description lang="en_GB">The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate.</description>
