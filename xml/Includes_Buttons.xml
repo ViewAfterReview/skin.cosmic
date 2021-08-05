@@ -96,6 +96,7 @@
 		<definition>
 			<textoffsetx>$PARAM[textoffsetx]</textoffsetx>
 			<top>0</top>
+			<textwidth>640</textwidth>
 			<height>$PARAM[height]</height>
 			<aligny>center</aligny>
 			<texturenofocus />
