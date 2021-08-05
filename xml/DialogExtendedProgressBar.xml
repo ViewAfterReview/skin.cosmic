@@ -104,7 +104,8 @@
 							<left>-12</left>
 							<centertop>30%</centertop>
 							<height>34</height>
-							<width>auto</width>
+							<width max="300">auto</width>
+							<scroll>true</scroll>
 							<align>right</align>
 							<font>font27_bold</font>
 							<textcolor>ffdedede</textcolor>
@@ -115,6 +116,8 @@
 						<top>90</top>
 						<right>90</right>
 						<align>right</align>
+						<width max="300">auto</width>
+						<scroll>true</scroll>
 						<font>font27_narrow</font>
 						<textcolor>ffdedede</textcolor>
 					</control>

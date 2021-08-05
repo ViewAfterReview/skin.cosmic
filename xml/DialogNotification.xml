@@ -103,7 +103,8 @@
 							<centertop>50%</centertop>
 							<height>34</height>
 							<label>$INFO[Control.GetLabel(401)]</label>
-							<width>auto</width>
+							<width max="300">auto</width>
+							<scroll>true</scroll>
 							<font>font27_bold</font>
 							<textcolor>ffdedede</textcolor>
 						</control>
@@ -111,7 +112,8 @@
 							<centertop>50%</centertop>
 							<height>34</height>
 							<label>$INFO[Control.GetLabel(402)]</label>
-							<width>auto</width>
+							<width max="300">auto</width>
+							<scroll>true</scroll>
 							<font>font27_narrow</font>
 							<textcolor>ffdedede</textcolor>
 						</control>
