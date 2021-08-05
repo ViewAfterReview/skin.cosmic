@@ -1409,3 +1409,18 @@ msgstr ""
 msgctxt "#31292"
 msgid "60 seconds"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31293"
+msgid "Switch rating icons colour"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31294"
+msgid "Monochrome"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31295"
+msgid "Colourful"
+msgstr ""

@@ -54,7 +54,7 @@
 
                     <control type="group">
                         <include content="Object_Ratings_Content">
-                            <param name="directory" value="colorful" />
+                            <param name="directory" value="$INFO[Skin.String(Icons)]" />
                             <param name="align" value="left" />
                             <param name="top" value="255" />
                             <param name="left" value="145" />

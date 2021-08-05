@@ -41,7 +41,7 @@
             <control type="group">
                 <visible>!String.IsEmpty(Container(56).ListItem.Title)</visible>
                 <include content="Object_Ratings_Content">
-                    <param name="directory" value="colorful" />
+                    <param name="directory" value="$INFO[Skin.String(Icons)]" />
                     <param name="align" value="left" />
                     <param name="top" value="180" />
                     <param name="left" value="695" />
