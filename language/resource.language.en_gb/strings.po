@@ -1197,7 +1197,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31248"
-msgid "Enable/Disable debugging"
+msgid "Toggle Debugging"
 msgstr ""
 
 #: /xml/SkinSettings.xml
@@ -1423,4 +1423,44 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31295"
 msgid "Colourful"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31296"
+msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31297"
+msgid "Restore skin defaults"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31298"
+msgid "Manage dependencies"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31299"
+msgid "General"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31300"
+msgid "Power menu"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31301"
+msgid "Manage colours"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31302"
+msgid "Manage background"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31303"
+msgid "Miscellaneous"
 msgstr ""
