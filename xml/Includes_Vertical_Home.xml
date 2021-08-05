@@ -70,7 +70,7 @@
                                 <top>1</top>
                                 <width>95</width>
                                 <height>95</height>
-                                <texture>$INFO[ListItem.Art(thumb)]</texture>
+                                <texture colordiffuse="dialog_fg_100">$INFO[ListItem.Art(thumb)]</texture>
                             </control>
                         </control>
                         <control type="group">
@@ -82,6 +82,7 @@
                                 <width>560</width>
                                 <aligny>center</aligny>
                                 <font>font45_title</font>
+                                <textcolor>dialog_fg_100</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                                 <shadowcolor>text_shadow</shadowcolor>
                             </control>
