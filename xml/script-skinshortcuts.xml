@@ -265,10 +265,12 @@
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
+                    <!-- Widget target -->
                     <control type="button" id="506" description="Content Type / Widget Target">
                         <label>Widget target</label>
                         <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                         <label2>$INFO[Container(211).ListItem.Property(widgetTarget)]</label2>
+                        <enable>!String.IsEmpty(Container(211).ListItem.Property(widget)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget) + !Container(8000).IsUpdating</enable>
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
                         <include>DialogSettingButton</include>
                     </control>
