@@ -1,2 +1,7 @@
+1.0.1
+    Fixed: Logic behind widgets
+    Changed: Widget target enable
+    Fixed: Widget movement with disabled widgets
+    Fixed: Customize main menu - header labels
 1.0.0
-    - First alpha release. Treat it as a preview...
+    First alpha release: Please treat it as a preview...
