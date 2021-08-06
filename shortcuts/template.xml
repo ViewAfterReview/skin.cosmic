@@ -79,7 +79,6 @@
                 <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
 
                 <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PYTHON[int(id) + 7501],home)</onfocus>
-                <onfocus>SetProperty(widgetMovementPosition,$SKINSHORTCUTS[id],home)</onfocus>
                 <onfocus>SetProperty(widgetNameLabel,$SKINSHORTCUTS[name],home)</onfocus>
 
                 <skinshortcuts>visibility</skinshortcuts>

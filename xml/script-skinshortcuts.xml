@@ -253,6 +253,8 @@
                         <label>$LOCALIZE[31176]</label>
                         <include>DialogSettingButton</include>
                         <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
 
                     <!-- Select widget -->
@@ -261,6 +263,14 @@
                         <label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
                         <include>DialogSettingButton</include>
                         <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+
+                    <control type="button" id="506" description="Content Type / Widget Target">
+                        <label>Widget target</label>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <label2>$INFO[Container(211).ListItem.Property(widgetTarget)]</label2>
+                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                        <include>DialogSettingButton</include>
                     </control>
 
                     <!-- Widget aspect -->
@@ -321,7 +331,9 @@
             </control>
             <!-- Hidden controls -->
             <control type="button" id="404">
-                <visible>false</visible>
+                <visible allowhiddenfocus="true">false</visible>
+                <width>1</width>
+                <height>1</height>
             </control>
             <control type="wraplist" id="8000">
                 <left>-1000</left>
