@@ -223,6 +223,7 @@
                 <nested />
 
                 <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
+                <onfocus>SetProperty(widgetNameLabel,$PARAM[name],home)</onfocus>
                 <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
 
                 <orientation>horizontal</orientation>
