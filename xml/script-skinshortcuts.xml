@@ -39,14 +39,32 @@
                             <texture colordiffuse="$VAR[ColorGradient]" border="5">common/white-gradient-rounded.png</texture>
                         </control>
                     </control>
+                    <!-- Header Label -->
                     <control type="label" id="500">
+                        <description>header label</description>
                         <left>40</left>
                         <top>0</top>
                         <right>100</right>
                         <height>70</height>
                         <font>font32_title</font>
+                        <align>left</align>
                         <aligny>center</aligny>
-                        <shadowcolor>black</shadowcolor>
+                        <textcolor>dialog_fg_70</textcolor>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                    </control>
+                    <!-- Widgets Header Label -->
+                    <control type="label">
+                        <description>header label</description>
+                        <left>40</left>
+                        <top>0</top>
+                        <right>100</right>
+                        <height>70</height>
+                        <font>font32_title</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>dialog_fg_70</textcolor>
+                        <label>$LOCALIZE[30062]</label>
+                        <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
                     </control>
                 </control>
             </control>
