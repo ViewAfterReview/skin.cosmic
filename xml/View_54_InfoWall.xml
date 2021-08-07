@@ -178,6 +178,39 @@
 			</control>
 		</definition>
 	</include>
+	<include name="ViewSquareItemLayout">
+		<definition>
+			<control type="image">
+				<top>-16</top>
+				<left>-16</left>
+				<width>360</width>
+				<height>422.5</height>
+				<aspectratio>scale</aspectratio>
+				<texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+				<bordertexture border="32">common/dark-shadow-24.png</bordertexture>
+				<bordersize>24</bordersize>
+			</control>
+			<control type="image">
+				<top>8</top>
+				<right>50</right>
+				<height>290</height>
+				<width>290</width>
+				<align>center</align>
+				<aspectratio>keep</aspectratio>
+				<texture>$VAR[Image_Poster]</texture>
+			</control>
+			<control type="label">
+				<top>320</top>
+				<left>20</left>
+				<right>20</right>
+				<width>290</width>
+				<align>center</align>
+				<font>font32_title</font>
+				<scroll>true</scroll>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</definition>
+	</include>
 	<include name="ViewLandscapeItemLayout">
 		<param name="iconheight" default="350" />
 		<definition>

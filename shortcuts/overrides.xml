@@ -65,6 +65,7 @@
 
     <!-- Widget Aspect -->
     <property property="widgetAspect">Poster</property>
+    <property property="widgetAspect">Square</property>
     <property property="widgetAspect">Landscape</property>
     <propertySettings property="widgetAspect" buttonID="505" title="Widget Aspect" />
 

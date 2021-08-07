@@ -217,6 +217,7 @@
         <param name="limit" default="" />
         <param name="path" default="" />
         <param name="postercondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Poster)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Poster)]" />
+        <param name="squarecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Square)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Square)]" />
         <param name="landscapecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Landscape)]" />
         <definition>
             <control type="$PARAM[controltype]" id="$PARAM[id]">
@@ -245,6 +246,21 @@
                         <param name="pad_bottom" value="-16" />
                         <param name="pad_left" value="-15" />
                         <param name="pad_right" value="-4" />
+                        <param name="focusbounce" value="true" />
+                    </include>
+                </focusedlayout>
+
+                <!-- Square aspect ratio -->
+                <itemlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
+                    <include content="ViewSquareItemLayout"></include>
+                </itemlayout>
+                <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
+                    <include content="ViewSquareItemLayout"></include>
+                    <include content="Selectbox_Bold">
+                        <param name="pad_top" value="-16" />
+                        <param name="pad_bottom" value="-16" />
+                        <param name="pad_left" value="-15" />
+                        <param name="pad_right" value="15" />
                         <param name="focusbounce" value="true" />
                     </include>
                 </focusedlayout>
@@ -283,6 +299,7 @@
         <param name="limit" default="" />
         <param name="path" default="" />
         <param name="postercondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Poster)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Poster)]" />
+        <param name="squarecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Square)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Square)]" />
         <param name="landscapecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Landscape)]" />
         <definition>
             <control type="$PARAM[controltype]" id="$PARAM[id]">
@@ -309,6 +326,21 @@
                         <param name="pad_bottom" value="-16" />
                         <param name="pad_left" value="-15" />
                         <param name="pad_right" value="-4" />
+                        <param name="focusbounce" value="true" />
+                    </include>
+                </focusedlayout>
+
+                <!-- Square aspect ratio -->
+                <itemlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
+                    <include content="ViewSquareItemLayout"></include>
+                </itemlayout>
+                <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
+                    <include content="ViewSquareItemLayout"></include>
+                    <include content="Selectbox_Bold">
+                        <param name="pad_top" value="-16" />
+                        <param name="pad_bottom" value="-16" />
+                        <param name="pad_left" value="-15" />
+                        <param name="pad_right" value="15" />
                         <param name="focusbounce" value="true" />
                     </include>
                 </focusedlayout>
