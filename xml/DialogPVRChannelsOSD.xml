@@ -5,8 +5,8 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 
-			<include condition="!Skin.HasSetting(LegacyPVRChannelsOSDLayout)">PVRChannelsOSDLayout_Familiar</include>
-			<include condition="Skin.HasSetting(LegacyPVRChannelsOSDLayout)">PVRChannelsOSDLayout_Legacy</include>
+			<include condition="!Skin.HasSetting(LegacyPVR)">PVRChannelsOSDLayout_Familiar</include>
+			<include condition="Skin.HasSetting(LegacyPVR)">PVRChannelsOSDLayout_Legacy</include>
 
 		</control>
 		<include>PVRChannelNumberInput</include>

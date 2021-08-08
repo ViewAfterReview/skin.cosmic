@@ -459,8 +459,8 @@
 					<control type="radiobutton" id="1102">
 						<label>$LOCALIZE[31311]</label>
 						<include>DefaultSettingButton</include>
-						<onclick>Skin.ToggleSetting(LegacyPVRChannelsOSDLayout)</onclick>
-						<selected>Skin.HasSetting(LegacyPVRChannelsOSDLayout)</selected>
+						<onclick>Skin.ToggleSetting(LegacyPVR)</onclick>
+						<selected>Skin.HasSetting(LegacyPVR)</selected>
 					</control>
 				</control>
 				<include content="DefaultSettingButtonGradient">
