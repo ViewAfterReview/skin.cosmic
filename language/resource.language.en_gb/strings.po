@@ -1135,7 +1135,7 @@ msgctxt "#31235"
 msgid "Top 100 Albums"
 msgstr ""
 
-#: /1080i/overrides.xml
+#: /xml/overrides.xml
 msgctxt "#31236"
 msgid "Random Albums"
 msgstr ""
@@ -1150,7 +1150,7 @@ msgctxt "#31238"
 msgid "Music Nodes"
 msgstr ""
 
-#: /1080i/overrides.xml
+#: /xml/overrides.xml
 msgctxt "#31239"
 msgid "PVR"
 msgstr ""
@@ -1175,7 +1175,7 @@ msgctxt "#31243"
 msgid "Grouped Deleted Recordings"
 msgstr ""
 
-#: /1080i/Includes_Labels.xml
+#: /xml/Includes_Labels.xml
 msgctxt "#31244"
 msgid "Video Sources"
 msgstr ""
@@ -1360,127 +1360,142 @@ msgctxt "#31282"
 msgid "Manage your dependencies or restore skin defaults"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31283"
 msgid "Auto close OSD controls after delay (in seconds)"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31284"
 msgid "Reset"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31285"
 msgid "3 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31286"
 msgid "5 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31287"
 msgid "10 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31288"
 msgid "12 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31289"
 msgid "15 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31290"
 msgid "20 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31291"
 msgid "30 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31292"
 msgid "60 seconds"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31293"
 msgid "Switch rating icons colour"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31294"
 msgid "Monochrome"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31295"
 msgid "Colourful"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31296"
 msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31297"
 msgid "Restore skin defaults"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31298"
 msgid "Manage dependencies"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31299"
 msgid "General"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31300"
 msgid "Power menu"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31301"
 msgid "Manage colours"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31302"
 msgid "Manage background"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31303"
 msgid "Miscellaneous"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31304"
 msgid "Menu style"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31305"
 msgid "Icons only"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31306"
 msgid "Icons & Text"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
+#: /xml/SkinSettings.xml
 msgctxt "#31307"
 msgid "Text only"
+msgstr ""
+
+#: /xml/DialogPVRChannelsOSD.xml
+msgctxt "#31308"
+msgid "On Now"
+msgstr ""
+
+#: /xml/DialogPVRChannelsOSD.xml
+msgctxt "#31309"
+msgid "Now Playing"
+msgstr ""
+
+#: /xml/DialogPVRChannelsOSD.xml
+msgctxt "#31310"
+msgid "Up Next"
 msgstr ""

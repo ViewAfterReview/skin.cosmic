@@ -844,4 +844,47 @@
             </control>
         </definition>
     </include>
+
+    <include name="Object_PVR_Icon">
+        <param name="bgcolor" default="main_bg" />
+        <param name="fgcolor" default="main_fg" />
+        <param name="width" default="113" />
+        <param name="height" default="113" />
+        <param name="font" default="font13" />
+        <definition>
+            <control type="image">
+                <top>4</top>
+                <right>4</right>
+                <left>0</left>
+                <bottom>0</bottom>
+                <bordersize>20</bordersize>
+                <texture>$INFO[ListItem.Icon]</texture>
+                <aspectratio aligny="center" align="right">keep</aspectratio>
+            </control>
+            <control type="image">
+                <top>4</top>
+                <right>4</right>
+                <left>0</left>
+                <bottom>0</bottom>
+                <bordersize>20</bordersize>
+                <texture colordiffuse="main_fg_100">common/circle.png</texture>
+                <aspectratio aligny="center" align="right">keep</aspectratio>
+                <visible>String.IsEmpty(ListItem.Icon)</visible>
+            </control>
+            <control type="label">
+                <top>4</top>
+                <right>4</right>
+                <left>0</left>
+                <bottom>0</bottom>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textoffsetx>20</textoffsetx>
+                <font>$PARAM[font]</font>
+                <textcolor>$PARAM[bgcolor]_90</textcolor>
+                <selectedcolor>$PARAM[bgcolor]_90</selectedcolor>
+                <label>$INFO[ListItem.ChannelNumberLabel]</label>
+                <visible>String.IsEmpty(ListItem.Icon)</visible>
+            </control>
+        </definition>
+    </include>
 </includes>

@@ -26,10 +26,22 @@
 			<style>lighten</style>
 		</font>
 		<font>
+			<name>font13_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>30</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>font14</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>33</size>
 			<style>lighten</style>
+		</font>
+		<font>
+			<name>font14_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>33</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>font23_narrow</name>
