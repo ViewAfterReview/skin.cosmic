@@ -5,7 +5,7 @@
 
 	<onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
 
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=1&amp;group=mainmenu|shutdown)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|shutdown)</onload>
 
 	<!-- set default home layout if none is set -->
 	<onload condition="!Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Vertical_Main)</onload>
