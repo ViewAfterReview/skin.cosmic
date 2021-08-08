@@ -1,3 +1,8 @@
+1.0.3
+    Added: Familiar layout to DialogPVRChannelGuide.xml
+    Added: Animation to Familiar PVRChannelsOSD layout
+    Fixed: Progress bars in Legacy PVRChannelsOSD
+    Added: Option to switch PVR Layouts to Legacy one
 1.0.2
     Changed: DialogPVRChannelsOSD.xml appearance
     Changed: Reduced size of logo in Landscape aspect ratio for PVR channels

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cosmic" version="1.0.2" name="Cosmic" provider-name="heppen (nfm886)">
+<addon id="skin.cosmic" version="1.0.3" name="Cosmic" provider-name="heppen (nfm886)">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="script.skinshortcuts" version="1.1.5" />
@@ -17,10 +17,11 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
-1.0.2
-Changed: DialogPVRChannelsOSD.xml appearance
-Changed: Reduced size of logo in Landscape aspect ratio for PVR channels
-Added: Square aspect ratio
+1.0.3
+Added: Familiar layout to DialogPVRChannelGuide.xml
+Added: Animation to Familiar PVRChannelsOSD layout
+Fixed: Progress bars in Legacy PVRChannelsOSD
+Added: Option to switch PVR Layouts to Legacy one
 		</news>
 		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
 		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>
