@@ -234,9 +234,10 @@
 					<visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
 				</control>
 				<control type="image">
-					<right>18</right>
+					<!-- <right>18</right> -->
 					<centerleft>50%</centerleft>
-					<width>400</width>
+					<centertop>50%</centertop>
+					<width>200</width>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[Image_Landscape]</texture>
 					<visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
