@@ -447,13 +447,21 @@
 					<pagecontrol>60</pagecontrol>
 					<ondown>1100</ondown>
 					<visible>Container(9000).HasFocus(6)</visible>
-					<!-- Fill empty category... -->
-					<!-- <control type="radiobutton" id="708">
-						<label>LABEL</label>
+					<control type="label" id="1101">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>80</height>
+						<textcolor>dialog_fg_30</textcolor>
+						<label>$LOCALIZE[31299]</label>
+						<font>font27</font>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="1102">
+						<label>$LOCALIZE[31311]</label>
 						<include>DefaultSettingButton</include>
-						<onclick>ONCLICK</onclick>
-						<selected>SELECTED</selected>
-					</control> -->
+						<onclick>Skin.ToggleSetting(LegacyPVRChannelsOSDLayout)</onclick>
+						<selected>Skin.HasSetting(LegacyPVRChannelsOSDLayout)</selected>
+					</control>
 				</control>
 				<include content="DefaultSettingButtonGradient">
 					<param name="id" value="1200" />

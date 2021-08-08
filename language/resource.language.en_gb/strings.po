@@ -1499,3 +1499,8 @@ msgstr ""
 msgctxt "#31310"
 msgid "Up Next"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31311"
+msgid "Switch PVR Channels OSD to Legacy"
+msgstr ""
