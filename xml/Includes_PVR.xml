@@ -9,6 +9,11 @@
 			<top>90</top>
 			<bottom>90</bottom>
 
+			<animation type="WindowOpen" reversible="False">
+				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="slide" start="0,-3000" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+
 			<control type="wraplist" id="11">
 				<left>0</left>
 				<width>1764</width>
@@ -172,7 +177,12 @@
 
 					<control type="group">
 						<visible>System.IdleTime(2)</visible>
-						<include>Animation_FocusTextureFade</include>
+
+						<animation type="Visible" reversible="true">
+							<effect type="fade" start="0" end="100" time="300" />
+							<effect type="slide" start="3000,0" end="0,0" time="300" tween="cubic" easing="out" />
+						</animation>
+
 						<control type="group">
 							<left>997.5</left>
 							<width>762.5</width>
@@ -270,14 +280,12 @@
 			<depth>DepthOSD</depth>
 			<left>90</left>
 			<top>-10</top>
+
 			<animation type="WindowOpen" reversible="False">
 				<effect type="fade" start="0" end="100" time="300" />
-				<effect type="slide" start="0,-200" end="0,0" time="300" delay="300" tween="cubic" easing="out" />
+				<effect type="slide" start="0,-3000" end="0,0" time="300" tween="cubic" easing="out" />
 			</animation>
-			<animation type="WindowClose" reversible="False">
-				<effect type="fade" start="100" end="0" time="300" />
-				<effect type="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="out" />
-			</animation>
+
 			<control type="image">
 				<left>0</left>
 				<width>995</width>
