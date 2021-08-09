@@ -2,14 +2,14 @@
 <template>
     <submenu include="submenu" level="2">
         <controls>
-            <control type="fixedlist" id="9001">
-                <left>0</left>
+            <control type="panel" id="9001">
+                <left>92</left>
                 <top>145</top>
                 <right>0</right>
                 <height>1080</height>
                 <onleft>9000</onleft>
                 <onright>3000</onright>
-                <orientation>vertical</orientation>
+                <orientation>horizontal</orientation>
                 <include content="Object_Submenu_Content">
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="label" value="$INFO[ListItem.Label]" />

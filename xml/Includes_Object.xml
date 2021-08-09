@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Object_Submenu_Content">
-        <itemlayout width="360" height="70">
+        <itemlayout height="95">
             <control type="group">
-                <control type="textbox">
-                    <left>38</left>
-                    <top>106</top>
+                <control type="image">
+                    <top>126</top>
+                    <width>95</width>
+                    <height>95</height>
+                    <texture colordiffuse="dialog_fg_70">$INFO[ListItem.Art(thumb)]</texture>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+                </control>
+                <control type="label">
+                    <left>95</left>
+                    <top>126</top>
                     <width>360</width>
-                    <height>70</height>
+                    <height>95</height>
                     <label>$PARAM[label]</label>
                     <font>font37</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <align>left</align>
                     <aligny>center</aligny>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                 </control>
                 <visible>Control.HasFocus(9001)</visible>
             </control>
         </itemlayout>
-        <focusedlayout width="360" height="70">
+        <focusedlayout height="95">
             <control type="group">
                 <depth>DepthContentPopout</depth>
                 <left>70</left>
@@ -27,16 +35,24 @@
                 <animation type="Unfocus">
                     <effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
                 </animation>
-                <control type="textbox">
-                    <left>38</left>
-                    <top>106</top>
+                <control type="image">
+                    <top>126</top>
+                    <width>95</width>
+                    <height>95</height>
+                    <texture colordiffuse="dialog_fg_70">$INFO[ListItem.Art(thumb)]</texture>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+                </control>
+                <control type="label">
+                    <left>95</left>
+                    <top>126</top>
                     <width>360</width>
-                    <height>70</height>
+                    <height>95</height>
                     <label>$PARAM[label]</label>
                     <font>font45_title</font>
                     <shadowcolor>text_shadow</shadowcolor>
                     <align>left</align>
                     <aligny>center</aligny>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                 </control>
                 <visible>Control.HasFocus(9001)</visible>
             </control>
