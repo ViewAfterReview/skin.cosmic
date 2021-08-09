@@ -1,3 +1,6 @@
+1.0.4
+    Testing: Fix for submenu
+    Changed: Text align in PVRChannelGuide.xml
 1.0.3
     Added: Familiar layout to DialogPVRChannelGuide.xml
     Added: Animation to Familiar PVRChannelsOSD layout
