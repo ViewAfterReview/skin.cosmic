@@ -86,22 +86,23 @@
                     <include content="InfoDialogButton">
                         <param name="id" value="8" />
                         <param name="icon" value="special://skin/extras/icons/play3.png" />
-                        <param name="label" value="Play" />
+                        <param name="label" value="$LOCALIZE[208]" />
                     </include>
                     <include content="InfoDialogButton">
                         <param name="id" value="11" />
                         <param name="icon" value="special://skin/extras/icons/film.png" />
-                        <param name="label" value="Trailer" />
+                        <param name="label" value="$LOCALIZE[20410]" />
                     </include>
                     <include content="InfoDialogButton">
                         <param name="id" value="13" />
                         <param name="icon" value="special://skin/extras/icons/search.png" />
-                        <param name="label" value="Search" />
+                        <param name="label" value="$LOCALIZE[137]" />
                     </include>
                     <include content="InfoDialogButton">
                         <param name="id" value="8898" />
                         <param name="icon" value="special://skin/extras/icons/settings.png" />
-                        <param name="label" value="Manage" />
+                        <param name="label" value="$LOCALIZE[31312]" />
+                        <param name="onclick_1" value="Control.SetFocus(9000,1,absolute)" />
                     </include>
                 </control>
 
@@ -361,6 +362,105 @@
                     <param name="itemheight" value="407" />
                     <param name="visible" value="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)" />
                 </include>
+            </control>
+
+            <control type="group" id="8999">
+                <visible>ControlGroup(9000).HasFocus()</visible>
+                <include>Animation_DialogPopupVisible</include>
+                <control type="image">
+                    <left>-1920</left>
+                    <top>-1080</top>
+                    <width>5760</width>
+                    <height>3240</height>
+                    <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+                    <texture colordiffuse="B0FFFFFF">colors/black.png</texture>
+                </control>
+                <control type="button">
+                    <left>-1920</left>
+                    <top>-1080</top>
+                    <width>5760</width>
+                    <height>3240</height>
+                    <texturefocus />
+                    <texturenofocus />
+                    <onclick>Action(close)</onclick>
+                </control>
+                <control type="group">
+                    <centertop>50%</centertop>
+                    <centerleft>50%</centerleft>
+                    <width>506</width>
+                    <height>844</height>
+                    <control type="image" id="999">
+                        <description>background image</description>
+                        <top>-24</top>
+                        <left>-24</left>
+                        <width>506</width>
+                        <height>844</height>
+                        <bordersize>24</bordersize>
+                        <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
+                        <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+                    </control>
+                    <include content="DefaultSettingButtonGradient">
+                        <param name="id" value="9000" />
+                        <param name="height" value="70" />
+                        <top>0</top>
+                        <height>70</height>
+                        <width>458</width>
+                        <visible>ControlGroup(9000).HasFocus()</visible>
+                    </include>
+                    <control type="grouplist" id="9000">
+                        <description>grouplist for context buttons</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>506</width>
+                        <onleft>Control.SetFocus(8898)</onleft>
+                        <onright>Control.SetFocus(8898)</onright>
+                        <ondown>Control.SetFocus(8898)</ondown>
+                        <height max="780">auto</height>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <control type="button" id="6">
+                            <label>$LOCALIZE[31313]</label>
+                            <left>0</left>
+                            <width>458</width>
+                            <height>70</height>
+                            <align>center</align>
+                            <texturefocus />
+                            <texturenofocus />
+                        </control>
+                        <control type="button" id="7">
+                            <label>$LOCALIZE[31314]</label>
+                            <left>0</left>
+                            <width>458</width>
+                            <height>70</height>
+                            <align>center</align>
+                            <texturefocus />
+                            <texturenofocus />
+                        </control>
+                        <control type="button" id="10">
+                            <label>$LOCALIZE[31315]</label>
+                            <left>0</left>
+                            <width>458</width>
+                            <height>70</height>
+                            <align>center</align>
+                            <texturefocus />
+                            <texturenofocus />
+                        </control>
+                        <control type="button" id="9004">
+                            <label>$LOCALIZE[31316]</label>
+                            <left>0</left>
+                            <width>458</width>
+                            <height>70</height>
+                            <align>center</align>
+                            <texturefocus />
+                            <texturenofocus />
+
+                            <visible>[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(tmdbhelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))</visible>
+
+                            <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
+                            <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(tmdbhelper.listitem.tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
+                        </control>
+                    </control>
+                </control>
             </control>
         </control>
     </include>

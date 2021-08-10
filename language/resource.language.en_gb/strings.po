@@ -1504,3 +1504,28 @@ msgstr ""
 msgctxt "#31311"
 msgid "Switch PVR Channels OSD to Legacy"
 msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31312"
+msgid "Manage"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31313"
+msgid "Refresh video informations"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31314"
+msgid "User Rating"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31315"
+msgid "Get Fanart"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31316"
+msgid "Trakt Management"
+msgstr ""
