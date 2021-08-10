@@ -389,13 +389,13 @@
                     <centertop>50%</centertop>
                     <centerleft>50%</centerleft>
                     <width>506</width>
-                    <height>844</height>
+                    <height>330</height>
                     <control type="image" id="999">
                         <description>background image</description>
                         <top>-24</top>
                         <left>-24</left>
                         <width>506</width>
-                        <height>844</height>
+                        <height>330</height>
                         <bordersize>24</bordersize>
                         <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
                         <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
