@@ -15,6 +15,7 @@
 	<include file="Includes_PVR.xml" />
 	<include file="Includes_Horizontal_Home.xml" />
 	<include file="Includes_Vertical_Home.xml" />
+	<include file="Includes_View.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_Poster.xml" />
@@ -1217,6 +1218,7 @@
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
 						<visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
 						<visible>Skin.HasSetting(Vertical_Main)</visible>
+						<visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
 					</control>
 				</control>
 			</control>

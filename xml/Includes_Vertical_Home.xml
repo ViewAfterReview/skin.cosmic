@@ -25,11 +25,16 @@
                     <include>WidgetVerticalLabel</include>
                 </control>
                 <control type="grouplist" id="3000">
+                    <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
                     <top>595</top>
                     <height>9999</height>
                     <usecontrolcoords>false</usecontrolcoords>
                     <include>Animation_Widget_Slide</include>
                     <include>skinshortcuts-template-vertical</include>
+                </control>
+                <control type="group" id="4000">
+                    <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+                    <include>View_Weather</include>
                 </control>
                 <control type="group" id="2999">
                     <include content="Object_Ratings_Content">
@@ -59,7 +64,8 @@
                     <onup>700</onup>
                     <!-- <ondown>700</ondown> -->
                     <onleft>9001</onleft>
-                    <onright>3000</onright>
+                    <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
+                    <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">4000</onright>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <focusedlayout height="95">
                         <control type="group">
