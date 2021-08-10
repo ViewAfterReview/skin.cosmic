@@ -606,7 +606,7 @@
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -646,22 +646,25 @@
 					<control type="group">
 						<left>70</left>
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,140" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,140" />
-						</animation>
-						<control type="image">
+						</animation> -->
+						<control type="group">
 							<left>0</left>
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
+							<control type="image">
+								<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+							</control>
+							<control type="image">
+								<texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+							</control>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<left>0</left>
 							<top>20</top>
 							<width>254</width>
@@ -669,7 +672,7 @@
 							<texture colordiffuse="Highlight">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
-						</control>
+						</control> -->
 						<control type="image">
 							<left>60</left>
 							<top>108</top>

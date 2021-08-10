@@ -54,7 +54,9 @@
                     <top>100</top>
                     <width>95%</width>
                     <height>220</height>
-                    <texture border="21">dialogs/dialog-bg.png</texture>
+                    <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
+                    <bordertexture border="21">overlays/shadow.png</bordertexture>
+                    <bordersize>20</bordersize>
                 </control>
                 <control type="label">
                     <top>310</top>
@@ -76,7 +78,7 @@
                     <aligny>center</aligny>
                     <textoffsetx>40</textoffsetx>
                     <textoffsety>0</textoffsety>
-                    <texturefocus border="40" colordiffuse="Highlight">buttons/button-fo.png</texturefocus>
+                    <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
                     <texturenofocus />
                     <onup>20000</onup>
                     <ondown>15100</ondown>
