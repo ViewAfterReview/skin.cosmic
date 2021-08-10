@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="View_Settings">
+        <control type="panel" id="5001">
+            <left>0</left>
+            <width>100%</width>
+            <top>120</top>
+            <height>300</height>
+            <onup>noop</onup>
+            <onleft condition="Window.IsVisible(Home)">9000</onleft>
+            <onback condition="Window.IsVisible(Home)">9000</onback>
+            <ondown>Control.SetFocus(5002,$INFO[Container(5001).Position],absolute)</ondown>
+            <include>SettingsPanel</include>
+            <include>Items_Settings_System</include>
+        </control>
+        <control type="panel" id="5002">
+            <left>0</left>
+            <right>0</right>
+            <top>470</top>
+            <bottom>0</bottom>
+            <onleft condition="Window.IsVisible(Home)">9000</onleft>
+            <onback condition="Window.IsVisible(Home)">9000</onback>
+            <onup>Control.SetFocus(5001,$INFO[Container(5002).Position],absolute)</onup>
+            <ondown>noop</ondown>
+            <include>SettingsPanel</include>
+            <include>Items_Settings_Main</include>
+        </control>
+    </include>
     <include name="View_Weather">
         <control type="grouplist" id="2000">
             <orientation>vertical</orientation>

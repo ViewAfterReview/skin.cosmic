@@ -38,42 +38,7 @@
 				<onup>noop</onup>
 				<ondown>Control.SetFocus(9001,$INFO[Container(9000).Position],absolute)</ondown>
 				<include>SettingsPanel</include>
-				<content>
-					<item id="1">
-						<label>$LOCALIZE[7]</label>
-						<icon>special://skin/extras/icons/folder.png</icon>
-						<onclick>ActivateWindow(filemanager)</onclick>
-					</item>
-					<item id="2">
-						<label>$LOCALIZE[24001]</label>
-						<icon>special://skin/extras/icons/addon.png</icon>
-						<onclick>ActivateWindow(addonbrowser)</onclick>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[10007]</label>
-						<icon>special://skin/extras/icons/sysinfo.png</icon>
-						<onclick>ActivateWindow(systeminfo)</onclick>
-					</item>
-					<item id="4">
-						<label>$LOCALIZE[10050]</label>
-						<icon>special://skin/extras/icons/recent.png</icon>
-						<onclick>ActivateWindow(eventlog)</onclick>
-						<visible>!System.HasAddon(service.libreelec.settings)</visible>
-						<visible>!System.HasAddon(service.coreelec.settings)</visible>
-					</item>
-					<item id="5">
-						<label>LibreELEC $LOCALIZE[5]</label>
-						<icon>special://skin/extras/icons/libreelec.png</icon>
-						<onclick>RunScript(service.libreelec.settings)</onclick>
-						<visible>System.HasAddon(service.libreelec.settings)</visible>
-					</item>
-					<item id="6">
-						<label>CoreELEC $LOCALIZE[5]</label>
-						<icon>special://skin/extras/icons/coreelec.png</icon>
-						<onclick>RunScript(service.coreelec.settings)</onclick>
-						<visible>System.HasAddon(service.coreelec.settings)</visible>
-					</item>
-				</content>
+				<include>Items_Settings_System</include>
 			</control>
 			<control type="panel" id="9001">
 				<left>0</left>
@@ -83,48 +48,7 @@
 				<onup>Control.SetFocus(9000,$INFO[Container(9001).Position],absolute)</onup>
 				<ondown>noop</ondown>
 				<include>SettingsPanel</include>
-				<content>
-					<item id="4">
-						<label>$LOCALIZE[20077]</label>
-						<icon>special://skin/extras/icons/paintbrush.png</icon>
-						<onclick>ActivateWindow(SkinSettings)</onclick>
-					</item>
-					<item id="1">
-						<label>$LOCALIZE[14207]</label>
-						<icon>special://skin/extras/icons/skinsettings.png</icon>
-						<onclick>ActivateWindow(InterfaceSettings)</onclick>
-					</item>
-					<item id="2">
-						<label>$LOCALIZE[14212]</label>
-						<icon>special://skin/extras/icons/tags.png</icon>
-						<onclick>ActivateWindow(MediaSettings)</onclick>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[14201]</label>
-						<icon>special://skin/extras/icons/equalizer.png</icon>
-						<onclick>ActivateWindow(PlayerSettings)</onclick>
-					</item>
-					<item id="5">
-						<label>$LOCALIZE[14209]</label>
-						<icon>special://skin/extras/icons/configure.png</icon>
-						<onclick>ActivateWindow(SystemSettings)</onclick>
-					</item>
-					<item id="6">
-						<label>$LOCALIZE[14208]</label>
-						<icon>special://skin/extras/icons/network.png</icon>
-						<onclick>ActivateWindow(servicesettings)</onclick>
-					</item>
-					<item id="10">
-						<label>$LOCALIZE[14205]</label>
-						<icon>special://skin/extras/icons/livetv.png</icon>
-						<onclick>ActivateWindow(pvrsettings)</onclick>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[14210]</label>
-						<icon>special://skin/extras/icons/actor.png</icon>
-						<onclick>ActivateWindow(Profiles)</onclick>
-					</item>
-				</content>
+				<include>Items_Settings_Main</include>
 			</control>
 		</control>
 		<include content="TopBar">
