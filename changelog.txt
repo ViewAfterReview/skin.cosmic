@@ -1,3 +1,7 @@
+1.0.6
+    Added: Implemented Manage button in DialogVideoInfo.xml
+    Fixed: Switching between locations in Weather widget
+    Changed: Little changes to Weather appearance
 1.0.5
     Added: Weather and Settings widgets
     Changed: Submenu focus behavior in Vertical layout
