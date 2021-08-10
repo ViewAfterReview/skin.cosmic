@@ -66,10 +66,10 @@
                     <height>44</height>
                     <shadowcolor>text_shadow</shadowcolor>
                     <label>$LOCALIZE[31154]</label>
-                    <visible>Control.HasFocus(20)</visible>
+                    <visible>Control.HasFocus(2001)</visible>
                     <animation effect="fade" time="400">VisibleChange</animation>
                 </control>
-                <control type="button" id="20">
+                <control type="button" id="2001">
                     <left>2.5%</left>
                     <top>100</top>
                     <width>95%</width>
@@ -179,6 +179,7 @@
         </control>
         <include content="TopBar">
             <param name="breadcrumbs_label" value="$INFO[Window(Weather).Property(Location)]" />
+            <param name="left" value="-130" />
         </include>
         <!-- <include>BottomBar</include> -->
     </include>
