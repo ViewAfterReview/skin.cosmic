@@ -1,3 +1,9 @@
+1.0.8
+    Fixed: Widget label may not appear from 9th widget and above
+    Added: Cycle animation through Genre and Studio tags
+    Fixed: Height of Studio and Genre infos in Item showcase
+    Added: Watchlist button to DialogVideoInfo.xml and changed Manage button
+    Fixed: DialogExtendedProgressBar.xml
 1.0.7
     Fixed: Some fixes to DialogExtendedProgressBar.xml
     Changed: Buttons texturenofocus
