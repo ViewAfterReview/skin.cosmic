@@ -2041,62 +2041,62 @@
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75010" />
+			<param name="id" value="7510" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75011" />
+			<param name="id" value="7511" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75012" />
+			<param name="id" value="7512" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75013" />
+			<param name="id" value="7513" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75014" />
+			<param name="id" value="7514" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75015" />
+			<param name="id" value="7515" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75016" />
+			<param name="id" value="7516" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75017" />
+			<param name="id" value="7517" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75018" />
+			<param name="id" value="7518" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75019" />
+			<param name="id" value="7519" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75020" />
+			<param name="id" value="7520" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
 		<include content="Object_Widget_Label">
-			<param name="id" value="75021" />
+			<param name="id" value="7521" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
 			<param name="top" value="520" />
 		</include>
@@ -2153,73 +2153,73 @@
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75010" />
+			<param name="id" value="7510" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75011" />
+			<param name="id" value="7511" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75012" />
+			<param name="id" value="7512" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75013" />
+			<param name="id" value="7513" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75014" />
+			<param name="id" value="7514" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75015" />
+			<param name="id" value="7515" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75016" />
+			<param name="id" value="7516" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75017" />
+			<param name="id" value="7517" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75018" />
+			<param name="id" value="7518" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75019" />
+			<param name="id" value="7519" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75020" />
+			<param name="id" value="7520" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
-			<param name="id" value="75021" />
+			<param name="id" value="7521" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabelHoriz)]" />
 			<param name="top" value="0" />
 		</include>
