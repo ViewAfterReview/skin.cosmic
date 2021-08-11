@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="Info_Param_Type">
+		<value condition="String.IsEqual(ListItem.DBType,movie) | ListItem.IsCollection | String.IsEqual(ListItem.DBType,set)">type=movie</value>
+		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">type=tv</value>
+	</variable>
 	<variable name="BackgroundOverlay">
 		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main)">37FFFFFF</value>
 		<value condition="Window.IsVisible(Home)"></value>

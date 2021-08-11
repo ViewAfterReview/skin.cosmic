@@ -1522,10 +1522,15 @@ msgstr ""
 
 #: /xml/Includes_DialogVideoInfo.xml
 msgctxt "#31315"
-msgid "Get Fanart"
+msgid "Select Art"
 msgstr ""
 
 #: /xml/Includes_DialogVideoInfo.xml
 msgctxt "#31316"
-msgid "Trakt Management"
+msgid "Trakt"
+msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31317"
+msgid "Watchlist"
 msgstr ""

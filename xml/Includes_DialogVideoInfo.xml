@@ -94,9 +94,16 @@
                         <param name="label" value="$LOCALIZE[20410]" />
                     </include>
                     <include content="InfoDialogButton">
-                        <param name="id" value="13" />
-                        <param name="icon" value="special://skin/extras/icons/search.png" />
-                        <param name="label" value="$LOCALIZE[137]" />
+                        <param name="id" value="8897" />
+                        <param name="icon" value="special://skin/extras/icons/watchlist.png" />
+                        <param name="label" value="$LOCALIZE[31317]" />
+                        <!-- <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(TMDbHelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" /> -->
+
+                        <param name="onclick_1_condition" value="!String.IsEmpty(ListItem.Property(tmdb_id))" />
+                        <param name="onclick_1" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Info_Param_Type],cache_refresh)" />
+
+                        <param name="onclick_2_condition" value="String.IsEmpty(ListItem.Property(tmdb_id))" />
+                        <param name="onclick_2" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(TMDbHelper.listitem.tmdb_id)],$VAR[Info_Param_Type],cache_refresh)" />
                     </include>
                     <include content="InfoDialogButton">
                         <param name="id" value="8898" />
@@ -445,7 +452,16 @@
                             <texturefocus />
                             <texturenofocus />
                         </control>
-                        <control type="button" id="9004">
+                        <control type="button" id="13">
+                            <label>$LOCALIZE[137]</label>
+                            <left>0</left>
+                            <width>458</width>
+                            <height>70</height>
+                            <align>center</align>
+                            <texturefocus />
+                            <texturenofocus />
+                        </control>
+                        <!-- <control type="button" id="9004">
                             <label>$LOCALIZE[31316]</label>
                             <left>0</left>
                             <width>458</width>
@@ -458,7 +474,7 @@
 
                             <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
                             <onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(tmdbhelper.listitem.tmdb_id)],type=$VAR[tmdb_type],cache_refresh)</onclick>
-                        </control>
+                        </control> -->
                     </control>
                 </control>
             </control>
