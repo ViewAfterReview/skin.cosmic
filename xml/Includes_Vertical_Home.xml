@@ -190,6 +190,7 @@
                         <onclick>ActivateWindow(LoginScreen.xml)</onclick>
                         <focusedcolor>dialog_fg_100</focusedcolor>
                         <texturefocus />
+                        <texturenofocus />
                         <visible>Control.IsVisible(9000)</visible>
                     </control>
                 </control>

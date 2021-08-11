@@ -38,7 +38,7 @@
 		<disabledcolor>dialog_fg_30</disabledcolor>
 		<selectedcolor>selected</selectedcolor>
 		<texturefocus colordiffuse="dialog_bg_12">common/white.png</texturefocus>
-		<texturenofocus />
+		<texturenofocus colordiffuse="dialog_bg_30">common/white.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="togglebutton">
