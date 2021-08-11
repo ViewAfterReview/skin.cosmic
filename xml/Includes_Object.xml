@@ -456,27 +456,29 @@
                         <texture colordiffuse="ff000000">indicator/genre2.png</texture>
                         <visible>String.IsEmpty(ListItem.Studio) + !String.IsEmpty(ListItem.Genre)</visible>
                     </control>
-                    <control type="label">
-                        <top>10</top>
+                    <control type="textbox">
+                        <top>45</top>
                         <left>74</left>
                         <width>680</width>
-                        <height>160</height>
+                        <height>88</height>
                         <aligny>center</aligny>
                         <font>font32</font>
                         <wrapmultiline>true</wrapmultiline>
                         <label>$INFO[ListItem.Studio]</label>
                         <visible>!String.IsEmpty(ListItem.Studio)</visible>
+                        <autoscroll delay="4000" time="4500" repeat="7000">!String.IsEmpty(ListItem.Studio)</autoscroll>
                     </control>
-                    <control type="label">
-                        <top>10</top>
+                    <control type="textbox">
+                        <top>45</top>
                         <left>74</left>
                         <width>680</width>
-                        <height>160</height>
+                        <height>88</height>
                         <aligny>center</aligny>
                         <font>font32</font>
                         <wrapmultiline>true</wrapmultiline>
                         <label>$INFO[ListItem.Genre]</label>
                         <visible>String.IsEmpty(ListItem.Studio)</visible>
+                        <autoscroll delay="4000" time="4500" repeat="7000">String.IsEmpty(ListItem.Studio)</autoscroll>
                     </control>
                 </control>
             </control>
