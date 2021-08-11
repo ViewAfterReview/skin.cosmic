@@ -57,9 +57,9 @@
 						<left>8</left>
 						<right>64</right>
 						<centertop>50%</centertop>
-						<height>128</height>
+						<height>64</height>
 						<orientation>horizontal</orientation>
-						<itemgap>32</itemgap>
+						<itemgap>16</itemgap>
 						<align>right</align>
 						<usecontrolcoords>true</usecontrolcoords>
 						<control type="group">
@@ -104,7 +104,7 @@
 							<left>-12</left>
 							<centertop>30%</centertop>
 							<height>34</height>
-							<width max="300">auto</width>
+							<width min="470">auto</width>
 							<scroll>true</scroll>
 							<align>right</align>
 							<font>font27_bold</font>
@@ -114,17 +114,18 @@
 
 					<control type="label" id="31">
 						<top>90</top>
-						<right>90</right>
+						<right>140</right>
 						<align>right</align>
-						<width max="300">auto</width>
+						<width max="400">auto</width>
 						<scroll>true</scroll>
 						<font>font27_narrow</font>
 						<textcolor>ffdedede</textcolor>
 					</control>
 					<control type="label">
-						<align>right</align>
 						<top>90</top>
-						<right>34</right>
+						<right>90</right>
+						<align>right</align>
+						<!-- <width>auto</width> -->
 						<textcolor>ffdedede</textcolor>
 						<font>font27_narrow</font>
 						<label>$INFO[Control.GetLabel(32),,%]</label>

@@ -68,7 +68,7 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<left>1210</left>
-				<top>92</top>
+				<top>102</top>
 				<orientation>vertical</orientation>
 				<width>300</width>
 				<height>250</height>
