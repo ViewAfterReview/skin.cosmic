@@ -1,3 +1,7 @@
+1.0.7
+    Fixed: Some fixes to DialogExtendedProgressBar.xml
+    Changed: Buttons texturenofocus
+    Fixed: Reduced height of Manage dialog window in DialogVideoInfo.xml
 1.0.6
     Added: Implemented Manage button in DialogVideoInfo.xml
     Fixed: Switching between locations in Weather widget
