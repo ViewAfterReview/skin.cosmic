@@ -502,7 +502,7 @@
                     <wrapmultiline>true</wrapmultiline>
                     <label>$INFO[ListItem.Studio]</label>
                     <visible>!String.IsEmpty(ListItem.Studio)</visible>
-                    <autoscroll delay="6000" time="4500" repeat="7000">!String.IsEmpty(ListItem.Studio)</autoscroll>
+                    <autoscroll delay="12000" time="3000" repeat="7000">!String.IsEmpty(ListItem.Studio)</autoscroll>
                 </control>
             </control>
         </control>
