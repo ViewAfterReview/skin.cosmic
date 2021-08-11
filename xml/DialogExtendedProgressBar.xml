@@ -114,7 +114,7 @@
 
 					<control type="label" id="31">
 						<top>90</top>
-						<right>140</right>
+						<right>150</right>
 						<align>right</align>
 						<width max="400">auto</width>
 						<scroll>true</scroll>
@@ -125,7 +125,7 @@
 						<top>90</top>
 						<right>90</right>
 						<align>right</align>
-						<!-- <width>auto</width> -->
+						<width>90</width>
 						<textcolor>ffdedede</textcolor>
 						<font>font27_narrow</font>
 						<label>$INFO[Control.GetLabel(32),,%]</label>
