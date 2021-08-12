@@ -257,6 +257,17 @@
                         <param name="pad_right" value="-4" />
                         <param name="focusbounce" value="true" />
                     </include>
+
+                    <control type="button">
+                        <include>Animation_AlarmDelay</include>
+
+                        <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
+                        <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
+
+                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
+                        <!-- notify about nothing of trailer -->
+                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
+                    </control>
                 </focusedlayout>
 
                 <!-- Square aspect ratio -->
@@ -272,6 +283,17 @@
                         <param name="pad_right" value="15" />
                         <param name="focusbounce" value="true" />
                     </include>
+
+                    <control type="button">
+                        <include>Animation_AlarmDelay</include>
+
+                        <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
+                        <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
+
+                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
+                        <!-- notify about nothing of trailer -->
+                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
+                    </control>
                 </focusedlayout>
 
                 <!-- Landscape aspect ratio -->
@@ -280,7 +302,6 @@
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
                     <include content="ViewLandscapeItemLayout"></include>
-
                     <include content="Selectbox_Bold">
                         <param name="pad_top" value="-7" />
                         <param name="pad_bottom" value="18" />
@@ -288,6 +309,17 @@
                         <param name="pad_right" value="10" />
                         <param name="focusbounce" value="true" />
                     </include>
+
+                    <control type="button">
+                        <include>Animation_AlarmDelay</include>
+
+                        <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
+                        <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
+
+                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
+                        <!-- notify about nothing of trailer -->
+                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
+                    </control>
                 </focusedlayout>
                 <include content="Object_Widget_Content_Path">
                     <param name="target" value="$PARAM[target]" />

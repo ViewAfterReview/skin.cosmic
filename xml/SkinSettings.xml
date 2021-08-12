@@ -335,29 +335,70 @@
 						<width>470</width>
 						<height>80</height>
 						<textcolor>dialog_fg_30</textcolor>
+						<label>$LOCALIZE[31327]</label>
+						<font>font27</font>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="902" description="Enable trailers in background">
+						<label>$LOCALIZE[31326]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(BackgroundPlayingTrailers)</onclick>
+						<selected>Skin.HasSetting(BackgroundPlayingTrailers)</selected>
+						<enable>System.AddonIsEnabled(plugin.video.youtube) + System.HasAddon(plugin.video.youtube)</enable>
+					</control>
+					<control type="button" id="903" description="Trailers delay">
+						<label>$LOCALIZE[31325]</label>
+						<label2>$VAR[Def_Trailer_Delay]</label2>
+						<include>DefaultSettingButton</include>
+
+						<enable>Skin.HasSetting(BackgroundPlayingTrailers) + [System.AddonIsEnabled(plugin.video.youtube) + System.HasAddon(plugin.video.youtube)]</enable>
+
+						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31284])</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(Trailer_Delay))</onclick>
+						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31318])</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(Trailer_Delay,00:01))</onclick>
+						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31319])</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(Trailer_Delay,00:04))</onclick>
+						<onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31320])</onclick>
+						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(Trailer_Delay,00:07))</onclick>
+						<onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31321])</onclick>
+						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(Trailer_Delay,00:12))</onclick>
+						<onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31322])</onclick>
+						<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(Trailer_Delay,00:17))</onclick>
+						<onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31323])</onclick>
+						<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(Trailer_Delay,00:27))</onclick>
+						<onclick>SetProperty(Dialog.8.Label,$LOCALIZE[31324])</onclick>
+						<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(Trailer_Delay,00:57))</onclick>
+						<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31325])</onclick>
+					</control>
+					<control type="label" id="904">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>80</height>
+						<textcolor>dialog_fg_30</textcolor>
 						<label>$LOCALIZE[31299]</label>
 						<font>font27</font>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="902" description="Disable extended info">
+					<control type="radiobutton" id="905" description="Disable extended info">
 						<label>$LOCALIZE[31250]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Skin.ToggleSetting(DisableExtendedInfo)</onclick>
 						<selected>Skin.HasSetting(DisableExtendedInfo)</selected>
 					</control>
-					<control type="radiobutton" id="903" description="Enable autoscroll for plot and title">
+					<control type="radiobutton" id="906" description="Enable autoscroll for plot and title">
 						<label>$LOCALIZE[20189]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 						<selected>Skin.HasSetting(autoscroll)</selected>
 					</control>
-					<control type="radiobutton" id="904" description="Show music posters instead of thumb">
+					<control type="radiobutton" id="907" description="Show music posters instead of thumb">
 						<label>$LOCALIZE[31168]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Skin.ToggleSetting(show_musicvideoposter)</onclick>
 						<selected>Skin.HasSetting(show_musicvideoposter)</selected>
 					</control>
-					<control type="button" id="905" description="Switch rating icons colour">
+					<control type="button" id="908" description="Switch rating icons colour">
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31293]</label>
 						<label2>$INFO[Skin.String(icons.label)]</label2>

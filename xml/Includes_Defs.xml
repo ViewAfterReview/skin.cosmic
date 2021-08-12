@@ -57,4 +57,15 @@
     <variable name="Def_Posters_List">
         <value>plugin://plugin.video.themoviedb.helper/?info=posters&amp;type=$VAR[TMDB_TYPE]&amp;$VAR[INFO_QUERY]&amp;nextpage=false</value>
     </variable>
+
+    <variable name="Def_Trailer_Delay">
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:01)">$LOCALIZE[31318]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:04)">$LOCALIZE[31319]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:07)">$LOCALIZE[31320]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:12)">$LOCALIZE[31321]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:17)">$LOCALIZE[31322]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:27)">$LOCALIZE[31323]</value>
+        <value condition="String.IsEqual(Skin.String(Trailer_Delay),00:57)">$LOCALIZE[31324]</value>
+        <value>Default</value>
+    </variable>
 </includes>

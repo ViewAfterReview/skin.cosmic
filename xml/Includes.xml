@@ -1161,7 +1161,13 @@
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasVideo</visible>
+				<visible>Player.HasVideo + !Skin.HasSetting(BackgroundPlayingTrailers)</visible>
+				<visible>!Slideshow.IsActive</visible>
+			</control>
+			<control type="videowindow">
+				<!-- <depth>DepthBackground</depth> -->
+				<include>TrailerWindowDimensions</include>
+				<visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers)</visible>
 				<visible>!Slideshow.IsActive</visible>
 			</control>
 			<control type="visualisation">
@@ -1173,6 +1179,7 @@
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 				<control type="group">
+					<animation effect="fade" start="100" end="0" time="300" condition="Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers) + [!VideoPlayer.Content(livetv) | Window.IsVisible(Home)]">Conditional</animation>
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(FullscreenGame) | Window.Previous(startup)">WindowOpen</animation>
 					<include>ColoredBackgroundImages</include>
@@ -1222,6 +1229,17 @@
 						<visible>Skin.HasSetting(Vertical_Main)</visible>
 						<visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
 					</control>
+				</control>
+				<control type="multiimage">
+					<left>0</left>
+					<top>0</top>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio aligny="center">scale</aspectratio>
+					<fadetime>400</fadetime>
+					<animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
+					<imagepath background="true">common/vignette-vert-main.png</imagepath>
+					<visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers)</visible>
 				</control>
 			</control>
 		</definition>
@@ -1344,6 +1362,12 @@
 		<top>0</top>
 		<width>100%</width>
 		<height>100%</height>
+	</include>
+	<include name="TrailerWindowDimensions">
+		<top>0</top>
+		<left>500</left>
+		<width>1420</width>
+		<height>780</height>
 	</include>
 	<include name="FocusableProgressBar">
 		<param name="width">100%</param>

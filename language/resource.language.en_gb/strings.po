@@ -1534,3 +1534,53 @@ msgstr ""
 msgctxt "#31317"
 msgid "Watchlist"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31318"
+msgid "4 seconds"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31319"
+msgid "7 seconds"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31320"
+msgid "10 seconds"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31321"
+msgid "15 seconds"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31322"
+msgid "20 seconds"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31323"
+msgid "30 seconds"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31324"
+msgid "60 seconds"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31325"
+msgid "Set delay to playing Trailers"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31326"
+msgid "[Experimental] Enable playing trailers in background"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31327"
+msgid "Trailers"
+msgstr ""
