@@ -1,3 +1,5 @@
+1.0.10
+    Fixed: Set default selection box size if none is selected
 1.0.9
     Added: Option to choose between Bold/Thin selection box sizes
     Added: Info Line Label about currently selected Episode in widgets
