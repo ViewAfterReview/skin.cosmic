@@ -1584,3 +1584,8 @@ msgstr ""
 msgctxt "#31327"
 msgid "Trailers"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31328"
+msgid "Selection box"
+msgstr ""

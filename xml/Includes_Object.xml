@@ -251,9 +251,9 @@
                 <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayout"></include>
                     <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-16" />
+                        <param name="pad_top" value="-17" />
                         <param name="pad_bottom" value="-16" />
-                        <param name="pad_left" value="-15" />
+                        <param name="pad_left" value="-17" />
                         <param name="pad_right" value="-4" />
                         <param name="focusbounce" value="true" />
                     </include>

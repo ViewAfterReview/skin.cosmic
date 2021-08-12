@@ -1872,21 +1872,26 @@
 					<top>$PARAM[pad_top]</top>
 					<right>$PARAM[pad_right]</right>
 					<bottom>$PARAM[pad_bottom]</bottom>
-					<!-- <control type="group">
+					<control type="group">
 						<control type="image">
 							<bordersize>15</bordersize>
 							<bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
-							<texture colordiffuse="red" border="10">common/selectbox.png</texture>
+							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox.png</texture>
 						</control>
-						<visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
-					</control> -->
+						<control type="image">
+							<bordersize>15</bordersize>
+							<bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox-gradient.png</texture>
+						</control>
+						<visible>String.IsEqual(Skin.String(PosterHighlight),Highlight) | String.IsEmpty(PosterHighlight)</visible>
+					</control>
 					<control type="group">
 						<control type="image">
 							<bordersize>15</bordersize>
 							<bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
 							<texture colordiffuse="ffffffff" border="10">common/selectbox.png</texture>
 						</control>
-						<!-- <visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible> -->
+						<visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible>
 					</control>
 				</control>
 			</control>
@@ -1911,21 +1916,21 @@
 					<top>$PARAM[pad_top]</top>
 					<right>$PARAM[pad_right]</right>
 					<bottom>$PARAM[pad_bottom]</bottom>
-					<!-- <control type="group">
+					<control type="group">
 						<control type="image">
 							<bordersize>15</bordersize>
 							<bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
 							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
 						</control>
 						<visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
-					</control> -->
+					</control>
 					<control type="group">
 						<control type="image">
 							<bordersize>15</bordersize>
 							<bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
 							<texture colordiffuse="ffffffff" border="10">common/selectbox2.png</texture>
 						</control>
-						<!-- <visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible> -->
+						<visible>String.IsEqual(Skin.String(PosterHighlight),White)</visible>
 					</control>
 				</control>
 			</control>
