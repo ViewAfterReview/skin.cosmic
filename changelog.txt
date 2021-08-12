@@ -1,3 +1,8 @@
+1.0.9
+    Added: Option to choose between Bold/Thin selection box sizes
+    Added: Info Line Label about currently selected Episode in widgets
+    Added: Option to set colours to Highlight
+    Experimental: Trailers in background feature
 1.0.8
     Fixed: Widget label may not appear from 9th widget and above
     Added: Cycle animation through Genre and Studio tags
