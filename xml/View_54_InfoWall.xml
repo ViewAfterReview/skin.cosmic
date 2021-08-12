@@ -101,12 +101,10 @@
 				<top>-14</top>
 				<width>297</width>
 				<height>407</height>
-				<include content="Selectbox_Bold">
-					<param name="pad_top" value="2" />
-					<param name="pad_bottom" value="2" />
-					<param name="pad_left" value="2" />
-					<param name="pad_right" value="2" />
-					<param name="focusbounce" value="true" />
+				<include content="Selectbox">
+					<param name="visible_posters" value="true" />
+					<param name="visible_squares" value="false" />
+					<param name="visible_landscapes" value="false" />
 				</include>
 				<animation effect="fade" start="0" end="100" time="200" tween="sine">Focus</animation>
 				<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>

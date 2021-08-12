@@ -250,12 +250,10 @@
                 </itemlayout>
                 <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayout"></include>
-                    <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-17" />
-                        <param name="pad_bottom" value="-16" />
-                        <param name="pad_left" value="-17" />
-                        <param name="pad_right" value="-4" />
-                        <param name="focusbounce" value="true" />
+                    <include content="Selectbox">
+                        <param name="visible_posters" value="$PARAM[postercondition]" />
+                        <param name="visible_squares" value="false" />
+                        <param name="visible_landscapes" value="false" />
                     </include>
 
                     <control type="button">
@@ -276,12 +274,10 @@
                 </itemlayout>
                 <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
                     <include content="ViewSquareItemLayout"></include>
-                    <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-16" />
-                        <param name="pad_bottom" value="-16" />
-                        <param name="pad_left" value="-15" />
-                        <param name="pad_right" value="15" />
-                        <param name="focusbounce" value="true" />
+                    <include content="Selectbox">
+                        <param name="visible_posters" value="false" />
+                        <param name="visible_squares" value="$PARAM[squarecondition]" />
+                        <param name="visible_landscapes" value="false" />
                     </include>
 
                     <control type="button">
@@ -302,12 +298,10 @@
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
                     <include content="ViewLandscapeItemLayout"></include>
-                    <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-7" />
-                        <param name="pad_bottom" value="18" />
-                        <param name="pad_left" value="-7" />
-                        <param name="pad_right" value="10" />
-                        <param name="focusbounce" value="true" />
+                    <include content="Selectbox">
+                        <param name="visible_posters" value="false" />
+                        <param name="visible_squares" value="false" />
+                        <param name="visible_landscapes" value="$PARAM[landscapecondition]" />
                     </include>
 
                     <control type="button">
@@ -362,12 +356,10 @@
                 </itemlayout>
                 <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayout"></include>
-                    <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-16" />
-                        <param name="pad_bottom" value="-16" />
-                        <param name="pad_left" value="-15" />
-                        <param name="pad_right" value="-4" />
-                        <param name="focusbounce" value="true" />
+                    <include content="Selectbox">
+                        <param name="visible_posters" value="$PARAM[postercondition]" />
+                        <param name="visible_squares" value="false" />
+                        <param name="visible_landscapes" value="false" />
                     </include>
                 </focusedlayout>
 
@@ -377,12 +369,10 @@
                 </itemlayout>
                 <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
                     <include content="ViewSquareItemLayout"></include>
-                    <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-16" />
-                        <param name="pad_bottom" value="-16" />
-                        <param name="pad_left" value="-15" />
-                        <param name="pad_right" value="15" />
-                        <param name="focusbounce" value="true" />
+                    <include content="Selectbox">
+                        <param name="visible_posters" value="false" />
+                        <param name="visible_squares" value="$PARAM[squarecondition]" />
+                        <param name="visible_landscapes" value="false" />
                     </include>
                 </focusedlayout>
 
@@ -392,13 +382,10 @@
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
                     <include content="ViewLandscapeItemLayout"></include>
-
-                    <include content="Selectbox_Bold">
-                        <param name="pad_top" value="-7" />
-                        <param name="pad_bottom" value="18" />
-                        <param name="pad_left" value="-7" />
-                        <param name="pad_right" value="10" />
-                        <param name="focusbounce" value="true" />
+                    <include content="Selectbox">
+                        <param name="visible_posters" value="false" />
+                        <param name="visible_squares" value="false" />
+                        <param name="visible_landscapes" value="$PARAM[landscapecondition]" />
                     </include>
                 </focusedlayout>
                 <include content="Object_Widget_Content_Path">

@@ -1872,6 +1872,7 @@
 					<top>$PARAM[pad_top]</top>
 					<right>$PARAM[pad_right]</right>
 					<bottom>$PARAM[pad_bottom]</bottom>
+					<visible>$PARAM[visible]</visible>
 					<control type="group">
 						<control type="image">
 							<bordersize>15</bordersize>
@@ -1916,11 +1917,17 @@
 					<top>$PARAM[pad_top]</top>
 					<right>$PARAM[pad_right]</right>
 					<bottom>$PARAM[pad_bottom]</bottom>
+					<visible>$PARAM[visible]</visible>
 					<control type="group">
 						<control type="image">
 							<bordersize>15</bordersize>
 							<bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
 							<texture colordiffuse="$VAR[ColorHighlight]" border="10">common/selectbox2.png</texture>
+						</control>
+						<control type="image">
+							<bordersize>15</bordersize>
+							<bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
+							<texture colordiffuse="$VAR[ColorGradient]" border="10">common/selectbox2-gradient.png</texture>
 						</control>
 						<visible>String.IsEqual(Skin.String(PosterHighlight),Highlight)</visible>
 					</control>
@@ -1935,6 +1942,60 @@
 				</control>
 			</control>
 		</definition>
+	</include>
+
+	<include name="Selectbox">
+		<!-- posters -->
+		<include content="Selectbox_Bold" condition="String.IsEqual(Skin.String(HighlightSize),Bold)">
+			<param name="pad_top" value="-17" />
+			<param name="pad_bottom" value="-16" />
+			<param name="pad_left" value="-17" />
+			<param name="pad_right" value="-4" />
+			<param name="focusbounce" value="true" />
+			<param name="visible" value="$PARAM[visible_posters]" />
+		</include>
+		<include content="Selectbox_Thin" condition="String.IsEqual(Skin.String(HighlightSize),Thin)">
+			<param name="pad_top" value="-16" />
+			<param name="pad_bottom" value="-16" />
+			<param name="pad_left" value="-16" />
+			<param name="pad_right" value="0" />
+			<param name="focusbounce" value="true" />
+			<param name="visible" value="$PARAM[visible_posters]" />
+		</include>
+		<!-- squares -->
+		<include content="Selectbox_Bold" condition="String.IsEqual(Skin.String(HighlightSize),Bold)">
+			<param name="pad_top" value="-15" />
+			<param name="pad_bottom" value="-15" />
+			<param name="pad_left" value="-15" />
+			<param name="pad_right" value="17" />
+			<param name="focusbounce" value="true" />
+			<param name="visible" value="$PARAM[visible_squares]" />
+		</include>
+		<include content="Selectbox_Thin" condition="String.IsEqual(Skin.String(HighlightSize),Thin)">
+			<param name="pad_top" value="-7" />
+			<param name="pad_bottom" value="-16" />
+			<param name="pad_left" value="-7" />
+			<param name="pad_right" value="24" />
+			<param name="focusbounce" value="true" />
+			<param name="visible" value="$PARAM[visible_squares]" />
+		</include>
+		<!-- landscapes -->
+		<include content="Selectbox_Bold" condition="String.IsEqual(Skin.String(HighlightSize),Bold)">
+			<param name="pad_top" value="-2" />
+			<param name="pad_bottom" value="18" />
+			<param name="pad_left" value="-2" />
+			<param name="pad_right" value="10" />
+			<param name="focusbounce" value="true" />
+			<param name="visible" value="$PARAM[visible_landscapes]" />
+		</include>
+		<include content="Selectbox_Thin" condition="String.IsEqual(Skin.String(HighlightSize),Thin)">
+			<param name="pad_top" value="-2" />
+			<param name="pad_bottom" value="24" />
+			<param name="pad_left" value="-2" />
+			<param name="pad_right" value="16" />
+			<param name="focusbounce" value="true" />
+			<param name="visible" value="$PARAM[visible_landscapes]" />
+		</include>
 	</include>
 
 	<include name="DialogBusy">

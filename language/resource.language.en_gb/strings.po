@@ -1587,5 +1587,10 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31328"
-msgid "Selection box"
+msgid "Selection box colour"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31329"
+msgid "Selection box size"
 msgstr ""
