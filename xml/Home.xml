@@ -9,6 +9,8 @@
 
 	<!-- set default home layout if none is set -->
 	<onload condition="!Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Vertical_Main)</onload>
+	<!-- set default selection box -->
+	<onload condition="String.IsEmpty(Skin.String(HighlightSize))">Skin.SetString(HighlightSize,Bold)</onload>
 	<!-- set colourful rating icons as default -->
 	<onload condition="String.IsEmpty(Skin.String(Icons))">Skin.SetString(Icons,colorful)</onload>
 
