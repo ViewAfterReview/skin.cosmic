@@ -634,13 +634,13 @@
                     <param name="id" value="$PARAM[uid]04" />
                     <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Season), Season ,]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season)" />
+                    <param name="visible" value="String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season) | ListItem.IsFolder | ListItem.IsCollection" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]05" />
                     <param name="label" value="$INFO[Window(Home).Property(TMDbHelper.ListItem.Episode), Episode ,]" />
                     <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season)" />
+                    <param name="visible" value="String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season) | ListItem.IsFolder | ListItem.IsCollection" />
                 </include>
                 <include content="Object_Info_Line_Label">
                     <param name="id" value="$PARAM[uid]06" />
