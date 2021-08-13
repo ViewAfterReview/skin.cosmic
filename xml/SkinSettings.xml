@@ -172,7 +172,20 @@
 						<selected>Skin.HasSetting(DisabledProfileInfo)</selected>
 						<onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
 					</control>
-					<control type="label" id="706">
+					<control type="button" id="706" description="Set Fallback Image">
+						<include>DefaultSettingButton</include>
+						<label>$LOCALIZE[31340]</label>
+						<label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
+
+						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(HomeBackgroundImage))</onclick>
+						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31341])</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(HomeBackgroundImage))</onclick>
+						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31342])</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
+						<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31340])</onclick>
+					</control>
+					<control type="label" id="707">
 						<textoffsetx>30</textoffsetx>
 						<width>470</width>
 						<height>80</height>
@@ -181,7 +194,7 @@
 						<font>font27</font>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="707" description="Customize shutdown menu">
+					<control type="button" id="708" description="Customize shutdown menu">
 						<label>$LOCALIZE[31180]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>

@@ -1227,7 +1227,7 @@
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
 						<visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
 						<visible>Skin.HasSetting(Vertical_Main)</visible>
-						<visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
+						<visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
 					</control>
 				</control>
 				<control type="multiimage">

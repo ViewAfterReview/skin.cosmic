@@ -1644,3 +1644,18 @@ msgstr ""
 msgctxt "#31339"
 msgid "Choose ratings"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31340"
+msgid "Global background"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31341"
+msgid "Single Image"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31342"
+msgid "Multi Image"
+msgstr ""
