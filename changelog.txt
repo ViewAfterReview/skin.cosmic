@@ -1,3 +1,12 @@
+1.0.11
+    Added: Option to set Global Background
+    Added: Option to Enable/Disable online ratings
+    Fixed: Lacks of highlight colours in some places [x2]
+    Added: Initial option to set background for each menu entry
+    Fixed: DialogBusy.xml when BG Trailers are enabled
+    Fixed: Background trailers condition
+    Added: Auto-completion for Virtual Keyboard
+    Fixed: Info Line Label about currently selected Episode in widgets
 1.0.10
     Fixed: Set default selection box size if none is selected
 1.0.9
