@@ -43,7 +43,7 @@
 				<height>60</height>
 				<align>right</align>
 				<font>font30_title</font>
-				<label>$INFO[player.chapter,[COLOR Highlight]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount,/]</label>
+				<label>[COLOR $VAR[ColorHighlight]]$LOCALIZE[21396]:[/COLOR]  $INFO[player.chapter]$INFO[Player.ChapterCount,/]</label>
 				<visible>!VideoPlayer.Content(LiveTV) + player.chaptercount</visible>
 			</control>
 			<control type="label">
@@ -53,7 +53,7 @@
 				<height>60</height>
 				<align>right</align>
 				<font>font30_title</font>
-				<label>[COLOR Highlight]$LOCALIZE[31026][/COLOR] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+				<label>[COLOR $VAR[ColorHighlight]]$LOCALIZE[31026][/COLOR] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
 				<visible>VideoPlayer.Content(LiveTV) + PVR.IsTimeShift</visible>
 			</control>
 			<control type="progress" description="cache">
@@ -97,8 +97,8 @@
 				<width>100%</width>
 				<height>26</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="Highlight">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="Highlight">colors/white.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[ColorHighlight]">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[ColorHighlight]">colors/white.png</textureslidernibfocus>
 				<info>Player.Seekbar</info>
 				<visible>!VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.DisplayAfterSeek]</visible>
 			</control>
@@ -134,8 +134,8 @@
 				<width>100%</width>
 				<height>26</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="Highlight">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="Highlight">colors/white.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[ColorHighlight]">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[ColorHighlight]">colors/white.png</textureslidernibfocus>
 				<info>PVR.TimeShiftSeekbar</info>
 				<visible>VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
 			</control>

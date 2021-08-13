@@ -92,7 +92,7 @@
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>[COLOR Highlight][B]$LOCALIZE[31000]: [/COLOR]$INFO[musicplayer.Playlistposition,]$INFO[musicplayer.Playlistlength,/][/B][CR]$VAR[NowPlayingInfoVar]</label>
+						<label>[COLOR $VAR[ColorHighlight]][B]$LOCALIZE[31000]: [/COLOR]$INFO[musicplayer.Playlistposition,]$INFO[musicplayer.Playlistlength,/][/B][CR]$VAR[NowPlayingInfoVar]</label>
 					</control>
 					<control type="textbox" id="15599">
 						<visible>!Player.HasAudio + Window.IsActive(musicplaylist)</visible>
@@ -101,7 +101,7 @@
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>[COLOR Highlight][B]$LOCALIZE[31000]: [/COLOR]$LOCALIZE[36623][/B]</label>
+						<label>[COLOR $VAR[ColorHighlight]][B]$LOCALIZE[31000]: [/COLOR]$LOCALIZE[36623][/B]</label>
 					</control>
 				</control>
 			</control>
@@ -190,7 +190,7 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="Highlight">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[ColorHighlight]">$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						<animation effect="fade" time="150">VisibleChange</animation>
 						<visible>!Control.HasFocus($PARAM[list_id])</visible>
@@ -342,7 +342,7 @@
 							<param name="width" value="540" />
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="ascending" />
-							<param name="item_label" value="$INFO[ListItem.Year,[COLOR Highlight],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="item_label" value="[COLOR $VAR[ColorHighlight]]$INFO[ListItem.Year][/COLOR]  -  $INFO[ListItem.Label]" />
 							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
 						</include>
 						<include content="InfoList">
@@ -351,7 +351,7 @@
 							<param name="width" value="540" />
 							<param name="sortby" value="track" />
 							<param name="sortorder" value="ascending" />
-							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR Highlight],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="item_label" value="[COLOR $VAR[ColorHighlight]]$INFO[ListItem.Duration][/COLOR]  -  $INFO[ListItem.Label]" />
 							<param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
 						</include>
 					</control>
