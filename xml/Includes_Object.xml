@@ -262,9 +262,9 @@
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
+                        <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
                         <!-- notify about nothing of trailer -->
-                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
+                        <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -286,9 +286,9 @@
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
+                        <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
                         <!-- notify about nothing of trailer -->
-                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
+                        <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
                     </control>
                 </focusedlayout>
 
@@ -310,9 +310,9 @@
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers)">CancelAlarm(PlayTrailer,silent)</onunfocus>
 
-                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
+                        <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Control.HasFocus($PARAM[id]) + Skin.HasSetting(BackgroundPlayingTrailers) + !Player.HasVideo + !String.IsEmpty(ListItem.Trailer)">AlarmClock(PlayTrailer,PlayMedia($ESCINFO[ListItem.Trailer],1),$INFO[Skin.String(Trailer_Delay)],silent)</onfocus>
                         <!-- notify about nothing of trailer -->
-                        <onfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
+                        <onfocus condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE, tvshow)] + Skin.HasSetting(BackgroundPlayingTrailers) + String.IsEmpty(ListItem.Trailer)">Notification(Trailer:,Nothing to play&#8230;)</onfocus>
                     </control>
                 </focusedlayout>
                 <include content="Object_Widget_Content_Path">
