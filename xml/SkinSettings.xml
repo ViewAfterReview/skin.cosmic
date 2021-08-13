@@ -400,19 +400,24 @@
 						<onclick>Skin.ToggleSetting(DisableExtendedInfo)</onclick>
 						<selected>Skin.HasSetting(DisableExtendedInfo)</selected>
 					</control>
-					<control type="radiobutton" id="906" description="Enable autoscroll for plot and title">
+					<control type="button" id="906" description="Enable ratings">
+						<label>$LOCALIZE[31339]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>ActivateWindow(1118)</onclick>
+					</control>
+					<control type="radiobutton" id="907" description="Enable autoscroll for plot and title">
 						<label>$LOCALIZE[20189]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 						<selected>Skin.HasSetting(autoscroll)</selected>
 					</control>
-					<control type="radiobutton" id="907" description="Show music posters instead of thumb">
+					<control type="radiobutton" id="908" description="Show music posters instead of thumb">
 						<label>$LOCALIZE[31168]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Skin.ToggleSetting(show_musicvideoposter)</onclick>
 						<selected>Skin.HasSetting(show_musicvideoposter)</selected>
 					</control>
-					<control type="button" id="908" description="Switch rating icons colour">
+					<control type="button" id="909" description="Switch rating icons colour">
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31293]</label>
 						<label2>$INFO[Skin.String(icons.label)]</label2>

@@ -1594,3 +1594,53 @@ msgstr ""
 msgctxt "#31329"
 msgid "Selection box size"
 msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31330"
+msgid "Oscars"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31331"
+msgid "Trakt"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31332"
+msgid "MetaCritic"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31333"
+msgid "RottenTomatoes"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31334"
+msgid "TheMovieDb"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31335"
+msgid "IMDB"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31336"
+msgid "IMDB Votes"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31337"
+msgid "Top250"
+msgstr ""
+
+#: /xml/Custom_1118_EnableRatings.xml
+msgctxt "#31338"
+msgid "User"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31339"
+msgid "Choose ratings"
+msgstr ""
