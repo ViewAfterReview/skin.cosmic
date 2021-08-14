@@ -884,7 +884,7 @@
 		</control>
 	</include>
 	<include name="TopBar">
-		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: ,  ∙  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
+		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: ,  &#8226;  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<param name="left" />
 		<definition>
 			<control type="group">
