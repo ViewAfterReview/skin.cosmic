@@ -1,3 +1,10 @@
+1.0.12
+    Changed: Cosmic section layout in SkinSettings.xml
+    Changed: LiveTV DialogSeekBar.xml appearance
+    Fixed: Online Ratings
+    Changed: Weather appearance
+    Added: Option to Enable/Disable weather on Topbar in Horizontal layout
+    Added: Option to hide Submenu in Horizontal layout
 1.0.11
     Added: Option to set Global Background
     Added: Option to Enable/Disable online ratings

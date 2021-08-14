@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cosmic" version="1.0.11" name="Cosmic" provider-name="heppen (nfm886)">
+<addon id="skin.cosmic" version="1.0.12" name="Cosmic" provider-name="heppen (nfm886)">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="script.skinshortcuts" version="1.1.5" />
@@ -17,15 +17,13 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
-1.0.11
-Added: Option to set Global Background
-Added: Option to Enable/Disable online ratings
-Fixed: Lacks of highlight colours in some places [x2]
-Added: Initial option to set background for each menu entry
-Fixed: DialogBusy.xml when BG Trailers are enabled
-Fixed: Background trailers condition
-Added: Auto-completion for Virtual Keyboard
-Fixed: Info Line Label about currently selected Episode in widgets
+1.0.12
+Changed: Cosmic section layout in SkinSettings.xml
+Changed: LiveTV DialogSeekBar.xml appearance
+Fixed: Online Ratings
+Changed: Weather appearance
+Added: Option to Enable/Disable weather on Topbar in Horizontal layout
+Added: Option to hide Submenu in Horizontal layout
 		</news>
 		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
 		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>
