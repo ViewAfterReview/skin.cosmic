@@ -14,6 +14,7 @@
     <include name="LiveTV_OSD">
         <definition>
             <control type="group" id="200">
+                <visible>!Player.ShowInfo</visible>
                 <include>Animation_DialogPopupOpenClose</include>
                 <width>1920</width>
                 <control type="group">
