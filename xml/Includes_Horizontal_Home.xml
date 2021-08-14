@@ -148,6 +148,7 @@
                 </content>
             </control>
             <control type="group">
+                <visible>!Skin.HasSetting(DisableSubmenuInHorizontal)</visible>
                 <control type="image">
                     <left>0</left>
                     <top>995</top>

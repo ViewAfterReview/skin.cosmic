@@ -165,14 +165,21 @@
 						<onclick>SetProperty(Context.3.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31307]))</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
 					</control>
-					<control type="radiobutton" id="705" description="Hide Profile Info">
+					<control type="radiobutton" id="706" description="Hide submenu in horizontal">
+						<label>$LOCALIZE[31343]</label>
+						<include>DefaultSettingButton</include>
+						<visible>Skin.HasSetting(Horizontal_Main)</visible>
+						<selected>Skin.HasSetting(DisableSubmenuInHorizontal)</selected>
+						<onclick>Skin.ToggleSetting(DisableSubmenuInHorizontal)</onclick>
+					</control>
+					<control type="radiobutton" id="707" description="Hide Profile Info">
 						<label>$LOCALIZE[31189]</label>
 						<include>DefaultSettingButton</include>
-						<enable>Skin.HasSetting(Vertical_Main)</enable>
+						<visible>Skin.HasSetting(Vertical_Main)</visible>
 						<selected>Skin.HasSetting(DisabledProfileInfo)</selected>
 						<onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
 					</control>
-					<control type="button" id="706" description="Set Fallback Image">
+					<control type="button" id="708" description="Set Fallback Image">
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31340]</label>
 						<label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
@@ -185,7 +192,7 @@
 						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31340])</onclick>
 					</control>
-					<control type="label" id="707">
+					<control type="label" id="709">
 						<textoffsetx>30</textoffsetx>
 						<width>470</width>
 						<height>80</height>
@@ -194,7 +201,7 @@
 						<font>font27</font>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="708" description="Customize shutdown menu">
+					<control type="button" id="710" description="Customize shutdown menu">
 						<label>$LOCALIZE[31180]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>
