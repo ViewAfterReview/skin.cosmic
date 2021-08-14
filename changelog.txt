@@ -1,3 +1,5 @@
+1.0.13
+    Added: New Classic vertical home layout
 1.0.12
     Changed: Cosmic section layout in SkinSettings.xml
     Changed: LiveTV DialogSeekBar.xml appearance
