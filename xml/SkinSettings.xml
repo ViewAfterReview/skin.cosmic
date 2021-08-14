@@ -55,21 +55,19 @@
 				<left>490</left>
 				<include>OpenClose_Right</include>
 
-				<control type="label" id="601">
-					<left>60</left>
-					<top>260</top>
-					<width>800</width>
-					<height>480</height>
-					<font>font_clock</font>
-					<textcolor>dialog_fg_100</textcolor>
+				<control type="image" id="601">
+					<centerleft>50%</centerleft>
+					<top>160</top>
+					<width>400</width>
+					<height>auto</height>
+					<texture>special://skin/resources/logo.png</texture>
 					<align>center</align>
-					<label>$LOCALIZE[31271]</label>
 					<visible>Container(9000).HasFocus(1)</visible>
 				</control>
 
 				<control type="textbox" id="602">
 					<left>60</left>
-					<top>420</top>
+					<top>360</top>
 					<width>800</width>
 					<height>480</height>
 					<font>font37</font>
@@ -81,14 +79,14 @@
 
 				<include content="DefaultSettingButtonGradient">
 					<param name="id" value="600" />
-					<top>133</top>
+					<top>633</top>
 					<height>80</height>
 					<right>0</right>
 					<visible>ControlGroup(600).HasFocus()</visible>
 				</include>
 				<!-- Cosmic -->
 				<control type="grouplist" id="600">
-					<top>133</top>
+					<top>633</top>
 					<left>0</left>
 					<right>0</right>
 					<bottom>140</bottom>
