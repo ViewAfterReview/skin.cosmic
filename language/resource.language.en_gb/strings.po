@@ -1664,3 +1664,8 @@ msgstr ""
 msgctxt "#31343"
 msgid "Hide Submenu"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31344"
+msgid "Show Weather in top bar"
+msgstr ""

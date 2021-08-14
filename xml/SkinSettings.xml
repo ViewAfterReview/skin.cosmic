@@ -172,14 +172,21 @@
 						<selected>Skin.HasSetting(DisableSubmenuInHorizontal)</selected>
 						<onclick>Skin.ToggleSetting(DisableSubmenuInHorizontal)</onclick>
 					</control>
-					<control type="radiobutton" id="707" description="Hide Profile Info">
+					<control type="radiobutton" id="707" description="Show weather in horizontal">
+						<label>$LOCALIZE[31344]</label>
+						<include>DefaultSettingButton</include>
+						<visible>Skin.HasSetting(Horizontal_Main)</visible>
+						<selected>Skin.HasSetting(EnableWeatherInHorizontalTopbar)</selected>
+						<onclick>Skin.ToggleSetting(EnableWeatherInHorizontalTopbar)</onclick>
+					</control>
+					<control type="radiobutton" id="708" description="Hide Profile Info in vertical">
 						<label>$LOCALIZE[31189]</label>
 						<include>DefaultSettingButton</include>
 						<visible>Skin.HasSetting(Vertical_Main)</visible>
 						<selected>Skin.HasSetting(DisabledProfileInfo)</selected>
 						<onclick>Skin.ToggleSetting(DisabledProfileInfo)</onclick>
 					</control>
-					<control type="button" id="708" description="Set Fallback Image">
+					<control type="button" id="709" description="Set Fallback Image">
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31340]</label>
 						<label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
@@ -192,7 +199,7 @@
 						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31340])</onclick>
 					</control>
-					<control type="label" id="709">
+					<control type="label" id="710">
 						<textoffsetx>30</textoffsetx>
 						<width>470</width>
 						<height>80</height>
@@ -201,7 +208,7 @@
 						<font>font27</font>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="710" description="Customize shutdown menu">
+					<control type="button" id="711" description="Customize shutdown menu">
 						<label>$LOCALIZE[31180]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>

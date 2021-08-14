@@ -26,7 +26,7 @@
                     <aligny>center</aligny>
                     <align>right</align>
                     <font>font_topbar_horiz</font>
-                    <label>$INFO[Weather.Temperature,   ,]   &#x2022;$INFO[System.Date,   ,]   &#x2022;$INFO[System.Time,   ,]   </label>
+                    <label>$VAR[Horizontal_RightTopbar]</label>
                 </control>
             </control>
         </control>
