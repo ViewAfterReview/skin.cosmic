@@ -857,19 +857,7 @@
                     <height>32</height>
                     <texture>flags/$PARAM[directory]/ratings/imdb.png</texture>
                     <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
-                    <visible>Skin.HasSetting(Ratings.IMDB)</visible>
-                </control>
-                <control type="label">
-                    <textcolor>dialog_fg_100</textcolor>
-                    <top>2</top>
-                    <width>auto</width>
-                    <height>42</height>
-                    <align>right</align>
-                    <font>font27</font>
-                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Votes), (, $LOCALIZE[205])]</label>
-                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
-                    <visible>Skin.HasSetting(Ratings.IMDB)</visible>
-                    <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible>
+                    <visible>Skin.HasSetting(Ratings.IMDB) | Skin.HasSetting(Ratings.IMDB.Votes)</visible>
                 </control>
                 <!-- <control type="label">
                     <textcolor>dialog_fg_100</textcolor>
@@ -880,10 +868,9 @@
                     <font>font27</font>
                     <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating)]</label>
                     <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
-                    <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
-                    <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible>
+                    <visible>Skin.HasSetting(Ratings.IMDB) + !Skin.HasSetting(Ratings.IMDB.Votes)</visible>
                 </control> -->
-                <!-- <control type="label">
+                <control type="label">
                     <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
                     <width>auto</width>
@@ -893,7 +880,26 @@
                     <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]</label>
                     <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
                     <visible>Skin.HasSetting(Ratings.IMDB)</visible>
-                </control> -->
+                </control>
+                <control type="label">
+                    <textcolor>dialog_fg_100</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>42</height>
+                    <align>right</align>
+                    <font>font27</font>
+                    <label>$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Votes), (, $LOCALIZE[205])]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+                    <visible>Skin.HasSetting(Ratings.IMDB.Votes)</visible>
+                </control>
+                <control type="image">
+                    <top>6</top>
+                    <width>52</width>
+                    <height>32</height>
+                    <texture>flags/$PARAM[directory]/ratings/imdbtop250.png</texture>
+                    <visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.Top250))</visible>
+                    <visible>Skin.HasSetting(Ratings.Top250)</visible>
+                </control>
                 <control type="label">
                     <textcolor>dialog_fg_100</textcolor>
                     <top>2</top>
@@ -903,7 +909,6 @@
                     <font>font27</font>
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,]</label>
                     <visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.Top250),0)</visible>
-                    <visible>Skin.HasSetting(Ratings.IMDB)</visible>
                     <visible>Skin.HasSetting(Ratings.Top250)</visible>
                 </control>
             </control>
