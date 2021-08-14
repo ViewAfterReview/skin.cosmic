@@ -29,7 +29,7 @@
     <include name="View_Weather">
         <control type="grouplist" id="2000">
             <orientation>vertical</orientation>
-            <top>0</top>
+            <top>60</top>
             <height>100%</height>
             <left>0</left>
             <ondown>20001</ondown>
@@ -179,7 +179,8 @@
         </control>
         <include content="TopBar">
             <param name="breadcrumbs_label" value="$INFO[Window(Weather).Property(Location)]" />
-            <param name="left" value="-130" />
+            <param name="left" value="$PARAM[left]" />
+            <param name="topbar_visible" value="$PARAM[topbar_visible]" />
         </include>
         <!-- <include>BottomBar</include> -->
     </include>

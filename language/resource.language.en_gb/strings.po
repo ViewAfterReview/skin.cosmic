@@ -1669,3 +1669,14 @@ msgstr ""
 msgctxt "#31344"
 msgid "Show Weather in top bar"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31345"
+msgid "Classic Vertical Layout"
+msgstr ""
+
+# Classic vertical home layout description in skin settings
+#: /xml/SkinSettings.xml
+msgctxt "#31346"
+msgid "Set vertical home layout with multiple widgets in classic style"
+msgstr ""

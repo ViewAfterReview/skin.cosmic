@@ -51,7 +51,9 @@
 			<visible>!Player.HasMedia</visible>
 		</control>
 
-		<include>View_Weather</include>
+		<include content="View_Weather">
+			<parma name="topbar_visible" value="true" />
+		</include>
 
 	</controls>
 </window>

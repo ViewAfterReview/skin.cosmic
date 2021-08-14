@@ -296,6 +296,18 @@
                         <visible>Skin.HasSetting(Vertical_Main)</visible>
                     </control>
 
+                    <!-- classic submenu -->
+                    <control type="button" id="4006" description="Vertical submenu">
+                        <label>$LOCALIZE[31170]</label>
+                        <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                        <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        <include>DialogSettingButton</include>
+                        <visible>!String.EndsWith(Window.Property(groupname),.1)</visible>
+                        <onclick>SetProperty(level,3)</onclick>
+                        <onclick>SendClick(405)</onclick>
+                        <visible>Skin.HasSetting(Classic_Main)</visible>
+                    </control>
+
                     <!-- Manage widgets -->
                     <control type="button" id="406">
                         <label>$LOCALIZE[31176]</label>

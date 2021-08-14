@@ -13,6 +13,7 @@
 	<include file="Includes_Object.xml" />
 	<include file="Includes_OSD.xml" />
 	<include file="Includes_PVR.xml" />
+	<include file="Includes_Classic_Home.xml" />
 	<include file="Includes_Horizontal_Home.xml" />
 	<include file="Includes_Vertical_Home.xml" />
 	<include file="Includes_View.xml" />
@@ -886,11 +887,13 @@
 	<include name="TopBar">
 		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: ,  &#8226;  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<param name="left" />
+		<param name="topbar_visible">true</param>
 		<definition>
 			<control type="group">
 				<animation effect="slide" end="0,-112" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)] + !Window.IsVisible(1109)">WindowOpen</animation>
+				<visible>$PARAM[topbar_visible]</visible>
 				<left>$PARAM[left]</left>
 				<control type="image">
 					<left>0</left>
@@ -1191,7 +1194,7 @@
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<control type="image" id="32111">
-						<include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]">FullScreenDimensions</include>
+						<include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]">FullScreenDimensions</include>
 						<left>500</left>
 						<width>1420</width>
 						<height>780</height>
@@ -1226,7 +1229,7 @@
 						<animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
 						<visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
-						<visible>Skin.HasSetting(Vertical_Main)</visible>
+						<visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main)</visible>
 						<visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
 					</control>
 				</control>
@@ -2093,102 +2096,122 @@
 		<include content="Object_Widget_Label">
 			<param name="id" value="7502" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7503" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7504" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7505" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7506" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7507" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7508" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7509" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7510" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7511" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7512" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7513" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7514" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7515" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7516" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7517" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7518" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7519" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7520" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 		<include content="Object_Widget_Label">
 			<param name="id" value="7521" />
 			<param name="label" value="$INFO[Window(home).Property(widgetNameLabel)]" />
-			<param name="top" value="520" />
+			<param name="top" value="$PARAM[top]" />
+			<param name="font" value="$PARAM[font]" />
 		</include>
 	</include>
 

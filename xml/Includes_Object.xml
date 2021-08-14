@@ -51,6 +51,74 @@
             </control>
         </focusedlayout>
     </include>
+    <include name="Object_SubmenuClassic_Content">
+        <focusedlayout height="95">
+            <control type="group">
+                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="-280,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                <visible>Control.HasFocus(9001)</visible>
+                <control type="group">
+                    <control type="label">
+                        <top>0</top>
+                        <height>95</height>
+                        <width>280</width>
+                        <aligny>center</aligny>
+                        <align>right</align>
+                        <font>font45_title</font>
+                        <textcolor>dialog_fg_100</textcolor>
+                        <label>$PARAM[label]</label>
+                        <scroll>true</scroll>
+                        <shadowcolor>text_shadow</shadowcolor>
+                    </control>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+                </control>
+                <control type="group">
+                    <control type="image">
+                        <left>288</left>
+                        <top>1</top>
+                        <align>right</align>
+                        <width>95</width>
+                        <height>95</height>
+                        <texture colordiffuse="dialog_fg_100">$PARAM[icon]</texture>
+                    </control>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+                </control>
+            </control>
+        </focusedlayout>
+        <itemlayout height="95">
+            <control type="group">
+                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="-280,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                <visible>Control.HasFocus(9001)</visible>
+                <control type="group">
+                    <control type="label">
+                        <top>0</top>
+                        <height>95</height>
+                        <width>280</width>
+                        <aligny>center</aligny>
+                        <align>right</align>
+                        <font>font37</font>
+                        <label>$PARAM[label]</label>
+                        <shadowcolor>text_shadow</shadowcolor>
+                    </control>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+                </control>
+                <control type="group">
+                    <control type="image">
+                        <left>288</left>
+                        <top>1</top>
+                        <align>right</align>
+                        <width>95</width>
+                        <height>95</height>
+                        <texture colordiffuse="44FFFFFF">$PARAM[icon]</texture>
+                    </control>
+                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+                </control>
+            </control>
+        </itemlayout>
+    </include>
     <include name="Object_SubmenuHorizontal_Content">
         <itemlayout width="384" height="95">
             <control type="group">
@@ -101,6 +169,7 @@
     </include>
     <include name="Object_Widget_Label">
         <param name="top" default="0" />
+        <param name="font" default="font27_bold" />
         <definition>
             <control type="group" id="$PARAM[groupid]">
                 <top>$PARAM[top]</top>
@@ -119,7 +188,7 @@
                         <label>$PARAM[label]</label>
                         <aligny>center</aligny>
                         <textcolor>dialog_fg_100</textcolor>
-                        <font>font27_bold</font>
+                        <font>$PARAM[font]</font>
                         <height>24</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -141,7 +210,7 @@
                         <label>$INFO[ListItem.ChannelName]</label>
                         <aligny>center</aligny>
                         <textcolor>dialog_fg_100</textcolor>
-                        <font>font27_bold</font>
+                        <font>$PARAM[font]</font>
                         <height>24</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
@@ -403,6 +472,9 @@
     </include>
     <include name="Object_Item_Showcase">
         <param name="top" default="0" />
+        <param name="info_line_top" default="185" />
+        <param name="plot_top" default="235" />
+        <param name="plot_height" default="120" />
         <definition>
             <control type="group">
                 <top>$PARAM[top]</top>
@@ -428,17 +500,17 @@
                 </control>
 
                 <control type="group">
-                    <top>185</top>
+                    <top>$PARAM[info_line_top]</top>
                     <left>150</left>
                     <include>Object_Info_Line</include>
                 </control>
 
                 <control type="group">
                     <control type="textbox">
-                        <top>235</top>
+                        <top>$PARAM[plot_top]</top>
                         <left>150</left>
                         <width>940</width>
-                        <height>120</height>
+                        <height>$PARAM[plot_height]</height>
                         <textcolor>white</textcolor>
                         <label>$PARAM[plot]</label>
                         <font>font32</font>

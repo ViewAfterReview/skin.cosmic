@@ -4,7 +4,7 @@
 	<backgroundcolor>Background</backgroundcolor>
 
 	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|shutdown)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown)</onunload>
 
 	<controls>
 		<include>DefaultBackground</include>
@@ -140,13 +140,22 @@
 						<onclick>SetProperty(Dialog.1.Label2,$LOCALIZE[31185],home)</onclick>
 						<onclick>SetProperty(Dialog.1.Icon,special://skin/extras/icons/home.png,home)</onclick>
 						<onclick>SetProperty(Dialog.1.BuiltIn,
-								Skin.Reset(Horizontal_Main) || 
+								Skin.Reset(Horizontal_Main) ||
+								Skin.Reset(Classic_Main) || 
 								Skin.SetBool(Vertical_Main),home)</onclick>
-						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31186],home)</onclick>
-						<onclick>SetProperty(Dialog.2.Label2,$LOCALIZE[31187],home)</onclick>
+						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31345],home)</onclick>
+						<onclick>SetProperty(Dialog.2.Label2,$LOCALIZE[31346],home)</onclick>
 						<onclick>SetProperty(Dialog.2.Icon,special://skin/extras/icons/home.png,home)</onclick>
 						<onclick>SetProperty(Dialog.2.BuiltIn,
+								Skin.Reset(Horizontal_Main) ||
 								Skin.Reset(Vertical_Main) || 
+								Skin.SetBool(Classic_Main),home)</onclick>
+						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31186],home)</onclick>
+						<onclick>SetProperty(Dialog.3.Label2,$LOCALIZE[31187],home)</onclick>
+						<onclick>SetProperty(Dialog.3.Icon,special://skin/extras/icons/home.png,home)</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,
+								Skin.Reset(Vertical_Main) ||
+								Skin.Reset(Classic_Main) || 
 								Skin.SetBool(Horizontal_Main),home)</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31183],usedetails=true,window=home)</onclick>
 					</control>
