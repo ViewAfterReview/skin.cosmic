@@ -35,13 +35,13 @@
                 <param name="title" value="$INFO[ListItem.Title]" />
                 <param name="plot" value="$VAR[PlotTextBoxVar]" />
                 <param name="top" value="75" />
-                <param name="info_line_top" value="205" />
+                <param name="info_line_top" value="160" />
                 <param name="plot_top" value="255" />
             </include>
             <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
 
             <control type="group">
-                <top>240</top>
+                <top>300</top>
                 <left>150</left>
                 <include content="ProgressGradient">
                     <param name="id" value="29999" />
@@ -84,7 +84,7 @@
                 <include content="Object_Ratings_Content">
                     <param name="directory" value="$INFO[Skin.String(Icons)]" />
                     <param name="align" value="left" />
-                    <param name="top" value="230" />
+                    <param name="top" value="280" />
                 </include>
             </control>
         </control>
