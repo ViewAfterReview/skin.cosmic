@@ -54,9 +54,8 @@
     <include name="Object_SubmenuClassic_Content">
         <focusedlayout height="95">
             <control type="group">
-                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="-280,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                 <visible>Control.HasFocus(9001)</visible>
                 <control type="group">
                     <control type="label">
@@ -88,9 +87,8 @@
         </focusedlayout>
         <itemlayout height="95">
             <control type="group">
-                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="135,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="-280,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                 <visible>Control.HasFocus(9001)</visible>
                 <control type="group">
                     <control type="label">
