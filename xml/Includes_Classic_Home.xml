@@ -57,6 +57,16 @@
 
                 <control type="group">
                     <control type="image">
+                        <top>-125</top>
+                        <left>955</left>
+                        <width>690</width>
+                        <height>410</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+                        <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
+                        <bordersize>24</bordersize>
+                    </control>
+                    <control type="image">
                         <top>-100</top>
                         <left>980</left>
                         <width max="640">640</width>
