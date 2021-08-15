@@ -58,6 +58,30 @@
                     <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
                     <visible>!Pvr.IsTimeShift</visible>
                 </control>
+                <control type="group">
+                    <control type="image">
+                        <top>-200</top>
+                        <left>1080</left>
+                        <width max="640">640</width>
+                        <height max="360">360</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$INFO[Listitem.EpgEventIcon]</texture>
+                    </control>
+                    <include content="Selectbox">
+                        <param name="pad_top_b" value="-220" />
+                        <param name="pad_bottom_b" value="600" />
+                        <param name="pad_left_b" value="1060" />
+                        <param name="pad_right_b" value="30" />
+                        <param name="pad_top_t" value="-216" />
+                        <param name="pad_bottom_t" value="604" />
+                        <param name="pad_left_t" value="1064" />
+                        <param name="pad_right_t" value="34" />
+                        <param name="visible_posters" value="false" />
+                        <param name="visible_squares" value="false" />
+                        <param name="visible_landscapes" value="true" />
+                    </include>
+                    <visible>!String.IsEmpty(Listitem.EpgEventIcon)</visible>
+                </control>
                 <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
             </control>
         </control>

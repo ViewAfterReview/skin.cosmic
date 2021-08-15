@@ -54,6 +54,31 @@
                 </control>
                 <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                 <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
+
+                <control type="group">
+                    <control type="image">
+                        <top>-100</top>
+                        <left>980</left>
+                        <width max="640">640</width>
+                        <height max="360">360</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$INFO[Listitem.EpgEventIcon]</texture>
+                    </control>
+                    <include content="Selectbox">
+                        <param name="pad_top_b" value="-120" />
+                        <param name="pad_bottom_b" value="545" />
+                        <param name="pad_left_b" value="960" />
+                        <param name="pad_right_b" value="-170" />
+                        <param name="pad_top_t" value="-116" />
+                        <param name="pad_bottom_t" value="549" />
+                        <param name="pad_left_t" value="964" />
+                        <param name="pad_right_t" value="-166" />
+                        <param name="visible_posters" value="false" />
+                        <param name="visible_squares" value="false" />
+                        <param name="visible_landscapes" value="true" />
+                    </include>
+                    <visible>!String.IsEmpty(Listitem.EpgEventIcon)</visible>
+                </control>
             </control>
         </control>
         <control type="group">
