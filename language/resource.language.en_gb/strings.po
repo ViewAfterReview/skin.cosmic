@@ -1680,3 +1680,8 @@ msgstr ""
 msgctxt "#31346"
 msgid "Set vertical home layout with multiple widgets in classic style"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31347"
+msgid "Set overlay alpha value"
+msgstr ""

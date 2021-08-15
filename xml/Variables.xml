@@ -4,12 +4,35 @@
 		<value condition="String.IsEqual(ListItem.DBType,movie) | ListItem.IsCollection | String.IsEqual(ListItem.DBType,set)">type=movie</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">type=tv</value>
 	</variable>
+	<variable name="AlphaPercentage">
+		<value condition="String.IsEqual(Skin.String(AlphaValue),100)">FFFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),95)">F2FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),90)">E6FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),85)">D9FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),80)">CCFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),70)">B3FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),65)">A6FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),60)">99FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),55)">8CFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),50)">80FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),45)">73FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),40)">66FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),35)">59FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),30)">4DFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),25)">40FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),20)">33FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),15)">26FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),10)">1AFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),5)">0DFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),0)">00FFFFFF</value>
+		<value>37FFFFFF</value>
+	</variable>
 	<variable name="BackgroundOverlay">
-		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">37FFFFFF</value>
+		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
 		<value condition="Window.IsVisible(Home)"></value>
 	</variable>
 	<variable name="HighlightOverlay">
-		<value condition="!Window.IsVisible(Home)">37FFFFFF</value>
+		<value condition="!Window.IsVisible(Home)">$VAR[AlphaPercentage]</value>
 	</variable>
 	<variable name="Horizontal_RightTopbar">
 		<value condition="Skin.HasSetting(EnableWeatherInHorizontalTopbar)">$INFO[Weather.Temperature,   ,]   &#x2022;$INFO[System.Date,   ,]   &#x2022;$INFO[System.Time,   ,]   </value>
