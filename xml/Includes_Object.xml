@@ -334,6 +334,7 @@
                     </include>
 
                     <control type="button">
+                        <include>HiddenObject</include>
                         <include>Animation_AlarmDelay</include>
 
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
@@ -366,6 +367,7 @@
                     </include>
 
                     <control type="button">
+                        <include>HiddenObject</include>
                         <include>Animation_AlarmDelay</include>
 
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
@@ -398,6 +400,7 @@
                     </include>
 
                     <control type="button">
+                        <include>HiddenObject</include>
                         <include>Animation_AlarmDelay</include>
 
                         <onunfocus condition="Skin.HasSetting(BackgroundPlayingTrailers) + !VideoPlayer.Content(livetv)">PlayerControl(Stop)</onunfocus>
