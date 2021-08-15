@@ -10,6 +10,7 @@
 		<value condition="String.IsEqual(Skin.String(AlphaValue),90)">E6FFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(AlphaValue),85)">D9FFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(AlphaValue),80)">CCFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AlphaValue),75)">BFFFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(AlphaValue),70)">B3FFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(AlphaValue),65)">A6FFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(AlphaValue),60)">99FFFFFF</value>
@@ -29,7 +30,7 @@
 	</variable>
 	<variable name="BackgroundOverlay">
 		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
-		<value condition="Window.IsVisible(Home)"></value>
+		<!-- <value condition="Window.IsVisible(Home)"></value> -->
 	</variable>
 	<variable name="HighlightOverlay">
 		<value condition="!Window.IsVisible(Home)">$VAR[AlphaPercentage]</value>
