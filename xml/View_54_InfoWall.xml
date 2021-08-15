@@ -102,6 +102,14 @@
 				<width>297</width>
 				<height>407</height>
 				<include content="Selectbox">
+					<param name="pad_top_b" value="2" />
+					<param name="pad_bottom_b" value="1" />
+					<param name="pad_left_b" value="1" />
+					<param name="pad_right_b" value="1" />
+					<param name="pad_top_t" value="6" />
+					<param name="pad_bottom_t" value="6" />
+					<param name="pad_left_t" value="6" />
+					<param name="pad_right_t" value="6" />
 					<param name="visible_posters" value="true" />
 					<param name="visible_squares" value="false" />
 					<param name="visible_landscapes" value="false" />
