@@ -1,3 +1,7 @@
+1.0.15
+    Added: EPGEventIcon in widgets to Horizontal and Classic layout
+    Changed: Default home layout to Classic instead of Vertical
+    Added: Progress bar to PVR widgets
 1.0.14
     Fixed: Submenu animation in Classic layout
     Fixed: Weird border around widgets in vertical layout
