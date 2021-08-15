@@ -64,6 +64,26 @@
                         <param name="directory" value="$INFO[Skin.String(Icons)]" />
                         <param name="align" value="right" />
                     </include>
+                    <control type="group">
+                        <top>545</top>
+                        <left>1150</left>
+                        <include content="ProgressGradient">
+                            <param name="id" value="29999" />
+                            <param name="top" value="0" />
+                            <width>480</width>
+                            <height>16</height>
+                            <info>ListItem.Progress</info>
+                        </include>
+                        <control type="label">
+                            <top>-12</top>
+                            <left>490</left>
+                            <font>font27</font>
+                            <width>auto</width>
+                            <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
+                            <visible>!Pvr.IsTimeShift</visible>
+                        </control>
+                        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+                    </control>
                 </control>
             </control>
             <control type="group">
