@@ -17,6 +17,7 @@
             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
             <include content="Object_Item_Showcase">
                 <param name="title" value="$INFO[ListItem.Title]" />
+                <param name="title_width" value="930" />
                 <param name="plot" value="$VAR[PlotTextBoxVar]" />
                 <param name="plot_height" value="200" />
                 <param name="info_line_top" value="180" />

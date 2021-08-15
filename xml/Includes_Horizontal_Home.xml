@@ -33,6 +33,7 @@
         <control type="group" id="5600">
             <include content="Object_Item_Showcase">
                 <param name="title" value="$INFO[ListItem.Title]" />
+                <param name="title_width" value="1000" />
                 <param name="plot" value="$VAR[PlotTextBoxVar]" />
                 <param name="top" value="75" />
                 <param name="info_line_top" value="160" />

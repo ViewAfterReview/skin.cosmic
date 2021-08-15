@@ -532,6 +532,8 @@
                     <control type="label">
                         <left>150</left>
                         <bottom>60</bottom>
+                        <scroll>true</scroll>
+                        <width>$PARAM[title_width]</width>
                         <textcolor>white</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <label>$PARAM[title]</label>
