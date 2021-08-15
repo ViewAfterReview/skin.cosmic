@@ -1,3 +1,7 @@
+1.0.14
+    Fixed: Submenu animation in Classic layout
+    Fixed: Weird border around widgets in vertical layout
+    Fixed: Selectbox in DialogVideoInfo.xml
 1.0.13
     Added: New Classic vertical home layout
 1.0.12
