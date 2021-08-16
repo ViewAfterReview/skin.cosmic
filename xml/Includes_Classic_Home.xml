@@ -13,7 +13,7 @@
         </control>
         <control type="group" id="5600">
             <left>300</left>
-            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
             <include content="Object_Item_Showcase">
                 <param name="title" value="$INFO[ListItem.Title]" />
@@ -26,7 +26,7 @@
             <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
         </control>
         <control type="group" id="2999">
-            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
             <include content="Object_Ratings_Content">
                 <param name="top" value="235" />
@@ -106,7 +106,7 @@
                 <include>OpenClose_Right</include>
                 <left>430</left>
                 <control type="group">
-                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                     <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                     <include content="WidgetVerticalLabel">
                         <param name="font" value="font27_bold" />
@@ -114,7 +114,7 @@
                     </include>
                 </control>
                 <control type="grouplist" id="3000">
-                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                     <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                     <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
                     <top>595</top>
@@ -126,7 +126,7 @@
                 </control>
                 <control type="group" id="4000">
                     <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
-                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                     <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                     <width>1800</width>
                     <include content="View_Weather">
@@ -135,7 +135,7 @@
                 </control>
                 <control type="group" id="5000">
                     <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
-                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                     <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                     <centerleft>50%</centerleft>
                     <width>1600</width>
@@ -188,8 +188,9 @@
                             <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                         </control>
                         <control type="group">
-                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                            <animation effect="slide" start="0" end="-280,0" time="0" reversible="false" condition="String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                             <control type="image">
                                 <right>80</right>
                                 <top>1</top>
@@ -217,8 +218,9 @@
                             <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                         </control>
                         <control type="group">
-                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+                            <animation effect="slide" start="0" end="-280,0" time="0" reversible="false" condition="String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                             <control type="image">
                                 <right>80</right>
                                 <top>1</top>
