@@ -159,14 +159,16 @@
 	</include>
 
 	<include name="GenreCycle">
-		<animation effect="slide" start="0,0" end="0,-800" time="600" delay="3000" tween="cubic" easing="inout" reversible="false" condition="ControlGroup(3000).HasFocus + System.IdleTime(6)">Conditional</animation>
-		<animation effect="slide" start="0,0" end="0,800" time="600" delay="0" tween="cubic" easing="inout" reversible="false" condition="ControlGroup(3000).HasFocus + System.IdleTime(18)">Conditional</animation>
-		<animation effect="slide" start="0,0" end="0,-800" time="600" delay="0" tween="cubic" easing="inout" reversible="false" condition="ControlGroup(3000).HasFocus + System.IdleTime(27)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="600" delay="3000" reversible="false" condition="System.IdleTime(6)">Conditional</animation>
 	</include>
 	<include name="StudioCycle">
-		<animation effect="slide" start="0,0" end="0,800" time="600" delay="0" tween="cubic" easing="inout" reversible="false" condition="System.IdleTime(9)">Conditional</animation>
-		<animation effect="slide" start="0,0" end="0,-800" time="600" delay="0" tween="cubic" easing="inout" reversible="false" condition="System.IdleTime(18)">Conditional</animation>
-		<animation effect="slide" start="0,0" end="0,800" time="600" delay="0" tween="cubic" easing="inout" reversible="false" condition="System.IdleTime(27)">Conditional</animation>
+		<animation effect="slide" start="0" end="0,800" time="0" delay="0" reversible="false" condition="System.IdleTime(9)">Conditional</animation>
+		<animation effect="fade" start="0" end="100" time="600" delay="500" reversible="false" condition="System.IdleTime(9)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="600" delay="0" reversible="false" condition="System.IdleTime(18)">Conditional</animation>
+	</include>
+	<include name="CastCycle">
+		<animation effect="slide" start="0" end="0,800" time="0" delay="0" reversible="false" condition="System.IdleTime(18)">Conditional</animation>
+		<animation effect="fade" start="0" end="100" time="600" delay="500" reversible="false" condition="System.IdleTime(18)">Conditional</animation>
 	</include>
 
 	<include name="Animation_AlarmDelay">

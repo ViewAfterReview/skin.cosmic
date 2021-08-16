@@ -572,6 +572,7 @@
                 <include content="CyclingInfo">
                     <param name="visible2" value="!String.IsEmpty(ListItem.Studio)" />
                     <param name="visible1" value="!String.IsEmpty(ListItem.Genre)" />
+                    <param name="visible3" value="!String.IsEmpty(ListItem.Cast)" />
                 </include>
             </control>
         </definition>
@@ -644,6 +645,38 @@
                     <label>$INFO[ListItem.Studio]</label>
                     <visible>!String.IsEmpty(ListItem.Studio)</visible>
                     <autoscroll delay="12000" time="3000" repeat="7000">!String.IsEmpty(ListItem.Studio)</autoscroll>
+                </control>
+            </control>
+            <control type="group">
+                <include>CastCycle</include>
+                <visible>$PARAM[visible3]</visible>
+                <top>-800</top>
+                <control type="image">
+                    <top>61</top>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture background="true" colordiffuse="ffa90007">common/circle.png</texture>
+                    <visible>!String.IsEmpty(ListItem.Studio) | !String.IsEmpty(ListItem.Genre) | !String.IsEmpty(ListItem.Cast)</visible>
+                </control>
+                <control type="image">
+                    <top>60</top>
+                    <left>0</left>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="ff000000">special://skin/extras/icons/actor.png</texture>
+                    <visible>!String.IsEmpty(ListItem.Cast)</visible>
+                </control>
+                <control type="textbox">
+                    <top>45</top>
+                    <left>74</left>
+                    <width>680</width>
+                    <height>88</height>
+                    <aligny>center</aligny>
+                    <font>font32</font>
+                    <wrapmultiline>true</wrapmultiline>
+                    <label>$INFO[ListItem.CastAndRole]</label>
+                    <visible>!String.IsEmpty(ListItem.CastAndRole)</visible>
+                    <autoscroll delay="12000" time="3000" repeat="7000">!String.IsEmpty(ListItem.CastAndRole)</autoscroll>
                 </control>
             </control>
         </control>
