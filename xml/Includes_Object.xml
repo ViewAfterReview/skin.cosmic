@@ -245,7 +245,7 @@
                         <label>$PARAM[label]</label>
                         <aligny>center</aligny>
                         <textcolor>dialog_fg_100</textcolor>
-                        <font>font_topbar_horiz</font>
+                        <font>font27_bold</font>
                         <height>42</height>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
@@ -267,7 +267,7 @@
                         <label>$INFO[ListItem.ChannelName]</label>
                         <aligny>center</aligny>
                         <textcolor>dialog_fg_100</textcolor>
-                        <font>font_topbar_horiz</font>
+                        <font>font27_bold</font>
                         <height>42</height>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                         <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>

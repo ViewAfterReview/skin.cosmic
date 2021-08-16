@@ -46,8 +46,8 @@
 		<value condition="!Window.IsVisible(Home)">$VAR[AlphaPercentage]</value>
 	</variable>
 	<variable name="Horizontal_RightTopbar">
-		<value condition="Skin.HasSetting(EnableWeatherInHorizontalTopbar)">$INFO[Weather.Temperature,   ,]   &#x2022;$INFO[System.Date,   ,]   &#x2022;$INFO[System.Time,   ,]   </value>
-		<value>$INFO[System.Date,   ,]   &#x2022;$INFO[System.Time,   ,]   </value>
+		<value condition="Skin.HasSetting(EnableWeatherInHorizontalTopbar)">$INFO[Weather.Temperature,   ,]   &#x2022;   $INFO[System.Date,[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$INFO[System.Date,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	<variable name="Image_ClearLogo">
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
