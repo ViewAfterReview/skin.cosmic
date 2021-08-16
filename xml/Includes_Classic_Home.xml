@@ -118,7 +118,7 @@
                     <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                     <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
                     <top>595</top>
-                    <width>2500</width>
+                    <width>1800</width>
                     <height>9999</height>
                     <usecontrolcoords>false</usecontrolcoords>
                     <include>Animation_Widget_Slide</include>
