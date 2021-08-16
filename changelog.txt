@@ -1,3 +1,12 @@
+1.0.18
+    Changed: Horizontal Layout
+    Changed: Textures.xbt
+    Fixed: Icons position in "Icons only" menu style in Classic layout
+    Added: Information about selected layout
+    Added: Option to select type of widget scrolling
+    Fixed: Studio, Genre, Cast tags animations in Vertical layout
+    Fixed: Selection box position in widgets
+    Fixed: Multi image for background
 1.0.17
     Fixed: Double ratings may appear in DialogVideoInfo.xml
 1.0.16
