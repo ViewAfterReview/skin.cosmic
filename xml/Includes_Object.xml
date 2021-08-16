@@ -304,7 +304,6 @@
                 <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
 
                 <orientation>horizontal</orientation>
-                <!-- <top>70</top> -->
                 <onleft>9000</onleft>
                 <onback>9000</onback>
                 <height>460</height>
@@ -318,13 +317,13 @@
                 <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayout"></include>
                     <include content="Selectbox">
-                        <param name="pad_top_b" value="-17" />
-                        <param name="pad_bottom_b" value="-16" />
-                        <param name="pad_left_b" value="-17" />
-                        <param name="pad_right_b" value="-4" />
-                        <param name="pad_top_t" value="-16" />
+                        <param name="pad_top_b" value="-15" />
+                        <param name="pad_bottom_b" value="-22" />
+                        <param name="pad_left_b" value="-15" />
+                        <param name="pad_right_b" value="-5" />
+                        <param name="pad_top_t" value="-10" />
                         <param name="pad_bottom_t" value="-16" />
-                        <param name="pad_left_t" value="-16" />
+                        <param name="pad_left_t" value="-10" />
                         <param name="pad_right_t" value="0" />
                         <param name="visible_posters" value="$PARAM[postercondition]" />
                         <param name="visible_squares" value="false" />
@@ -352,13 +351,13 @@
                     <include content="ViewSquareItemLayout"></include>
                     <include content="Selectbox">
                         <param name="pad_top_b" value="-15" />
-                        <param name="pad_bottom_b" value="-15" />
+                        <param name="pad_bottom_b" value="-23" />
                         <param name="pad_left_b" value="-15" />
                         <param name="pad_right_b" value="17" />
-                        <param name="pad_top_t" value="-7" />
-                        <param name="pad_bottom_t" value="-16" />
-                        <param name="pad_left_t" value="-7" />
-                        <param name="pad_right_t" value="24" />
+                        <param name="pad_top_t" value="-8" />
+                        <param name="pad_bottom_t" value="-18" />
+                        <param name="pad_left_t" value="-10" />
+                        <param name="pad_right_t" value="22" />
                         <param name="visible_posters" value="false" />
                         <param name="visible_squares" value="$PARAM[squarecondition]" />
                         <param name="visible_landscapes" value="false" />
@@ -384,14 +383,14 @@
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
                     <include content="ViewLandscapeItemLayout"></include>
                     <include content="Selectbox">
-                        <param name="pad_top_b" value="-2" />
+                        <param name="pad_top_b" value="-8" />
                         <param name="pad_bottom_b" value="18" />
-                        <param name="pad_left_b" value="-2" />
+                        <param name="pad_left_b" value="-8" />
                         <param name="pad_right_b" value="10" />
-                        <param name="pad_top_t" value="-2" />
-                        <param name="pad_bottom_t" value="24" />
-                        <param name="pad_left_t" value="-2" />
-                        <param name="pad_right_t" value="16" />
+                        <param name="pad_top_t" value="-3" />
+                        <param name="pad_bottom_t" value="23" />
+                        <param name="pad_left_t" value="-3" />
+                        <param name="pad_right_t" value="15" />
                         <param name="visible_posters" value="false" />
                         <param name="visible_squares" value="false" />
                         <param name="visible_landscapes" value="$PARAM[landscapecondition]" />
@@ -451,13 +450,13 @@
                 <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
                     <include content="ViewPosterItemLayout"></include>
                     <include content="Selectbox">
-                        <param name="pad_top_b" value="-17" />
-                        <param name="pad_bottom_b" value="-16" />
-                        <param name="pad_left_b" value="-17" />
-                        <param name="pad_right_b" value="-4" />
-                        <param name="pad_top_t" value="-16" />
+                        <param name="pad_top_b" value="-15" />
+                        <param name="pad_bottom_b" value="-22" />
+                        <param name="pad_left_b" value="-15" />
+                        <param name="pad_right_b" value="-5" />
+                        <param name="pad_top_t" value="-10" />
                         <param name="pad_bottom_t" value="-16" />
-                        <param name="pad_left_t" value="-16" />
+                        <param name="pad_left_t" value="-10" />
                         <param name="pad_right_t" value="0" />
                         <param name="visible_posters" value="$PARAM[postercondition]" />
                         <param name="visible_squares" value="false" />
@@ -473,13 +472,13 @@
                     <include content="ViewSquareItemLayout"></include>
                     <include content="Selectbox">
                         <param name="pad_top_b" value="-15" />
-                        <param name="pad_bottom_b" value="-15" />
+                        <param name="pad_bottom_b" value="-23" />
                         <param name="pad_left_b" value="-15" />
                         <param name="pad_right_b" value="17" />
-                        <param name="pad_top_t" value="-7" />
-                        <param name="pad_bottom_t" value="-16" />
-                        <param name="pad_left_t" value="-7" />
-                        <param name="pad_right_t" value="24" />
+                        <param name="pad_top_t" value="-8" />
+                        <param name="pad_bottom_t" value="-18" />
+                        <param name="pad_left_t" value="-10" />
+                        <param name="pad_right_t" value="22" />
                         <param name="visible_posters" value="false" />
                         <param name="visible_squares" value="$PARAM[squarecondition]" />
                         <param name="visible_landscapes" value="false" />
@@ -493,14 +492,14 @@
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
                     <include content="ViewLandscapeItemLayout"></include>
                     <include content="Selectbox">
-                        <param name="pad_top_b" value="-2" />
+                        <param name="pad_top_b" value="-8" />
                         <param name="pad_bottom_b" value="18" />
-                        <param name="pad_left_b" value="-2" />
+                        <param name="pad_left_b" value="-8" />
                         <param name="pad_right_b" value="10" />
-                        <param name="pad_top_t" value="-2" />
-                        <param name="pad_bottom_t" value="24" />
-                        <param name="pad_left_t" value="-2" />
-                        <param name="pad_right_t" value="16" />
+                        <param name="pad_top_t" value="-3" />
+                        <param name="pad_bottom_t" value="23" />
+                        <param name="pad_left_t" value="-3" />
+                        <param name="pad_right_t" value="15" />
                         <param name="visible_posters" value="false" />
                         <param name="visible_squares" value="false" />
                         <param name="visible_landscapes" value="$PARAM[landscapecondition]" />

@@ -178,6 +178,8 @@
 				<bordersize>24</bordersize>
 			</control>
 			<control type="image">
+				<top>8</top>
+				<left>8</left>
 				<right>18</right>
 				<aspectratio>scale</aspectratio>
 				<texture>$VAR[Image_Poster]</texture>
