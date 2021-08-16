@@ -135,6 +135,7 @@
 					</control>
 					<control type="button" id="703" description="Change home layout">
 						<label>$LOCALIZE[31183]</label>
+						<label2>$VAR[homeLayout]</label2>
 						<include>DefaultSettingButton</include>
 						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31184],home)</onclick>
 						<onclick>SetProperty(Dialog.1.Label2,$LOCALIZE[31185],home)</onclick>
