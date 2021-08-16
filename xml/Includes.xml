@@ -1193,15 +1193,18 @@
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<control type="image" id="32111">
+					<control type="multiimage" id="32111">
 						<include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]">FullScreenDimensions</include>
 						<left>500</left>
 						<width>1420</width>
 						<height>780</height>
 						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>600</fadetime>
+						<timeperimage>6000</timeperimage>
+						<randomize>true</randomize>
+						<loop>yes</loop>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</texture>
+						<imagepath background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</imagepath>
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
 						<animation effect="fade" end="0" start="100" time="50" reversible="true" condition="$EXP[infodialog_active]">Conditional</animation>
 						<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
