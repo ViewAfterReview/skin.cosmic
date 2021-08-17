@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cosmic" version="1.0.18" name="Cosmic" provider-name="heppen (nfm886)">
+<addon id="skin.cosmic" version="1.0.19" name="Cosmic" provider-name="heppen (nfm886)">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0" />
 		<import addon="script.skinshortcuts" version="1.1.5" />
@@ -17,15 +17,11 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
-1.0.18
-Changed: Horizontal Layout
-Changed: Textures.xbt
-Fixed: Icons position in "Icons only" menu style in Classic layout
-Added: Information about selected layout
-Added: Option to select type of widget scrolling
-Fixed: Studio, Genre, Cast tags animations in Vertical layout
-Fixed: Selection box position in widgets
-Fixed: Multi image for background
+1.0.19
+Added: Info label in top left corner with "Icons only" menu style
+Added: Option to enable/disable clearlogo on Landscape aspect ratio
+Added: Warning before removing Settings shortcuts
+Fixed: Background trailers in some add-ons
 		</news>
 		<summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
 		<summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>

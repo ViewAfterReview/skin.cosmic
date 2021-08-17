@@ -1,3 +1,8 @@
+1.0.19
+    Added: Info label in top left corner with "Icons only" menu style
+    Added: Option to enable/disable clearlogo on Landscape aspect ratio
+    Added: Warning before removing Settings shortcuts
+    Fixed: Background trailers in some add-ons
 1.0.18
     Changed: Horizontal Layout
     Changed: Textures.xbt
