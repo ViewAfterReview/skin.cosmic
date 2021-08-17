@@ -1700,3 +1700,8 @@ msgstr ""
 msgctxt "#31350"
 msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31351"
+msgid "Landscape Art"
+msgstr ""

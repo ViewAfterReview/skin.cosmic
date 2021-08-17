@@ -384,10 +384,14 @@
 
                 <!-- Landscape aspect ratio -->
                 <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                    <include content="ViewLandscapeItemLayout"></include>
+                    <include content="ViewLandscapeItemLayout">
+                        <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
+                    </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                    <include content="ViewLandscapeItemLayout"></include>
+                    <include content="ViewLandscapeItemLayout">
+                        <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
+                    </include>
                     <include content="Selectbox">
                         <param name="pad_top_b" value="-8" />
                         <param name="pad_bottom_b" value="18" />
@@ -496,10 +500,14 @@
 
                 <!-- Landscape aspect ratio -->
                 <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                    <include content="ViewLandscapeItemLayout"></include>
+                    <include content="ViewLandscapeItemLayout">
+                        <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
+                    </include>
                 </itemlayout>
                 <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
-                    <include content="ViewLandscapeItemLayout"></include>
+                    <include content="ViewLandscapeItemLayout">
+                        <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
+                    </include>
                     <include content="Selectbox">
                         <param name="pad_top_b" value="-8" />
                         <param name="pad_bottom_b" value="18" />

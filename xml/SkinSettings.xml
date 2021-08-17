@@ -480,6 +480,12 @@
                                             Skin.SetString(icons.label, $LOCALIZE[31294]))</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
 					</control>
+					<control type="radiobutton" id="910" description="Landscape art">
+						<label>$LOCALIZE[31351]</label>
+						<include>DefaultSettingButton</include>
+						<selected>Skin.HasSetting(LandscapeArt)</selected>
+						<onclick>Skin.ToggleSetting(LandscapeArt)</onclick>
+					</control>
 				</control>
 				<include content="DefaultSettingButtonGradient">
 					<param name="id" value="1000" />
