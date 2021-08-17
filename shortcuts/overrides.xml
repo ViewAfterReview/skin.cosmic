@@ -13,6 +13,9 @@
     <!-- Trick for shutdown menu -->
     <groupoverride group="shutdown" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
 
+    <!-- Warning to Remove Settings -->
+    <warn heading="31349" message="31350">ActivateWindow(Settings)</warn>
+
     <!-- Widget Target -->
     <property property="widgetTarget">videos</property>
     <property property="widgetTarget">music</property>

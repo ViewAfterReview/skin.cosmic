@@ -1690,3 +1690,13 @@ msgstr ""
 msgctxt "#31348"
 msgid "Select widget scrolling type"
 msgstr ""
+
+#: /xml/overrides.xml
+msgctxt "#31349"
+msgid "Delete Settings Shortcut"
+msgstr ""
+
+#: /xml/overrides.xml
+msgctxt "#31350"
+msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
+msgstr ""
