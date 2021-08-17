@@ -11,6 +11,18 @@
                 <label>$INFO[System.Time]</label>
             </control>
         </control>
+        <control type="group">
+            <animation effect="slide" start="0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+            <control type="label">
+                <left>100</left>
+                <top>35</top>
+                <right>75</right>
+                <font>font_clock</font>
+                <label>$INFO[ListItem.Label]</label>
+                <shadowcolor>text_shadow</shadowcolor>
+            </control>
+            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) + Control.HasFocus(9000)</visible>
+        </control>
         <control type="group" id="5600">
             <left>300</left>
             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
