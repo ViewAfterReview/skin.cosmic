@@ -49,6 +49,10 @@
 		<value condition="Skin.HasSetting(EnableWeatherInHorizontalTopbar)">$INFO[Weather.Temperature,   ,]   &#x2022;   $INFO[System.Date,[UPPERCASE],[/UPPERCASE]]</value>
 		<value>$INFO[System.Date,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
+	<variable name="VolumeSliderColour">
+		<value condition="Skin.HasSetting(EnableDarkVolumeSlider)">FF1A2123</value>
+		<value>ffffffff</value>
+	</variable>
 	<variable name="Image_ClearLogo">
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + !String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>

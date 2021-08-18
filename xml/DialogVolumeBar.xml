@@ -16,7 +16,7 @@
 				<top>767</top>
 				<left>-780</left>
 				<control type="image">
-					<texture border="5">common/box.png</texture>
+					<texture border="5" colordiffuse="$VAR[VolumeSliderColour]">common/box.png</texture>
 				</control>
 				<animation effect="rotate" end="90" center="90" time="200" condition="Control.IsVisible(29999)">Conditional</animation>
 			</control>

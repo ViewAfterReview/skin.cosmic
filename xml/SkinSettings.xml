@@ -372,6 +372,12 @@
 						<onclick>Skin.ToggleSetting(MinimalDialogBusy)</onclick>
 						<selected>Skin.HasSetting(MinimalDialogBusy)</selected>
 					</control>
+					<control type="radiobutton" id="818" description="Dark volume slider">
+						<label>$LOCALIZE[31352]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(EnableDarkVolumeSlider)</onclick>
+						<selected>Skin.HasSetting(EnableDarkVolumeSlider)</selected>
+					</control>
 				</control>
 				<include content="DefaultSettingButtonGradient">
 					<param name="id" value="900" />
