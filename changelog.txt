@@ -1,3 +1,13 @@
+1.0.20
+    Fixed: Submenu logic
+    Changed: InfoButton appearance
+    Fixed: Highlight colour in most cases
+    Fixed: Highlight colour in FileManager.xml
+    Fixed: Highlight colour in DialogNumeric.xml
+    Fixed: Highlight colour in DialogSlider.xml
+    Fixed: Open Info Dialog when clicking on TV Show in widget
+    Fixed: Object_Item_Showcase visibility
+    Added: Option to enable dark volume slider
 1.0.19
     Added: Info label in top left corner with "Icons only" menu style
     Added: Option to enable/disable clearlogo on Landscape aspect ratio
