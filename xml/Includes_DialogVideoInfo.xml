@@ -3,7 +3,6 @@
     <include name="DialogVideoInfo">
         <control type="group">
             <control type="group" id="98">
-
                 <control type="group">
                     <control type="image">
                         <top>-120</top>
@@ -24,7 +23,6 @@
                         <bordersize>20</bordersize>
                     </control>
                 </control>
-
                 <control type="group">
                     <left>570</left>
                     <control type="group">
@@ -45,13 +43,11 @@
                             <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
                         </control>
                     </control>
-
                     <control type="group">
                         <top>185</top>
                         <left>150</left>
                         <include>Object_Info_Line</include>
                     </control>
-
                     <control type="group">
                         <include content="Object_Ratings_Content">
                             <param name="directory" value="$INFO[Skin.String(Icons)]" />
@@ -60,7 +56,6 @@
                             <param name="left" value="145" />
                         </include>
                     </control>
-
                     <control type="group">
                         <control type="textbox">
                             <top>325</top>
@@ -74,9 +69,7 @@
                         </control>
                     </control>
                 </control>
-
                 <animation effect="fade" start="100" end="0" time="200" easing="inout" condition="ControlGroup(100).HasFocus">Conditional</animation>
-
                 <control type="grouplist" id="99">
                     <top>500</top>
                     <left>690</left>
@@ -103,10 +96,8 @@
                         <param name="icon" value="special://skin/extras/icons/watchlist.png" />
                         <param name="label" value="$LOCALIZE[31317]" />
                         <!-- <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(TMDbHelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" /> -->
-
                         <param name="onclick_1_condition" value="!String.IsEmpty(ListItem.Property(tmdb_id))" />
                         <param name="onclick_1" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Info_Param_Type],cache_refresh)" />
-
                         <param name="onclick_2_condition" value="String.IsEmpty(ListItem.Property(tmdb_id))" />
                         <param name="onclick_2" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(TMDbHelper.listitem.tmdb_id)],$VAR[Info_Param_Type],cache_refresh)" />
                         <param name="visible" value="Control.IsVisible(8897)" />
@@ -120,12 +111,10 @@
                         <param name="visible" value="Control.IsVisible(8898)" />
                     </include>
                 </control>
-
                 <control type="group" id="10049">
                     <top>660</top>
                     <left>710</left>
                     <height>382.5</height>
-
                     <control type="group">
                         <control type="group">
                             <control type="label">
@@ -169,7 +158,6 @@
                             </control>
                         </control>
                     </control>
-
                     <control type="group">
                         <left>550</left>
                         <control type="group">
@@ -223,9 +211,7 @@
                 <height>975</height>
                 <width>1720</width>
                 <itemgap>52</itemgap>
-
                 <animation effect="slide" start="0,0" end="0,1080" time="200" tween="cubic" easing="inout" condition="!ControlGroup(100).HasFocus">Conditional</animation>
-
                 <include content="InfoDialogLabel">
                     <param name="groupid" value="1051" />
                     <param name="id" value="50" />
@@ -240,7 +226,7 @@
                     <orientation>horizontal</orientation>
                     <top>0</top>
                     <height>407</height>
-                    <visible>true</visible>
+                    <visible>!Skin.HasSetting(InfoDialog.Cast)</visible>
                     <scrolltime tween="sine" easing="out">200</scrolltime>
                     <itemlayout width="270" height="427">
                         <include content="InfoDialogItemLayout">
@@ -257,7 +243,6 @@
                         </include>
                     </focusedlayout>
                 </control>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1052" />
                     <param name="groupid" value="10052" />
@@ -270,9 +255,8 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.Set) | ListItem.IsCollection" />
+                    <param name="visible" value="!Skin.HasSetting(InfoDialog.Sets) + [!String.IsEmpty(ListItem.Set) | ListItem.IsCollection]" />
                 </include>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1053" />
                     <param name="groupid" value="10053" />
@@ -285,9 +269,8 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.IMDBNumber)" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.IMDBNumber) + Skin.HasSetting(InfoDialog.Similar)" />
                 </include>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1054" />
                     <param name="groupid" value="10054" />
@@ -300,9 +283,8 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.Director)" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Director) + Skin.HasSetting(InfoDialog.Director)" />
                 </include>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1055" />
                     <param name="groupid" value="10055" />
@@ -315,9 +297,8 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.Studio)" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.Studio) + Skin.HasSetting(InfoDialog.Studio)" />
                 </include>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1056" />
                     <param name="groupid" value="10056" />
@@ -330,9 +311,8 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="true" />
+                    <param name="visible" value="Skin.HasSetting(InfoDialog.Crew)" />
                 </include>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1057" />
                     <param name="groupid" value="10057" />
@@ -345,9 +325,8 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="true" />
+                    <param name="visible" value="Skin.HasSetting(InfoDialog.Recommended)" />
                 </include>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1058" />
                     <param name="groupid" value="10058" />
@@ -360,9 +339,8 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.Genre)" />
+                    <param name="visible" value="Skin.HasSetting(InfoDialog.Genre) + !String.IsEmpty(ListItem.Genre)" />
                 </include>
-
                 <include content="InfoDialogWallContainer">
                     <param name="id" value="1059" />
                     <param name="groupid" value="10059" />
@@ -375,10 +353,9 @@
                     <param name="limit" value="25" />
                     <param name="itemwidth" value="270" />
                     <param name="itemheight" value="407" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)" />
+                    <param name="visible" value="Skin.HasSetting(InfoDialog.Posters) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]" />
                 </include>
             </control>
-
             <control type="group" id="8999">
                 <visible>ControlGroup(9000).HasFocus()</visible>
                 <include>Animation_DialogPopupVisible</include>

@@ -2,10 +2,8 @@
 <window>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>Background</backgroundcolor>
-
 	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown)</onunload>
-
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="multiimage">
@@ -20,7 +18,6 @@
 			<imagepath background="true" colordiffuse="30FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
 			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
 		</control>
-
 		<control type="group">
 			<width>1400</width>
 			<height>833</height>
@@ -54,7 +51,6 @@
 			<control type="group" id="10000">
 				<left>490</left>
 				<include>OpenClose_Right</include>
-
 				<control type="image" id="601">
 					<centerleft>50%</centerleft>
 					<top>160</top>
@@ -64,7 +60,6 @@
 					<align>center</align>
 					<visible>Container(9000).HasFocus(1)</visible>
 				</control>
-
 				<control type="textbox" id="602">
 					<left>60</left>
 					<top>360</top>
@@ -76,7 +71,6 @@
 					<align>center</align>
 					<visible>Container(9000).HasFocus(1)</visible>
 				</control>
-
 				<include content="DefaultSettingButtonGradient">
 					<param name="id" value="600" />
 					<top>633</top>
@@ -140,31 +134,21 @@
 						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31184],home)</onclick>
 						<onclick>SetProperty(Dialog.1.Label2,$LOCALIZE[31185],home)</onclick>
 						<onclick>SetProperty(Dialog.1.Icon,special://skin/extras/icons/home.png,home)</onclick>
-						<onclick>SetProperty(Dialog.1.BuiltIn,
-								Skin.Reset(Horizontal_Main) ||
-								Skin.Reset(Classic_Main) || 
-								Skin.SetBool(Vertical_Main),home)</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn, Skin.Reset(Horizontal_Main) || Skin.Reset(Classic_Main) || Skin.SetBool(Vertical_Main),home)</onclick>
 						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31345],home)</onclick>
 						<onclick>SetProperty(Dialog.2.Label2,$LOCALIZE[31346],home)</onclick>
 						<onclick>SetProperty(Dialog.2.Icon,special://skin/extras/icons/home.png,home)</onclick>
-						<onclick>SetProperty(Dialog.2.BuiltIn,
-								Skin.Reset(Horizontal_Main) ||
-								Skin.Reset(Vertical_Main) || 
-								Skin.SetBool(Classic_Main),home)</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn, Skin.Reset(Horizontal_Main) || Skin.Reset(Vertical_Main) || Skin.SetBool(Classic_Main),home)</onclick>
 						<onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31186],home)</onclick>
 						<onclick>SetProperty(Dialog.3.Label2,$LOCALIZE[31187],home)</onclick>
 						<onclick>SetProperty(Dialog.3.Icon,special://skin/extras/icons/home.png,home)</onclick>
-						<onclick>SetProperty(Dialog.3.BuiltIn,
-								Skin.Reset(Vertical_Main) ||
-								Skin.Reset(Classic_Main) || 
-								Skin.SetBool(Horizontal_Main),home)</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn, Skin.Reset(Vertical_Main) || Skin.Reset(Classic_Main) || Skin.SetBool(Horizontal_Main),home)</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31183],usedetails=true,window=home)</onclick>
 					</control>
 					<control type="button" id="704" description="Home Menu Style">
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31304]</label>
 						<label2>$INFO[Skin.String(MenuStyle)]</label2>
-
 						<onclick>SetProperty(Context.1.Label,$LOCALIZE[31305])</onclick>
 						<onclick>SetProperty(Context.1.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31305]))</onclick>
 						<onclick>SetProperty(Context.2.Label,$LOCALIZE[31306])</onclick>
@@ -205,7 +189,6 @@
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31340]</label>
 						<label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
-
 						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
 						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(HomeBackgroundImage))</onclick>
 						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31341])</onclick>
@@ -424,9 +407,7 @@
 						<label>$LOCALIZE[31325]</label>
 						<label2>$VAR[Def_Trailer_Delay]</label2>
 						<include>DefaultSettingButton</include>
-
 						<enable>Skin.HasSetting(BackgroundPlayingTrailers) + [System.AddonIsEnabled(plugin.video.youtube) + System.HasAddon(plugin.video.youtube)]</enable>
-
 						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31284])</onclick>
 						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(Trailer_Delay))</onclick>
 						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31318])</onclick>
@@ -460,39 +441,40 @@
 						<onclick>Skin.ToggleSetting(DisableExtendedInfo)</onclick>
 						<selected>Skin.HasSetting(DisableExtendedInfo)</selected>
 					</control>
-					<control type="button" id="906" description="Enable ratings">
+					<control type="button" id="906" description="Manage info dialog list">
+						<label>$LOCALIZE[31354]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>ActivateWindow(1119)</onclick>
+						<enable>!Skin.HasSetting(DisableExtendedInfo)</enable>
+					</control>
+					<control type="button" id="907" description="Enable ratings">
 						<label>$LOCALIZE[31339]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>ActivateWindow(1118)</onclick>
 					</control>
-					<control type="radiobutton" id="907" description="Enable autoscroll for plot and title">
+					<control type="radiobutton" id="908" description="Enable autoscroll for plot and title">
 						<label>$LOCALIZE[20189]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 						<selected>Skin.HasSetting(autoscroll)</selected>
 					</control>
-					<control type="radiobutton" id="908" description="Show music posters instead of thumb">
+					<control type="radiobutton" id="909" description="Show music posters instead of thumb">
 						<label>$LOCALIZE[31168]</label>
 						<include>DefaultSettingButton</include>
 						<onclick>Skin.ToggleSetting(show_musicvideoposter)</onclick>
 						<selected>Skin.HasSetting(show_musicvideoposter)</selected>
 					</control>
-					<control type="button" id="909" description="Switch rating icons colour">
+					<control type="button" id="910" description="Switch rating icons colour">
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31293]</label>
 						<label2>$INFO[Skin.String(icons.label)]</label2>
-
 						<onclick>SetProperty(Context.1.Label,$LOCALIZE[31295])</onclick>
-						<onclick>SetProperty(Context.1.BuiltIn,
-                                            Skin.SetString(Icons, colorful) ||
-                                            Skin.SetString(icons.label, $LOCALIZE[31295]))</onclick>
+						<onclick>SetProperty(Context.1.BuiltIn, Skin.SetString(Icons, colorful) || Skin.SetString(icons.label, $LOCALIZE[31295]))</onclick>
 						<onclick>SetProperty(Context.2.Label,$LOCALIZE[31294])</onclick>
-						<onclick>SetProperty(Context.2.BuiltIn,
-                                            Skin.SetString(Icons, monochrome) ||
-                                            Skin.SetString(icons.label, $LOCALIZE[31294]))</onclick>
+						<onclick>SetProperty(Context.2.BuiltIn, Skin.SetString(Icons, monochrome) || Skin.SetString(icons.label, $LOCALIZE[31294]))</onclick>
 						<onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
 					</control>
-					<control type="radiobutton" id="910" description="Landscape art">
+					<control type="radiobutton" id="911" description="Landscape art">
 						<label>$LOCALIZE[31351]</label>
 						<include>DefaultSettingButton</include>
 						<selected>Skin.HasSetting(LandscapeArt)</selected>
@@ -531,7 +513,6 @@
 						<include>DefaultSettingButton</include>
 						<label>$LOCALIZE[31283]</label>
 						<label2>$INFO[Skin.String(OSD_Timeout),,]</label2>
-
 						<onclick>SetProperty(Dialog.1.Label,$LOCALIZE[31284])</onclick>
 						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(OSD_Timeout))</onclick>
 						<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31285])</onclick>
@@ -634,7 +615,7 @@
 					</control>
 					<control type="radiobutton" id="1204">
 						<label>script.skinshortcuts</label>
-						<label2>$INFO[System.AddonVersion(script.skinshortcuts)]               </label2>
+						<label2>$INFO[System.AddonVersion(script.skinshortcuts)] </label2>
 						<onclick>Addon.OpenSettings(script.skinshortcuts)</onclick>
 						<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 						<selected>System.HasAddon(script.skinshortcuts)</selected>
@@ -642,7 +623,7 @@
 					</control>
 					<control type="radiobutton" id="1205">
 						<label>script.embuary.info</label>
-						<label2>$INFO[System.AddonVersion(script.embuary.info)]               </label2>
+						<label2>$INFO[System.AddonVersion(script.embuary.info)] </label2>
 						<onclick>Addon.OpenSettings(script.embuary.info)</onclick>
 						<onclick condition="!System.HasAddon(script.embuary.info)">InstallAddon(script.embuary.info)</onclick>
 						<selected>System.HasAddon(script.embuary.info)</selected>
@@ -650,7 +631,7 @@
 					</control>
 					<control type="radiobutton" id="1206">
 						<label>plugin.video.themoviedb.helper</label>
-						<label2>$INFO[System.AddonVersion(plugin.video.themoviedb.helper)]               </label2>
+						<label2>$INFO[System.AddonVersion(plugin.video.themoviedb.helper)] </label2>
 						<onclick>Addon.OpenSettings(plugin.video.themoviedb.helper)</onclick>
 						<onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">InstallAddon(plugin.video.themoviedb.helper)</onclick>
 						<selected>System.HasAddon(plugin.video.themoviedb.helper)</selected>
@@ -658,7 +639,7 @@
 					</control>
 					<control type="radiobutton" id="1207">
 						<label>script.embuary.helper</label>
-						<label2>$INFO[System.AddonVersion(script.embuary.helper)]               </label2>
+						<label2>$INFO[System.AddonVersion(script.embuary.helper)] </label2>
 						<onclick>Addon.OpenSettings(script.embuary.helper)</onclick>
 						<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
 						<selected>System.HasAddon(script.embuary.helper)</selected>
@@ -666,7 +647,7 @@
 					</control>
 					<control type="radiobutton" id="1208">
 						<label>resource.images.studios.white</label>
-						<label2>$INFO[System.AddonVersion(resource.images.studios.white)]               </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.studios.white)] </label2>
 						<onclick>Addon.OpenSettings(resource.images.studios.white)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
 						<selected>System.HasAddon(resource.images.studios.white)</selected>
@@ -674,7 +655,7 @@
 					</control>
 					<control type="radiobutton" id="1209">
 						<label>resource.images.studios.coloured</label>
-						<label2>$INFO[System.AddonVersion(resource.images.studios.coloured)]               </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.studios.coloured)] </label2>
 						<onclick>Addon.OpenSettings(resource.images.studios.coloured)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.studios.coloured)">InstallAddon(resource.images.studios.coloured)</onclick>
 						<selected>System.HasAddon(resource.images.studios.coloured)</selected>
@@ -682,7 +663,7 @@
 					</control>
 					<control type="radiobutton" id="1210">
 						<label>resource.images.weathericons.white</label>
-						<label2>$INFO[System.AddonVersion(resource.images.weathericons.white)]               </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.weathericons.white)] </label2>
 						<onclick>Addon.OpenSettings(resource.images.weathericons.white)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.weathericons.white)">InstallAddon(resource.images.weathericons.white)</onclick>
 						<selected>System.HasAddon(resource.images.weathericons.white)</selected>
@@ -690,7 +671,7 @@
 					</control>
 					<control type="radiobutton" id="1211">
 						<label>resource.images.moviegenreicons.transparent</label>
-						<label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)]               </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)] </label2>
 						<onclick>Addon.OpenSettings(resource.images.moviegenreicons.transparent)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.moviegenreicons.transparent)">InstallAddon(resource.images.moviegenreicons.transparent)</onclick>
 						<selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
@@ -698,7 +679,7 @@
 					</control>
 					<control type="radiobutton" id="1212">
 						<label>resource.images.moviecountryicons.maps</label>
-						<label2>$INFO[System.AddonVersion(resource.images.moviecountryicons.maps)]               </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.moviecountryicons.maps)] </label2>
 						<onclick>Addon.OpenSettings(resource.images.moviecountryicons.maps)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.moviecountryicons.maps)">InstallAddon(resource.images.moviecountryicons.maps)</onclick>
 						<selected>System.HasAddon(resource.images.moviecountryicons.maps)</selected>

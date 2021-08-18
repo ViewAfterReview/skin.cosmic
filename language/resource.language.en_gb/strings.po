@@ -1715,3 +1715,8 @@ msgstr ""
 msgctxt "#31353"
 msgid "Enable colored background"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31354"
+msgid "Manage Info Dialog lists"
+msgstr ""
