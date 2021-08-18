@@ -1146,18 +1146,21 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="$VAR[ColorGradient]">special://skin/extras/backgrounds/primary.jpg</texture>
-		</control>
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="$VAR[ColorHighlight]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
-		</control>
+		<definition>
+			<control type="image">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[ColorGradient]">special://skin/extras/backgrounds/primary.jpg</texture>
+			</control>
+			<control type="image">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[ColorHighlight]" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
+			</control>
+			<visible>Skin.HasSetting(EnableColoredBackground)</visible>
+		</definition>
 	</include>
 	<include name="DefaultBackground">
 		<definition>
