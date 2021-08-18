@@ -153,7 +153,7 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR Highlight],[/COLOR]]</label>
+									<label>[COLOR $VAR[ColorHighlight]]$INFO[ListItem.Label][/COLOR]</label>
 								</control>
 								<control type="label">
 									<left>10</left>
@@ -178,7 +178,7 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR Highlight],[/COLOR]]</label>
+									<label>[COLOR $VAR[ColorHighlight]]$INFO[ListItem.Label][/COLOR]</label>
 									<scroll>false</scroll>
 								</control>
 								<control type="label">

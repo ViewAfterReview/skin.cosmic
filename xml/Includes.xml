@@ -145,7 +145,7 @@
 		</control>
 	</include>
 	<include name="InfoList">
-		<param name="item_label">$INFO[ListItem.Year,[COLOR Highlight],[/COLOR]  -  ]$INFO[ListItem.Label]</param>
+		<param name="item_label">[COLOR $VAR[ColorHighlight]]$INFO[ListItem.Year][/COLOR]  -  $INFO[ListItem.Label]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
 		<param name="item_height">40</param>
 		<param name="bottom">100</param>
