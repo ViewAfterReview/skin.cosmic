@@ -93,7 +93,8 @@
 	<include name="DefaultSettingButton">
 		<param name="height">80</param>
 		<param name="textoffsetx">40</param>
-		<param name="textwidth"></param>
+		<param name="textwidth">
+		</param>
 		<definition>
 			<textoffsetx>$PARAM[textoffsetx]</textoffsetx>
 			<top>0</top>
@@ -152,7 +153,8 @@
 		<param name="height">70</param>
 		<param name="wrapmultiline">false</param>
 		<param name="font">font23_narrow</param>
-		<param name="onclick"></param>
+		<param name="onclick">
+		</param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="button" id="$PARAM[id]">
@@ -186,7 +188,6 @@
 		<aligny>top</aligny>
 		<font>font45</font>
 	</include> -->
-
 	<!-- Keyboard and Numeric Keys -->
 	<include name="KeyboardButton">
 		<width>85</width>
@@ -233,7 +234,6 @@
 				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
 				<param name="texture" value="common/button-dialog.png" />
 			</include>
-
 			<include content="ButtonType_Texture" condition="Skin.HasSetting(EnableMonochromeHighlight) + $PARAM[texture]">
 				<param name="colordiffuse" value="$PARAM[colordiffuse]" />
 				<param name="texture" value="common/box.png" />
@@ -256,7 +256,6 @@
 			</include>
 		</definition>
 	</include>
-
 	<include name="ButtonType_Texture">
 		<texture colordiffuse="$PARAM[colordiffuse]" border="5">$PARAM[texture]</texture>
 	</include>
@@ -272,7 +271,6 @@
 	<include name="ButtonType_AltTextureNoFocus">
 		<alttexturenofocus colordiffuse="$PARAM[colordiffuse]" border="5">$PARAM[texture]</alttexturenofocus>
 	</include>
-
 	<include name="PlaylistWindowButton">
 		<param name="width">100%</param>
 		<definition>
@@ -366,7 +364,6 @@
 			<textureradioondisabled colordiffuse="dialog_fg_30">$PARAM[icon]</textureradioondisabled>
 		</definition>
 	</include>
-
 	<include name="InfoButtonLeft">
 		<control type="group">
 			<visible>$PARAM[visible]</visible>
@@ -382,7 +379,6 @@
 			</control>
 		</control>
 	</include>
-
 	<include name="InfoButton">
 		<param name="visible" default="true" />
 		<param name="control-type" default="button" />
@@ -419,8 +415,8 @@
 				<height>100</height>
 				<texturenofocus border="0,50,50,50" flipx="true" colordiffuse="main_fg_12">common/button-view-nf.png</texturenofocus>
 				<texturefocus border="0,50,50,50" flipx="true" colordiffuse="selected">common/button-view-fo.png</texturefocus>
-				<font>font13</font>
-				<label>$PARAM[label][COLOR=00ffffff]------[/COLOR]</label>
+				<font>font10</font>
+				<label>[UPPERCASE]$PARAM[label][COLOR=00ffffff]------[/COLOR][/UPPERCASE]</label>
 				<align>left</align>
 				<textoffsetx>10</textoffsetx>
 				<textcolor>main_fg_70</textcolor>
@@ -432,7 +428,6 @@
 			</control>
 		</definition>
 	</include>
-
 	<include name="InfoDialogButton">
 		<param name="width">264</param>
 		<param name="onclick_1_condition">true</param>
