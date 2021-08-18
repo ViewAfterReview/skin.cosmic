@@ -6,7 +6,7 @@
                 <param name="title" value="$INFO[ListItem.Title]" />
                 <param name="plot" value="$VAR[PlotTextBoxVar]" />
             </include>
-            <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
+            <visible>!$EXP[infodialog_active]</visible>
         </control>
         <control type="group">
             <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>

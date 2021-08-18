@@ -35,7 +35,7 @@
                 <param name="info_line_top" value="180" />
                 <param name="plot_top" value="300" />
             </include>
-            <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
+            <visible>!$EXP[infodialog_active]</visible>
         </control>
         <control type="group" id="2999">
             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
