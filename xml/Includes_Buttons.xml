@@ -366,6 +366,73 @@
 			<textureradioondisabled colordiffuse="dialog_fg_30">$PARAM[icon]</textureradioondisabled>
 		</definition>
 	</include>
+
+	<include name="InfoButtonLeft">
+		<control type="group">
+			<visible>$PARAM[visible]</visible>
+			<control type="image">
+				<texture colordiffuse="$PARAM[colordiffuse-texture]" border="50,50,0,50">$PARAM[texture]</texture>
+			</control>
+			<control type="image">
+				<left>32</left>
+				<centertop>50%</centertop>
+				<width>60</width>
+				<height>60</height>
+				<texture colordiffuse="$PARAM[colordiffuse-icon]">$PARAM[icon]</texture>
+			</control>
+		</control>
+	</include>
+
+	<include name="InfoButton">
+		<param name="visible" default="true" />
+		<param name="control-type" default="button" />
+		<param name="width" default="auto" />
+		<param name="focused" default="false" />
+		<param name="onclick_1_condition">true</param>
+		<param name="onclick_2_condition">true</param>
+		<param name="onclick_3_condition">true</param>
+		<definition>
+			<control type="group" id="$PARAM[groupid]">
+				<left>0</left>
+				<width>100</width>
+				<height>100</height>
+				<visible>$PARAM[visible]</visible>
+				<include content="InfoButtonLeft">
+					<param name="visible" value="Control.HasFocus($PARAM[id]) | $PARAM[focused]" />
+					<param name="texture" value="common/button-view-fo.png" />
+					<param name="icon" value="$PARAM[icon]" />
+					<param name="colordiffuse-icon" value="panel_bg" />
+					<param name="colordiffuse-texture" value="selected" />
+				</include>
+				<include content="InfoButtonLeft">
+					<param name="visible" value="![Control.HasFocus($PARAM[id]) | $PARAM[focused]]" />
+					<param name="texture" value="common/button-view-nf.png" />
+					<param name="icon" value="$PARAM[icon]" />
+					<param name="colordiffuse-icon" value="main_fg_70" />
+					<param name="colordiffuse-texture" value="main_fg_12" />
+				</include>
+			</control>
+			<control type="$PARAM[control-type]" id="$PARAM[id]">
+				<left>-24</left>
+				<width>$PARAM[width]</width>
+				<visible>$PARAM[visible]</visible>
+				<height>100</height>
+				<texturenofocus border="0,50,50,50" flipx="true" colordiffuse="main_fg_12">common/button-view-nf.png</texturenofocus>
+				<texturefocus border="0,50,50,50" flipx="true" colordiffuse="selected">common/button-view-fo.png</texturefocus>
+				<font>font13</font>
+				<label>$PARAM[label][COLOR=00ffffff]------[/COLOR]</label>
+				<align>left</align>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>main_fg_70</textcolor>
+				<focusedcolor>panel_bg</focusedcolor>
+				<onclick condition="$PARAM[onclick_1_condition]">$PARAM[onclick_1]</onclick>
+				<onclick condition="$PARAM[onclick_2_condition]">$PARAM[onclick_2]</onclick>
+				<onclick condition="$PARAM[onclick_3_condition]">$PARAM[onclick_3]</onclick>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
 	<include name="InfoDialogButton">
 		<param name="width">264</param>
 		<param name="onclick_1_condition">true</param>

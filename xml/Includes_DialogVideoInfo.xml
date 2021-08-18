@@ -83,18 +83,23 @@
                     <height>142</height>
                     <ondown>100</ondown>
                     <orientation>horizontal</orientation>
-                    <include content="InfoDialogButton">
+                    <include content="InfoButton">
                         <param name="id" value="8" />
+                        <param name="groupid" value="8008" />
                         <param name="icon" value="special://skin/extras/icons/play3.png" />
                         <param name="label" value="$LOCALIZE[208]" />
+                        <param name="visible" value="Control.IsVisible(8)" />
                     </include>
-                    <include content="InfoDialogButton">
+                    <include content="InfoButton">
                         <param name="id" value="11" />
+                        <param name="groupid" value="8011" />
                         <param name="icon" value="special://skin/extras/icons/film.png" />
                         <param name="label" value="$LOCALIZE[20410]" />
+                        <param name="visible" value="Control.IsVisible(11)" />
                     </include>
-                    <include content="InfoDialogButton">
+                    <include content="InfoButton">
                         <param name="id" value="8897" />
+                        <param name="groupid" value="8097" />
                         <param name="icon" value="special://skin/extras/icons/watchlist.png" />
                         <param name="label" value="$LOCALIZE[31317]" />
                         <!-- <param name="visible" value="[!String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(window(home).property(TMDbHelper.listitem.tmdb_id))] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.TraktIsAuth))" /> -->
@@ -104,12 +109,15 @@
 
                         <param name="onclick_2_condition" value="String.IsEmpty(ListItem.Property(tmdb_id))" />
                         <param name="onclick_2" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(TMDbHelper.listitem.tmdb_id)],$VAR[Info_Param_Type],cache_refresh)" />
+                        <param name="visible" value="Control.IsVisible(8897)" />
                     </include>
-                    <include content="InfoDialogButton">
+                    <include content="InfoButton">
                         <param name="id" value="8898" />
+                        <param name="groupid" value="8098" />
                         <param name="icon" value="special://skin/extras/icons/settings.png" />
                         <param name="label" value="$LOCALIZE[31312]" />
                         <param name="onclick_1" value="Control.SetFocus(9000,1,absolute)" />
+                        <param name="visible" value="Control.IsVisible(8898)" />
                     </include>
                 </control>
 
