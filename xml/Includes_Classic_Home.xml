@@ -248,7 +248,7 @@
                         <include>skinshortcuts-mainmenu</include>
                     </content>
                 </control>
-                <include>skinshortcuts-template-submenuClassic</include>
+                <include>skinshortcuts-template-submenu</include>
             </control>
         </control>
     </include>

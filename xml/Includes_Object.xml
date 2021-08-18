@@ -1,169 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Object_Submenu_Content">
-        <itemlayout height="95">
-            <control type="group">
-                <control type="image">
-                    <top>126</top>
-                    <width>95</width>
-                    <height>95</height>
-                    <texture colordiffuse="dialog_fg_70">$INFO[ListItem.Art(thumb)]</texture>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                </control>
-                <control type="label">
-                    <left>95</left>
-                    <top>126</top>
-                    <width>360</width>
-                    <height>95</height>
-                    <label>$PARAM[label]</label>
-                    <font>font37</font>
-                    <shadowcolor>text_shadow</shadowcolor>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                </control>
-                <visible>Control.HasFocus(9001)</visible>
-            </control>
-        </itemlayout>
-        <focusedlayout height="95">
-            <control type="group">
-                <depth>DepthContentPopout</depth>
-                <control type="image">
-                    <top>126</top>
-                    <width>95</width>
-                    <height>95</height>
-                    <texture colordiffuse="dialog_fg_70">$INFO[ListItem.Art(thumb)]</texture>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                </control>
-                <control type="label">
-                    <left>95</left>
-                    <top>126</top>
-                    <width>360</width>
-                    <height>95</height>
-                    <label>$PARAM[label]</label>
-                    <font>font45_title</font>
-                    <shadowcolor>text_shadow</shadowcolor>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                </control>
-                <visible>Control.HasFocus(9001)</visible>
-            </control>
-        </focusedlayout>
-    </include>
-    <include name="Object_SubmenuClassic_Content">
-        <focusedlayout height="95">
-            <control type="group">
-                <animation effect="slide" start="0,0" end="0,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="0,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
-                <visible>Control.HasFocus(9001)</visible>
+        <control type="list" id="9001">
+            <nested />
+            <include content="submenuVerticalParams" condition="Skin.HasSetting(Vertical_Main)" />
+            <include content="submenuClassicParams" condition="Skin.HasSetting(Classic_Main)" />
+            <include content="submenuHorizontalParams" condition="Skin.HasSetting(Horizontal_Main)" />
+            <focusedlayout width="384" height="95">
                 <control type="group">
-                    <control type="label">
-                        <top>0</top>
-                        <height>95</height>
-                        <width>280</width>
-                        <aligny>center</aligny>
-                        <align>right</align>
-                        <font>font45_title</font>
-                        <textcolor>dialog_fg_100</textcolor>
-                        <label>$PARAM[label]</label>
-                        <scroll>true</scroll>
-                        <shadowcolor>text_shadow</shadowcolor>
+                    <visible>Control.HasFocus(9001)</visible>
+                    <control type="group">
+                        <control type="image">
+                            <left>0</left>
+                            <top>995</top>
+                            <width>384</width>
+                            <height>95</height>
+                            <texture colordiffuse="37FFFFFF">common/white.png</texture>
+                            <visible>Skin.HasSetting(Horizontal_Main)</visible>
+                        </control>
+                        <control type="label">
+                            <include content="submenuVerticalLabelLayout" condition="Skin.HasSetting(Vertical_Main)" />
+                            <include content="submenuClassicLabelLayout" condition="Skin.HasSetting(Classic_Main)" />
+                            <include content="submenuHorizontalLabelLayout" condition="Skin.HasSetting(Horizontal_Main)" />
+                            <textcolor>dialog_fg_100</textcolor>
+                            <label>$PARAM[label]</label>
+                            <scroll>true</scroll>
+                            <shadowcolor>text_shadow</shadowcolor>
+                        </control>
+                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                     </control>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+                    <control type="group">
+                        <control type="image">
+                            <include content="submenuVerticalIconLayout" condition="Skin.HasSetting(Vertical_Main)" />
+                            <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main)" />
+                            <texture colordiffuse="dialog_fg_100">$PARAM[icon]</texture>
+                        </control>
+                        <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
+                    </control>
                 </control>
+            </focusedlayout>
+            <itemlayout width="384" height="95">
                 <control type="group">
-                    <control type="image">
-                        <left>288</left>
-                        <top>1</top>
-                        <align>right</align>
-                        <width>95</width>
-                        <height>95</height>
-                        <texture colordiffuse="dialog_fg_100">$PARAM[icon]</texture>
+                    <visible>Control.HasFocus(9001)</visible>
+                    <control type="group">
+                        <control type="image">
+                            <left>0</left>
+                            <top>995</top>
+                            <width>384</width>
+                            <height>95</height>
+                            <texture colordiffuse="44FFFFFF">common/white.png</texture>
+                            <visible>Skin.HasSetting(Horizontal_Main)</visible>
+                        </control>
+                        <control type="label">
+                            <label>$PARAM[label]</label>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <include content="submenuFont" condition="Skin.HasSetting(Vertical_Main) | Skin.HasSetting(Classic_Main)" />
+                            <include content="submenuVerticalLabelLayout" condition="Skin.HasSetting(Vertical_Main)" />
+                            <include content="submenuClassicLabelLayout" condition="Skin.HasSetting(Classic_Main)" />
+                            <include content="submenuHorizontalLabelLayout" condition="Skin.HasSetting(Horizontal_Main)" />
+                        </control>
+                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                     </control>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                </control>
-            </control>
-        </focusedlayout>
-        <itemlayout height="95">
-            <control type="group">
-                <animation effect="slide" start="0,0" end="0,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="0,0" time="0" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
-                <visible>Control.HasFocus(9001)</visible>
-                <control type="group">
-                    <control type="label">
-                        <top>0</top>
-                        <height>95</height>
-                        <width>280</width>
-                        <aligny>center</aligny>
-                        <align>right</align>
-                        <font>font37</font>
-                        <label>$PARAM[label]</label>
-                        <shadowcolor>text_shadow</shadowcolor>
+                    <control type="group">
+                        <control type="image">
+                            <include content="submenuVerticalIconLayout" condition="Skin.HasSetting(Vertical_Main)" />
+                            <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main)" />
+                            <texture colordiffuse="44FFFFFF">$PARAM[icon]</texture>
+                        </control>
+                        <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
                     </control>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                 </control>
-                <control type="group">
-                    <control type="image">
-                        <left>288</left>
-                        <top>1</top>
-                        <align>right</align>
-                        <width>95</width>
-                        <height>95</height>
-                        <texture colordiffuse="44FFFFFF">$PARAM[icon]</texture>
-                    </control>
-                    <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                </control>
-            </control>
-        </itemlayout>
-    </include>
-    <include name="Object_SubmenuHorizontal_Content">
-        <itemlayout width="384" height="95">
-            <control type="group">
-                <control type="image">
-                    <left>0</left>
-                    <top>995</top>
-                    <width>384</width>
-                    <height>95</height>
-                    <texture colordiffuse="44FFFFFF">common/white.png</texture>
-                </control>
-                <control type="textbox">
-                    <left>0</left>
-                    <top>995</top>
-                    <width>384</width>
-                    <height>95</height>
-                    <label>$PARAM[label]</label>
-                    <font>font27</font>
-                    <shadowcolor>text_shadow</shadowcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                </control>
-                <visible>true</visible>
-            </control>
-        </itemlayout>
-        <focusedlayout width="384" height="95">
-            <control type="group">
-                <control type="image">
-                    <left>0</left>
-                    <top>995</top>
-                    <width>384</width>
-                    <height>95</height>
-                    <texture colordiffuse="37FFFFFF">common/white.png</texture>
-                </control>
-                <control type="textbox">
-                    <left>0</left>
-                    <top>995</top>
-                    <width>384</width>
-                    <height>95</height>
-                    <label>$PARAM[label]</label>
-                    <font>font27</font>
-                    <shadowcolor>text_shadow</shadowcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                </control>
-                <visible>true</visible>
-            </control>
-        </focusedlayout>
+            </itemlayout>
+        </control>
     </include>
     <include name="Object_Widget_Label">
         <param name="top" default="0" />

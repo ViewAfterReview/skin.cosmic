@@ -2340,4 +2340,100 @@
 			<param name="top" value="0" />
 		</include>
 	</include>
+
+	<include name="submenuFont">
+		<font>font37</font>
+	</include>
+
+	<include name="submenuVerticalParams">
+		<definition>
+			<left>92</left>
+			<top>145</top>
+			<right>0</right>
+			<height>1080</height>
+			<onleft>9000</onleft>
+			<onright>3000</onright>
+			<orientation>vertical</orientation>
+		</definition>
+	</include>
+
+	<include name="submenuVerticalLabelLayout">
+		<definition>
+			<top>140</top>
+			<left>104</left>
+			<height>95</height>
+			<width>280</width>
+			<aligny>center</aligny>
+			<align>left</align>
+			<font>font45_title</font>
+		</definition>
+	</include>
+
+	<include name="submenuVerticalIconLayout">
+		<definition>
+			<top>141</top>
+			<align>left</align>
+			<width>95</width>
+			<height>95</height>
+			<font>font45_title</font>
+		</definition>
+	</include>
+
+	<include name="submenuClassicParams">
+		<definition>
+			<top>180</top>
+			<height>1080</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<orientation>vertical</orientation>
+		</definition>
+	</include>
+
+	<include name="submenuClassicLabelLayout">
+		<definition>
+			<top>0</top>
+			<height>95</height>
+			<width>280</width>
+			<aligny>center</aligny>
+			<align>right</align>
+			<font>font45_title</font>
+		</definition>
+	</include>
+
+	<include name="submenuClassicIconLayout">
+		<definition>
+			<left>288</left>
+			<top>1</top>
+			<align>right</align>
+			<width>95</width>
+			<height>95</height>
+		</definition>
+	</include>
+
+	<include name="submenuHorizontalParams">
+		<definition>
+			<left>0</left>
+			<top>0</top>
+			<right>0</right>
+			<bottom>0</bottom>
+			<height>1080</height>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
+			<orientation>horizontal</orientation>
+		</definition>
+	</include>
+
+	<include name="submenuHorizontalLabelLayout">
+		<definition>
+			<left>0</left>
+			<top>995</top>
+			<width>384</width>
+			<height>95</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font27</font>
+		</definition>
+	</include>
 </includes>
