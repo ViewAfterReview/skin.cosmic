@@ -117,7 +117,7 @@
 							<top>16</top>
 							<width>393</width>
 							<height>228</height>
-							<texture border="8" colordiffuse="Highlight">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[ColorHighlight]">buttons/thumbnail_focused.png</texture>
 						</control>
 					</focusedlayout>
 				</control>

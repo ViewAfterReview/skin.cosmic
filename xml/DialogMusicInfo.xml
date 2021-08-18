@@ -210,7 +210,7 @@
 							<top>-10</top>
 							<width>595</width>
 							<height>100</height>
-							<texture border="21" colordiffuse="Highlight">buttons/button-fo.png</texture>
+							<texture border="21" colordiffuse="$VAR[ColorHighlight]">buttons/button-fo.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -250,7 +250,7 @@
 								<top>-10</top>
 								<width>595</width>
 								<height>100</height>
-								<texture border="21" colordiffuse="Highlight">buttons/button-fo.png</texture>
+								<texture border="21" colordiffuse="$VAR[ColorHighlight]">buttons/button-fo.png</texture>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -342,7 +342,7 @@
 								<top>6</top>
 								<width>218</width>
 								<height>280</height>
-								<texture border="8" colordiffuse="Highlight">buttons/thumbnail_focused.png</texture>
+								<texture border="8" colordiffuse="$VAR[ColorHighlight]">buttons/thumbnail_focused.png</texture>
 								<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
 							</control>
 						</control>

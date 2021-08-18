@@ -354,8 +354,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-					<textureslidernib colordiffuse="Highlight">osd/progress/nub_bar.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="Highlight">colors/white.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="$VAR[ColorHighlight]">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[ColorHighlight]">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled + !Player.ChannelPreviewActive</visible>
 				</control>
 			</control>

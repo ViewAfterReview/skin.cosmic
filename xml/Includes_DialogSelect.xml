@@ -244,7 +244,7 @@
 						<control type="image">
 							<width>444</width>
 							<height>250</height>
-							<texture border="8" colordiffuse="Highlight">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[ColorHighlight]">buttons/thumbnail_focused.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
 					</control>
@@ -350,7 +350,7 @@
 						<control type="image">
 							<width>444</width>
 							<height>250</height>
-							<texture border="8" colordiffuse="Highlight">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[ColorHighlight]">buttons/thumbnail_focused.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
 					</control>

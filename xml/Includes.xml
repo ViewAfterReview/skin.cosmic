@@ -131,7 +131,7 @@
 			<width>44</width>
 			<height>44</height>
 			<aspectratio>keep</aspectratio>
-			<texture colordiffuse="Highlight">overlays/badge.png</texture>
+			<texture colordiffuse="$VAR[ColorHighlight]">overlays/badge.png</texture>
 		</control>
 		<control type="label">
 			<left>3</left>
@@ -712,8 +712,8 @@
 				<top>$PARAM[down_posy]</top>
 				<width>48</width>
 				<height>24</height>
-				<texturefocus colordiffuse="Highlight">overlays/arrowdown.png</texturefocus>
-				<texturenofocus colordiffuse="Highlight">overlays/arrowdown.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]">overlays/arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[ColorHighlight]">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -727,8 +727,8 @@
 				<top>$PARAM[up_posy]</top>
 				<width>48</width>
 				<height>24</height>
-				<texturefocus colordiffuse="Highlight" flipy="true">overlays/arrowdown.png</texturefocus>
-				<texturenofocus colordiffuse="Highlight" flipy="true">overlays/arrowdown.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ColorHighlight]" flipy="true">overlays/arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[ColorHighlight]" flipy="true">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -750,7 +750,7 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texture flipx="true" colordiffuse="Highlight">overlays/arrowright.png</texture>
+				<texture flipx="true" colordiffuse="$VAR[ColorHighlight]">overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -762,7 +762,7 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texture colordiffuse="Highlight">overlays/arrowright.png</texture>
+				<texture colordiffuse="$VAR[ColorHighlight]">overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -966,7 +966,7 @@
 								<width>32</width>
 								<height>32</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Highlight">$VAR[NowPlayingIconVar]</texture>
+								<texture colordiffuse="$VAR[ColorHighlight]">$VAR[NowPlayingIconVar]</texture>
 							</control>
 							<control type="label">
 								<label>$INFO[Player.Title]</label>
@@ -1279,7 +1279,7 @@
 						<width>36</width>
 						<height>36</height>
 						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="Control.IsVisible(51) | Control.IsVisible(53)">Conditional</animation>
-						<texturefocus colordiffuse="Highlight">frame/menu-nofo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorHighlight]">frame/menu-nofo.png</texturefocus>
 						<texturenofocus colordiffuse="FFCCCCCC">frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
@@ -1290,7 +1290,7 @@
 						<left>12</left>
 						<width>36</width>
 						<height>36</height>
-						<texturefocus colordiffuse="Highlight">icons/menu.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[ColorHighlight]">icons/menu.png</texturefocus>
 						<texturenofocus colordiffuse="FFCCCCCC">icons/menu.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
@@ -1336,7 +1336,7 @@
 					<width>54</width>
 					<height>44</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="Highlight">frame/item-count.png</texture>
+					<texture colordiffuse="$VAR[ColorHighlight]">frame/item-count.png</texture>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -1350,7 +1350,7 @@
 					<width>54</width>
 					<height>44</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="Highlight">frame/item-count.png</texture>
+					<texture colordiffuse="$VAR[ColorHighlight]">frame/item-count.png</texture>
 				</control>
 				<control type="label">
 					<width>auto</width>
@@ -1396,7 +1396,7 @@
 				<height>15</height>
 				<info>Player.Progress</info>
 				<texturebg border="3" colordiffuse="80FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="Highlight">colors/white.png</midtexture>
+				<midtexture colordiffuse="$VAR[ColorHighlight]">colors/white.png</midtexture>
 			</control>
 			<control type="button" id="87">
 				<include>HiddenObject</include>
@@ -1415,7 +1415,7 @@
 				<height>25</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="Highlight">osd/progress/nub_leftright.png</textureslidernibfocus>
+				<textureslidernibfocus colordiffuse="$VAR[ColorHighlight]">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
 				<action>seek</action>
 				<visible>!Control.HasFocus(87) + Player.SeekEnabled</visible>
@@ -1426,8 +1426,8 @@
 				<width>$PARAM[width]</width>
 				<height>25</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib colordiffuse="Highlight">osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="Highlight">osd/progress/nub_leftright.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[ColorHighlight]">osd/progress/nub_leftright.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[ColorHighlight]">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
 				<action>seek</action>
 				<visible>Control.HasFocus(87) + Player.SeekEnabled</visible>
@@ -1493,7 +1493,7 @@
 					<height>120</height>
 					<label></label>
 					<onclick>ActivateWindow(1103)</onclick>
-					<texturefocus colordiffuse="Highlight">buttons/roundbutton-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorHighlight]">buttons/roundbutton-fo.png</texturefocus>
 					<texturenofocus />
 				</control>
 				<control type="image">
@@ -1523,7 +1523,7 @@
 			<onclick>Action(Back)</onclick>
 			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(home)">WindowClose</animation>
-			<texturefocus colordiffuse="Highlight">buttons/roundbutton-fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorHighlight]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
 			<radiowidth>60</radiowidth>
@@ -1544,7 +1544,7 @@
 			<aligny>center</aligny>
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>Action(FullScreen)</onclick>
-			<texturefocus colordiffuse="Highlight">buttons/roundbutton-fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorHighlight]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
 			<radiowidth>60</radiowidth>
@@ -1565,7 +1565,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<onfocus>Action(Back)</onfocus>
-			<texturefocus colordiffuse="Highlight">buttons/roundbutton-fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[ColorHighlight]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
 			<radiowidth>60</radiowidth>

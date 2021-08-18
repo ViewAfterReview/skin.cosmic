@@ -109,7 +109,7 @@
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="Highlight">$INFO[ListItem.Art(thumb)]</texture>
+							<texture colordiffuse="$VAR[ColorHighlight]">$INFO[ListItem.Art(thumb)]</texture>
 							<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
@@ -244,7 +244,7 @@
 					<label />
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus colordiffuse="Highlight">buttons/roundbutton-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorHighlight]">buttons/roundbutton-fo.png</texturefocus>
 					<texturenofocus />
 					<radioposx>39</radioposx>
 					<radioposy>0</radioposy>
@@ -266,7 +266,7 @@
 					<label />
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="30" colordiffuse="Highlight">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="30" colordiffuse="$VAR[ColorHighlight]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus />
 					<radioposx>35</radioposx>
 					<radioposy>0</radioposy>
@@ -290,7 +290,7 @@
 					<label />
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus colordiffuse="Highlight">buttons/roundbutton-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[ColorHighlight]">buttons/roundbutton-fo.png</texturefocus>
 					<texturenofocus />
 					<radioposx>40</radioposx>
 					<radioposy>0</radioposy>
