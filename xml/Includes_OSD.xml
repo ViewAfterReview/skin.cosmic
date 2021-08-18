@@ -143,7 +143,7 @@
                         <orientation>horizontal</orientation>
                         <onup>87</onup>
                         <ondown>noop</ondown>
-                        <onleft>70048</onleft>
+                        <onleft>70049</onleft>
                         <onright>600</onright>
                         <control type="radiobutton" id="600">
                             <include content="PVROSDButton">
@@ -310,6 +310,15 @@
                         </control>
                         <control type="radiobutton" id="70048">
                             <include content="PVROSDButton">
+                                <param name="texture" value="special://skin/extras/icons/sysinfo.png" />
+                            </include>
+                            <onclick>ActivateWindow(playerprocessinfo)</onclick>
+                            <visible>Window.IsVisible(videoosd)</visible>
+                            <visible>ControlGroup(201).HasFocus</visible>
+                            <include>OSD_Button_OnFocus</include>
+                        </control>
+                        <control type="radiobutton" id="70049">
+                            <include content="PVROSDButton">
                                 <param name="texture" value="osd/fullscreen/buttons/settings.png" />
                             </include>
                             <onclick>SetProperty(settingslist_content,osd,home)</onclick>
@@ -372,6 +381,14 @@
                     <ondown condition="Control.HasFocus(255)">13103</ondown>
                     <onleft>202</onleft>
                     <onright>600</onright>
+                    <control type="radiobutton" id="803">
+                        <include content="OSDButton">
+                            <param name="texture" value="special://skin/extras/icons/sysinfo.png" />
+                        </include>
+                        <onclick>ActivateWindow(playerprocessinfo)</onclick>
+                        <visible>!VideoPlayer.Content(livetv)</visible>
+                        <include>OSD_Button_OnFocus</include>
+                    </control>
                     <control type="radiobutton" id="804">
                         <include content="OSDButton">
                             <param name="texture" value="osd/fullscreen/buttons/home.png" />
