@@ -14,7 +14,7 @@
         </control>
         <control type="group">
             <visible>Container(9999).IsUpdating</visible>
-            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+            <visible>!$EXP[infodialog_active]</visible>
             <include>DialogBusy</include>
         </control>
     </controls>
