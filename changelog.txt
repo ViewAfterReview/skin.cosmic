@@ -1,3 +1,8 @@
+1.0.21
+    Fixed: Highlight colour in most cases
+    Added: Option to Enable/Disable colored background
+    Added: PlayerProcessInfo button
+    Fixed: Highlight colour on some labels
 1.0.20
     Fixed: Submenu logic
     Changed: InfoButton appearance
