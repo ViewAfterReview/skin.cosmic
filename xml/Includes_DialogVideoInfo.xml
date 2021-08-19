@@ -331,6 +331,20 @@
                     <param name="id" value="1058" />
                     <param name="groupid" value="10058" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
+                    <param name="altlabel" value="$LOCALIZE[31356]" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="label2" value="$INFO[ListItem.Label2]" />
+                    <param name="content" value="$VAR[Def_FromYear_List]" />
+                    <param name="target" value="videos" />
+                    <param name="limit" value="25" />
+                    <param name="itemwidth" value="270" />
+                    <param name="itemheight" value="407" />
+                    <param name="visible" value="Skin.HasSetting(InfoDialog.FromYear) + !String.IsEmpty(ListItem.Year)" />
+                </include>
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1059" />
+                    <param name="groupid" value="10059" />
+                    <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="$LOCALIZE[31255]" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="label2" value="$INFO[ListItem.Label2]" />
@@ -342,8 +356,8 @@
                     <param name="visible" value="Skin.HasSetting(InfoDialog.Genre) + !String.IsEmpty(ListItem.Genre)" />
                 </include>
                 <include content="InfoDialogWallContainer">
-                    <param name="id" value="1059" />
-                    <param name="groupid" value="10059" />
+                    <param name="id" value="1060" />
+                    <param name="groupid" value="10060" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="$LOCALIZE[31266]" />
                     <param name="label" value="$INFO[ListItem.Label]" />

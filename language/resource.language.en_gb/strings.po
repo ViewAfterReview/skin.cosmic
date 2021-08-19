@@ -1725,3 +1725,8 @@ msgstr ""
 msgctxt "#31355"
 msgid "Disable watched indicators"
 msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31356"
+msgid "From Year"
+msgstr ""
