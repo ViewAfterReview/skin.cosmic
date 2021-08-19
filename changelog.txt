@@ -1,3 +1,11 @@
+1.0.22
+    Fixed: Recently added tv shows indicator
+    Fixed: Recently added movies indicator
+    Fixed: Don't open DialogVideoInfo.xml after clicking on TV Show in widget
+    Fixed: Some improvements in DialogVideoInfo.xml
+    Added: Indicators for home widgets
+    Added: Option to manage info-dialog lists
+    Changed: Make label in InfoButtons uppercase
 1.0.21
     Fixed: Highlight colour in most cases
     Added: Option to Enable/Disable colored background
