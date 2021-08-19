@@ -184,4 +184,43 @@
         </include>
         <!-- <include>BottomBar</include> -->
     </include>
+    <include name="View_WatchedOverlay">
+        <param name="corner_top" default="8" />
+        <param name="corner_right" default="18" />
+        <param name="image_top" default="8" />
+        <param name="image_right" default="18" />
+        <param name="label_top" default="8" />
+        <param name="label_right" default="18" />
+        <definition>
+            <control type="group">
+                <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
+                <control type="image">
+                    <top>$PARAM[corner_top]</top>
+                    <right>$PARAM[corner_right]</right>
+                    <width>48</width>
+                    <height>48</height>
+                    <texture colordiffuse="ff000000" border="10">$VAR[Image_Overlay_Corner]</texture>
+                </control>
+                <control type="image">
+                    <top>$PARAM[image_top]</top>
+                    <right>$PARAM[image_right]</right>
+                    <width>24</width>
+                    <height>24</height>
+                    <texture colordiffuse="ffffffff">$VAR[Image_Overlay]</texture>
+                    <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | ![String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]</visible>
+                </control>
+                <control type="label">
+                    <top>$PARAM[label_top]</top>
+                    <right>$PARAM[label_right]</right>
+                    <width>28</width>
+                    <height>28</height>
+                    <font>font10</font>
+                    <align>center</align>
+                    <textcolor>ffededed</textcolor>
+                    <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                    <include>View_UnwatchedEpisodes_Visible</include>
+                </control>
+            </control>
+        </definition>
+    </include>
 </includes>

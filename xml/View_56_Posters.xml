@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
     <include name="View_56_Posters">
-
         <control type="group">
             <top>25</top>
             <visible>Control.IsVisible(56)</visible>
@@ -72,7 +71,6 @@
                     <scroll>true</scroll>
                     <label fallback="-">$INFO[Container(56).ListItem.Studio]</label>
                 </control>
-
                 <control type="label">
                     <top>480</top>
                     <left>695</left>
@@ -87,7 +85,6 @@
                     <scroll>true</scroll>
                     <label fallback="-">$INFO[Container(56).ListItem.Director]</label>
                 </control>
-
                 <control type="label">
                     <top>400</top>
                     <left>1245</left>
@@ -102,7 +99,6 @@
                     <scroll>true</scroll>
                     <label fallback="-">$INFO[Container(56).ListItem.Genre]</label>
                 </control>
-
                 <control type="label">
                     <top>480</top>
                     <left>1245</left>
@@ -126,7 +122,6 @@
                     <visible>Control.IsVisible(56)</visible>
                     <include>Visible_Right</include>
                     <include>OpenClose_Right</include>
-
                     <control type="fixedlist" id="56">
                         <top>466</top>
                         <left>630</left>
@@ -169,15 +164,15 @@
                                 </control>
                                 <include>View_56_Posters_Layout</include>
                                 <control type="image">
-                                    <top>4</top>
-                                    <left>228</left>
+                                    <top>10</top>
+                                    <right>32</right>
                                     <width>64</width>
                                     <height>64</height>
                                     <texture colordiffuse="main_bg_100">indicator/corner.png</texture>
                                 </control>
                                 <control type="image">
-                                    <top>9</top>
-                                    <left>256</left>
+                                    <top>12</top>
+                                    <right>32</right>
                                     <width>32</width>
                                     <height>32</height>
                                     <texture>$VAR[ListWatchedIconVar]</texture>
@@ -187,7 +182,6 @@
                     </control>
                 </control>
             </control>
-
             <control type="group">
                 <control type="image">
                     <top>-50</top>
@@ -198,7 +192,6 @@
                     <bordertexture border="21">overlays/shadow.png</bordertexture>
                     <bordersize>20</bordersize>
                 </control>
-
                 <control type="image">
                     <left>-1280</left>
                     <!-- <top>105</top> -->
@@ -209,6 +202,5 @@
                 </control>
             </control>
         </control>
-
     </include>
 </includes>

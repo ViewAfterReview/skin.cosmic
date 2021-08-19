@@ -45,7 +45,8 @@
 	<constant name="dialogbuttons_itemgap">-20</constant>
 	<constant name="list_y_offset">0</constant>
 	<constant name="list_item_height">80</constant>
-	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)</expression>
+	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo)
+		| Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
@@ -145,14 +146,15 @@
 		</control>
 	</include>
 	<include name="InfoList">
-		<param name="item_label">[COLOR $VAR[ColorHighlight]]$INFO[ListItem.Year][/COLOR]  -  $INFO[ListItem.Label]</param>
+		<param name="item_label">[COLOR $VAR[ColorHighlight]]$INFO[ListItem.Year][/COLOR] - $INFO[ListItem.Label]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
 		<param name="item_height">40</param>
 		<param name="bottom">100</param>
 		<param name="width">1152</param>
 		<param name="list_id">5000</param>
 		<param name="font">font13</param>
-		<param name="sortby"></param>
+		<param name="sortby">
+		</param>
 		<param name="sortorder">ascending</param>
 		<param name="visible">true</param>
 		<definition>
@@ -361,7 +363,8 @@
 		</definition>
 	</include>
 	<include name="MediaFlags">
-		<param name="infolabel_prefix"></param>
+		<param name="infolabel_prefix">
+		</param>
 		<param name="resolution_var">$VAR[ResolutionFlagVar]</param>
 		<definition>
 			<control type="grouplist">
@@ -470,8 +473,10 @@
 		</control>
 	</include>
 	<include name="FileManagerPanel">
-		<param name="width"></param>
-		<param name="right"></param>
+		<param name="width">
+		</param>
+		<param name="right">
+		</param>
 		<definition>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
@@ -885,7 +890,7 @@
 		</control>
 	</include>
 	<include name="TopBar">
-		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: ,  &#8226;  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
+		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: , &#8226; ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<param name="left" />
 		<param name="topbar_visible">true</param>
 		<definition>
@@ -1236,7 +1241,8 @@
 						<imagepath background="true">common/vignette-vert-main.png</imagepath>
 						<visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
 						<visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main)</visible>
-						<visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
+						<visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))
+						</visible>
 					</control>
 				</control>
 				<control type="multiimage">
@@ -1440,7 +1446,8 @@
 	<include name="ContentPanel">
 		<param name="width">500</param>
 		<param name="left">-40</param>
-		<param name="right"></param>
+		<param name="right">
+		</param>
 		<param name="top">-10%</param>
 		<param name="height">120%</param>
 		<param name="flipx">false</param>
@@ -1648,26 +1655,22 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 	<!-- Highlight Color -->
 	<variable name="ColorHighlight">
 		<value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
 		<value>Highlight</value>
 	</variable>
-
 	<!-- Gradient Color -->
 	<variable name="ColorGradient">
 		<value condition="!Skin.HasSetting(EnableMonochromeHighlight) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
 		<value condition="!Skin.HasSetting(EnableMonochromeHighlight)">Gradient</value>
 		<value>00ffffff</value>
 	</variable>
-
 	<variable name="Label_ColorValue">
 		<value condition="String.IsEqual(Window(Home).Property(colorpick),Highlight) + !String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
 		<value condition="String.IsEqual(Window(Home).Property(colorpick),Gradient) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
-
 	<include name="ProgressGradient">
 		<control type="progress" id="$PARAM[id]">
 			<nested />
@@ -1685,7 +1688,6 @@
 			</include>
 		</control>
 	</include>
-
 	<include name="ProgressColorFader">
 		<animation effect="fade" start="100" end="0" condition="Integer.IsEqual($PARAM[info],0)">Conditional</animation>
 		<animation effect="fade" start="100" end="1" condition="Integer.IsEqual($PARAM[info],1)">Conditional</animation>
@@ -1788,13 +1790,11 @@
 		<animation effect="fade" start="100" end="98" condition="Integer.IsEqual($PARAM[info],98)">Conditional</animation>
 		<animation effect="fade" start="100" end="99" condition="Integer.IsEqual($PARAM[info],99)">Conditional</animation>
 	</include>
-
 	<include name="ProgressColorFade">
 		<include content="ProgressColorFader">
 			<param name="info" value="Control.GetLabel($PARAM[id])" />
 		</include>
 	</include>
-
 	<include name="Dialog_ColorPicker_SwatchLabel">
 		<control type="label">
 			<nested />
@@ -1804,7 +1804,6 @@
 			<textcolor>dialog_fg_100</textcolor>
 		</control>
 	</include>
-
 	<include name="Dialog_ColorPicker_SwatchPreview">
 		<control type="group">
 			<width>86.67</width>
@@ -1861,7 +1860,6 @@
 			</control>
 		</control>
 	</include>
-
 	<!-- Selectbox -->
 	<include name="Selectbox_Bold">
 		<param name="pad_top" default="" />
@@ -1907,7 +1905,6 @@
 			</control>
 		</definition>
 	</include>
-
 	<include name="Selectbox_Thin">
 		<param name="pad_top" default="" />
 		<param name="pad_bottom" default="" />
@@ -1952,7 +1949,6 @@
 			</control>
 		</definition>
 	</include>
-
 	<include name="Selectbox">
 		<!-- posters -->
 		<include content="Selectbox_Bold" condition="String.IsEqual(Skin.String(HighlightSize),Bold)">
@@ -2006,7 +2002,6 @@
 			<param name="visible" value="$PARAM[visible_landscapes]" />
 		</include>
 	</include>
-
 	<include name="DialogBusy">
 		<control type="group">
 			<depth>DepthMax</depth>
@@ -2036,7 +2031,6 @@
 			</control>
 		</control>
 	</include>
-
 	<include name="MinimalDialogBusy">
 		<control type="group">
 			<depth>DepthMax</depth>
@@ -2066,7 +2060,6 @@
 			</control>
 		</control>
 	</include>
-
 	<!-- Small Busy Spinner -->
 	<include name="SmallBusySpinner">
 		<definition>
@@ -2093,11 +2086,30 @@
 			</control>
 		</definition>
 	</include>
-
 	<include name="View_Forced">
-		<visible>[Container.Content(games) + [String.IsEqual(Skin.String(Skin.ForcedView.games),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.games))]] | [Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies))]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets))]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes))]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors))]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists))]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums))]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs))]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons))]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres))]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.images))]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos))]] | [Container.Content() + [String.IsEqual(Skin.String(Skin.ForcedView.),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.))]] | [Container.Content(tags) + [String.IsEqual(Skin.String(Skin.ForcedView.tags),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.tags))]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.years))]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries))]] | [Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios))]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists))]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors))]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.files))]] | [Container.Content(mixed) + [String.IsEqual(Skin.String(Skin.ForcedView.mixed),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.mixed))]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.unknown))]] | [!Container.Content(games) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(actors) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(addons) + !Container.Content(genres) + !Container.Content(images) + !Container.Content(videos) + !Container.Content() + !Container.Content(tags) + !Container.Content(years) + !Container.Content(countries) + !Container.Content(studios) + !Container.Content(playlists) + !Container.Content(musicvideos) + !Container.Content(directors) + !Container.Content(files) + !Container.Content(mixed) + !Container.Content(unknown)] | Window.IsVisible(MyPlaylist.xml)</visible>
+		<visible>[Container.Content(games) + [String.IsEqual(Skin.String(Skin.ForcedView.games),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.games))]] | [Container.Content(movies) +
+			[String.IsEqual(Skin.String(Skin.ForcedView.movies),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies))]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$PARAM[string]) |
+			String.IsEmpty(Skin.String(Skin.ForcedView.sets))]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]] |
+			[Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]] | [Container.Content(episodes) +
+			[String.IsEqual(Skin.String(Skin.ForcedView.episodes),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes))]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$PARAM[string]) |
+			String.IsEmpty(Skin.String(Skin.ForcedView.actors))]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists))]] |
+			[Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums))]] | [Container.Content(songs) +
+			[String.IsEqual(Skin.String(Skin.ForcedView.songs),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs))]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$PARAM[string]) |
+			String.IsEmpty(Skin.String(Skin.ForcedView.addons))]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres))]] | [Container.Content(images)
+			+ [String.IsEqual(Skin.String(Skin.ForcedView.images),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.images))]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$PARAM[string]) |
+			String.IsEmpty(Skin.String(Skin.ForcedView.videos))]] | [Container.Content() + [String.IsEqual(Skin.String(Skin.ForcedView.),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.))]] | [Container.Content(tags) +
+			[String.IsEqual(Skin.String(Skin.ForcedView.tags),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.tags))]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$PARAM[string]) |
+			String.IsEmpty(Skin.String(Skin.ForcedView.years))]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries))]] |
+			[Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios))]] | [Container.Content(playlists) +
+			[String.IsEqual(Skin.String(Skin.ForcedView.playlists),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists))]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$PARAM[string])
+			| String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors))]] |
+			[Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.files))]] | [Container.Content(mixed) +
+			[String.IsEqual(Skin.String(Skin.ForcedView.mixed),$PARAM[string]) | String.IsEmpty(Skin.String(Skin.ForcedView.mixed))]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$PARAM[string]) |
+			String.IsEmpty(Skin.String(Skin.ForcedView.unknown))]] | [!Container.Content(games) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) +
+			!Container.Content(actors) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(addons) + !Container.Content(genres) + !Container.Content(images) + !Container.Content(videos) +
+			!Container.Content() + !Container.Content(tags) + !Container.Content(years) + !Container.Content(countries) + !Container.Content(studios) + !Container.Content(playlists) + !Container.Content(musicvideos) + !Container.Content(directors) +
+			!Container.Content(files) + !Container.Content(mixed) + !Container.Content(unknown)] | Window.IsVisible(MyPlaylist.xml)</visible>
 	</include>
-
 	<include name="WidgetVerticalLabel">
 		<include content="Object_Widget_Label">
 			<param name="id" value="7502" />
@@ -2220,7 +2232,6 @@
 			<param name="font" value="$PARAM[font]" />
 		</include>
 	</include>
-
 	<include name="WidgetHorizontalLabel">
 		<include content="Object_WidgetHorizontal_Label">
 			<param name="groupid" value="8000" />
@@ -2343,11 +2354,9 @@
 			<param name="top" value="0" />
 		</include>
 	</include>
-
 	<include name="submenuFont">
 		<font>font37</font>
 	</include>
-
 	<include name="submenuVerticalParams">
 		<definition>
 			<left>92</left>
@@ -2359,7 +2368,6 @@
 			<orientation>vertical</orientation>
 		</definition>
 	</include>
-
 	<include name="submenuVerticalLabelLayout">
 		<definition>
 			<top>140</top>
@@ -2371,7 +2379,6 @@
 			<font>font45_title</font>
 		</definition>
 	</include>
-
 	<include name="submenuVerticalIconLayout">
 		<definition>
 			<top>141</top>
@@ -2381,7 +2388,6 @@
 			<font>font45_title</font>
 		</definition>
 	</include>
-
 	<include name="submenuClassicParams">
 		<definition>
 			<top>180</top>
@@ -2391,7 +2397,6 @@
 			<orientation>vertical</orientation>
 		</definition>
 	</include>
-
 	<include name="submenuClassicLabelLayout">
 		<definition>
 			<top>0</top>
@@ -2402,7 +2407,6 @@
 			<font>font45_title</font>
 		</definition>
 	</include>
-
 	<include name="submenuClassicIconLayout">
 		<definition>
 			<left>288</left>
@@ -2412,7 +2416,6 @@
 			<height>95</height>
 		</definition>
 	</include>
-
 	<include name="submenuHorizontalParams">
 		<definition>
 			<left>0</left>
@@ -2427,7 +2430,6 @@
 			<orientation>horizontal</orientation>
 		</definition>
 	</include>
-
 	<include name="submenuHorizontalLabelLayout">
 		<definition>
 			<left>0</left>
@@ -2438,5 +2440,9 @@
 			<aligny>center</aligny>
 			<font>font27</font>
 		</definition>
+	</include>
+	<include name="View_UnwatchedEpisodes_Visible">
+		<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]</visible>
+		<visible>!ListItem.IsCollection</visible>
 	</include>
 </includes>
