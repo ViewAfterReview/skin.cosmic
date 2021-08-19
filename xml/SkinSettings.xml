@@ -621,7 +621,7 @@
 					</control>
 					<control type="radiobutton" id="1204">
 						<label>script.skinshortcuts</label>
-						<label2>$INFO[System.AddonVersion(script.skinshortcuts)] </label2>
+						<label2>$INFO[System.AddonVersion(script.skinshortcuts)]               </label2>
 						<onclick>Addon.OpenSettings(script.skinshortcuts)</onclick>
 						<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 						<selected>System.HasAddon(script.skinshortcuts)</selected>
@@ -629,7 +629,7 @@
 					</control>
 					<control type="radiobutton" id="1205">
 						<label>script.embuary.info</label>
-						<label2>$INFO[System.AddonVersion(script.embuary.info)] </label2>
+						<label2>$INFO[System.AddonVersion(script.embuary.info)]               </label2>
 						<onclick>Addon.OpenSettings(script.embuary.info)</onclick>
 						<onclick condition="!System.HasAddon(script.embuary.info)">InstallAddon(script.embuary.info)</onclick>
 						<selected>System.HasAddon(script.embuary.info)</selected>
@@ -637,7 +637,7 @@
 					</control>
 					<control type="radiobutton" id="1206">
 						<label>plugin.video.themoviedb.helper</label>
-						<label2>$INFO[System.AddonVersion(plugin.video.themoviedb.helper)] </label2>
+						<label2>$INFO[System.AddonVersion(plugin.video.themoviedb.helper)]               </label2>
 						<onclick>Addon.OpenSettings(plugin.video.themoviedb.helper)</onclick>
 						<onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">InstallAddon(plugin.video.themoviedb.helper)</onclick>
 						<selected>System.HasAddon(plugin.video.themoviedb.helper)</selected>
@@ -645,7 +645,7 @@
 					</control>
 					<control type="radiobutton" id="1207">
 						<label>script.embuary.helper</label>
-						<label2>$INFO[System.AddonVersion(script.embuary.helper)] </label2>
+						<label2>$INFO[System.AddonVersion(script.embuary.helper)]               </label2>
 						<onclick>Addon.OpenSettings(script.embuary.helper)</onclick>
 						<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
 						<selected>System.HasAddon(script.embuary.helper)</selected>
@@ -653,7 +653,7 @@
 					</control>
 					<control type="radiobutton" id="1208">
 						<label>resource.images.studios.white</label>
-						<label2>$INFO[System.AddonVersion(resource.images.studios.white)] </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.studios.white)]               </label2>
 						<onclick>Addon.OpenSettings(resource.images.studios.white)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
 						<selected>System.HasAddon(resource.images.studios.white)</selected>
@@ -661,7 +661,7 @@
 					</control>
 					<control type="radiobutton" id="1209">
 						<label>resource.images.studios.coloured</label>
-						<label2>$INFO[System.AddonVersion(resource.images.studios.coloured)] </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.studios.coloured)]               </label2>
 						<onclick>Addon.OpenSettings(resource.images.studios.coloured)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.studios.coloured)">InstallAddon(resource.images.studios.coloured)</onclick>
 						<selected>System.HasAddon(resource.images.studios.coloured)</selected>
@@ -669,7 +669,7 @@
 					</control>
 					<control type="radiobutton" id="1210">
 						<label>resource.images.weathericons.white</label>
-						<label2>$INFO[System.AddonVersion(resource.images.weathericons.white)] </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.weathericons.white)]               </label2>
 						<onclick>Addon.OpenSettings(resource.images.weathericons.white)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.weathericons.white)">InstallAddon(resource.images.weathericons.white)</onclick>
 						<selected>System.HasAddon(resource.images.weathericons.white)</selected>
@@ -677,7 +677,7 @@
 					</control>
 					<control type="radiobutton" id="1211">
 						<label>resource.images.moviegenreicons.transparent</label>
-						<label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)] </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)]               </label2>
 						<onclick>Addon.OpenSettings(resource.images.moviegenreicons.transparent)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.moviegenreicons.transparent)">InstallAddon(resource.images.moviegenreicons.transparent)</onclick>
 						<selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
@@ -685,7 +685,7 @@
 					</control>
 					<control type="radiobutton" id="1212">
 						<label>resource.images.moviecountryicons.maps</label>
-						<label2>$INFO[System.AddonVersion(resource.images.moviecountryicons.maps)] </label2>
+						<label2>$INFO[System.AddonVersion(resource.images.moviecountryicons.maps)]               </label2>
 						<onclick>Addon.OpenSettings(resource.images.moviecountryicons.maps)</onclick>
 						<onclick condition="!System.HasAddon(resource.images.moviecountryicons.maps)">InstallAddon(resource.images.moviecountryicons.maps)</onclick>
 						<selected>System.HasAddon(resource.images.moviecountryicons.maps)</selected>
