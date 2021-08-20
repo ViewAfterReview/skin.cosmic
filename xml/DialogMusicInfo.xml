@@ -172,7 +172,7 @@
 					<height>340</height>
 					<wrapmultiline>true</wrapmultiline>
 					<label>$VAR[MusicInfoTextboxVar]</label>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[ColorHighlight]</textcolor>
 				</control>
 			</control>
 			<control type="group">

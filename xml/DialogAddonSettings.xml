@@ -80,7 +80,7 @@
 				<height>70</height>
 				<font>font12</font>
 				<align>justify</align>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="button" id="7">

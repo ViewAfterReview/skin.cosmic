@@ -24,7 +24,7 @@
 					<label>$VAR[PlayerLabel1]</label>
 					<font>font45</font>
 					<shadowcolor>black</shadowcolor>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[ColorHighlight]</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -34,7 +34,7 @@
 					<label>$VAR[PlayerLabel2]</label>
 					<font>font37</font>
 					<shadowcolor>black</shadowcolor>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[ColorHighlight]</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">

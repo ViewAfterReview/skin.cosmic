@@ -27,7 +27,7 @@
 				<top>180</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[179]</label>
 			</control>
@@ -79,7 +79,7 @@
 				<top>595</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29909]</label>
 			</control>
@@ -115,7 +115,7 @@
 				<top>180</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29908]</label>
 			</control>
@@ -167,7 +167,7 @@
 				<top>595</top>
 				<width>780</width>
 				<height>25</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29913]</label>
 			</control>
@@ -200,7 +200,7 @@
 				<control type="label">
 					<width>780</width>
 					<height>25</height>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[ColorHighlight]</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[29915]</label>
 				</control>
@@ -227,7 +227,7 @@
 				<control type="label">
 					<width>780</width>
 					<height>25</height>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[ColorHighlight]</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[14304]</label>
 				</control>

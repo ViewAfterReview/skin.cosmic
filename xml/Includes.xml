@@ -202,7 +202,7 @@
 				<height>40</height>
 				<aligny>center</aligny>
 				<label>$PARAM[label]:</label>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>

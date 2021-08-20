@@ -941,14 +941,14 @@
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 				<label>: [COLOR white]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
 			</control>
 		</control>
@@ -1298,7 +1298,7 @@
 				<height>40</height>
 				<aligny>center</aligny>
 				<label>$PARAM[label]:</label>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[ColorHighlight]</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
