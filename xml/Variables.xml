@@ -405,21 +405,19 @@
 		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]">indicator/corner.png</value>
 	</variable>
 	<variable name="ShiftLeftTextBoxVar">
-		<value condition="Window.IsActive(pictures)">$INFO[ListItem.Property(description)][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.PictureDatetime][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[169]:
-			[/COLOR]$INFO[ListItem.PictureResolution][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[31041]: [/COLOR]$INFO[ListItem.PictureCamMake][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21823]: [/COLOR]$INFO[ListItem.PictureCamModel][CR]</value>
-		<value condition="String.IsEqual(listitem.dbtype,artist)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21898]:
-			[/COLOR]$INFO[ListItem.Property(Artist_YearsActive)][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Artist_Style)][CR]</value>
-		<value condition="String.IsEqual(listitem.dbtype,album)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR
-			$VAR[ColorHighlight]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(album_label)][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(album_style)][CR]</value>
-		<value condition="String.IsEqual(Listitem.DBType,season) | String.IsEqual(Listitem.DBType,tvshow)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20416]:
-			[/COLOR]$INFO[ListItem.Premiered]</value>
-		<value>[COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20417]:
-			[/COLOR]$INFO[ListItem.Writer][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered]</value>
+		<value
+			condition="Window.IsActive(pictures)">$INFO[ListItem.Property(description)][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.PictureDatetime][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[169]: [/COLOR]$INFO[ListItem.PictureResolution][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[31041]: [/COLOR]$INFO[ListItem.PictureCamMake][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21823]: [/COLOR]$INFO[ListItem.PictureCamModel][CR]</value>
+		<value
+			condition="String.IsEqual(listitem.dbtype,artist)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Artist_Style)][CR]</value>
+		<value
+			condition="String.IsEqual(listitem.dbtype,album)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(album_label)][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(album_style)][CR]</value>
+		<value
+			condition="String.IsEqual(Listitem.DBType,season) | String.IsEqual(Listitem.DBType,tvshow)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered]</value>
+		<value>[COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20417]: [/COLOR]$INFO[ListItem.Writer][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered]</value>
 	</variable>
 	<variable name="ShiftRightTextBoxVar">
-		<value condition="Window.IsActive(pictures)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[289]: [/COLOR]$INFO[ListItem.Size][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21826]: [/COLOR]$INFO[ListItem.PictureAperture][CR][COLOR
-			$VAR[ColorHighlight]]$LOCALIZE[21827]: [/COLOR]$INFO[ListItem.PictureFocalLen][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21830]: [/COLOR]$INFO[ListItem.PictureExpTime][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[552]:
-			[/COLOR]$INFO[ListItem.Date][CR]</value>
+		<value
+			condition="Window.IsActive(pictures)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[289]: [/COLOR]$INFO[ListItem.Size][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21826]: [/COLOR]$INFO[ListItem.PictureAperture][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21827]: [/COLOR]$INFO[ListItem.PictureFocalLen][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[21830]: [/COLOR]$INFO[ListItem.PictureExpTime][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[552]: [/COLOR]$INFO[ListItem.Date][CR]</value>
 		<value condition="String.IsEqual(listitem.dbtype,artist)">$INFO[ListItem.Property(artist_description)]</value>
 		<value condition="String.IsEqual(listitem.dbtype,album)">$INFO[ListItem.Property(album_description)]</value>
 		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
@@ -457,20 +455,14 @@
 		<value condition="String.IsEqual(listitem.dbtype,artist)">$INFO[ListItem.Property(artist_description)]</value>
 		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicplaylist)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[554]: [/COLOR]$VAR[MusicTrackInfo][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[557]:
-			[/COLOR]$INFO[ListItem.Artist][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[558]: [/COLOR]$INFO[listitem.Album][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[427]: [/COLOR]$VAR[InfoDiscVar][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[345]:
-			[/COLOR]$INFO[ListItem.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[567]:
-			[/COLOR]$INFO[ListItem.Playcount][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[568]: [/COLOR]$INFO[ListItem.LastPlayed]</value>
-		<value condition="String.IsEqual(ListItem.DBType,song) + Window.IsActive(musicplaylist)">[COLOR $VAR[ColorHighlight]][B]$LOCALIZE[31037]: [/COLOR]$INFO[Container.CurrentItem,,/]$INFO[Container.NumItems][/B][CR][COLOR
-			$VAR[ColorHighlight]]$LOCALIZE[554]: [/COLOR]$VAR[MusicTrackInfo][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[558]: [/COLOR]$INFO[listitem.Album][CR][COLOR
-			$VAR[ColorHighlight]]$LOCALIZE[427]: [/COLOR]$VAR[InfoDiscVar][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR
-			$VAR[ColorHighlight]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[567]: [/COLOR]$INFO[ListItem.Playcount]</value>
+		<value
+			condition="String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicplaylist)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[554]: [/COLOR]$VAR[MusicTrackInfo][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[558]: [/COLOR]$INFO[listitem.Album][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[427]: [/COLOR]$VAR[InfoDiscVar][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[567]: [/COLOR]$INFO[ListItem.Playcount][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[568]: [/COLOR]$INFO[ListItem.LastPlayed]</value>
+		<value
+			condition="String.IsEqual(ListItem.DBType,song) + Window.IsActive(musicplaylist)">[COLOR $VAR[ColorHighlight]][B]$LOCALIZE[31037]: [/COLOR]$INFO[Container.CurrentItem,,/]$INFO[Container.NumItems][/B][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[554]: [/COLOR]$VAR[MusicTrackInfo][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[558]: [/COLOR]$INFO[listitem.Album][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[427]: [/COLOR]$VAR[InfoDiscVar][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[567]: [/COLOR]$INFO[ListItem.Playcount]</value>
 		<value>[COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre][CR]</value>
 	</variable>
 	<variable name="NowPlayingInfoVar">
-		<value>[COLOR $VAR[ColorHighlight]]$LOCALIZE[554]: [/COLOR]$INFO[MusicPlayer.Title][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[557]: [/COLOR]$INFO[MusicPlayer.Artist][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[558]:
-			[/COLOR]$INFO[MusicPlayer.Album][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[427]: [/COLOR]$VAR[MultiDiscVar][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[345]: [/COLOR]$INFO[MusicPlayer.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]:
-			[/COLOR]$INFO[MusicPlayer.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[180]: [/COLOR]$INFO[MusicPlayer.Time,,/]$INFO[MusicPlayer.Duration,,[CR]]</value>
+		<value>[COLOR $VAR[ColorHighlight]]$LOCALIZE[554]: [/COLOR]$INFO[MusicPlayer.Title][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[557]: [/COLOR]$INFO[MusicPlayer.Artist][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[558]: [/COLOR]$INFO[MusicPlayer.Album][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[427]: [/COLOR]$VAR[MultiDiscVar][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[345]: [/COLOR]$INFO[MusicPlayer.Year][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[515]: [/COLOR]$INFO[MusicPlayer.Genre][CR][COLOR $VAR[ColorHighlight]]$LOCALIZE[180]: [/COLOR]$INFO[MusicPlayer.Time,,/]$INFO[MusicPlayer.Duration,,[CR]]</value>
 	</variable>
 	<variable name="MusicTrackInfo">
 		<value condition="String.IsEmpty(listitem.Title)">$INFO[listitem.TrackNumber]</value>
@@ -680,8 +672,8 @@
 		<value condition="Window.IsActive(visualisation) + Integer.IsGreater(Playlist.Length(music),1) + Integer.IsGreater(Playlist.Position(music),0)">$LOCALIZE[554] $INFO[Playlist.Position] / $INFO[Playlist.Length]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$VAR[NowPlayingSublabelVar,,[CR]][COLOR $VAR[ColorHighlight]]$LOCALIZE[21396]: [/COLOR]$INFO[player.chapter]$INFO[Player.ChapterCount,/]$INFO[Player.ChapterName, - ]</value>
 		<value condition="VideoPlayer.Content(episodes) + !player.chaptercount">[COLOR $VAR[ColorHighlight]][CAPITALIZE]$LOCALIZE[36906][/CAPITALIZE]:[/COLOR] S$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,E,: ]$INFO[VideoPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(episodes) + player.chaptercount">[COLOR $VAR[ColorHighlight]][CAPITALIZE]$LOCALIZE[36906][/CAPITALIZE]:[/COLOR] S$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,E, -
-			]$INFO[VideoPlayer.Title,,[CR]][COLOR $VAR[ColorHighlight]]$LOCALIZE[21396]:[/COLOR] $INFO[player.chapter]$INFO[Player.ChapterCount,/]$INFO[Player.ChapterName, - ]</value>
+		<value
+			condition="VideoPlayer.Content(episodes) + player.chaptercount">[COLOR $VAR[ColorHighlight]][CAPITALIZE]$LOCALIZE[36906][/CAPITALIZE]:[/COLOR] S$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,E, - ]$INFO[VideoPlayer.Title,,[CR]][COLOR $VAR[ColorHighlight]]$LOCALIZE[21396]:[/COLOR] $INFO[player.chapter]$INFO[Player.ChapterCount,/]$INFO[Player.ChapterName, - ]</value>
 		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">([COLOR $VAR[ColorHighlight]]$INFO[VideoPlayer.ChannelNumberLabel][/COLOR]) $INFO[VideoPlayer.ChannelName] $INFO[VideoPlayer.EpisodeName, - ]
 		</value>
 		<value condition="player.chaptercount + [!VideoPlayer.Content(episodes) + !VideoPlayer.Content(LiveTV)]">[COLOR $VAR[ColorHighlight]]$LOCALIZE[21396]:[/COLOR] $INFO[player.chapter]$INFO[Player.ChapterCount,/]$INFO[Player.ChapterName, - ]
@@ -689,13 +681,13 @@
 		<value>$INFO[VideoPlayer.Genre]</value>
 	</variable>
 	<variable name="OSDNextLabelVar">
-		<value condition="Window.IsActive(visualisation)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, - ]$INFO[MusicPlayer.offset(1).Album, -
-			]$INFO[MusicPlayer.offset(1).Year, (,)]</value>
-		<value condition="VideoPlayer.Content(musicvideos)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).Title]$INFO[VideoPlayer.offset(1).Artist, - ]$INFO[VideoPlayer.offset(1).Album, -
-			]$INFO[VideoPlayer.offset(1).Year, (,)]</value>
+		<value
+			condition="Window.IsActive(visualisation)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, - ]$INFO[MusicPlayer.offset(1).Album, - ]$INFO[MusicPlayer.offset(1).Year, (,)]</value>
+		<value
+			condition="VideoPlayer.Content(musicvideos)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).Title]$INFO[VideoPlayer.offset(1).Artist, - ]$INFO[VideoPlayer.offset(1).Album, - ]$INFO[VideoPlayer.offset(1).Year, (,)]</value>
 		<value condition="VideoPlayer.Content(livetv)">[COLOR=$VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.NextStartTime, ]$INFO[VideoPlayer.NextEndTime, - ]$INFO[VideoPlayer.NextTitle,: ]</value>
-		<value condition="VideoPlayer.Content(episodes) + Window.IsActive(fullscreenvideo)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).TVShowtitle]$INFO[VideoPlayer.offset(1).Season, -
-			S,]$INFO[VideoPlayer.offset(1).Episode,E]$INFO[VideoPlayer.offset(1).Title, - ]</value>
+		<value
+			condition="VideoPlayer.Content(episodes) + Window.IsActive(fullscreenvideo)">[COLOR $VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).TVShowtitle]$INFO[VideoPlayer.offset(1).Season, - S,]$INFO[VideoPlayer.offset(1).Episode,E]$INFO[VideoPlayer.offset(1).Title, - ]</value>
 		<value>[COLOR $VAR[ColorHighlight]]$LOCALIZE[19031]: [/COLOR]$INFO[VideoPlayer.offset(1).Title]$INFO[VideoPlayer.offset(1).Year, (,)]</value>
 	</variable>
 	<variable name="PlayerClearLogoVar">
