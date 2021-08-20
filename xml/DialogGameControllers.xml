@@ -147,39 +147,39 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
-				<top>110</top>
-				<right>20</right>
-				<width>340</width>
+				<top>120</top>
+				<right>50</right>
+				<width>300</width>
 				<onleft>5</onleft>
 				<onright>3</onright>
-				<itemgap>dialogbuttons_itemgap</itemgap>
+				<itemgap>12</itemgap>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="18" />
 					<param name="label" value="$LOCALIZE[186]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="19" />
 					<param name="label" value="$LOCALIZE[13007]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="20" />
 					<param name="label" value="$LOCALIZE[21452]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="22" />
 					<param name="label" value="$LOCALIZE[35021]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="17" />
 					<param name="label" value="$LOCALIZE[10043]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="21" />
 					<param name="label" value="$LOCALIZE[35019]" />
 				</include>
