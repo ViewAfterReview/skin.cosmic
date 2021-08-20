@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Object_Submenu_Content">
-        <control type="list" id="9001">
+        <control type="fixedlist" id="9001">
             <nested />
             <include content="submenuVerticalParams" condition="Skin.HasSetting(Vertical_Main)" />
             <include content="submenuClassicParams" condition="Skin.HasSetting(Classic_Main)" />
