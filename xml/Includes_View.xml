@@ -219,6 +219,7 @@
                     <textcolor>ffededed</textcolor>
                     <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
                     <include>View_UnwatchedEpisodes_Visible</include>
+                    <visible>!Skin.HasSetting(DisableIndicator.Episodes)</visible>
                 </control>
             </control>
         </definition>

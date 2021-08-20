@@ -1730,3 +1730,28 @@ msgstr ""
 msgctxt "#31356"
 msgid "From Year"
 msgstr ""
+
+#: /xml/Custom_1120_EnableIndicators.xml
+msgctxt "#31357"
+msgid "Hide all indicators"
+msgstr ""
+
+#: /xml/Custom_1121_EnableIndicators.xml
+msgctxt "#31358"
+msgid "Classic corner style indicators"
+msgstr ""
+
+#: /xml/Custom_1121_EnableIndicators.xml
+msgctxt "#31359"
+msgid "Unwatched episodes"
+msgstr ""
+
+#: /xml/Custom_1121_EnableIndicators.xml
+msgctxt "#31360"
+msgid "In-progress"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31361"
+msgid "Manage watched indicators"
+msgstr ""
