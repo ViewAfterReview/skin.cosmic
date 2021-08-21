@@ -179,7 +179,7 @@
                     <align>right</align>
                     <font>font10</font>
                     <textcolor>ff181818</textcolor>
-                    <label>$INFO[ListItem.Duration(mins,, $LOCALIZE[12391]]</label>
+                    <label>$INFO[ListItem.Duration(mins),, $LOCALIZE[31191]]</label>
                 </control>
             </control>
         </control>
