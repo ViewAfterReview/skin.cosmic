@@ -1,3 +1,17 @@
+1.0.23
+    Added: Fanart Aspect ratio
+    Added: YouTube videos to InfoDialog [need some fixes]
+    Fixed: Show selectionbox only for focused item in widgets on home screen
+    Added: Option to set Title colour
+    Added: New "kFanart" view type for library
+    Fixed: Corner image for watched indicators
+    Added: Option to manage watched indicators
+    Fixed: DialogGameControllers.xml
+    Fixed: Highlight colour in some labels
+    Changed: Submenu control type
+    Fixed: Shift View
+    Fixed: White spaces in Variables.xml
+    Fixed: Glitched side menu in MyMusicNav.xml
 1.0.22
     Fixed: Recently added tv shows indicator
     Fixed: Recently added movies indicator
