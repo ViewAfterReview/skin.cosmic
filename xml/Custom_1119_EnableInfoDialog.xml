@@ -163,6 +163,18 @@
                     <selected>Skin.HasSetting(InfoDialog.Genre)</selected>
                 </control>
                 <control type="radiobutton" id="9010">
+                    <label>$LOCALIZE[31365]</label>
+                    <right>190</right>
+                    <width>458</width>
+                    <height>70</height>
+                    <align>right</align>
+                    <radioposx>470</radioposx>
+                    <texturefocus />
+                    <texturenofocus />
+                    <onclick>Skin.ToggleSetting(InfoDialog.YouTube)</onclick>
+                    <selected>Skin.HasSetting(InfoDialog.YouTube)</selected>
+                </control>
+                <control type="radiobutton" id="9011">
                     <label>$LOCALIZE[31266]</label>
                     <right>190</right>
                     <width>458</width>

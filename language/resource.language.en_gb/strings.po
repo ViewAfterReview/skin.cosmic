@@ -1770,3 +1770,8 @@ msgstr ""
 msgctxt "#31364"
 msgid "Title colour"
 msgstr ""
+
+#: /xml/Includes_DialogVideoInfo.xml
+msgctxt "#31365"
+msgid "YouTube"
+msgstr ""

@@ -9,6 +9,7 @@
                 <align>right</align>
                 <font>font_clock</font>
                 <label>$INFO[System.Time]</label>
+                <visible>!$EXP[infodialog_active]</visible>
             </control>
         </control>
         <control type="group">
@@ -67,7 +68,6 @@
                     <visible>!Pvr.IsTimeShift</visible>
                 </control>
                 <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-
                 <control type="group">
                     <control type="image">
                         <top>-125</top>
@@ -200,7 +200,8 @@
                             <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                         </control>
                         <control type="group">
-                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
+                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional
+                            </animation>
                             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                             <animation effect="slide" start="0" end="-280,0" time="0" reversible="false" condition="String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                             <control type="image">
@@ -230,7 +231,8 @@
                             <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
                         </control>
                         <control type="group">
-                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
+                            <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional
+                            </animation>
                             <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
                             <animation effect="slide" start="0" end="-280,0" time="0" reversible="false" condition="String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305])">Conditional</animation>
                             <control type="image">

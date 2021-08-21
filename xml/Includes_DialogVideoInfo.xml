@@ -209,7 +209,7 @@
                 <top>35</top>
                 <left>20</left>
                 <height>975</height>
-                <width>1720</width>
+                <width>1920</width>
                 <itemgap>52</itemgap>
                 <animation effect="slide" start="0,0" end="0,1080" time="200" tween="cubic" easing="inout" condition="!ControlGroup(100).HasFocus">Conditional</animation>
                 <include content="InfoDialogLabel">
@@ -217,7 +217,7 @@
                     <param name="id" value="50" />
                     <param name="label" value="$INFO[ListItem.Label]" />
                     <param name="altlabel" value="$LOCALIZE[31261]" />
-                    <param name="left" value="80" />
+                    <param name="left" value="20" />
                     <param name="top" value="0" />
                     <param name="visible" value="true" />
                 </include>
@@ -355,9 +355,51 @@
                     <param name="itemheight" value="407" />
                     <param name="visible" value="Skin.HasSetting(InfoDialog.Genre) + !String.IsEmpty(ListItem.Genre)" />
                 </include>
-                <include content="InfoDialogWallContainer">
-                    <param name="id" value="1060" />
+                <include content="InfoDialogLabel">
                     <param name="groupid" value="10060" />
+                    <param name="id" value="1060" />
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="altlabel" value="$LOCALIZE[31365]" />
+                    <param name="left" value="20" />
+                    <param name="top" value="0" />
+                    <param name="visible"
+                        value="Skin.HasSetting(InfoDialog.YouTube) + System.HasAddon(plugin.video.youtube) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]" />
+                </include>
+                <control type="list" id="1060">
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <height>375.5</height>
+                    <itemlayout height="375.5" width="600">
+                        <include content="ViewLandscapeItemLayout"></include>
+                    </itemlayout>
+                    <focusedlayout height="375.5" width="600">
+                        <include content="ViewLandscapeItemLayout"></include>
+                        <include content="Selectbox">
+                            <param name="pad_top_b" value="-8" />
+                            <param name="pad_bottom_b" value="18" />
+                            <param name="pad_left_b" value="-8" />
+                            <param name="pad_right_b" value="10" />
+                            <param name="pad_top_t" value="-3" />
+                            <param name="pad_bottom_t" value="23" />
+                            <param name="pad_left_t" value="-3" />
+                            <param name="pad_right_t" value="15" />
+                            <param name="visible_posters" value="false" />
+                            <param name="visible_squares" value="false" />
+                            <param name="visible_landscapes" value="true + Control.HasFocus(1060)" />
+                        </include>
+                    </focusedlayout>
+                    <onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
+                    <onclick>PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
+                    <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.TvShowTitle) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.TvShowTitle,plugin://plugin.video.youtube/search/?q=,]</content>
+                    <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.Artist) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Artist,plugin://plugin.video.youtube/search/?q=,]</content>
+                    <content limit="10" target="videos" sortby="file" condition="!String.IsEmpty(ListItem.Title) + System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Title,plugin://plugin.video.youtube/search/?q=,]</content>
+                    <content limit="10" target="videos" sortby="file" condition="System.HasAddon(plugin.video.youtube)">$INFO[ListItem.Label,plugin://plugin.video.youtube/search/?q=,]</content>
+                    <visible>Skin.HasSetting(InfoDialog.YouTube) + System.HasAddon(plugin.video.youtube) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) |
+                        String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                </control>
+                <include content="InfoDialogWallContainer">
+                    <param name="id" value="1061" />
+                    <param name="groupid" value="10061" />
                     <param name="icon" value="$INFO[ListItem.Icon]" />
                     <param name="altlabel" value="$LOCALIZE[31266]" />
                     <param name="label" value="$INFO[ListItem.Label]" />

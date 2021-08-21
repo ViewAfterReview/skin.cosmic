@@ -78,10 +78,10 @@
 	</include>
 	<include name="InfoDialogItemLayout">
 		<control type="group">
-			<left>68</left>
+			<left>0</left>
 			<top>10</top>
 			<control type="image">
-				<left>15</left>
+				<left>4</left>
 				<top>-10</top>
 				<width>290</width>
 				<height>400</height>
@@ -94,10 +94,10 @@
 	</include>
 	<include name="InfoDialogFocusedLayout">
 		<control type="group">
-			<left>68</left>
+			<left>0</left>
 			<top>10</top>
 			<control type="group">
-				<left>11</left>
+				<left>0</left>
 				<top>-14</top>
 				<width>297</width>
 				<height>407</height>
@@ -118,7 +118,7 @@
 				<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 			</control>
 			<control type="image">
-				<left>15</left>
+				<left>4</left>
 				<top>-10</top>
 				<width>290</width>
 				<height>400</height>
@@ -135,7 +135,7 @@
 				<param name="id" value="$PARAM[id]" />
 				<param name="label" value="$PARAM[label]" />
 				<param name="altlabel" value="$PARAM[altlabel]" />
-				<param name="left" value="80" />
+				<param name="left" value="20" />
 				<param name="top" value="0" />
 				<param name="visible" value="$PARAM[visible]" />
 			</include>
@@ -164,7 +164,6 @@
 			</control>
 		</definition>
 	</include>
-
 	<include name="ViewPosterItemLayout">
 		<definition>
 			<control type="image">
@@ -264,7 +263,6 @@
 			</control>
 		</definition>
 	</include>
-
 	<include name="InfoWallPictureLayout">
 		<param name="focused">false</param>
 		<definition>
@@ -648,15 +646,18 @@
 				<preloaditems>2</preloaditems>
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
-				<itemlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) |
+					Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
+				<itemlayout height="445" width="320"
+					condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<left>30</left>
 						<top>120</top>
 						<include>InfoWallMovieLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<focusedlayout height="445" width="320"
+					condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
