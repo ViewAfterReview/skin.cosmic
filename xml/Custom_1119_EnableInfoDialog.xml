@@ -28,13 +28,13 @@
             <animation effect="slide" end="-225" time="0" condition="true">conditional</animation>
             <centertop>40%</centertop>
             <width>506</width>
-            <height>750</height>
+            <height>820</height>
             <control type="image" id="999">
                 <description>background image</description>
                 <top>-24</top>
                 <left>-24</left>
                 <width>506</width>
-                <height>750</height>
+                <height>820</height>
                 <bordersize>24</bordersize>
                 <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
                 <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
