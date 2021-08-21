@@ -1760,3 +1760,13 @@ msgstr ""
 msgctxt "#31362"
 msgid "kFanart"
 msgstr ""
+
+#: /xml/Custom_1117_ColorPicker.xml
+msgctxt "#31363"
+msgid "Title"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31364"
+msgid "Title colour"
+msgstr ""

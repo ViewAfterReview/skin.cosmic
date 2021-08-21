@@ -1656,6 +1656,11 @@
 			</control>
 		</focusedlayout>
 	</include>
+	<!-- TItle colour -->
+	<variable name="TitleColour">
+		<value condition="!String.IsEmpty(Skin.String(titlecolour.name))">$INFO[Skin.String(titlecolour.name)]</value>
+		<value>selected</value>
+	</variable>
 	<!-- Highlight Color -->
 	<variable name="ColorHighlight">
 		<value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
@@ -1670,6 +1675,7 @@
 	<variable name="Label_ColorValue">
 		<value condition="String.IsEqual(Window(Home).Property(colorpick),Highlight) + !String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
 		<value condition="String.IsEqual(Window(Home).Property(colorpick),Gradient) + !String.IsEmpty(Skin.String(gradientcolor.name))">$INFO[Skin.String(gradientcolor.name)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(colorpick),Title) + !String.IsEmpty(Skin.String(titlecolour.name))">$INFO[Skin.String(titlecolour.name)]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
 	<include name="ProgressGradient">

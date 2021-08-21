@@ -531,7 +531,7 @@
                         <bottom>60</bottom>
                         <scroll>true</scroll>
                         <width>$PARAM[title_width]</width>
-                        <textcolor>white</textcolor>
+                        <textcolor>$VAR[TitleColour]</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <label>$PARAM[title]</label>
                         <font>font_title_bold</font>
