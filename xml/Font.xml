@@ -9,6 +9,12 @@
 			<style>lighten</style>
 		</font>
 		<font>
+			<name>font10_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>23</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>font12</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>25</size>
@@ -81,6 +87,12 @@
 			<name>font32</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>32</size>
+		</font>
+		<font>
+			<name>font32_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>32</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>font37</name>
@@ -275,7 +287,6 @@
 			<size>30</size>
 			<style>bold</style>
 		</font>
-
 		<font>
 			<name>font32_title</name>
 			<filename>arial.ttf</filename>

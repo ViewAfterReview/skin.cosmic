@@ -1755,3 +1755,8 @@ msgstr ""
 msgctxt "#31361"
 msgid "Manage watched indicators"
 msgstr ""
+
+#: /xml/View_57_kFanart.xml
+msgctxt "#31362"
+msgid "kFanart"
+msgstr ""

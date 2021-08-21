@@ -47,9 +47,8 @@
 		<value>37FFFFFF</value>
 	</variable>
 	<variable name="BackgroundOverlay">
-		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">
-			$VAR[AlphaPercentage]</value>
-		<!-- <value condition="Window.IsVisible(Home)"></value> -->
+		<value condition="Control.HasFocus(57)">FFFFFFFF</value>
+		<value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
 	</variable>
 	<variable name="HighlightOverlay">
 		<value condition="!Window.IsVisible(Home)">$VAR[AlphaPercentage]</value>
@@ -741,6 +740,14 @@
 		<value>icons/pvr/timers/recording.png</value>
 	</variable>
 	<!-- Breadcrumbs -->
+	<variable name="BreadcrumbsVideoIconVar">
+		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(container.folderpath,videodb://movies)">special://skin/extras/icons/film.png</value>
+		<value condition="Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)">special://skin/extras/icons/sets.png</value>
+		<value condition="Container.Content(tvshows) | String.StartsWith(container.folderpath,library://video/tvshows/) | String.StartsWith(container.folderpath,videodb://tvshows)">special://skin/extras/icons/tv.png</value>
+		<value condition="Container.Content(seasons)">special://skin/extras/icons/tv.png</value>
+		<value condition="Container.Content(episodes)">special://skin/extras/icons/tv.png</value>
+		<value>special://skin/extras/icons/kodi.png</value>
+	</variable>
 	<variable name="BreadcrumbsVideoVar">
 		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(container.folderpath,videodb://movies)">$LOCALIZE[20342]</value>
 		<value condition="Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)">$LOCALIZE[20389]</value>
