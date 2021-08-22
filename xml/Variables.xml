@@ -692,6 +692,8 @@
     <value condition="!String.IsEmpty(Skin.String(HomeBackgroundImage))">$INFO[Skin.String(HomeBackgroundImage)]</value>
     <value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
     <value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
+    <!-- home fanart first widget item -->
+    <value condition="Window.IsVisible(home) + String.IsEmpty(Container(3000).ListItem.Property(Background)) + !String.IsEmpty(Container(7502).ListItem.Art(fanart)) + Control.IsVisible(7502)">$INFO[Container(7502).ListItem.Art(fanart)]</value>
     <value>$INFO[Container.Art(fanart)]</value>
   </variable>
   <variable name="BlurBackground">
