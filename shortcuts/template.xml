@@ -1,133 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
-	<submenu include="submenu">
-		<controls>
-			<include content="Object_Submenu_Content">
-				<param name="icon" value="$INFO[ListItem.Icon]" />
-				<param name="label" value="$INFO[ListItem.Label]" />
-				<content>
-					<skinshortcuts>items</skinshortcuts>
-				</content>
-				<skinshortcuts>visibility</skinshortcuts>
-			</include>
-		</controls>
-	</submenu>
-	<other>
-		<controls>
-			<description>This is a fake template which is needed to trick Skin Shortcuts into building the submenuOther templates</description>
-		</controls>
-	</other>
-	<submenuOther include="vertical" level="1">
-		<!-- <condition tag="property" attribute="name|path" /> -->
-		<condition tag="property" attribute="name|list" />
-		<property name="id" tag="mainmenuid" />
-		<property name="path" tag="property" attribute="name|list" />
-		<property name="sortby" tag="property" attribute="name|widgetSortBy" />
-		<property name="sortdirection" tag="property" attribute="name|widgetSortDirection" />
-		<property name="limit" tag="property" attribute="name|widgetLimit" />
-		<property name="aspect" tag="property" attribute="name|widgetAspect" />
-		<property name="aspect">Poster</property>
-		<propertyGroup>mainmenuWidgets</propertyGroup>
-		<controls>
-			<include content="Object_Widget_Content" condition="!Skin.HasSetting(DisableFixedScrolling)">
-				<param name="controltype" value="fixedlist" />
-				<param name="name" value="$SKINSHORTCUTS[label]" />
-				<param name="id" value="$PYTHON[int(id) + 7501]" />
-				<param name="target" value="$SKINSHORTCUTS[target]" />
-				<param name="sortby" value="$SKINSHORTCUTS[sortby]" />
-				<param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
-				<param name="limit" value="$SKINSHORTCUTS[limit]" />
-				<param name="path" value="$SKINSHORTCUTS[path]" />
-				<param name="image" value="$SKINSHORTCUTS[artwork]" />
-				<param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
-				<param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']" />
-				<param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
-				<param name="fanartcondition" value="$PYTHON['true' if aspect in 'Fanart' else 'false']" />
-				<onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
-				<skinshortcuts>visibility</skinshortcuts>
-			</include>
-			<include content="Object_Widget_Content" condition="Skin.HasSetting(DisableFixedScrolling)">
-				<param name="controltype" value="list" />
-				<param name="name" value="$SKINSHORTCUTS[label]" />
-				<param name="id" value="$PYTHON[int(id) + 7501]" />
-				<param name="target" value="$SKINSHORTCUTS[target]" />
-				<param name="sortby" value="$SKINSHORTCUTS[sortby]" />
-				<param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
-				<param name="limit" value="$SKINSHORTCUTS[limit]" />
-				<param name="path" value="$SKINSHORTCUTS[path]" />
-				<param name="image" value="$SKINSHORTCUTS[artwork]" />
-				<param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
-				<param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']" />
-				<param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
-				<param name="fanartcondition" value="$PYTHON['true' if aspect in 'Fanart' else 'false']" />
-				<onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
-				<skinshortcuts>visibility</skinshortcuts>
-			</include>
-		</controls>
-	</submenuOther>
-	<submenuOther include="horizontal" level="1">
-		<!-- <condition tag="property" attribute="name|path" /> -->
-		<condition tag="property" attribute="name|list" />
-		<property name="id" tag="mainmenuid" />
-		<property name="path" tag="property" attribute="name|list" />
-		<property name="sortby" tag="property" attribute="name|widgetSortBy" />
-		<property name="sortdirection" tag="property" attribute="name|widgetSortDirection" />
-		<property name="limit" tag="property" attribute="name|widgetLimit" />
-		<property name="aspect" tag="property" attribute="name|widgetAspect" />
-		<property name="aspect">Poster</property>
-		<propertyGroup>mainmenuWidgets</propertyGroup>
-		<controls>
-			<include content="Object_Widget_Content_Horizontal" condition="!Skin.HasSetting(DisableFixedScrolling)">
-				<param name="controltype" value="fixedlist" />
-				<param name="name" value="$SKINSHORTCUTS[label]" />
-				<param name="groupid" value="$PYTHON[int(id) + 7601]" />
-				<param name="image" value="$SKINSHORTCUTS[artwork]" />
-				<param name="id" value="$PYTHON[int(id) + 7501]" />
-				<param name="target" value="$SKINSHORTCUTS[target]" />
-				<param name="sortby" value="$SKINSHORTCUTS[sortby]" />
-				<param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
-				<param name="limit" value="$SKINSHORTCUTS[limit]" />
-				<param name="path" value="$SKINSHORTCUTS[path]" />
-				<param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
-				<param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']" />
-				<param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
-				<onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
-				<skinshortcuts>visibility</skinshortcuts>
-			</include>
-			<include content="Object_Widget_Content_Horizontal" condition="Skin.HasSetting(DisableFixedScrolling)">
-				<param name="controltype" value="list" />
-				<param name="name" value="$SKINSHORTCUTS[label]" />
-				<param name="groupid" value="$PYTHON[int(id) + 7601]" />
-				<param name="image" value="$SKINSHORTCUTS[artwork]" />
-				<param name="id" value="$PYTHON[int(id) + 7501]" />
-				<param name="target" value="$SKINSHORTCUTS[target]" />
-				<param name="sortby" value="$SKINSHORTCUTS[sortby]" />
-				<param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]" />
-				<param name="limit" value="$SKINSHORTCUTS[limit]" />
-				<param name="path" value="$SKINSHORTCUTS[path]" />
-				<param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']" />
-				<param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']" />
-				<param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']" />
-				<onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
-				<skinshortcuts>visibility</skinshortcuts>
-			</include>
-		</controls>
-	</submenuOther>
-	<propertyGroup name="mainmenuWidgets">
-		<property name="id" tag="mainmenuid" />
-		<property name="name" tag="property" attribute="name|widgetName" />
-		<!-- <property name="path" tag="property" attribute="name|path" /> -->
-		<property name="target" tag="property" attribute="name|widgetTarget" />
-		<property name="target">
+  <submenu include="submenu">
+    <controls>
+      <include content="Object_Submenu_Content">
+        <param name="icon" value="$INFO[ListItem.Icon]"/>
+        <param name="label" value="$INFO[ListItem.Label]"/>
+        <content>
+          <skinshortcuts>items</skinshortcuts>
+        </content>
+        <skinshortcuts>visibility</skinshortcuts>
+      </include>
+    </controls>
+  </submenu>
+  <other>
+    <controls>
+      <description>This is a fake template which is needed to trick Skin Shortcuts into building the submenuOther templates</description>
+    </controls>
+  </other>
+  <submenuOther include="vertical" level="1">
+    <!-- <condition tag="property" attribute="name|path" /> -->
+    <condition tag="property" attribute="name|list"/>
+    <property name="id" tag="mainmenuid"/>
+    <property name="path" tag="property" attribute="name|list"/>
+    <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
+    <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
+    <property name="limit" tag="property" attribute="name|widgetLimit"/>
+    <property name="aspect" tag="property" attribute="name|widgetAspect"/>
+    <property name="aspect">Poster</property>
+    <propertyGroup>mainmenuWidgets</propertyGroup>
+    <controls>
+      <include content="Object_Widget_Content" condition="!Skin.HasSetting(DisableFixedScrolling)">
+        <param name="controltype" value="fixedlist"/>
+        <param name="name" value="$SKINSHORTCUTS[label]"/>
+        <param name="id" value="$PYTHON[int(id) + 7501]"/>
+        <param name="target" value="$SKINSHORTCUTS[target]"/>
+        <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
+        <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]"/>
+        <param name="limit" value="$SKINSHORTCUTS[limit]"/>
+        <param name="path" value="$SKINSHORTCUTS[path]"/>
+        <param name="image" value="$SKINSHORTCUTS[artwork]"/>
+        <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']"/>
+        <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
+        <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
+        <param name="fanartcondition" value="$PYTHON['true' if aspect in 'Fanart' else 'false']"/>
+        <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
+        <skinshortcuts>visibility</skinshortcuts>
+      </include>
+      <include content="Object_Widget_Content" condition="Skin.HasSetting(DisableFixedScrolling)">
+        <param name="controltype" value="list"/>
+        <param name="name" value="$SKINSHORTCUTS[label]"/>
+        <param name="id" value="$PYTHON[int(id) + 7501]"/>
+        <param name="target" value="$SKINSHORTCUTS[target]"/>
+        <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
+        <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]"/>
+        <param name="limit" value="$SKINSHORTCUTS[limit]"/>
+        <param name="path" value="$SKINSHORTCUTS[path]"/>
+        <param name="image" value="$SKINSHORTCUTS[artwork]"/>
+        <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']"/>
+        <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
+        <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
+        <param name="fanartcondition" value="$PYTHON['true' if aspect in 'Fanart' else 'false']"/>
+        <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
+        <skinshortcuts>visibility</skinshortcuts>
+      </include>
+    </controls>
+  </submenuOther>
+  <submenuOther include="horizontal" level="1">
+    <!-- <condition tag="property" attribute="name|path" /> -->
+    <condition tag="property" attribute="name|list"/>
+    <property name="id" tag="mainmenuid"/>
+    <property name="path" tag="property" attribute="name|list"/>
+    <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
+    <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
+    <property name="limit" tag="property" attribute="name|widgetLimit"/>
+    <property name="aspect" tag="property" attribute="name|widgetAspect"/>
+    <property name="aspect">Poster</property>
+    <propertyGroup>mainmenuWidgets</propertyGroup>
+    <controls>
+      <include content="Object_Widget_Content_Horizontal" condition="!Skin.HasSetting(DisableFixedScrolling)">
+        <param name="controltype" value="fixedlist"/>
+        <param name="name" value="$SKINSHORTCUTS[label]"/>
+        <param name="groupid" value="$PYTHON[int(id) + 7601]"/>
+        <param name="image" value="$SKINSHORTCUTS[artwork]"/>
+        <param name="id" value="$PYTHON[int(id) + 7501]"/>
+        <param name="target" value="$SKINSHORTCUTS[target]"/>
+        <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
+        <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]"/>
+        <param name="limit" value="$SKINSHORTCUTS[limit]"/>
+        <param name="path" value="$SKINSHORTCUTS[path]"/>
+        <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']"/>
+        <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
+        <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
+        <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
+        <skinshortcuts>visibility</skinshortcuts>
+      </include>
+      <include content="Object_Widget_Content_Horizontal" condition="Skin.HasSetting(DisableFixedScrolling)">
+        <param name="controltype" value="list"/>
+        <param name="name" value="$SKINSHORTCUTS[label]"/>
+        <param name="groupid" value="$PYTHON[int(id) + 7601]"/>
+        <param name="image" value="$SKINSHORTCUTS[artwork]"/>
+        <param name="id" value="$PYTHON[int(id) + 7501]"/>
+        <param name="target" value="$SKINSHORTCUTS[target]"/>
+        <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
+        <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]"/>
+        <param name="limit" value="$SKINSHORTCUTS[limit]"/>
+        <param name="path" value="$SKINSHORTCUTS[path]"/>
+        <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']"/>
+        <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
+        <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
+        <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
+        <skinshortcuts>visibility</skinshortcuts>
+      </include>
+    </controls>
+  </submenuOther>
+  <propertyGroup name="mainmenuWidgets">
+    <property name="id" tag="mainmenuid"/>
+    <property name="name" tag="property" attribute="name|widgetName"/>
+    <!-- <property name="path" tag="property" attribute="name|path" /> -->
+    <property name="target" tag="property" attribute="name|widgetTarget"/>
+    <property name="target">
 		</property>
-		<!-- <property name="path">$INCLUDE[skinshortcuts-group-$SKINSHORTCUTS[submenuVisibility]]</property> -->
-		<!-- For TV Shows, we want to specify the artwork as the tv show poster, otherwise we'll use the icon -->
-		<property name="artwork" tag="property" attribute="name|widgetType" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
-		<property name="artwork">$VAR[ImagePoster]</property>
-		<property name="widgetInclude" tag="property" attribute="name|path">Object_Widget_Content</property>
-		<property name="submenuVisibility" tag="property" attribute="name|submenuVisibility" />
-		<property name="label" tag="label" />
-		<property name="label">$INFO[ListItem.Label]</property>
-		<property name="background" tag="property" attribute="name|background" />
-	</propertyGroup>
+    <!-- <property name="path">$INCLUDE[skinshortcuts-group-$SKINSHORTCUTS[submenuVisibility]]</property> -->
+    <!-- For TV Shows, we want to specify the artwork as the tv show poster, otherwise we'll use the icon -->
+    <property name="artwork" tag="property" attribute="name|widgetType" value="tvshows">$INFO[ListItem.Art(tvshow.poster)]</property>
+    <property name="artwork">$VAR[ImagePoster]</property>
+    <property name="widgetInclude" tag="property" attribute="name|path">Object_Widget_Content</property>
+    <property name="submenuVisibility" tag="property" attribute="name|submenuVisibility"/>
+    <property name="label" tag="label"/>
+    <property name="label">$INFO[ListItem.Label]</property>
+    <property name="background" tag="property" attribute="name|background"/>
+  </propertyGroup>
 </template>

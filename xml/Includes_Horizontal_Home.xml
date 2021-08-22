@@ -1,221 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="Horizontal_Main">
-        <control type="group">
-            <right>40</right>
-            <top>30</top>
-            <width>500</width>
-            <height>120</height>
-            <control type="grouplist">
-                <itemgap>30</itemgap>
-                <orientation>vertical</orientation>
-                <usecontrolcoords>false</usecontrolcoords>
-                <control type="label">
-                    <top>0</top>
-                    <left>0</left>
-                    <font>font27_narrow</font>
-                    <align>right</align>
-                    <label>$VAR[Horizontal_RightTopbar]</label>
-                </control>
-                <control type="label">
-                    <top>0</top>
-                    <align>right</align>
-                    <font>font_clock</font>
-                    <label>$INFO[System.Time]</label>
-                </control>
-            </control>
+  <include name="Horizontal_Main">
+    <control type="group">
+      <right>40</right>
+      <top>30</top>
+      <width>500</width>
+      <height>120</height>
+      <control type="grouplist">
+        <itemgap>30</itemgap>
+        <orientation>vertical</orientation>
+        <usecontrolcoords>false</usecontrolcoords>
+        <control type="label">
+          <top>0</top>
+          <left>0</left>
+          <font>font27_narrow</font>
+          <align>right</align>
+          <label>$VAR[Horizontal_RightTopbar]</label>
         </control>
-        <control type="group" id="5600">
-            <include content="Object_Item_Showcase">
-                <param name="title" value="$INFO[ListItem.Title]" />
-                <param name="title_width" value="1000" />
-                <param name="plot" value="$VAR[PlotTextBoxVar]" />
-                <param name="top" value="0" />
-                <param name="info_line_top" value="190" />
-                <param name="plot_top" value="285" />
-            </include>
-            <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
-
-            <control type="group">
-                <top>250</top>
-                <left>150</left>
-                <include content="ProgressGradient">
-                    <param name="id" value="29999" />
-                    <param name="top" value="0" />
-                    <width>480</width>
-                    <height>16</height>
-                    <info>ListItem.Progress</info>
-                </include>
-                <control type="label">
-                    <top>-12</top>
-                    <left>490</left>
-                    <font>font27</font>
-                    <width>auto</width>
-                    <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
-                    <visible>!Pvr.IsTimeShift</visible>
-                </control>
-                <control type="group">
-                    <control type="image">
-                        <top>-75</top>
-                        <left>1155</left>
-                        <width>476</width>
-                        <height>290</height>
-                        <aspectratio>scale</aspectratio>
-                        <texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                        <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
-                        <bordersize>24</bordersize>
-                    </control>
-                    <control type="image">
-                        <top>-50</top>
-                        <left>1180</left>
-                        <width max="426">426</width>
-                        <height max="240">240</height>
-                        <aspectratio>stretch</aspectratio>
-                        <texture>$INFO[Listitem.EpgEventIcon]</texture>
-                    </control>
-                    <include content="Selectbox">
-                        <param name="pad_top_b" value="-70" />
-                        <param name="pad_bottom_b" value="620" />
-                        <param name="pad_left_b" value="1160" />
-                        <param name="pad_right_b" value="140" />
-                        <param name="pad_top_t" value="-66" />
-                        <param name="pad_bottom_t" value="624" />
-                        <param name="pad_left_t" value="1164" />
-                        <param name="pad_right_t" value="144" />
-                        <param name="visible_posters" value="false" />
-                        <param name="visible_squares" value="false" />
-                        <param name="visible_landscapes" value="true" />
-                    </include>
-                    <visible>!String.IsEmpty(Listitem.EpgEventIcon)</visible>
-                </control>
-                <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-            </control>
+        <control type="label">
+          <top>0</top>
+          <align>right</align>
+          <font>font_clock</font>
+          <label>$INFO[System.Time]</label>
         </control>
-        <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
-        <control type="group" id="2000">
-            <animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
-                <effect type="slide" end="0,20" time="60" tween="sine" />
-                <effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
-            </animation>
-            <animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
-                <effect type="slide" end="0,-20" time="60" tween="sine" />
-                <effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
-            </animation>
-            <include>OpenClose_Right</include>
-            <control type="grouplist" id="3000">
-                <top>480</top>
-                <height>460</height>
-                <itemgap>0</itemgap>
-                <usecontrolcoords>false</usecontrolcoords>
-                <include>skinshortcuts-template-horizontal</include>
-            </control>
-            <control type="group">
-                <top>430</top>
-                <include>WidgetHorizontalLabel</include>
-            </control>
-            <control type="group" id="2999">
-                <left>150</left>
-                <include content="Object_Ratings_Content">
-                    <param name="directory" value="$INFO[Skin.String(Icons)]" />
-                    <param name="align" value="left" />
-                    <param name="top" value="240" />
-                </include>
-            </control>
+      </control>
+    </control>
+    <control type="group" id="5600">
+      <include content="Object_Item_Showcase">
+        <param name="title" value="$INFO[ListItem.Title]"/>
+        <param name="title_width" value="1000"/>
+        <param name="plot" value="$VAR[PlotTextBoxVar]"/>
+        <param name="top" value="0"/>
+        <param name="info_line_top" value="190"/>
+        <param name="plot_top" value="285"/>
+      </include>
+      <visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(pvrguideinfo)</visible>
+      <control type="group">
+        <top>250</top>
+        <left>150</left>
+        <include content="ProgressGradient">
+          <param name="id" value="29999"/>
+          <param name="top" value="0"/>
+          <width>480</width>
+          <height>16</height>
+          <info>ListItem.Progress</info>
+        </include>
+        <control type="label">
+          <top>-12</top>
+          <left>490</left>
+          <font>font27</font>
+          <width>auto</width>
+          <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
+          <visible>!Pvr.IsTimeShift</visible>
         </control>
         <control type="group">
-            <control type="panel" id="9000">
-                <width>1920</width>
-                <height>180</height>
-                <bottom>0</bottom>
-                <movement>6</movement>
-                <focusposition>0</focusposition>
-                <ondown>9001</ondown>
-                <onup>3000</onup>
-                <orientation>horizontal</orientation>
-                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                <focusedlayout height="95" width="384">
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>95</height>
-                        <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                    </control>
-                    <control type="group">
-                        <control type="image">
-                            <left>20</left>
-                            <width>64</width>
-                            <height>64</height>
-                            <centertop>50%</centertop>
-                            <texture>$INFO[ListItem.Art(thumb)]</texture>
-                        </control>
-                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                    </control>
-                    <control type="group">
-                        <control type="label">
-                            <left>84</left>
-                            <top>0</top>
-                            <height>95</height>
-                            <width>300</width>
-                            <scroll>true</scroll>
-                            <aligny>center</aligny>
-                            <align>left</align>
-                            <font>font32</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <shadowcolor>text_shadow</shadowcolor>
-                        </control>
-                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                    </control>
-                </focusedlayout>
-                <itemlayout height="95" width="384">
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>95</height>
-                        <texture colordiffuse="44FFFFFF">common/white.png</texture>
-                    </control>
-                    <control type="group">
-                        <control type="image">
-                            <left>20</left>
-                            <centertop>50%</centertop>
-                            <width>64</width>
-                            <height>64</height>
-                            <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-                        </control>
-                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                    </control>
-                    <control type="group">
-                        <control type="label">
-                            <left>84</left>
-                            <top>0</top>
-                            <height>95</height>
-                            <width>300</width>
-                            <scroll>true</scroll>
-                            <aligny>center</aligny>
-                            <align>left</align>
-                            <font>font32</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <shadowcolor>text_shadow</shadowcolor>
-                        </control>
-                        <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
-                    </control>
-                </itemlayout>
-                <content>
-                    <include>skinshortcuts-mainmenu</include>
-                </content>
-            </control>
-            <control type="group">
-                <visible>!Skin.HasSetting(DisableSubmenuInHorizontal)</visible>
-                <control type="image">
-                    <left>0</left>
-                    <top>995</top>
-                    <width>1920</width>
-                    <height>95</height>
-                    <texture colordiffuse="37FFFFFF">common/white.png</texture>
-                </control>
-                <include>skinshortcuts-template-submenu</include>
-            </control>
+          <control type="image">
+            <top>-75</top>
+            <left>1155</left>
+            <width>476</width>
+            <height>290</height>
+            <aspectratio>scale</aspectratio>
+            <texture diffuse="common/geometric.png" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+            <bordertexture border="32">common/dark-shadow-24.png</bordertexture>
+            <bordersize>24</bordersize>
+          </control>
+          <control type="image">
+            <top>-50</top>
+            <left>1180</left>
+            <width max="426">426</width>
+            <height max="240">240</height>
+            <aspectratio>stretch</aspectratio>
+            <texture>$INFO[Listitem.EpgEventIcon]</texture>
+          </control>
+          <include content="Selectbox">
+            <param name="pad_top_b" value="-70"/>
+            <param name="pad_bottom_b" value="620"/>
+            <param name="pad_left_b" value="1160"/>
+            <param name="pad_right_b" value="140"/>
+            <param name="pad_top_t" value="-66"/>
+            <param name="pad_bottom_t" value="624"/>
+            <param name="pad_left_t" value="1164"/>
+            <param name="pad_right_t" value="144"/>
+            <param name="visible_posters" value="false"/>
+            <param name="visible_squares" value="false"/>
+            <param name="visible_landscapes" value="true"/>
+          </include>
+          <visible>!String.IsEmpty(Listitem.EpgEventIcon)</visible>
         </control>
-    </include>
+        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+      </control>
+    </control>
+    <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+    <control type="group" id="2000">
+      <animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
+        <effect type="slide" end="0,20" time="60" tween="sine"/>
+        <effect type="slide" end="0,-20" time="180" tween="sine" delay="80"/>
+      </animation>
+      <animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
+        <effect type="slide" end="0,-20" time="60" tween="sine"/>
+        <effect type="slide" end="0,20" time="180" tween="sine" delay="80"/>
+      </animation>
+      <include>OpenClose_Right</include>
+      <control type="grouplist" id="3000">
+        <top>480</top>
+        <height>460</height>
+        <itemgap>0</itemgap>
+        <usecontrolcoords>false</usecontrolcoords>
+        <include>skinshortcuts-template-horizontal</include>
+      </control>
+      <control type="group">
+        <top>430</top>
+        <include>WidgetHorizontalLabel</include>
+      </control>
+      <control type="group" id="2999">
+        <left>150</left>
+        <include content="Object_Ratings_Content">
+          <param name="directory" value="$INFO[Skin.String(Icons)]"/>
+          <param name="align" value="left"/>
+          <param name="top" value="240"/>
+        </include>
+      </control>
+    </control>
+    <control type="group">
+      <control type="panel" id="9000">
+        <width>1920</width>
+        <height>180</height>
+        <bottom>0</bottom>
+        <movement>6</movement>
+        <focusposition>0</focusposition>
+        <ondown>9001</ondown>
+        <onup>3000</onup>
+        <orientation>horizontal</orientation>
+        <scrolltime tween="cubic" easing="out">500</scrolltime>
+        <focusedlayout height="95" width="384">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>384</width>
+            <height>95</height>
+            <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+          </control>
+          <control type="group">
+            <control type="image">
+              <left>20</left>
+              <width>64</width>
+              <height>64</height>
+              <centertop>50%</centertop>
+              <texture>$INFO[ListItem.Art(thumb)]</texture>
+            </control>
+            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+          </control>
+          <control type="group">
+            <control type="label">
+              <left>84</left>
+              <top>0</top>
+              <height>95</height>
+              <width>300</width>
+              <scroll>true</scroll>
+              <aligny>center</aligny>
+              <align>left</align>
+              <font>font32</font>
+              <label>$INFO[ListItem.Label]</label>
+              <shadowcolor>text_shadow</shadowcolor>
+            </control>
+            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+          </control>
+        </focusedlayout>
+        <itemlayout height="95" width="384">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>384</width>
+            <height>95</height>
+            <texture colordiffuse="44FFFFFF">common/white.png</texture>
+          </control>
+          <control type="group">
+            <control type="image">
+              <left>20</left>
+              <centertop>50%</centertop>
+              <width>64</width>
+              <height>64</height>
+              <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
+            </control>
+            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+          </control>
+          <control type="group">
+            <control type="label">
+              <left>84</left>
+              <top>0</top>
+              <height>95</height>
+              <width>300</width>
+              <scroll>true</scroll>
+              <aligny>center</aligny>
+              <align>left</align>
+              <font>font32</font>
+              <label>$INFO[ListItem.Label]</label>
+              <shadowcolor>text_shadow</shadowcolor>
+            </control>
+            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+          </control>
+        </itemlayout>
+        <content>
+          <include>skinshortcuts-mainmenu</include>
+        </content>
+      </control>
+      <control type="group">
+        <visible>!Skin.HasSetting(DisableSubmenuInHorizontal)</visible>
+        <control type="image">
+          <left>0</left>
+          <top>995</top>
+          <width>1920</width>
+          <height>95</height>
+          <texture colordiffuse="37FFFFFF">common/white.png</texture>
+        </control>
+        <include>skinshortcuts-template-submenu</include>
+      </control>
+    </control>
+  </include>
 </includes>

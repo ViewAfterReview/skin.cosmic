@@ -1,243 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1111">
-    <defaultcontrol>9000</defaultcontrol>
-    <include>Animation_DialogPopupOpenClose</include>
-    <coordinates>
-        <origin x="50%" y="175" />
-    </coordinates>
-    <controls>
-        <control type="image">
-            <left>-1920</left>
-            <top>-1080</top>
-            <width>5760</width>
-            <height>3240</height>
-            <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-            <texture colordiffuse="B0FFFFFF">colors/black.png</texture>
+  <defaultcontrol>9000</defaultcontrol>
+  <include>Animation_DialogPopupOpenClose</include>
+  <coordinates>
+    <origin x="50%" y="175"/>
+  </coordinates>
+  <controls>
+    <control type="image">
+      <left>-1920</left>
+      <top>-1080</top>
+      <width>5760</width>
+      <height>3240</height>
+      <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+      <texture colordiffuse="B0FFFFFF">colors/black.png</texture>
+    </control>
+    <control type="button">
+      <left>-1920</left>
+      <top>-1080</top>
+      <width>5760</width>
+      <height>3240</height>
+      <texturefocus/>
+      <texturenofocus/>
+      <onclick>Action(close)</onclick>
+    </control>
+    <control type="group">
+      <animation effect="slide" end="-180" time="0" condition="true">conditional</animation>
+      <centertop>40%</centertop>
+      <width>360</width>
+      <height>610</height>
+      <control type="image" id="999">
+        <description>background image</description>
+        <top>-24</top>
+        <left>-24</left>
+        <width>360</width>
+        <height>610</height>
+        <bordersize>24</bordersize>
+        <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
+        <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
+      </control>
+      <include content="DefaultSettingButtonGradient">
+        <param name="id" value="9000"/>
+        <param name="height" value="70"/>
+        <top>0</top>
+        <height>70</height>
+        <width>312</width>
+        <visible>ControlGroup(9000).HasFocus()</visible>
+      </include>
+      <control type="grouplist" id="9000">
+        <description>grouplist for context buttons</description>
+        <left>0</left>
+        <top>0</top>
+        <width>360</width>
+        <height>560</height>
+        <usecontrolcoords>true</usecontrolcoords>
+        <control type="button" id="9001">
+          <label>100%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,100)</onclick>
         </control>
-        <control type="button">
-            <left>-1920</left>
-            <top>-1080</top>
-            <width>5760</width>
-            <height>3240</height>
-            <texturefocus />
-            <texturenofocus />
-            <onclick>Action(close)</onclick>
+        <control type="button" id="9002">
+          <label>95%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,95)</onclick>
         </control>
-        <control type="group">
-            <animation effect="slide" end="-180" time="0" condition="true">conditional</animation>
-            <centertop>40%</centertop>
-            <width>360</width>
-            <height>610</height>
-            <control type="image" id="999">
-                <description>background image</description>
-                <top>-24</top>
-                <left>-24</left>
-                <width>360</width>
-                <height>610</height>
-                <bordersize>24</bordersize>
-                <bordertexture border="32">common/shadow-dialog-24.png</bordertexture>
-                <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
-            </control>
-            <include content="DefaultSettingButtonGradient">
-                <param name="id" value="9000" />
-                <param name="height" value="70" />
-                <top>0</top>
-                <height>70</height>
-                <width>312</width>
-                <visible>ControlGroup(9000).HasFocus()</visible>
-            </include>
-            <control type="grouplist" id="9000">
-                <description>grouplist for context buttons</description>
-                <left>0</left>
-                <top>0</top>
-                <width>360</width>
-                <height>560</height>
-                <usecontrolcoords>true</usecontrolcoords>
-                <control type="button" id="9001">
-                    <label>100%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,100)</onclick>
-                </control>
-                <control type="button" id="9002">
-                    <label>95%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,95)</onclick>
-                </control>
-                <control type="button" id="9003">
-                    <label>90%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,90)</onclick>
-                </control>
-                <control type="button" id="9004">
-                    <label>85%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,85)</onclick>
-                </control>
-                <control type="button" id="9005">
-                    <label>80%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,80)</onclick>
-                </control>
-                <control type="button" id="9006">
-                    <label>75%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,75)</onclick>
-                </control>
-                <control type="button" id="9007">
-                    <label>70%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,70)</onclick>
-                </control>
-                <control type="button" id="9008">
-                    <label>65%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,65)</onclick>
-                </control>
-                <control type="button" id="9009">
-                    <label>60%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,60)</onclick>
-                </control>
-                <control type="button" id="9010">
-                    <label>55%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,55)</onclick>
-                </control>
-                <control type="button" id="9011">
-                    <label>50%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,50)</onclick>
-                </control>
-                <control type="button" id="9012">
-                    <label>45%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,45)</onclick>
-                </control>
-                <control type="button" id="9013">
-                    <label>40%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,40)</onclick>
-                </control>
-                <control type="button" id="9014">
-                    <label>35%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,35)</onclick>
-                </control>
-                <control type="button" id="9015">
-                    <label>30%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,30)</onclick>
-                </control>
-                <control type="button" id="9016">
-                    <label>25%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,25)</onclick>
-                </control>
-                <control type="button" id="9017">
-                    <label>20%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,20)</onclick>
-                </control>
-                <control type="button" id="9018">
-                    <label>15%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,15)</onclick>
-                </control>
-                <control type="button" id="9019">
-                    <label>10%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,10)</onclick>
-                </control>
-                <control type="button" id="9020">
-                    <label>5%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,5)</onclick>
-                </control>
-                <control type="button" id="9021">
-                    <label>0%</label>
-                    <width>312</width>
-                    <height>70</height>
-                    <align>center</align>
-                    <onclick>Dialog.Close(1111)</onclick>
-                    <onclick>Skin.SetString(AlphaValue,0)</onclick>
-                </control>
-            </control>
-            <include content="UpDownArrows">
-                <param name="container_id" value="9000" />
-                <param name="posx" value="131" />
-                <param name="up_posy" value="-40" />
-                <param name="down_posy" value="580" />
-            </include>
+        <control type="button" id="9003">
+          <label>90%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,90)</onclick>
         </control>
-        <control type="button" id="1000">
-            <description>button template</description>
-            <left>0</left>
-            <width>312</width>
-            <height>70</height>
-            <align>left</align>
-            <texturefocus />
-            <texturenofocus />
+        <control type="button" id="9004">
+          <label>85%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,85)</onclick>
         </control>
-    </controls>
+        <control type="button" id="9005">
+          <label>80%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,80)</onclick>
+        </control>
+        <control type="button" id="9006">
+          <label>75%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,75)</onclick>
+        </control>
+        <control type="button" id="9007">
+          <label>70%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,70)</onclick>
+        </control>
+        <control type="button" id="9008">
+          <label>65%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,65)</onclick>
+        </control>
+        <control type="button" id="9009">
+          <label>60%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,60)</onclick>
+        </control>
+        <control type="button" id="9010">
+          <label>55%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,55)</onclick>
+        </control>
+        <control type="button" id="9011">
+          <label>50%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,50)</onclick>
+        </control>
+        <control type="button" id="9012">
+          <label>45%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,45)</onclick>
+        </control>
+        <control type="button" id="9013">
+          <label>40%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,40)</onclick>
+        </control>
+        <control type="button" id="9014">
+          <label>35%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,35)</onclick>
+        </control>
+        <control type="button" id="9015">
+          <label>30%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,30)</onclick>
+        </control>
+        <control type="button" id="9016">
+          <label>25%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,25)</onclick>
+        </control>
+        <control type="button" id="9017">
+          <label>20%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,20)</onclick>
+        </control>
+        <control type="button" id="9018">
+          <label>15%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,15)</onclick>
+        </control>
+        <control type="button" id="9019">
+          <label>10%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,10)</onclick>
+        </control>
+        <control type="button" id="9020">
+          <label>5%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,5)</onclick>
+        </control>
+        <control type="button" id="9021">
+          <label>0%</label>
+          <width>312</width>
+          <height>70</height>
+          <align>center</align>
+          <onclick>Dialog.Close(1111)</onclick>
+          <onclick>Skin.SetString(AlphaValue,0)</onclick>
+        </control>
+      </control>
+      <include content="UpDownArrows">
+        <param name="container_id" value="9000"/>
+        <param name="posx" value="131"/>
+        <param name="up_posy" value="-40"/>
+        <param name="down_posy" value="580"/>
+      </include>
+    </control>
+    <control type="button" id="1000">
+      <description>button template</description>
+      <left>0</left>
+      <width>312</width>
+      <height>70</height>
+      <align>left</align>
+      <texturefocus/>
+      <texturenofocus/>
+    </control>
+  </controls>
 </window>
