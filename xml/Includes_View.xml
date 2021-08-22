@@ -201,10 +201,14 @@
 					</include>
 					<control type="image">
 						<texture colordiffuse="$VAR[ColorHighlight]">$VAR[Image_Overlay_Backing]-fo.png</texture>
+						<include content="WatchedOverlay_Focus_bs0" condition="String.IsEqual(Skin.String(HighlightSize),Bold)" />
+						<include content="WatchedOverlay_Focus_bs4" condition="String.IsEqual(Skin.String(HighlightSize),Thin)" />
 					</control>
 					<control type="image">
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
 						<texture colordiffuse="$VAR[ColorGradient]">$VAR[Image_Overlay_Backing]-fo.png</texture>
+						<include content="WatchedOverlay_Focus_bs0" condition="String.IsEqual(Skin.String(HighlightSize),Bold)" />
+						<include content="WatchedOverlay_Focus_bs4" condition="String.IsEqual(Skin.String(HighlightSize),Thin)" />
 					</control>
 				</include>
 				<visible>$PARAM[visible]</visible>

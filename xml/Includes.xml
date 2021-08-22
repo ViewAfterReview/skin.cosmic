@@ -2452,4 +2452,10 @@
 		<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)]</visible>
 		<visible>!ListItem.IsCollection</visible>
 	</include>
+	<include name="WatchedOverlay_Focus_bs4">
+		<bordersize>4</bordersize>
+	</include>
+	<include name="WatchedOverlay_Focus_bs0">
+		<bordersize>0</bordersize>
+	</include>
 </includes>
