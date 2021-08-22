@@ -214,18 +214,18 @@
 				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<height>460</height>
-				<!-- <onclick condition="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D],call_auto=1190)</onclick> -->
 				<animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
 				<!-- Posters aspect ratio -->
 				<itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
-					<include content="ViewPosterItemLayout">
+					<include content="ViewPosterItemLayout" />
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="-25" />
+						<param name="right" value="44" />
+						<param name="visible" value="false" />
 					</include>
-					<include>View_WatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
-					<include content="ViewPosterItemLayout">
-					</include>
-					<include>View_WatchedOverlay</include>
+					<include content="ViewPosterItemLayout" />
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-15" />
 						<param name="pad_bottom_b" value="-22" />
@@ -239,6 +239,11 @@
 						<param name="visible_squares" value="false" />
 						<param name="visible_landscapes" value="false" />
 					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="-25" />
+						<param name="right" value="44" />
+						<param name="visible" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])" />
+					</include>
 					<control type="button">
 						<include>HiddenObject</include>
 						<include>Animation_AlarmDelay</include>
@@ -251,28 +256,15 @@
 				</focusedlayout>
 				<!-- Square aspect ratio -->
 				<itemlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
-					<include content="ViewSquareItemLayout">
-					</include>
+					<include content="ViewSquareItemLayout" />
 					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="8" />
-						<param name="corner_right" value="39" />
-						<param name="image_top" value="8" />
-						<param name="image_right" value="39" />
-						<param name="label_top" value="8" />
-						<param name="label_right" value="39" />
+						<param name="bottom" value="-25" />
+						<param name="right" value="72" />
+						<param name="visible" value="false" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
-					<include content="ViewSquareItemLayout">
-					</include>
-					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="8" />
-						<param name="corner_right" value="39" />
-						<param name="image_top" value="8" />
-						<param name="image_right" value="39" />
-						<param name="label_top" value="8" />
-						<param name="label_right" value="39" />
-					</include>
+					<include content="ViewSquareItemLayout" />
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-15" />
 						<param name="pad_bottom_b" value="-23" />
@@ -285,6 +277,11 @@
 						<param name="visible_posters" value="false" />
 						<param name="visible_squares" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])" />
 						<param name="visible_landscapes" value="false" />
+					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="-25" />
+						<param name="right" value="72" />
+						<param name="visible" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])" />
 					</include>
 					<control type="button">
 						<include>HiddenObject</include>
@@ -302,25 +299,14 @@
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
 					</include>
 					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="false" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
 					<include content="ViewLandscapeItemLayout">
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
-					</include>
-					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
 					</include>
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-8" />
@@ -334,6 +320,11 @@
 						<param name="visible_posters" value="false" />
 						<param name="visible_squares" value="false" />
 						<param name="visible_landscapes" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])" />
+					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])" />
 					</include>
 					<control type="button">
 						<include>HiddenObject</include>
@@ -351,25 +342,14 @@
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
 					</include>
 					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="false" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
 					<include content="ViewFanartItemLayout">
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
-					</include>
-					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
 					</include>
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-8" />
@@ -383,6 +363,11 @@
 						<param name="visible_posters" value="false" />
 						<param name="visible_squares" value="false" />
 						<param name="visible_landscapes" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])" />
+					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])" />
 					</include>
 					<control type="button">
 						<include>HiddenObject</include>
@@ -432,12 +417,15 @@
 				<itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
 					<include content="ViewPosterItemLayout">
 					</include>
-					<include>View_WatchedOverlay</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="-25" />
+						<param name="right" value="44" />
+						<param name="visible" value="false" />
+					</include>
 				</itemlayout>
 				<focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
 					<include content="ViewPosterItemLayout">
 					</include>
-					<include>View_WatchedOverlay</include>
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-15" />
 						<param name="pad_bottom_b" value="-22" />
@@ -447,9 +435,14 @@
 						<param name="pad_bottom_t" value="-16" />
 						<param name="pad_left_t" value="-10" />
 						<param name="pad_right_t" value="0" />
-						<param name="visible_posters" value="$PARAM[postercondition]" />
+						<param name="visible_posters" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])" />
 						<param name="visible_squares" value="false" />
 						<param name="visible_landscapes" value="false" />
+					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="-25" />
+						<param name="right" value="44" />
+						<param name="visible" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])" />
 					</include>
 				</focusedlayout>
 				<!-- Square aspect ratio -->
@@ -457,24 +450,13 @@
 					<include content="ViewSquareItemLayout">
 					</include>
 					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="8" />
-						<param name="corner_right" value="39" />
-						<param name="image_top" value="8" />
-						<param name="image_right" value="39" />
-						<param name="label_top" value="8" />
-						<param name="label_right" value="39" />
+						<param name="bottom" value="-25" />
+						<param name="right" value="72" />
+						<param name="visible" value="false" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
 					<include content="ViewSquareItemLayout">
-					</include>
-					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="8" />
-						<param name="corner_right" value="39" />
-						<param name="image_top" value="8" />
-						<param name="image_right" value="39" />
-						<param name="label_top" value="8" />
-						<param name="label_right" value="39" />
 					</include>
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-15" />
@@ -486,8 +468,13 @@
 						<param name="pad_left_t" value="-10" />
 						<param name="pad_right_t" value="22" />
 						<param name="visible_posters" value="false" />
-						<param name="visible_squares" value="$PARAM[squarecondition]" />
+						<param name="visible_squares" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])" />
 						<param name="visible_landscapes" value="false" />
+					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="-25" />
+						<param name="right" value="72" />
+						<param name="visible" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])" />
 					</include>
 				</focusedlayout>
 				<!-- Landscape aspect ratio -->
@@ -496,25 +483,14 @@
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
 					</include>
 					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="false" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
 					<include content="ViewLandscapeItemLayout">
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
-					</include>
-					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
 					</include>
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-8" />
@@ -527,7 +503,12 @@
 						<param name="pad_right_t" value="15" />
 						<param name="visible_posters" value="false" />
 						<param name="visible_squares" value="false" />
-						<param name="visible_landscapes" value="$PARAM[landscapecondition]" />
+						<param name="visible_landscapes" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])" />
+					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])" />
 					</include>
 				</focusedlayout>
 				<!-- Fanart aspect ratio -->
@@ -536,25 +517,14 @@
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
 					</include>
 					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="false" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
 					<include content="ViewFanartItemLayout">
 						<param name="clearlogo" value="Skin.HasSetting(LandscapeArt)" />
-					</include>
-					<include content="View_WatchedOverlay">
-						<param name="corner_top" value="14" />
-						<param name="corner_right" value="32" />
-						<param name="image_top" value="14" />
-						<param name="image_right" value="32" />
-						<param name="label_top" value="14" />
-						<param name="label_right" value="32" />
 					</include>
 					<include content="Selectbox">
 						<param name="pad_top_b" value="-8" />
@@ -568,6 +538,11 @@
 						<param name="visible_posters" value="false" />
 						<param name="visible_squares" value="false" />
 						<param name="visible_landscapes" value="$PARAM[fanartcondition]" />
+					</include>
+					<include content="View_WatchedOverlay">
+						<param name="bottom" value="18" />
+						<param name="right" value="72" />
+						<param name="visible" value="$PARAM[fanartcondition]" />
 					</include>
 				</focusedlayout>
 				<include content="Object_Widget_Content_Path">
@@ -1150,5 +1125,10 @@
 				<visible>String.IsEmpty(ListItem.Icon)</visible>
 			</control>
 		</definition>
+	</include>
+	<include name="Object_Control">
+		<control type="$PARAM[type]" id="$PARAM[id]">
+			<nested />
+		</control>
 	</include>
 </includes>

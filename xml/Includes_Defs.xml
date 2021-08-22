@@ -66,4 +66,18 @@
 		<value condition="String.IsEqual(Skin.String(Trailer_Delay),00:57)">$LOCALIZE[31324]</value>
 		<value>Default</value>
 	</variable>
+	<variable name="Defs_PercentPlayed">
+		<value condition="Window.IsVisible(AddonBrowser.xml) + String.EndsWith(ListItem.Label2,%)">$INFO[ListItem.Label2]</value>
+		<value condition="!String.IsEmpty(ListItem.PercentPlayed) + !Integer.IsEqual(ListItem.PercentPlayed,0)">$INFO[ListItem.PercentPlayed]</value>
+		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(DisableIndicator.Watched)">100</value>
+	</variable>
+	<include name="Defs_Pad">
+		<param name="pad" default="5" />
+		<definition>
+			<left>$PARAM[pad]</left>
+			<right>$PARAM[pad]</right>
+			<bottom>$PARAM[pad]</bottom>
+			<top>$PARAM[pad]</top>
+		</definition>
+	</include>
 </includes>
