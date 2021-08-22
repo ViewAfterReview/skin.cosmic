@@ -1,134 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <zorder>3</zorder>
   <controls>
     <control type="group">
-      <depth>DepthMax</depth>
-      <top>-150</top>
-      <right>0</right>
-      <width>800</width>
-      <include>OpenClose_Right</include>
-      <control type="grouplist">
-        <orientation>vertical</orientation>
-        <right>0</right>
-        <top>80</top>
-        <itemgap>0</itemgap>
-        <usecontrolcoords>true</usecontrolcoords>
-        <control type="group">
-          <include>OpenClose_Fade</include>
-          <left>300</left>
-          <top>0</top>
-          <width>700</width>
-          <height>50</height>
-          <control type="image">
-            <left>-400</left>
-            <right>-400</right>
-            <top>-400</top>
-            <bottom>-400</bottom>
-            <aspectratio>stretch</aspectratio>
-            <texture flipx="true">common/shadowspot.png</texture>
-          </control>
-          <control type="image">
-            <left>-400</left>
-            <right>-400</right>
-            <top>-400</top>
-            <bottom>-400</bottom>
-            <aspectratio>stretch</aspectratio>
-            <texture flipx="true">common/shadowspot.png</texture>
-          </control>
-          <control type="image">
-            <left>-400</left>
-            <right>-400</right>
-            <top>-400</top>
-            <bottom>-400</bottom>
-            <aspectratio>stretch</aspectratio>
-            <texture flipx="true">common/shadowspot.png</texture>
-          </control>
-        </control>
-        <control type="group">
-          <top>0</top>
-          <height>180</height>
-          <align>right</align>
-          <control type="grouplist">
-            <left>8</left>
-            <right>64</right>
-            <centertop>50%</centertop>
-            <height>64</height>
-            <orientation>horizontal</orientation>
-            <itemgap>16</itemgap>
-            <align>right</align>
-            <usecontrolcoords>true</usecontrolcoords>
-            <control type="group">
-              <control type="image" description="Back">
-                <right>0</right>
-                <centertop>50%</centertop>
-                <width>80</width>
-                <height>80</height>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
-                <texture>dialog/loading-back.png</texture>
-                <colordiffuse>b3dedede</colordiffuse>
-              </control>
-              <control type="group">
-                <right>0</right>
-                <centertop>50%</centertop>
-                <width>80</width>
-                <height>80</height>
-                <visible>[Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)]</visible>
-                <control type="image">
-                  <texture colordiffuse="$VAR[ColorHighlight]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
-                  <aspectratio align="center" aligny="center">keep</aspectratio>
-                </control>
-                <control type="image">
-                  <texture colordiffuse="$VAR[ColorGradient]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
-                  <animation effect="fade" end="66" condition="true">Conditional</animation>
-                  <aspectratio align="center" aligny="center">keep</aspectratio>
-                  <!-- <include content="ProgressColorFade">
-										<param name="id" value="$PARAM[progress-id]" />
-									</include> -->
-                </control>
-              </control>
-              <control type="image">
-                <right>24</right>
-                <centertop>50%</centertop>
-                <height>32</height>
-                <width>42</width>
-                <aspectratio align="right">keep</aspectratio>
-                <texture colordiffuse="ffdedede">buttons/info.png</texture>
-              </control>
-            </control>
-            <control type="label" id="180">
-              <left>-12</left>
-              <centertop>50%</centertop>
-              <height>34</height>
-              <label>$INFO[Control.GetLabel(401)]</label>
-              <width max="300">auto</width>
-              <scroll>true</scroll>
-              <font>font27_bold</font>
-              <textcolor>ffdedede</textcolor>
-            </control>
-            <control type="label" id="181">
-              <centertop>50%</centertop>
-              <height>34</height>
-              <label>$INFO[Control.GetLabel(402)]</label>
-              <width max="300">auto</width>
-              <scroll>true</scroll>
-              <font>font27_narrow</font>
-              <textcolor>ffdedede</textcolor>
-            </control>
-            <control type="label">
-              <centertop>50%</centertop>
-              <height>34</height>
-              <width>auto</width>
-              <textcolor>ffdedede</textcolor>
-              <font>font27_narrow</font>
-              <label>$INFO[Control.GetLabel(32),,%]</label>
-              <visible>Window.IsVisible(DialogExtendedProgressBar.xml) + Control.IsVisible(32)</visible>
-            </control>
-          </control>
-        </control>
+      <visible>!Window.IsVisible(Startup.xml)</visible>
+      <control type="group">
+        <include content="Dialog_Notification_Group" condition="![Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml)]">
+          <param name="main_id" value="9401" />
+          <param name="sub_id" value="9402" />
+          <param name="label" value="$INFO[Control.GetLabel(401)]" />
+          <param name="label2" value="$INFO[Control.GetLabel(402)]" />
+        </include>
+        <include content="Dialog_Notification_Group" condition="[Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml)]">
+          <param name="main_id" value="9401" />
+          <param name="sub_id" value="9402" />
+          <param name="label" value="$INFO[Control.GetLabel(401)]" />
+          <param name="label2" value="$INFO[Control.GetLabel(402)]" />
+          <param name="fgcolor" value="panel_fg" />
+        </include>
       </control>
     </control>
-    <!-- Hidden buttons -->
     <control type="label" id="401">
       <include>HiddenObject</include>
     </control>
