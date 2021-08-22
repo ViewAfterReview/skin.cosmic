@@ -1,3 +1,7 @@
+1.0.25
+    Added: Pick fanart from first item in widget and set as background
+    Fixed: Optimization for loading poster textures
+    Fixed: Notifications
 1.0.24
     Fixed: Some errors in DialogVideoInfo.xml
     Changed: Watched overlay appearance
