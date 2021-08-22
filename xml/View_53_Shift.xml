@@ -54,8 +54,7 @@
 					<pagecontrol>5199</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>horizontal</orientation>
-					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) |
-						Container.Content(mixed) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
+					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) |						Container.Content(mixed) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
 					<onleft>53</onleft>
 					<onup>9000</onup>
 					<ondown>5199</ondown>
@@ -119,7 +118,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<autoscroll time="3000" delay="3000" repeat="3000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
 						<control type="image">
 							<left>169</left>
@@ -197,7 +196,7 @@
 				<top>45</top>
 				<right>30</right>
 				<height>163</height>
-				<autoscroll delay="7000" time="3500" repeat="10000">true</autoscroll>
+				<autoscroll delay="7000" time="3500" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				<label>$PARAM[textbox_content]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>

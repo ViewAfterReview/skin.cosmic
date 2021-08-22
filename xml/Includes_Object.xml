@@ -603,7 +603,7 @@
 						<label>$PARAM[plot]</label>
 						<font>font32</font>
 						<shadowcolor>black</shadowcolor>
-						<autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600)</autoscroll>
+						<autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>
 				<include content="CyclingInfo">
@@ -648,7 +648,7 @@
 					<wrapmultiline>true</wrapmultiline>
 					<label>$INFO[ListItem.Genre]</label>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
-					<autoscroll delay="6000" time="4500" repeat="7000">!String.IsEmpty(ListItem.Genre)</autoscroll>
+					<autoscroll delay="6000" time="4500" repeat="7000">!String.IsEmpty(ListItem.Genre) + Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">
@@ -680,7 +680,7 @@
 					<wrapmultiline>true</wrapmultiline>
 					<label>$INFO[ListItem.Studio]</label>
 					<visible>!String.IsEmpty(ListItem.Studio)</visible>
-					<autoscroll delay="12000" time="3000" repeat="7000">!String.IsEmpty(ListItem.Studio)</autoscroll>
+					<autoscroll delay="12000" time="3000" repeat="7000">!String.IsEmpty(ListItem.Studio) + Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">
@@ -712,7 +712,7 @@
 					<wrapmultiline>true</wrapmultiline>
 					<label>$INFO[ListItem.CastAndRole]</label>
 					<visible>!String.IsEmpty(ListItem.CastAndRole)</visible>
-					<autoscroll delay="12000" time="3000" repeat="7000">!String.IsEmpty(ListItem.CastAndRole)</autoscroll>
+					<autoscroll delay="12000" time="3000" repeat="7000">!String.IsEmpty(ListItem.CastAndRole) + Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 		</control>

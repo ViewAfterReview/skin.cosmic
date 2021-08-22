@@ -65,7 +65,7 @@
 							<label>$INFO[ListItem.Plot]</label>
 							<font>font32</font>
 							<shadowcolor>shadow</shadowcolor>
-							<autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(99)</autoscroll>
+							<autoscroll delay="4000" time="4500" repeat="7000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
 					</control>
 				</control>

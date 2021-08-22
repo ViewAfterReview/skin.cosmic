@@ -51,7 +51,7 @@
                 <top>235</top>
                 <height>145</height>
                 <right>115</right>
-                <autoscroll time="3000" delay="7000" repeat="5000">Control.HasFocus(56)</autoscroll>
+                <autoscroll time="3000" delay="7000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
                 <label>$VAR[PlotTextBoxVar]</label>
                 <shadowcolor>text_shadow</shadowcolor>
                 <visible>![ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)]</visible>
