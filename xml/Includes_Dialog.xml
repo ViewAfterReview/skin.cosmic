@@ -15,7 +15,7 @@
       <height>40</height>
       <control type="group">
         <include>OpenClose_Fade</include>
-        <right>-100</right>
+        <right>-225</right>
         <top>0</top>
         <width>700</width>
         <height>50</height>
