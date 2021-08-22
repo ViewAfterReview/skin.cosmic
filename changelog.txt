@@ -1,3 +1,9 @@
+1.0.24
+    Fixed: Some errors in DialogVideoInfo.xml
+    Changed: Watched overlay appearance
+    Fixed: Unwatched_movies playlist sort method
+    Fixed: Autoscroll plot and review option
+    Reformatted code using XML Lint
 1.0.23
     Added: Fanart Aspect ratio
     Added: YouTube videos to InfoDialog [need some fixes]
