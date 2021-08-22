@@ -181,7 +181,7 @@
         <left>8</left>
         <right>18</right>
         <aspectratio>scale</aspectratio>
-        <texture>$VAR[Image_Poster]</texture>
+        <texture background="true">$VAR[Image_Poster]</texture>
       </control>
     </definition>
   </include>
@@ -204,7 +204,7 @@
         <width>290</width>
         <align>center</align>
         <aspectratio>keep</aspectratio>
-        <texture>$VAR[Image_Poster]</texture>
+        <texture background="true">$VAR[Image_Poster]</texture>
       </control>
       <control type="label">
         <top>320</top>
@@ -236,7 +236,7 @@
           <right>18</right>
           <height>$PARAM[iconheight]</height>
           <aspectratio>scale</aspectratio>
-          <texture>$VAR[Image_Landscape]</texture>
+          <texture background="true">$VAR[Image_Landscape]</texture>
           <bordersize>15</bordersize>
           <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
@@ -246,7 +246,7 @@
           <centertop>50%</centertop>
           <width>200</width>
           <aspectratio>keep</aspectratio>
-          <texture>$VAR[Image_Landscape]</texture>
+          <texture background="true">$VAR[Image_Landscape]</texture>
           <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
         <control type="group">
@@ -256,7 +256,7 @@
             <bottom>40</bottom>
             <width>33%</width>
             <aspectratio align="right" aligny="bottom">keep</aspectratio>
-            <texture>$VAR[Image_ClearLogo]</texture>
+            <texture background="true">$VAR[Image_ClearLogo]</texture>
             <visible>$PARAM[clearlogo]</visible>
           </control>
         </control>
@@ -281,7 +281,7 @@
           <right>18</right>
           <height>$PARAM[iconheight]</height>
           <aspectratio>scale</aspectratio>
-          <texture>$VAR[Image_Fanart]</texture>
+          <texture background="true">$VAR[Image_Fanart]</texture>
           <bordersize>15</bordersize>
           <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
@@ -291,7 +291,7 @@
           <centertop>50%</centertop>
           <width>200</width>
           <aspectratio>keep</aspectratio>
-          <texture>$VAR[Image_Fanart]</texture>
+          <texture background="true">$VAR[Image_Fanart]</texture>
           <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         </control>
         <control type="group">
@@ -301,7 +301,7 @@
             <bottom>40</bottom>
             <width>33%</width>
             <aspectratio align="right" aligny="bottom">keep</aspectratio>
-            <texture>$VAR[Image_ClearLogo]</texture>
+            <texture background="true">$VAR[Image_ClearLogo]</texture>
             <visible>$PARAM[clearlogo]</visible>
           </control>
         </control>
