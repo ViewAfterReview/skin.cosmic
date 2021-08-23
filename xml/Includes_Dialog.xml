@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="Dialog_Notification_Group">
-    <param name="main_id" default="30" />
-    <param name="sub_id" default="31" />
-    <param name="nowplaying" default="false" />
-    <param name="progress" default="Control.GetLabel(32)" />
-    <param name="progress-id" default="32" />
-    <param name="icon" default="buttons/info.png" />
-    <param name="fgcolor" default="main_fg" />
+    <param name="main_id" default="30"/>
+    <param name="sub_id" default="31"/>
+    <param name="nowplaying" default="false"/>
+    <param name="progress" default="Control.GetLabel(32)"/>
+    <param name="progress-id" default="32"/>
+    <param name="icon" default="buttons/info.png"/>
+    <param name="fgcolor" default="main_fg"/>
     <definition>
       <top>80</top>
       <left>80</left>
@@ -68,7 +68,7 @@
           <animation effect="fade" end="66" condition="true">Conditional</animation>
           <aspectratio align="center" aligny="center">keep</aspectratio>
           <include content="ProgressColorFade">
-            <param name="id" value="$PARAM[progress-id]" />
+            <param name="id" value="$PARAM[progress-id]"/>
           </include>
         </control>
       </control>
