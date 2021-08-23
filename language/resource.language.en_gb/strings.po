@@ -1312,7 +1312,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31273"
-msgid "Background & Misc."
+msgid "Background"
 msgstr ""
 
 #: /xml/SkinSettings.xml
