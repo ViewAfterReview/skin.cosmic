@@ -158,29 +158,29 @@
           <width>32</width>
           <height>32</height>
           <font/>
-          <texturenofocus>buttons/cross.png</texturenofocus>
-          <texturefocus colordiffuse="ffe17055">buttons/cross.png</texturefocus>
+          <texturenofocus colordiffuse="dialog_fg_30">buttons/cross.png</texturenofocus>
+          <texturefocus colordiffuse="selected">buttons/cross.png</texturefocus>
         </control>
         <control type="button" id="301" description="Add">
           <width>32</width>
           <height>32</height>
           <font/>
-          <texturenofocus>buttons/plus.png</texturenofocus>
-          <texturefocus colordiffuse="ffe17055">buttons/plus.png</texturefocus>
+          <texturenofocus colordiffuse="dialog_fg_30">buttons/plus.png</texturenofocus>
+          <texturefocus colordiffuse="selected">buttons/plus.png</texturefocus>
         </control>
         <control type="button" id="303" description="Up">
           <width>32</width>
           <height>32</height>
           <font/>
-          <texturenofocus flipy="true">buttons/down.png</texturenofocus>
-          <texturefocus colordiffuse="ffe17055" flipy="true">buttons/down.png</texturefocus>
+          <texturenofocus colordiffuse="dialog_fg_30" flipy="true">buttons/down.png</texturenofocus>
+          <texturefocus colordiffuse="selected" flipy="true">buttons/down.png</texturefocus>
         </control>
         <control type="button" id="304" description="Down">
           <width>32</width>
           <height>32</height>
           <font/>
-          <texturenofocus>buttons/down.png</texturenofocus>
-          <texturefocus colordiffuse="ffe17055">buttons/down.png</texturefocus>
+          <texturenofocus colordiffuse="dialog_fg_30">buttons/down.png</texturenofocus>
+          <texturefocus colordiffuse="selected">buttons/down.png</texturefocus>
         </control>
       </control>
       <control type="group">
