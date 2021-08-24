@@ -33,10 +33,10 @@
             <right>0</right>
             <height>70</height>
             <control type="image">
-              <texture colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texture>
+              <texture colordiffuse="$VAR[ColorHighlight]" border="5">common/white.png</texture>
             </control>
             <control type="image">
-              <texture colordiffuse="$VAR[ColorGradient]" border="5">common/white-gradient-rounded.png</texture>
+              <texture colordiffuse="$VAR[ColorGradient]" border="5">common/white-gradient.png</texture>
             </control>
           </control>
           <!-- Header Label -->
@@ -107,10 +107,10 @@
         </itemlayout>
         <focusedlayout width="550" height="70">
           <control type="image">
-            <texture colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texture>
+            <texture colordiffuse="$VAR[ColorHighlight]" border="5">common/white.png</texture>
           </control>
           <control type="image">
-            <texture colordiffuse="$VAR[ColorGradient]" border="5">common/white-gradient-rounded.png</texture>
+            <texture colordiffuse="$VAR[ColorGradient]" border="5">common/white-gradient.png</texture>
           </control>
           <control type="label">
             <left>30</left>
