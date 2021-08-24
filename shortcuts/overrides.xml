@@ -11,6 +11,11 @@
   <groupoverride group="shutdown" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
   <!-- Warning to Remove Settings -->
   <warn heading="31349" message="31350">ActivateWindow(Settings)</warn>
+  <override action="Skin.SetString(SearchTerm)">
+    <action>Skin.Reset(SearchTerm)</action>
+    <action>Skin.SetString(SearchTerm)</action>
+    <action>ActivateWindow(1121)</action>
+  </override>
   <!-- Widget Target -->
   <property property="widgetTarget">videos</property>
   <property property="widgetTarget">music</property>
@@ -62,6 +67,19 @@
   <property property="widgetAspect">Landscape</property>
   <property property="widgetAspect">Fanart</property>
   <propertySettings property="widgetAspect" buttonID="505" title="Widget Aspect"/>
+  <!-- Search Item Default Properties -->
+  <propertydefault labelID="artists" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="albums" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="songs" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="add-ons" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="spotifyartists" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="spotifyalbums" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="spotifysongs" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="spotifyplaylists" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="musicvideos" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="musicvideoartists" group="searchmenu" property="widgetAspect">Square</propertydefault>
+  <propertydefault labelID="youtube" group="searchmenu" property="widgetAspect">Landscape</propertydefault>
+  <propertydefault labelID="episodes" group="searchmenu" property="widgetAspect">Landscape</propertydefault>
   <!-- Icon Overrides -->
   <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
   <icon labelID="radio">special://skin/extras/icons/radio.png</icon>
@@ -147,6 +165,7 @@
   <groupings>
     <node label="32029">
       <content>common</content>
+      <shortcut label="$LOCALIZE[137]" type="$LOCALIZE[31206]" icon="special://skin/extras/icons/search.png">Skin.SetString(SearchTerm)</shortcut>
       <shortcut label="$LOCALIZE[10821]" type="32021" icon="special://skin/extras/icons/games.png">ActivateWindow(Games)</shortcut>
       <shortcut label="$LOCALIZE[33060]" type="$LOCALIZE[31206]" icon="special://skin/extras/icons/power.png">ActivateWindow(shutdownmenu)</shortcut>
       <shortcut label="$LOCALIZE[31207]" type="32021" icon="special://skin/extras/icons/passports.png">SetFocus(9001)</shortcut>
@@ -242,6 +261,47 @@
     </node>
     <content>video</content>
   </video-groupings>
+  <!-- customsearch Grouping -->
+  <customsearch-groupings>
+    <node label="32010">
+      <content>addon-video</content>
+    </node>
+    <node label="32011">
+      <content>addon-audio</content>
+    </node>
+    <node label="32012">
+      <content>addon-image</content>
+    </node>
+    <node label="32009">
+      <content>addon-program</content>
+    </node>
+  </customsearch-groupings>
+  <customsearchdefaultitems-groupings>
+    <shortcut label="Movies" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-Movies</shortcut>
+    <shortcut label="Tv Shows" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-TvShows</shortcut>
+    <shortcut label="Episodes" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-Episodes</shortcut>
+    <shortcut label="Genres" type="571" icon="special://skin/extras/icons/genre.png">DefaultSearch-Genres</shortcut>
+    <shortcut label="Year" type="571" icon="special://skin/extras/icons/years.png">DefaultSearch-Year</shortcut>
+    <shortcut label="Studio" type="571" icon="special://skin/extras/icons/studio.png">DefaultSearch-Studio</shortcut>
+    <shortcut label="Country" type="571" icon="special://skin/extras/icons/country.png">DefaultSearch-Country</shortcut>
+    <shortcut label="Actor" type="571" icon="special://skin/extras/icons/person.png">DefaultSearch-Actor</shortcut>
+    <shortcut label="Director" type="571" icon="special://skin/extras/icons/person.png">DefaultSearch-Director</shortcut>
+    <shortcut label="Albums" type="571" icon="special://skin/extras/icons/songs.png">DefaultSearch-Albums</shortcut>
+    <shortcut label="Artists" type="571" icon="special://skin/extras/icons/songs.png">DefaultSearch-Artists</shortcut>
+    <shortcut label="Songs" type="571" icon="special://skin/extras/icons/songs.png">DefaultSearch-Songs</shortcut>
+    <shortcut label="Music Videos" type="571" icon="special://skin/extras/icons/musicvideo.png">DefaultSearch-MusicVideos</shortcut>
+    <shortcut label="Music Video Artists" type="571" icon="special://skin/extras/icons/musicvideo.png">DefaultSearch-MusicVideoArtists</shortcut>
+    <shortcut label="Add-ons" type="571" icon="special://skin/extras/icons/addons.png">DefaultSearch-Addons</shortcut>
+    <shortcut label="Youtube" type="571" icon="special://skin/extras/icons/youtube.png">DefaultSearch-Youtube</shortcut>
+    <shortcut label="Netflix" type="571" icon="special://skin/extras/icons/netflix.png">DefaultSearch-Netflix</shortcut>
+    <shortcut label="Spotify Artists" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyArtists</shortcut>
+    <shortcut label="Spotify Albums" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyAlbums</shortcut>
+    <shortcut label="Spotify Songs" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifySongs</shortcut>
+    <shortcut label="Spotify Playlists" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyPlaylists</shortcut>
+    <shortcut label="TMDb Movies" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-TMDBMovies</shortcut>
+    <shortcut label="TMDb Shows" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-TMDBShows</shortcut>
+    <shortcut label="TMDb People" type="571" icon="special://skin/extras/icons/person3.png">DefaultSearch-TMDBPeople</shortcut>
+  </customsearchdefaultitems-groupings>
   <!-- Widget Grouping -->
   <widget-groupings>
     <node label="$LOCALIZE[31208]">

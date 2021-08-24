@@ -1775,3 +1775,18 @@ msgstr ""
 msgctxt "#31365"
 msgid "YouTube"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31366"
+msgid "Customize search list"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31367"
+msgid "Default search items"
+msgstr ""
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31368"
+msgid "Action"
+msgstr ""

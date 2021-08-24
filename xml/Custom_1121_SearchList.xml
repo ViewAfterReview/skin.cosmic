@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1121">
+  <defaultcontrol>4100</defaultcontrol>
+  <onload condition="String.IsEmpty(Skin.String(SearchTerm))">Back</onload>
+  <controls>
+    <visible>!$EXP[infodialog_active]</visible>
+    <include>DefaultBackground</include>
+    <control type="grouplist" id="4100">
+      <scrolltime tween="quadratic">400</scrolltime>
+      <orientation>vertical</orientation>
+      <usecontrolcoords>true</usecontrolcoords>
+      <top>655</top>
+      <width>1800</width>
+      <height>9999</height>
+      <include content="Animation_Widget_Slide">
+        <param name="container" value="4100" />
+      </include>
+      <include>skinshortcuts-template-search</include>
+    </control>
+    <control type="group">
+      <include content="Object_Item_Showcase">
+        <param name="title" value="$INFO[ListItem.Title]"/>
+        <param name="title_width" value="930"/>
+        <param name="plot" value="$VAR[PlotTextBoxVar]"/>
+        <param name="plot_height" value="200"/>
+        <param name="info_line_top" value="100"/>
+        <param name="plot_top" value="160"/>
+        <param name="top" value="220" />
+      </include>
+      <control type="image">
+        <left>-20%</left>
+        <top>-30</top>
+        <width>150%</width>
+        <height>140</height>
+        <texture colordiffuse="ff000000">diffuse/box-sharp.png</texture>
+        <bordertexture border="21">overlays/shadow.png</bordertexture>
+        <bordersize>20</bordersize>
+      </control>
+      <control type="image">
+        <left>32</left>
+        <top>10</top>
+        <width>64</width>
+        <height>64</height>
+        <texture colordiffuse="$VAR[ColorHighlight]">diffuse/box-sharp.png</texture>
+      </control>
+      <control type="image">
+        <left>32</left>
+        <top>10</top>
+        <width>64</width>
+        <height>64</height>
+        <texture>special://skin/extras/icons/search.png</texture>
+      </control>
+      <control type="label">
+        <top>0</top>
+        <left>128</left>
+        <font>font60</font>
+        <label>[UPPERCASE]$INFO[Window(home).Property(widgetNameLabel)][/UPPERCASE]</label>
+      </control>
+      <control type="label">
+        <top>0</top>
+        <right>60</right>
+        <align>right</align>
+        <font>font60</font>
+        <label>$INFO[System.Time]</label>
+      </control>
+    </control>
+  </controls>
+</window>

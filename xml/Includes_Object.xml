@@ -192,6 +192,168 @@
       </control>
     </definition>
   </include>
+  <include name="Object_Widget_Content_SearchList">
+    <param name="controltype" default="list"/>
+    <param name="id" default=""/>
+    <param name="target" default=""/>
+    <param name="sortby" default=""/>
+    <param name="sortdirection" default=""/>
+    <param name="limit" default=""/>
+    <param name="path" default=""/>
+    <param name="postercondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Poster)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Poster)]"/>
+    <param name="squarecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Square)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Square)]"/>
+    <param name="landscapecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Landscape)]"/>
+    <param name="fanartcondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Fanart)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Fanart)]"/>
+    <definition>
+      <control type="$PARAM[controltype]" id="$PARAM[id]">
+        <nested/>
+        <onfocus>SetProperty(TMDbHelper.WidgetContainer,$PARAM[id],home)</onfocus>
+        <onfocus>SetProperty(widgetNameLabel,$PARAM[label],home)</onfocus>
+        <onfocus>SetProperty(widgetMovementId,$PARAM[id],home)</onfocus>
+        <orientation>horizontal</orientation>
+        <height>460</height>
+        <animation effect="fade" start="100" end="0" time="300" reversible="true" easing="inout" condition="Integer.IsGreater(Window(home).Property(widgetMovementId),$PARAM[id])">Conditional</animation>
+        <!-- Posters aspect ratio -->
+        <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
+          <include content="ViewPosterItemLayout" />
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="-25"/>
+            <param name="right" value="44"/>
+            <param name="visible" value="false"/>
+          </include>
+        </itemlayout>
+        <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
+          <include content="ViewPosterItemLayout">
+          </include>
+          <include content="Selectbox">
+            <param name="pad_top_b" value="-15"/>
+            <param name="pad_bottom_b" value="-22"/>
+            <param name="pad_left_b" value="-15"/>
+            <param name="pad_right_b" value="-5"/>
+            <param name="pad_top_t" value="-10"/>
+            <param name="pad_bottom_t" value="-16"/>
+            <param name="pad_left_t" value="-10"/>
+            <param name="pad_right_t" value="0"/>
+            <param name="visible_posters" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
+            <param name="visible_squares" value="false"/>
+            <param name="visible_landscapes" value="false"/>
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="-25"/>
+            <param name="right" value="44"/>
+            <param name="visible" value="$PARAM[postercondition] + Control.HasFocus($PARAM[id])"/>
+          </include>
+        </focusedlayout>
+        <!-- Square aspect ratio -->
+        <itemlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
+          <include content="ViewSquareItemLayout">
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="-25"/>
+            <param name="right" value="72"/>
+            <param name="visible" value="false"/>
+          </include>
+        </itemlayout>
+        <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
+          <include content="ViewSquareItemLayout">
+          </include>
+          <include content="Selectbox">
+            <param name="pad_top_b" value="-15"/>
+            <param name="pad_bottom_b" value="-23"/>
+            <param name="pad_left_b" value="-15"/>
+            <param name="pad_right_b" value="17"/>
+            <param name="pad_top_t" value="-8"/>
+            <param name="pad_bottom_t" value="-18"/>
+            <param name="pad_left_t" value="-10"/>
+            <param name="pad_right_t" value="22"/>
+            <param name="visible_posters" value="false"/>
+            <param name="visible_squares" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
+            <param name="visible_landscapes" value="false"/>
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="-25"/>
+            <param name="right" value="72"/>
+            <param name="visible" value="$PARAM[squarecondition] + Control.HasFocus($PARAM[id])"/>
+          </include>
+        </focusedlayout>
+        <!-- Landscape aspect ratio -->
+        <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
+          <include content="ViewLandscapeItemLayout">
+            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="18"/>
+            <param name="right" value="72"/>
+            <param name="visible" value="false"/>
+          </include>
+        </itemlayout>
+        <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
+          <include content="ViewLandscapeItemLayout">
+            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+          </include>
+          <include content="Selectbox">
+            <param name="pad_top_b" value="-8"/>
+            <param name="pad_bottom_b" value="18"/>
+            <param name="pad_left_b" value="-8"/>
+            <param name="pad_right_b" value="10"/>
+            <param name="pad_top_t" value="-3"/>
+            <param name="pad_bottom_t" value="23"/>
+            <param name="pad_left_t" value="-3"/>
+            <param name="pad_right_t" value="15"/>
+            <param name="visible_posters" value="false"/>
+            <param name="visible_squares" value="false"/>
+            <param name="visible_landscapes" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])"/>
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="18"/>
+            <param name="right" value="72"/>
+            <param name="visible" value="$PARAM[landscapecondition] + Control.HasFocus($PARAM[id])"/>
+          </include>
+        </focusedlayout>
+        <!-- Fanart aspect ratio -->
+        <itemlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
+          <include content="ViewFanartItemLayout">
+            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="18"/>
+            <param name="right" value="72"/>
+            <param name="visible" value="false"/>
+          </include>
+        </itemlayout>
+        <focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
+          <include content="ViewFanartItemLayout">
+            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+          </include>
+          <include content="Selectbox">
+            <param name="pad_top_b" value="-8"/>
+            <param name="pad_bottom_b" value="18"/>
+            <param name="pad_left_b" value="-8"/>
+            <param name="pad_right_b" value="10"/>
+            <param name="pad_top_t" value="-3"/>
+            <param name="pad_bottom_t" value="23"/>
+            <param name="pad_left_t" value="-3"/>
+            <param name="pad_right_t" value="15"/>
+            <param name="visible_posters" value="false"/>
+            <param name="visible_squares" value="false"/>
+            <param name="visible_landscapes" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])"/>
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="18"/>
+            <param name="right" value="72"/>
+            <param name="visible" value="$PARAM[fanartcondition] + Control.HasFocus($PARAM[id])"/>
+          </include>
+        </focusedlayout>
+        <include content="Object_Widget_Content_Path">
+          <param name="target" value="$PARAM[target]"/>
+          <param name="sortby" value="$PARAM[sortby]"/>
+          <param name="sortdirection" value="$PARAM[sortdirection]"/>
+          <param name="limit" value="$PARAM[limit]"/>
+          <param name="path" value="$PARAM[path]"/>
+        </include>
+      </control>
+    </definition>
+  </include>
   <include name="Object_Widget_Content">
     <param name="controltype" default="fixedlist"/>
     <param name="id" default="5610"/>
@@ -400,6 +562,7 @@
     <param name="postercondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Poster)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Poster)]"/>
     <param name="squarecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Square)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Square)]"/>
     <param name="landscapecondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Landscape)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Landscape)]"/>
+    <param name="fanartcondition" default="!String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(302).ListItem.Property(widgetAspect),Fanart)] | [String.IsEmpty(Container(302).ListItem.Property(widgetPath)) + String.IsEqual(Container(301).ListItem.Property(widgetAspect),Fanart)]"/>
     <definition>
       <control type="$PARAM[controltype]" id="$PARAM[id]">
         <nested/>
@@ -416,7 +579,7 @@
         <!-- Posters aspect ratio -->
         <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout">
-					</include>
+          </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="-25"/>
             <param name="right" value="44"/>
@@ -425,7 +588,7 @@
         </itemlayout>
         <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
           <include content="ViewPosterItemLayout">
-					</include>
+          </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-15"/>
             <param name="pad_bottom_b" value="-22"/>
@@ -448,7 +611,7 @@
         <!-- Square aspect ratio -->
         <itemlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
           <include content="ViewSquareItemLayout">
-					</include>
+          </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="-25"/>
             <param name="right" value="72"/>
@@ -457,7 +620,7 @@
         </itemlayout>
         <focusedlayout height="382.5" width="360" condition="$PARAM[squarecondition]">
           <include content="ViewSquareItemLayout">
-					</include>
+          </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-15"/>
             <param name="pad_bottom_b" value="-23"/>

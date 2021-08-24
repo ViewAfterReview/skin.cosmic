@@ -3,7 +3,7 @@
   <defaultcontrol>9000</defaultcontrol>
   <backgroundcolor>Background</backgroundcolor>
   <onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
-  <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown)</onload>
+  <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown|searchmenu)</onload>
   <!-- set default home layout if none is set -->
   <onload condition="!Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main)">Skin.SetBool(Classic_Main)</onload>
   <!-- set default selection box -->
@@ -37,9 +37,9 @@
       <onleft>50</onleft>
       <onright>50</onright>
       <itemlayout width="1" height="1">
-			</itemlayout>
+      </itemlayout>
       <focusedlayout height="1" width="1">
-			</focusedlayout>
+      </focusedlayout>
       <content>
         <include>skinshortcuts-submenu-1</include>
       </content>

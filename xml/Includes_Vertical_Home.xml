@@ -31,7 +31,9 @@
           <top>595</top>
           <height>9999</height>
           <usecontrolcoords>false</usecontrolcoords>
-          <include>Animation_Widget_Slide</include>
+          <include content="Animation_Widget_Slide">
+            <param name="container" value="3000" />
+          </include>
           <include>skinshortcuts-template-vertical</include>
         </control>
         <control type="group" id="4000">
