@@ -1,3 +1,12 @@
+1.0.26
+  Changed: Notification shadow position
+  Fixed: Watched indicators
+  Changed: Skin settings re-arrangement
+  Added: Polish language
+  Added: Custom SearchList feature
+  Fixed: Buttons colour in script-skinshortcuts.xml
+  Removed: Rounded corners from settings
+  Fixed: Some language strings
 1.0.25
     Added: Pick fanart from first item in widget and set as background
     Fixed: Optimization for loading poster textures
