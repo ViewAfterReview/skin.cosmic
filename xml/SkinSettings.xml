@@ -349,14 +349,14 @@
           <control type="button" id="1306" description="Selection box size">
             <include>DefaultSettingButton</include>
             <label>$LOCALIZE[31329]</label>
-            <label2>$INFO[Skin.String(HighlightSize)]</label2>
+            <label2>$VAR[highlightSizeValue]</label2>
             <onclick condition="String.IsEqual(Skin.String(HighlightSize),Thin)">Skin.SetString(HighlightSize,Bold)</onclick>
             <onclick condition="String.IsEqual(Skin.String(HighlightSize),Bold)">Skin.SetString(HighlightSize,Thin)</onclick>
           </control>
           <control type="button" id="1307" description="Selection box colour">
             <include>DefaultSettingButton</include>
             <label>$LOCALIZE[31328]</label>
-            <label2>$INFO[Skin.String(PosterHighlight)]</label2>
+            <label2>$VAR[posterHighlightValue]</label2>
             <onclick condition="!String.IsEqual(Skin.String(PosterHighlight),Highlight)">Skin.SetString(PosterHighlight,Highlight)</onclick>
             <onclick condition="String.IsEqual(Skin.String(PosterHighlight),Highlight)">Skin.SetString(PosterHighlight,White)</onclick>
           </control>

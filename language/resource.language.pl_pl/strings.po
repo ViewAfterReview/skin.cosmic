@@ -607,7 +607,7 @@ msgstr "Animowane tło"
 #: /xml/SkinSettings.xml
 msgctxt "#31168"
 msgid "Show posters instead of thumbs for musicvideos"
-msgstr "Pokaż plakety zamiast miniaturek dla teledysków"
+msgstr "Pokaż plakaty zamiast miniaturek dla teledysków"
 
 #. Description label for skin settings area
 #: /xml/Variables.xml
@@ -690,7 +690,7 @@ msgstr ""
 # Label of choosing home layout in skin settings
 #: /xml/SkinSettings.xml
 msgctxt "#31183"
-msgid "Switch home layout"
+msgid "Home layout"
 msgstr "Przełącz układ"
 
 # Vertical home layout label in skin settings
@@ -752,12 +752,12 @@ msgstr ""
 #: /xml/SkinSettings.xml
 msgctxt "#31194"
 msgid "Highlight colour"
-msgstr "Kolor podświetlanie"
+msgstr "Kolor podświetlenia"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31195"
 msgid "Monochrome highlight"
-msgstr "Podświetlanie jednokolorowe"
+msgstr "Podświetlenie jednokolorowe"
 
 #: /xml/Custom_1117_ColorPicker.xml
 msgctxt "#31196"
@@ -767,7 +767,7 @@ msgstr "Wybierz paleta"
 #: /xml/Custom_1117_ColorPicker.xml
 msgctxt "#31197"
 msgid "Highlight"
-msgstr "Podświetlanie"
+msgstr "Podświetlenie"
 
 #: /xml/Custom_1117_ColorPicker.xml
 msgctxt "#31198"
@@ -1027,7 +1027,7 @@ msgstr "Włącz debugowanie"
 #: /xml/SkinSettings.xml
 msgctxt "#31249"
 msgid "Minimize loading spinner"
-msgstr "Zminimalizuj ekran ładowanie"
+msgstr "Zminimalizuj ekran ładowania"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31250"
@@ -1167,7 +1167,7 @@ msgstr "Skórka została zaprojektowana, aby użytkownik mógł skupić się na 
 #: /xml/Variables.xml
 msgctxt "#31279"
 msgid "Settings related to your library"
-msgstr "Ustawienia związane z twoją bilbioteką"
+msgstr "Ustawienia związane z twoją biblioteką"
 
 #: /xml/Variables.xml
 msgctxt "#31280"
@@ -1252,7 +1252,7 @@ msgstr "Kolorowe"
 #: /xml/SkinSettings.xml
 msgctxt "#31296"
 msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
-msgstr "Zresetuj ustawienia skórki do podstawowej (UWAGA: to zresetuje twoje głowne menu do ustawień podstawowych)"
+msgstr "Zresetuj ustawienia skórki do podstawowej (UWAGA: to zresetuje Twoje menu główne do ustawień podstawowych)"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31297"
@@ -1402,7 +1402,7 @@ msgstr "Ustaw opóżnienie odtwarzania zwiastunów"
 #: /xml/SkinSettings.xml
 msgctxt "#31326"
 msgid "[Experimental] Enable Trailers in background"
-msgstr "[Eksperymantalne] Włącz zwiastuny w tle"
+msgstr "[Eksperymentalne] Włącz zwiastuny w tle"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31327"
@@ -1614,3 +1614,48 @@ msgstr "Podstawowe pozycje wyszukiwania"
 msgctxt "#31368"
 msgid "Action"
 msgstr "Akcja"
+
+#: /xml/Variables.xml
+msgctxt "#31369"
+msgid "Vertical"
+msgstr "Pionowy"
+
+#: /xml/Variables.xml
+msgctxt "#31370"
+msgid "Classic"
+msgstr "Klasyczny"
+
+#: /xml/Variables.xml
+msgctxt "#31371"
+msgid "Poziomy"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31372"
+msgid "Default"
+msgstr "Domyślny"
+
+#: /xml/Variables.xml
+msgctxt "#31373"
+msgid "Fixed"
+msgstr "Ustalony"
+
+#: /xml/Variables.xml
+msgctxt "#31374"
+msgid "Thin"
+msgstr "Cienkie"
+
+#: /xml/Variables.xml
+msgctxt "#31375"
+msgid "Bold"
+msgstr "Grube"
+
+#: /xml/Variables.xml
+msgctxt "#31376"
+msgid "Highlight"
+msgstr "Podświetlenie"
+
+#: /xml/Variables.xml
+msgctxt "#31377"
+msgid "White"
+msgstr "Białe"

@@ -13,14 +13,22 @@
     <value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">type=tv</value>
   </variable>
   <variable name="homeLayout">
-    <value condition="Skin.HasSetting(Vertical_Main)">Vertical</value>
-    <value condition="Skin.HasSetting(Classic_Main)">Classic</value>
-    <value condition="Skin.HasSetting(Horizontal_Main)">Horizontal</value>
+    <value condition="Skin.HasSetting(Vertical_Main)">$LOCALIZE[31369]</value>
+    <value condition="Skin.HasSetting(Classic_Main)">$LOCALIZE[31370]</value>
+    <value condition="Skin.HasSetting(Horizontal_Main)">$LOCALIZE[31371]</value>
     <value>Null</value>
   </variable>
   <variable name="widgetScrollingType">
-    <value condition="Skin.HasSetting(DisableFixedScrolling)">Default</value>
-    <value>Fixed</value>
+    <value condition="Skin.HasSetting(DisableFixedScrolling)">$LOCALIZE[31372]</value>
+    <value>$LOCALIZE[31373]</value>
+  </variable>
+  <variable name="highlightSizeValue">
+    <value condition="String.IsEqual(Skin.String(HighlightSize),Thin)">$LOCALIZE[31374]</value>
+    <value>$LOCALIZE[31375]</value>
+  </variable>
+  <variable name="posterHighlightValue">
+    <value condition="!String.IsEqual(Skin.String(PosterHighlight),Highlight)">$LOCALIZE[31376]</value>
+    <value>$LOCALIZE[31377]</value>
   </variable>
   <variable name="AlphaPercentage">
     <value condition="String.IsEqual(Skin.String(AlphaValue),100)">FFFFFFFF</value>

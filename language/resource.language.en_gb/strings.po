@@ -1790,3 +1790,48 @@ msgstr ""
 msgctxt "#31368"
 msgid "Action"
 msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31369"
+msgid "Vertical"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31370"
+msgid "Classic"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31371"
+msgid "Horizontal"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31372"
+msgid "Default"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31373"
+msgid "Fixed"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31374"
+msgid "Thin"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31375"
+msgid "Bold"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31376"
+msgid "Highlight"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31377"
+msgid "White"
+msgstr ""
