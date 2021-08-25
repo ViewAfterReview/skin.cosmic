@@ -54,9 +54,6 @@
           <top>100</top>
           <width>95%</width>
           <height>220</height>
-          <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
-          <bordertexture border="21">overlays/shadow.png</bordertexture>
-          <bordersize>20</bordersize>
         </control>
         <control type="label">
           <top>310</top>
@@ -78,10 +75,13 @@
           <aligny>center</aligny>
           <textoffsetx>40</textoffsetx>
           <textoffsety>0</textoffsety>
-          <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
+          <texturefocus colordiffuse="AltPosterBack">diffuse/poster-wall.png</texturefocus>
+          <bordertexture border="21">overlays/shadow.png</bordertexture>
           <texturenofocus/>
           <onup>20000</onup>
           <ondown>15100</ondown>
+          <onleft>9000</onleft>
+          <onback>9000</onback>
           <font>font12</font>
           <onclick>Weather.LocationNext</onclick>
           <label>

@@ -594,6 +594,7 @@
         <top>90</top>
         <right>0</right>
         <height>396</height>
+        <onback>9000</onback>
         <include content="WidgetListCommon">
           <param name="list_id" value="$PARAM[list_id]"/>
         </include>
@@ -606,9 +607,6 @@
               <top>20</top>
               <width>254</width>
               <height>280</height>
-              <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
-              <bordertexture border="21">overlays/shadow.png</bordertexture>
-              <bordersize>20</bordersize>
             </control>
             <control type="image">
               <left>60</left>
@@ -646,33 +644,15 @@
           <control type="group">
             <left>70</left>
             <depth>DepthContentPopout</depth>
-            <!-- <animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,140" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,140" />
-						</animation> -->
-            <control type="group">
+            <control type="image">
               <left>0</left>
               <top>20</top>
               <width>254</width>
               <height>280</height>
-              <control type="image">
-                <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
-              </control>
-              <control type="image">
-                <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
-              </control>
+              <texture colordiffuse="AltPosterBack">diffuse/poster-wall.png</texture>
+              <bordertexture border="21">overlays/shadow.png</bordertexture>
+              <bordersize>20</bordersize>
             </control>
-            <!-- <control type="image">
-							<left>0</left>
-							<top>20</top>
-							<width>254</width>
-							<height>280</height>
-							<texture colordiffuse="$VAR[ColorHighlight]">colors/grey.png</texture>
-							<bordersize>20</bordersize>
-							<include>Animation_FocusTextureFade</include>
-						</control> -->
             <control type="image">
               <left>60</left>
               <top>108</top>
