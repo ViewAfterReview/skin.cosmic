@@ -38,6 +38,10 @@
         </control>
         <control type="group" id="4000">
           <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+          <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+          <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
+          <width>1800</width>
+          <left>280</left>
           <include content="View_Weather">
             <param name="left" value="-130"/>
             <param name="topbar_visible" value="true"/>
@@ -45,9 +49,12 @@
         </control>
         <control type="group" id="5000">
           <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)</visible>
+          <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
+          <animation effect="slide" start="0,0" end="280" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
           <centerleft>50%</centerleft>
           <width>1600</width>
           <top>0</top>
+          <left>350</left>
           <bottom>0</bottom>
           <include>OpenClose_Right</include>
           <control type="label">
