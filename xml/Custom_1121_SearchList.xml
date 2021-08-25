@@ -100,5 +100,9 @@
         <label>$INFO[System.Time]</label>
       </control>
     </control>
+    <control type="group">
+      <include>DialogBusy</include>
+      <visible>Container(7501).IsUpdating | Container(7502).IsUpdating | Container(7503).IsUpdating | Container(7504).IsUpdating | Container(7505).IsUpdating | Container(7506).IsUpdating | Container(7507).IsUpdating | Container(7508).IsUpdating | Container(7509).IsUpdating | Container(7510).IsUpdating</visible>
+    </control>
   </controls>
 </window>

@@ -132,7 +132,7 @@
           <param name="label" value="$SKINSHORTCUTS[widgetLabel]"/>
           <param name="groupid" value="$PYTHON[int(id) + 8500]"/>
           <param name="image" value="$SKINSHORTCUTS[widgetSourceArt]"/>
-          <param name="id" value="$PYTHON[int(id) + 7501]"/>
+          <param name="id" value="$PYTHON[int(id) + 7500]"/>
           <param name="target" value="$SKINSHORTCUTS[widgetTarget]"/>
           <param name="limit" value="$SKINSHORTCUTS[widgetLimit]"/>
           <param name="path" value="$SKINSHORTCUTS[widgetPath]$INFO[Skin.String(SearchTerm)]$SKINSHORTCUTS[widgetPath2]"/>
