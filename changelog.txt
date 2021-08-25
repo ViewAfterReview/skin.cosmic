@@ -1,12 +1,25 @@
+1.0.27
+    Added: Few extra icons
+    Changed: Reorganize skin settings
+    Removed: Rounded corners from some buttons
+    Added: Rounded corners to dialog windows
+    Fixed: Some language strings
+    Changed: File browser appearance
+    Changed: Weather appearance
+    Added: Animations to Weather and Settings widget in Vertical home layout
+    Fixed: Scrollbar in SkinSettings.xml
+    Fixed: Posters highlight
+    Fixed: Button type in script-skinshortcuts.xml
+    Fixed: SearchList layout
 1.0.26
-  Changed: Notification shadow position
-  Fixed: Watched indicators
-  Changed: Skin settings re-arrangement
-  Added: Polish language
-  Added: Custom SearchList feature
-  Fixed: Buttons colour in script-skinshortcuts.xml
-  Removed: Rounded corners from settings
-  Fixed: Some language strings
+    Changed: Notification shadow position
+    Fixed: Watched indicators
+    Changed: Skin settings re-arrangement
+    Added: Polish language
+    Added: Custom SearchList feature
+    Fixed: Buttons colour in script-skinshortcuts.xml
+    Removed: Rounded corners from settings
+    Fixed: Some language strings
 1.0.25
     Added: Pick fanart from first item in widget and set as background
     Fixed: Optimization for loading poster textures

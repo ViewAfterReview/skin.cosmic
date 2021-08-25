@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.cosmic" version="1.0.26" name="Cosmic" provider-name="heppen (nfm886)">
+<addon id="skin.cosmic" version="1.0.27" name="Cosmic" provider-name="heppen (nfm886)">
   <requires>
     <import addon="xbmc.gui" version="5.15.0"/>
     <import addon="script.skinshortcuts" version="1.1.5"/>
@@ -16,7 +16,7 @@
     <res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <news>1.0.26[CR]Changed: Notification shadow position[CR]Fixed: Watched indicators[CR]Changed: Skin settings re-arrangement[CR]Added: Polish language[CR]Added: Custom SearchList feature[CR]Fixed: Buttons colour in script-skinshortcuts.xml[CR]Removed: Rounded corners from settings[CR]Fixed: Some language strings[CR]</news>
+    <news>1.0.27[CR]Added: Few extra icons[CR]Changed: Reorganize skin settings[CR]Removed: Rounded corners from some buttons[CR]Added: Rounded corners to dialog windows[CR]Fixed: Some language strings[CR]Changed: File browser appearance[CR]Changed: Weather appearance[CR]Added: Animations to Weather and Settings widget in Vertical home layout[CR]Fixed: Scrollbar in SkinSettings.xml[CR]Fixed: Posters highlight[CR]Fixed: Button type in script-skinshortcuts.xml[CR]Fixed: SearchList layout[CR]</news>
     <summary lang="en_GB">Simple, lightweight and innovative skin by heppen.</summary>
     <summary lang="pl_PL">Prosta, lekka i innowacyjna skórka autorstwa heppen.</summary>
     <description lang="en_GB">The skin is designed to allow the user to focus on media consumption. It provides many innovative solutions that every movie lover will appreciate.</description>
