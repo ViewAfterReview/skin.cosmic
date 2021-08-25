@@ -51,7 +51,7 @@
         <top>290</top>
         <width>915</width>
         <align>center</align>
-        <itemgap>12</itemgap>
+        <itemgap>32</itemgap>
         <include content="DefaultDialogButton">
           <param name="id" value="11"/>
           <param name="label" value=""/>
