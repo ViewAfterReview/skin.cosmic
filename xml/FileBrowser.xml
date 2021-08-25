@@ -164,15 +164,6 @@
             <aspectratio scalediffuse="false">keep</aspectratio>
             <texture fallback="DefaultAddonNone.png" background="true">$INFO[Listitem.Icon]</texture>
           </control>
-          <control type="label">
-            <height>32</height>
-            <bottom>0</bottom>
-            <aligny>center</aligny>
-            <align>center</align>
-            <font>font_fps</font>
-            <label>[UPPERCASE]$INFO[ListITem.Label][/UPPERCASE]</label>
-            <textcolor>Selected</textcolor>
-          </control>
         </focusedlayout>
       </control>
       <control type="scrollbar" id="60">
