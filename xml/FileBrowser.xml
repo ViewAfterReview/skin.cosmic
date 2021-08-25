@@ -64,39 +64,40 @@
       <control type="panel" id="450">
         <left>20</left>
         <top>100</top>
-        <width>940</width>
+        <width>960</width>
         <height>700</height>
         <onleft>9000</onleft>
         <onright>60</onright>
         <onup>450</onup>
         <ondown>450</ondown>
         <pagecontrol>60</pagecontrol>
-        <scrolltime>200</scrolltime>
-        <itemlayout height="70" width="940">
+        <scrolltime>400</scrolltime>
+        <itemlayout height="140" width="960">
           <control type="image">
-            <left>10</left>
-            <top>10</top>
-            <width>50</width>
-            <height>50</height>
+            <top>24</top>
+            <left>24</left>
+            <width>92</width>
+            <height>92</height>
+            <aligny>center</aligny>
             <texture>$INFO[ListItem.Icon]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <left>75</left>
+            <left>120</left>
             <top>0</top>
             <right>20</right>
-            <height>70</height>
+            <height>140</height>
             <aligny>center</aligny>
-            <selectedcolor>green</selectedcolor>
+            <selectedcolor>selected</selectedcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
-        <focusedlayout height="70" width="940">
+        <focusedlayout height="140" width="960">
           <control type="group">
             <left>0</left>
             <top>0</top>
             <right>0</right>
-            <height>71</height>
+            <height>140</height>
             <visible>Control.HasFocus(450)</visible>
             <control type="image">
               <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
@@ -106,20 +107,21 @@
             </control>
           </control>
           <control type="image">
-            <left>10</left>
-            <top>10</top>
-            <width>50</width>
-            <height>50</height>
+            <top>24</top>
+            <left>24</left>
+            <width>92</width>
+            <height>92</height>
+            <aligny>center</aligny>
             <texture>$INFO[ListItem.Icon]</texture>
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <left>75</left>
+            <left>120</left>
             <top>0</top>
             <right>20</right>
-            <height>70</height>
+            <height>140</height>
             <aligny>center</aligny>
-            <selectedcolor>green</selectedcolor>
+            <selectedcolor>selected</selectedcolor>
             <label>$INFO[ListItem.Label]</label>
           </control>
         </focusedlayout>
@@ -127,7 +129,7 @@
       <control type="panel" id="451">
         <left>20</left>
         <top>100</top>
-        <width>940</width>
+        <width>960</width>
         <height>700</height>
         <onleft>9000</onleft>
         <onright>60</onright>
@@ -135,55 +137,41 @@
         <ondown>451</ondown>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="70" width="940">
+        <itemlayout height="160" width="160">
           <control type="image">
-            <left>10</left>
-            <top>10</top>
-            <width>50</width>
-            <height>50</height>
-            <texture>$INFO[ListItem.Icon]</texture>
-            <aspectratio>keep</aspectratio>
+            <bordersize>15</bordersize>
+            <aspectratio scalediffuse="false">keep</aspectratio>
+            <texture fallback="DefaultAddonNone.png" background="true">$INFO[Listitem.Icon]</texture>
+            <visible>!String.StartsWith(ListItem.Path,special://skin/extras/icons) + !String.StartsWith(ListItem.Icon,Default)</visible>
           </control>
-          <control type="label">
-            <left>75</left>
-            <top>0</top>
-            <right>20</right>
-            <height>70</height>
-            <aligny>center</aligny>
-            <selectedcolor>green</selectedcolor>
-            <label>$INFO[ListItem.Label]</label>
+          <control type="image">
+            <colordiffuse>dialog_fg_70</colordiffuse>
+            <bordersize>15</bordersize>
+            <aspectratio scalediffuse="false">keep</aspectratio>
+            <texture fallback="DefaultAddonNone.png" background="true">$INFO[Listitem.Icon]</texture>
+            <visible>String.StartsWith(ListItem.Path,special://skin/extras/icons) | String.StartsWith(ListItem.Icon,Default)</visible>
           </control>
         </itemlayout>
-        <focusedlayout height="70" width="940">
-          <control type="group">
-            <left>0</left>
-            <top>0</top>
-            <right>0</right>
-            <height>71</height>
-            <visible>Control.HasFocus(451)</visible>
-            <control type="image">
-              <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
-            </control>
-            <control type="image">
-              <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
-            </control>
+        <focusedlayout height="160" width="160">
+          <control type="image">
+            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
           </control>
           <control type="image">
-            <left>10</left>
-            <top>10</top>
-            <width>50</width>
-            <height>50</height>
-            <texture>$INFO[ListItem.Icon]</texture>
-            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+          </control>
+          <control type="image">
+            <bordersize>15</bordersize>
+            <aspectratio scalediffuse="false">keep</aspectratio>
+            <texture fallback="DefaultAddonNone.png" background="true">$INFO[Listitem.Icon]</texture>
           </control>
           <control type="label">
-            <left>75</left>
-            <top>0</top>
-            <right>20</right>
-            <height>70</height>
+            <height>32</height>
+            <bottom>0</bottom>
             <aligny>center</aligny>
-            <selectedcolor>green</selectedcolor>
-            <label>$INFO[ListItem.Label]</label>
+            <align>center</align>
+            <font>font_fps</font>
+            <label>[UPPERCASE]$INFO[ListITem.Label][/UPPERCASE]</label>
+            <textcolor>Selected</textcolor>
           </control>
         </focusedlayout>
       </control>
