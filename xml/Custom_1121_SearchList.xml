@@ -10,7 +10,8 @@
       <orientation>vertical</orientation>
       <usecontrolcoords>true</usecontrolcoords>
       <top>655</top>
-      <width>1800</width>
+      <left>30</left>
+      <width>1860</width>
       <height>9999</height>
       <include content="Animation_Widget_Slide">
         <param name="container" value="4100" />
@@ -18,15 +19,50 @@
       <include>skinshortcuts-template-search</include>
     </control>
     <control type="group">
-      <include content="Object_Item_Showcase">
-        <param name="title" value="$INFO[ListItem.Title]"/>
-        <param name="title_width" value="930"/>
-        <param name="plot" value="$VAR[PlotTextBoxVar]"/>
-        <param name="plot_height" value="200"/>
-        <param name="info_line_top" value="100"/>
-        <param name="plot_top" value="160"/>
-        <param name="top" value="220" />
-      </include>
+      <control type="group">
+        <top>220</top>
+        <control type="group">
+          <top>60</top>
+          <control type="label">
+            <top>-140</top>
+            <left>150</left>
+            <bottom>60</bottom>
+            <scroll>true</scroll>
+            <width>960</width>
+            <textcolor>$VAR[TitleColour]</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[ListItem.Title]</label>
+            <font>font_title_bold</font>
+            <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+          </control>
+          <control type="image">
+            <top>-940</top>
+            <left>150</left>
+            <width>480</width>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[Image_ClearLogo]</texture>
+            <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+          </control>
+        </control>
+        <control type="group">
+          <top>40</top>
+          <left>150</left>
+          <include>Object_Info_Line</include>
+        </control>
+        <control type="group">
+          <control type="textbox">
+            <top>110</top>
+            <left>150</left>
+            <width>940</width>
+            <height>235</height>
+            <textcolor>white</textcolor>
+            <label>$VAR[PlotTextBoxVar]</label>
+            <font>font32</font>
+            <shadowcolor>black</shadowcolor>
+            <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
+          </control>
+        </control>
+      </control>
       <control type="image">
         <left>-20%</left>
         <top>-30</top>

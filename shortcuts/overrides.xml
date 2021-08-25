@@ -282,8 +282,8 @@
     <shortcut label="Episodes" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-Episodes</shortcut>
     <shortcut label="Genres" type="571" icon="special://skin/extras/icons/genre.png">DefaultSearch-Genres</shortcut>
     <shortcut label="Year" type="571" icon="special://skin/extras/icons/years.png">DefaultSearch-Year</shortcut>
-    <shortcut label="Studio" type="571" icon="special://skin/extras/icons/studio.png">DefaultSearch-Studio</shortcut>
-    <shortcut label="Country" type="571" icon="special://skin/extras/icons/country.png">DefaultSearch-Country</shortcut>
+    <shortcut label="Studio" type="571" icon="special://skin/extras/icons/director.png">DefaultSearch-Studio</shortcut>
+    <shortcut label="Country" type="571" icon="special://skin/extras/icons/world.png">DefaultSearch-Country</shortcut>
     <shortcut label="Actor" type="571" icon="special://skin/extras/icons/person.png">DefaultSearch-Actor</shortcut>
     <shortcut label="Director" type="571" icon="special://skin/extras/icons/person.png">DefaultSearch-Director</shortcut>
     <shortcut label="Albums" type="571" icon="special://skin/extras/icons/songs.png">DefaultSearch-Albums</shortcut>
