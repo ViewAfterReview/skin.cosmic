@@ -825,7 +825,7 @@
         <left>0</left>
         <top>0</top>
         <right>0</right>
-        <bottom>0</bottom>
+        <bottom>-10</bottom>
         <texture colordiffuse="dialog_bg_100" border="5">common/box.png</texture>
       </control>
       <control type="radiobutton">
