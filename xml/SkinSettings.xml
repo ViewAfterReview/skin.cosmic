@@ -64,6 +64,7 @@
           <left>0</left>
           <right>0</right>
           <bottom>140</bottom>
+          <pagecontrol>60</pagecontrol>
           <onleft>9000</onleft>
           <onright>60</onright>
           <onup>600</onup>
