@@ -1874,7 +1874,7 @@
     <param name="pad_bottom" default=""/>
     <param name="pad_left" default=""/>
     <param name="pad_right" default=""/>
-    <param name="colordiffuse" default="red"/>
+    <param name="colordiffuse" default=""/>
     <param name="focusbounce" default="true"/>
     <definition>
       <control type="group">
@@ -1918,7 +1918,7 @@
     <param name="pad_bottom" default=""/>
     <param name="pad_left" default=""/>
     <param name="pad_right" default=""/>
-    <param name="colordiffuse" default="red"/>
+    <param name="colordiffuse" default=""/>
     <param name="focusbounce" default="true"/>
     <definition>
       <control type="group">
