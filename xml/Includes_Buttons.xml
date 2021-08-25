@@ -94,7 +94,7 @@
     <param name="height">80</param>
     <param name="textoffsetx">40</param>
     <param name="textwidth">
-		</param>
+    </param>
     <definition>
       <textoffsetx>$PARAM[textoffsetx]</textoffsetx>
       <top>0</top>
@@ -153,9 +153,9 @@
     <param name="height">70</param>
     <param name="wrapmultiline">false</param>
     <param name="font">font23_narrow</param>
-    <param name="onclick">
-		</param>
     <param name="visible">true</param>
+    <param name="texturenofocus">common/white.png</param>
+    <param name="onclick" default="" />
     <definition>
       <control type="button" id="$PARAM[id]">
         <width>$PARAM[width]</width>
@@ -166,6 +166,7 @@
         <textoffsetx>20</textoffsetx>
         <onclick>$PARAM[onclick]</onclick>
         <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
+        <texturenofocus colordiffuse="dialog_bg_30">$PARAM[texturenofocus]</texturenofocus>
         <align>center</align>
         <include content="ButtonType">
           <param name="texturefocus" value="true"/>
@@ -178,16 +179,6 @@
       </control>
     </definition>
   </include>
-  <!-- <include name="KeyboardButton">
-		<width>120</width>
-		<height>120</height>
-		<textoffsety>27</textoffsety>
-		<texturefocus colordiffuse="$VAR[ColorHighlight]">buttons/roundbutton-fo.png</texturefocus>
-		<texturenofocus />
-		<align>center</align>
-		<aligny>top</aligny>
-		<font>font45</font>
-	</include> -->
   <!-- Keyboard and Numeric Keys -->
   <include name="KeyboardButton">
     <width>85</width>
