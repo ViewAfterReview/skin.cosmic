@@ -96,15 +96,15 @@
   <variable name="Image_Landscape">
     <value condition="!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))">$INFO[ListItem.Art(thumb)]</value>
     <value condition="!String.IsEmpty(ListItem.Art(snap))">$INFO[ListItem.Art(snap)]</value>
-    <value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
-    <value condition="!String.IsEmpty(ListItem.Art(tvshow.landscape))">$INFO[ListItem.Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItem.Art(landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[ListItem.Art(landscape)]</value>
+    <value condition="!String.IsEmpty(ListItem.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[ListItem.Art(thumb)]</value>
     <value condition="!String.IsEmpty(ListItem.Property(fanart))">$INFO[ListItem.Property(fanart)]</value>
     <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
     <value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
     <value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
     <value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-    <value condition="!String.IsEmpty(Container.Art(landscape))">$INFO[Container.Art(landscape)]</value>
-    <value condition="!String.IsEmpty(Container.Art(tvshow.landscape))">$INFO[Container.Art(tvshow.landscape)]</value>
+    <value condition="!String.IsEmpty(Container.Art(landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[Container.Art(landscape)]</value>
+    <value condition="!String.IsEmpty(Container.Art(tvshow.landscape)) + Skin.HasSetting(LandscapeArt)">$INFO[Container.Art(tvshow.landscape)]</value>
     <value condition="!String.IsEmpty(Container.Property(fanart))">$INFO[Container.Property(fanart)]</value>
     <value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
     <value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
@@ -124,7 +124,7 @@
   <variable name="InfoListPathVar">
     <value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
     <value>
-		</value>
+    </value>
   </variable>
   <variable name="AddonCountLabel">
     <value condition="Integer.IsGreater(System.AddonUpdateCount,0)">$INFO[System.AddonUpdateCount]</value>
@@ -608,7 +608,7 @@
   </variable>
   <variable name="ListSubLabelVar">
     <value condition="ListItem.IsCollection">
-		</value>
+    </value>
     <value>[COLOR grey]$INFO[ListItem.Year, (,)][/COLOR]</value>
   </variable>
   <variable name="VideoInfoMainLabelVar">
@@ -669,7 +669,7 @@
   </variable>
   <variable name="AddonsFanartVar">
     <value condition="Skin.HasSetting(no_fanart)">
-		</value>
+    </value>
     <value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)">$INFO[Window(home).Property(infobackground)]</value>
     <value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
     <value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>
@@ -677,7 +677,7 @@
   </variable>
   <variable name="HomeFanartVar">
     <value condition="Skin.HasSetting(no_fanart)">
-		</value>
+    </value>
     <value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)">$INFO[Window(home).Property(infobackground)]</value>
     <value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
     <value condition="!String.IsEmpty(Skin.String(HomeBackgroundImage))">$INFO[Skin.String(HomeBackgroundImage)]</value>
@@ -690,7 +690,7 @@
   </variable>
   <variable name="MediaFanartVar">
     <value condition="Skin.HasSetting(no_fanart)">
-		</value>
+    </value>
     <value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)">$INFO[Window(home).Property(infobackground)]</value>
     <value condition="Container.Content(genres) + Window.IsActive(videos)">$INFO[Skin.String(MovieGenreFanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
     <value condition="Window.IsActive(pictures) + String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.FolderPath]</value>
