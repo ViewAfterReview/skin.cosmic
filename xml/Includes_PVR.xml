@@ -504,10 +504,10 @@
           <right>0</right>
           <animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
           <control type="image">
-            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
           </control>
           <control type="image">
-            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
           </control>
           <visible>Control.HasFocus($PARAM[list_id])</visible>
         </control>
@@ -809,10 +809,10 @@
               <width>780</width>
               <bottom>0</bottom>
               <control type="image">
-                <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+                <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
               </control>
               <control type="image">
-                <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+                <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
               </control>
               <visible>Control.HasFocus(11)</visible>
               <animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
@@ -976,10 +976,10 @@
           <right>0</right>
           <bottom>0</bottom>
           <control type="image">
-            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+            <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
           </control>
           <control type="image">
-            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+            <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
           </control>
           <visible>Control.HasFocus($PARAM[list_id])</visible>
         </control>

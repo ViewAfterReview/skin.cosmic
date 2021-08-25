@@ -481,10 +481,10 @@
                   <width>446</width>
                   <height>33</height>
                   <control type="image">
-                    <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
+                    <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/white.png</texture>
                   </control>
                   <control type="image">
-                    <texture colordiffuse="$VAR[ColorGradient]" border="10">common/box-gradient.png</texture>
+                    <texture colordiffuse="$VAR[ColorGradient]" border="10">common/white-gradient.png</texture>
                   </control>
                   <visible>Control.HasFocus(41)</visible>
                 </control>
