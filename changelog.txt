@@ -1,3 +1,9 @@
+1.0.28
+    Added: DialogBusy to SearchList
+    Fixed: Some colour highlights
+    Fixed: Landscape Art option
+    Changed: Appearance of dialog windows
+    Changed: DialogMediaSource appearance
 1.0.27
     Added: Few extra icons
     Changed: Reorganize skin settings
