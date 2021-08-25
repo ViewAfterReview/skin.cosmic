@@ -637,7 +637,7 @@ msgstr "Widgety"
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31173"
 msgid "Set icon"
-msgstr "Ustaw ikony"
+msgstr "Ustaw ikone"
 
 # Label of customize main menu in skin settings
 #: /xml/SkinSettings.xml
@@ -654,7 +654,7 @@ msgstr "Przywróć menu główne"
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31176"
 msgid "Select widgets"
-msgstr "Wybierz Widgety"
+msgstr "Wybierz widgety"
 
 #: /xml/script-skinshortcuts.xml
 msgctxt "#31177"
@@ -1659,3 +1659,8 @@ msgstr "Podświetlenie"
 msgctxt "#31377"
 msgid "White"
 msgstr "Białe"
+
+#: /xml/script-skinshortcuts.xml
+msgctxt "#31378"
+msgid "Target"
+msgstr "Typ"

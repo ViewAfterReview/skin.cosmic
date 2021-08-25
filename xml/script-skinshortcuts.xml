@@ -297,7 +297,7 @@
           </control>
           <!-- Widget target -->
           <control type="button" id="506" description="Content Type / Widget Target">
-            <label>Widget target</label>
+            <label>$LOCALIZE[31378]</label>
             <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
             <label2>$INFO[Container(211).ListItem.Property(widgetTarget)]</label2>
             <visible>[String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenu)]</visible>
