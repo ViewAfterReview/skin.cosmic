@@ -278,7 +278,7 @@
         <!-- Landscape aspect ratio -->
         <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
           <include content="ViewLandscapeItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="18"/>
@@ -288,7 +288,7 @@
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
           <include content="ViewLandscapeItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-8"/>
@@ -312,7 +312,7 @@
         <!-- Fanart aspect ratio -->
         <itemlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
           <include content="ViewFanartItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="18"/>
@@ -322,7 +322,7 @@
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
           <include content="ViewFanartItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-8"/>
@@ -457,7 +457,7 @@
         <!-- Landscape aspect ratio -->
         <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
           <include content="ViewLandscapeItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="18"/>
@@ -467,7 +467,7 @@
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
           <include content="ViewLandscapeItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-8"/>
@@ -500,7 +500,7 @@
         <!-- Fanart aspect ratio -->
         <itemlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
           <include content="ViewFanartItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="18"/>
@@ -510,7 +510,7 @@
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
           <include content="ViewFanartItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-8"/>
@@ -642,7 +642,7 @@
         <!-- Landscape aspect ratio -->
         <itemlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
           <include content="ViewLandscapeItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="18"/>
@@ -652,7 +652,7 @@
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[landscapecondition]">
           <include content="ViewLandscapeItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-8"/>
@@ -676,7 +676,7 @@
         <!-- Fanart aspect ratio -->
         <itemlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
           <include content="ViewFanartItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="View_WatchedOverlay">
             <param name="bottom" value="18"/>
@@ -686,7 +686,7 @@
         </itemlayout>
         <focusedlayout height="375.5" width="600" condition="$PARAM[fanartcondition]">
           <include content="ViewFanartItemLayout">
-            <param name="clearlogo" value="Skin.HasSetting(LandscapeArt)"/>
+            <param name="clearlogo" value="[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [[String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape))] | [[!String.IsEmpty(ListItem.Art(tvshow.landscape)) | !String.IsEmpty(ListItem.Art(landscape))] + !Skin.HasSetting(LandscapeArt)] | [!String.IsEmpty(ListItem.Art(thumb)) + [String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)] + String.IsEmpty(ListItem.Property(airday))]]"/>
           </include>
           <include content="Selectbox">
             <param name="pad_top_b" value="-8"/>
