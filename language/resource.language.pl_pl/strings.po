@@ -762,7 +762,7 @@ msgstr "Podświetlenie jednokolorowe"
 #: /xml/Custom_1117_ColorPicker.xml
 msgctxt "#31196"
 msgid "Choose Palette"
-msgstr "Wybierz paleta"
+msgstr "Wybierz palete"
 
 #: /xml/Custom_1117_ColorPicker.xml
 msgctxt "#31197"
