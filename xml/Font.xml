@@ -3,6 +3,12 @@
   <fontset id="Default" idloc="15109">
     <!-- Normal Fonts -->
     <font>
+      <name>font_hintlabel</name>
+      <style>uppercase bold</style>
+      <filename>RobotoCondensed-Bold.ttf</filename>
+      <size>18</size>
+    </font>
+    <font>
       <name>font10</name>
       <filename>RobotoCondensed-Regular.ttf</filename>
       <size>23</size>

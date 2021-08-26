@@ -127,19 +127,21 @@
     <top>0</top>
     <height>80</height>
     <label/>
-    <!-- <align>center</align> -->
+    <textoffsetx>40</textoffsetx>
     <aligny>center</aligny>
-    <font>font23_narrow</font>
-    <textcolor>grey</textcolor>
+    <font>font_hintlabel</font>
+    <textcolor>dialog_fg_30</textcolor>
   </include>
   <include name="SettingsItemCommon">
-    <texturenofocus/>
-    <texturefocus/>
-    <height>100</height>
+    <align>left</align>
     <aligny>center</aligny>
-    <textoffsetx>40</textoffsetx>
-    <alttexturefocus border="40" colordiffuse="$VAR[ColorHighlight]">buttons/dialogbutton-fo.png</alttexturefocus>
-    <alttexturenofocus border="40">buttons/dialogbutton-nofo.png</alttexturenofocus>
+    <height>80</height>
+    <texturenofocus />
+    <texturefocus />
+    <texturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</texturefocus>
+    <alttexturenofocus />
+    <alttexturefocus />
+    <alttexturefocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturefocus>
   </include>
   <include name="SettingsLabelCommon">
     <height>50</height>
@@ -149,6 +151,7 @@
     <textcolor>$VAR[ColorHighlight]</textcolor>
   </include>
   <include name="DefaultDialogButton">
+    <param name="controltype">button</param>
     <param name="width">270</param>
     <param name="height">70</param>
     <param name="wrapmultiline">false</param>
@@ -157,10 +160,11 @@
     <param name="texturenofocus">common/white.png</param>
     <param name="onclick" default="" />
     <definition>
-      <control type="button" id="$PARAM[id]">
+      <control type="$PARAM[controltype]" id="$PARAM[id]">
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <label>$PARAM[label]</label>
+        <altlabel>$PARAM[altlabel]</altlabel>
         <font>$PARAM[font]</font>
         <textcolor>dialog_fg_70</textcolor>
         <textoffsetx>20</textoffsetx>
@@ -168,6 +172,7 @@
         <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
         <texturenofocus colordiffuse="dialog_bg_30">$PARAM[texturenofocus]</texturenofocus>
         <align>center</align>
+        <aligny>center</aligny>
         <include content="ButtonType">
           <param name="texturefocus" value="true"/>
         </include>
@@ -300,9 +305,9 @@
         <radiowidth>40</radiowidth>
         <radioheight>40</radioheight>
         <textureradioonfocus>$PARAM[icon]</textureradioonfocus>
-        <textureradioonnofocus colordiffuse="grey">$PARAM[icon]</textureradioonnofocus>
+        <textureradioonnofocus colordiffuse="dialog_fg_30">$PARAM[icon]</textureradioonnofocus>
         <textureradioofffocus>$PARAM[icon]</textureradioofffocus>
-        <textureradiooffnofocus colordiffuse="grey">$PARAM[icon]</textureradiooffnofocus>
+        <textureradiooffnofocus colordiffuse="dialog_fg_30">$PARAM[icon]</textureradiooffnofocus>
         <visible>$PARAM[visible]</visible>
       </control>
     </definition>
@@ -325,9 +330,9 @@
         <radiowidth>40</radiowidth>
         <radioheight>40</radioheight>
         <textureradioonfocus>$PARAM[icon_on]</textureradioonfocus>
-        <textureradioonnofocus colordiffuse="grey">$PARAM[icon_on]</textureradioonnofocus>
+        <textureradioonnofocus colordiffuse="dialog_fg_30">$PARAM[icon_on]</textureradioonnofocus>
         <textureradioofffocus>$PARAM[icon_off]</textureradioofffocus>
-        <textureradiooffnofocus colordiffuse="grey">$PARAM[icon_off]</textureradiooffnofocus>
+        <textureradiooffnofocus colordiffuse="dialog_fg_30">$PARAM[icon_off]</textureradiooffnofocus>
         <selected>$PARAM[selected]</selected>
       </control>
     </definition>
@@ -509,7 +514,7 @@
         <height>70</height>
         <align>center</align>
         <aligny>center</aligny>
-        <textcolor>grey</textcolor>
+        <textcolor>dialog_fg_30</textcolor>
         <label>$INFO[ListItem.Label]</label>
       </control>
     </itemlayout>

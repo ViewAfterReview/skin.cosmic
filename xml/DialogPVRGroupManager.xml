@@ -14,12 +14,18 @@
         <param name="header_label" value="$VAR[PVRGroupMgrHeader]$INFO[Container(13).NumItems, (,)]"/>
         <param name="header_id" value="1"/>
       </include>
+      <include content="DefaultSettingButtonGradient">
+        <param name="id" value="9000"/>
+        <top>70</top>
+        <height>80</height>
+        <width>370</width>
+        <visible>ControlGroup(9000).HasFocus()</visible>
+      </include>
       <control type="grouplist" id="9000">
         <left>0</left>
         <top>50</top>
         <width>370</width>
         <height>600</height>
-        <itemgap>-20</itemgap>
         <align>center</align>
         <orientation>vertical</orientation>
         <onleft>12</onleft>
@@ -30,45 +36,47 @@
           <description>Add Group</description>
           <width>370</width>
           <include>SettingsItemCommon</include>
-          <font>font25_title</font>
+          <font>font27</font>
           <label>$LOCALIZE[31044]</label>
         </control>
         <control type="button" id="27">
           <description>Rename Group</description>
           <width>370</width>
           <include>SettingsItemCommon</include>
-          <font>font25_title</font>
+          <font>font27</font>
           <label>$LOCALIZE[31045]</label>
         </control>
         <control type="radiobutton" id="25">
           <description>Hide Group</description>
           <width>370</width>
           <include>SettingsItemCommon</include>
-          <font>font25_title</font>
+          <font>font27</font>
+          <textoffsetx>30</textoffsetx>
           <label>$LOCALIZE[19289]</label>
           <radiowidth>100</radiowidth>
-          <radioposy>13</radioposy>
+          <radioposy>0</radioposy>
         </control>
         <control type="button" id="28">
           <description>Delete Group</description>
           <width>370</width>
           <include>SettingsItemCommon</include>
-          <font>font25_title</font>
+          <font>font27</font>
           <label>$LOCALIZE[31046]</label>
         </control>
         <control type="button" id="35">
           <description>Regenerate Group Thumbnail</description>
           <width>370</width>
           <include>SettingsItemCommon</include>
-          <font>font25_title</font>
+          <font>font27</font>
           <label>$LOCALIZE[13315]</label>
         </control>
         <control type="togglebutton" id="34">
           <description>TV/Radio toggle</description>
           <width>370</width>
           <include>SettingsItemCommon</include>
-          <font>font25_title</font>
+          <font>font27</font>
           <label>$LOCALIZE[19174]</label>
+          <textoffsetx>30</textoffsetx>
           <altlabel>$LOCALIZE[19173]</altlabel>
           <usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
         </control>
@@ -76,7 +84,7 @@
           <description>OK</description>
           <width>370</width>
           <include>SettingsItemCommon</include>
-          <font>font25_title</font>
+          <font>font27</font>
           <label>$LOCALIZE[186]</label>
         </control>
       </control>
@@ -103,13 +111,6 @@
           <align>center</align>
           <aligny>center</aligny>
           <textcolor>$VAR[ColorHighlight]</textcolor>
-        </control>
-        <control type="image">
-          <left>0</left>
-          <top>55</top>
-          <width>360</width>
-          <height>740</height>
-          <texture border="40">buttons/dialogbutton-nofo.png</texture>
         </control>
         <control type="list" id="13">
           <left>20</left>

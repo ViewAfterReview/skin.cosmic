@@ -14,6 +14,14 @@
         <param name="header_label" value=""/>
         <param name="header_id" value="2"/>
       </include>
+      <control type="image">
+        <top>100</top>
+        <left>429</left>
+        <bottom>0</bottom>
+        <width>1</width>
+        <height>560</height>
+        <texture colordiffuse="dialog_bg_70">common/white.png</texture>
+      </control>
       <include content="DefaultSettingButtonGradient">
         <param name="id" value="3"/>
         <top>100</top>
@@ -44,13 +52,6 @@
         <font>font25_title</font>
         <texturefocus/>
         <texturenofocus/>
-      </control>
-      <control type="image">
-        <left>410</left>
-        <top>80</top>
-        <width>1100</width>
-        <height>740</height>
-        <!-- <texture border="40">buttons/dialogbutton-nofo.png</texture> -->
       </control>
       <include content="DefaultSettingButtonGradient">
         <param name="id" value="5"/>

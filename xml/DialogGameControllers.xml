@@ -30,14 +30,6 @@
           <aligny>center</aligny>
           <textcolor>$VAR[ColorHighlight]</textcolor>
         </control>
-        <control type="image">
-          <description>Controller profiles grouplist background</description>
-          <top>20</top>
-          <bottom>-20</bottom>
-          <left>-20</left>
-          <right>0</right>
-          <texture border="40">buttons/dialogbutton-nofo.png</texture>
-        </control>
         <control type="grouplist" id="3">
           <description>Controller profiles grouplist</description>
           <top>40</top>
@@ -71,15 +63,6 @@
         <width>540</width>
         <height>540</height>
       </control>
-      <!--
-			<control type="image">
-				<top>110</top>
-				<left>440</left>
-				<width>580</width>
-				<height>580</height>
-				<texture border="40">buttons/dialogbutton-nofo.png</texture>
-			</control>
-			-->
       <control type="group">
         <description>Feature list</description>
         <top>90</top>
@@ -94,13 +77,6 @@
           <align>center</align>
           <aligny>center</aligny>
           <textcolor>$VAR[ColorHighlight]</textcolor>
-        </control>
-        <control type="image">
-          <top>20</top>
-          <bottom>-20</bottom>
-          <left>-20</left>
-          <right>0</right>
-          <texture border="40">buttons/dialogbutton-nofo.png</texture>
         </control>
         <control type="grouplist" id="5">
           <description>Features grouplist</description>
@@ -190,14 +166,6 @@
         <left>30</left>
         <right>30</right>
         <height>140</height>
-        <control type="image">
-          <description>Controller description background image</description>
-          <top>-20</top>
-          <bottom>-20</bottom>
-          <left>-20</left>
-          <right>-20</right>
-          <texture border="40">buttons/dialogbutton-nofo.png</texture>
-        </control>
         <control type="textbox" id="32">
           <top>5</top>
           <bottom>5</bottom>

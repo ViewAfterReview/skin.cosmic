@@ -54,17 +54,10 @@
         <bordersize>4</bordersize>
         <texture border="4" background="true">$INFO[ListItem.Icon]</texture>
       </control>
-      <control type="image">
-        <left>0</left>
-        <top>80</top>
-        <width>980</width>
-        <height>740</height>
-        <texture border="40">buttons/dialogbutton-nofo.png</texture>
-      </control>
       <control type="panel" id="450">
         <left>20</left>
         <top>100</top>
-        <width>960</width>
+        <width>940</width>
         <height>700</height>
         <onleft>9000</onleft>
         <onright>60</onright>
@@ -137,7 +130,7 @@
         <ondown>451</ondown>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="160" width="160">
+        <itemlayout height="155" width="155">
           <control type="image">
             <bordersize>15</bordersize>
             <aspectratio scalediffuse="false">keep</aspectratio>
@@ -152,7 +145,7 @@
             <visible>String.StartsWith(ListItem.Path,special://skin/extras/icons) | String.StartsWith(ListItem.Icon,Default)</visible>
           </control>
         </itemlayout>
-        <focusedlayout height="160" width="160">
+        <focusedlayout height="155" width="155">
           <control type="image">
             <texture colordiffuse="$VAR[ColorHighlight]" border="10">common/box.png</texture>
           </control>

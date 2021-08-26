@@ -26,13 +26,6 @@
           <onright>9002</onright>
           <orientation>vertical</orientation>
         </control>
-        <control type="image">
-          <left>0</left>
-          <top>10</top>
-          <width>672</width>
-          <height>750</height>
-          <texture border="40">buttons/dialogbutton-nofo.png</texture>
-        </control>
         <control type="list" id="20">
           <left>20</left>
           <top>30</top>
@@ -142,13 +135,20 @@
       </control>
       <control type="group">
         <left>700</left>
+        <include content="DefaultSettingButtonGradient">
+          <param name="id" value="9002"/>
+          <top>60</top>
+          <height>80</height>
+          <width>700</width>
+          <visible>ControlGroup(9002).HasFocus()</visible>
+        </include>
         <control type="grouplist" id="9002">
           <top>80</top>
           <onleft>60</onleft>
           <onright>9000</onright>
           <onup>34</onup>
           <ondown>30</ondown>
-          <itemgap>-25</itemgap>
+          <!-- <itemgap>-25</itemgap> -->
           <control type="label" id="9001">
             <description>channel options Header</description>
             <width>700</width>
@@ -199,58 +199,37 @@
         </control>
         <control type="image">
           <left>600</left>
-          <top>290</top>
-          <width>70</width>
-          <height>50</height>
+          <top>308</top>
+          <width>80</width>
+          <height>60</height>
           <aspectratio>keep</aspectratio>
           <texture background="true">$INFO[Container(20).ListItem.Property(icon)]</texture>
         </control>
         <control type="grouplist">
-          <top>565</top>
-          <itemgap>-15</itemgap>
+          <top>600</top>
+          <itemgap>12</itemgap>
           <onleft>60</onleft>
           <onright>9000</onright>
           <onup>14</onup>
           <ondown>7</ondown>
           <animation effect="slide" start="0,0" end="0,45" time="0" condition="!Control.IsVisible(31)">Conditional</animation>
-          <control type="label" id="9003">
-            <description>channel options Header</description>
-            <width>700</width>
-            <height>50</height>
-            <textoffsetx>30</textoffsetx>
-            <font>font12</font>
-            <label>$LOCALIZE[31021]</label>
-            <aligny>center</aligny>
-            <textcolor>$VAR[ColorHighlight]</textcolor>
-            <shadowcolor>black</shadowcolor>
-          </control>
-          <control type="button" id="31">
-            <description>New channel Button</description>
-            <width>700</width>
-            <height>100</height>
-            <textoffsetx>40</textoffsetx>
-            <align>center</align>
-            <label>$LOCALIZE[19204]</label>
-          </control>
-          <control type="button" id="30">
-            <description>Group Manager Button</description>
-            <width>700</width>
-            <height>100</height>
-            <textoffsetx>40</textoffsetx>
-            <align>center</align>
-            <label>$LOCALIZE[19205]</label>
-          </control>
-          <control type="togglebutton" id="34">
-            <description>TV/Radio toggle</description>
-            <width>700</width>
-            <height>100</height>
-            <textoffsetx>40</textoffsetx>
-            <align>center</align>
-            <aligny>center</aligny>
-            <label>$LOCALIZE[19024]</label>
-            <altlabel>$LOCALIZE[19023]</altlabel>
-            <usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
-          </control>
+          <include content="DefaultDialogButton">
+            <param name="width" value="700"/>
+            <param name="id" value="31"/>
+            <param name="label" value="$LOCALIZE[19204]"/>
+          </include>
+          <include content="DefaultDialogButton">
+            <param name="width" value="700"/>
+            <param name="id" value="30"/>
+            <param name="label" value="$LOCALIZE[19205]"/>
+          </include>
+          <include content="DefaultDialogButton">
+            <param name="controltype" value="togglebutton" />
+            <param name="width" value="700"/>
+            <param name="id" value="34"/>
+            <param name="label" value="$LOCALIZE[19024]"/>
+            <param name="altlabel" value="$LOCALIZE[19023]" />
+          </include>
         </control>
       </control>
       <control type="grouplist" id="9000">
@@ -258,20 +237,20 @@
         <top>90</top>
         <onleft>9002</onleft>
         <onright>20</onright>
-        <itemgap>dialogbuttons_itemgap</itemgap>
+        <itemgap>12</itemgap>
         <width>400</width>
         <include content="DefaultDialogButton">
-          <param name="width" value="400"/>
+          <param name="width" value="300"/>
           <param name="id" value="4"/>
           <param name="label" value="$LOCALIZE[186]"/>
         </include>
         <include content="DefaultDialogButton">
-          <param name="width" value="400"/>
+          <param name="width" value="300"/>
           <param name="id" value="5"/>
           <param name="label" value="$LOCALIZE[14070]"/>
         </include>
         <include content="DefaultDialogButton">
-          <param name="width" value="400"/>
+          <param name="width" value="300"/>
           <param name="id" value="6"/>
           <param name="label" value="$LOCALIZE[222]"/>
         </include>

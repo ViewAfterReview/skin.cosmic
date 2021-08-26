@@ -15,13 +15,6 @@
         <param name="header_label" value=""/>
         <param name="header_id" value="2"/>
       </include>
-      <control type="image">
-        <left>10</left>
-        <top>80</top>
-        <width>1200</width>
-        <height>790</height>
-        <texture border="40">buttons/dialogbutton-nofo.png</texture>
-      </control>
       <include content="DefaultSettingButtonGradient">
         <param name="id" value="5"/>
         <top>100</top>

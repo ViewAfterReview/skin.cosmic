@@ -12,13 +12,6 @@
         <param name="header_label" value=""/>
         <param name="header_id" value="1"/>
       </include>
-      <control type="image">
-        <left>0</left>
-        <top>80</top>
-        <width>900</width>
-        <bottom>2</bottom>
-        <texture border="40">buttons/dialogbutton-nofo.png</texture>
-      </control>
       <control type="list" id="3">
         <left>20</left>
         <top>100</top>
