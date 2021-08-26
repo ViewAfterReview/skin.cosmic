@@ -1,3 +1,5 @@
+1.0.30
+    Changed: DialogKeyboard appearance
 1.0.29
     Fixed: DialogBackgroundCommons bottom margin
     Fixed: Menu Style logic
