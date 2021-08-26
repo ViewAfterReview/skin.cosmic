@@ -72,10 +72,6 @@
   <propertydefault labelID="albums" group="searchmenu" property="widgetAspect">Square</propertydefault>
   <propertydefault labelID="songs" group="searchmenu" property="widgetAspect">Square</propertydefault>
   <propertydefault labelID="add-ons" group="searchmenu" property="widgetAspect">Square</propertydefault>
-  <propertydefault labelID="spotifyartists" group="searchmenu" property="widgetAspect">Square</propertydefault>
-  <propertydefault labelID="spotifyalbums" group="searchmenu" property="widgetAspect">Square</propertydefault>
-  <propertydefault labelID="spotifysongs" group="searchmenu" property="widgetAspect">Square</propertydefault>
-  <propertydefault labelID="spotifyplaylists" group="searchmenu" property="widgetAspect">Square</propertydefault>
   <propertydefault labelID="musicvideos" group="searchmenu" property="widgetAspect">Square</propertydefault>
   <propertydefault labelID="musicvideoartists" group="searchmenu" property="widgetAspect">Square</propertydefault>
   <propertydefault labelID="youtube" group="searchmenu" property="widgetAspect">Landscape</propertydefault>
@@ -293,11 +289,6 @@
     <shortcut label="Music Video Artists" type="571" icon="special://skin/extras/icons/musicvideo.png">DefaultSearch-MusicVideoArtists</shortcut>
     <shortcut label="Add-ons" type="571" icon="special://skin/extras/icons/addons.png">DefaultSearch-Addons</shortcut>
     <shortcut label="Youtube" type="571" icon="special://skin/extras/icons/youtube.png">DefaultSearch-Youtube</shortcut>
-    <shortcut label="Netflix" type="571" icon="special://skin/extras/icons/netflix.png">DefaultSearch-Netflix</shortcut>
-    <shortcut label="Spotify Artists" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyArtists</shortcut>
-    <shortcut label="Spotify Albums" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyAlbums</shortcut>
-    <shortcut label="Spotify Songs" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifySongs</shortcut>
-    <shortcut label="Spotify Playlists" type="571" icon="special://skin/extras/icons/spotify.png">DefaultSearch-SpotifyPlaylists</shortcut>
     <shortcut label="TMDb Movies" type="571" icon="special://skin/extras/icons/film.png">DefaultSearch-TMDBMovies</shortcut>
     <shortcut label="TMDb Shows" type="571" icon="special://skin/extras/icons/tv.png">DefaultSearch-TMDBShows</shortcut>
     <shortcut label="TMDb People" type="571" icon="special://skin/extras/icons/person3.png">DefaultSearch-TMDBPeople</shortcut>
