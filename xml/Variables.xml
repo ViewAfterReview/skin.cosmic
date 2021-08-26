@@ -18,6 +18,11 @@
     <value condition="Skin.HasSetting(Horizontal_Main)">$LOCALIZE[31371]</value>
     <value>Null</value>
   </variable>
+  <variable name="menuStyle">
+    <value condition="String.IsEqual(Skin.String(MenuStyle),Icons)">$LOCALIZE[31305]</value>
+    <value condition="String.IsEqual(Skin.String(MenuStyle),IconsText)">$LOCALIZE[31306]</value>
+    <value condition="String.IsEqual(Skin.String(MenuStyle),Text)">$LOCALIZE[31307]</value>
+  </variable>
   <variable name="widgetScrollingType">
     <value condition="Skin.HasSetting(DisableFixedScrolling)">$LOCALIZE[31372]</value>
     <value>$LOCALIZE[31373]</value>

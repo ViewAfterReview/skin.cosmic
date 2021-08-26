@@ -27,7 +27,7 @@
               <scroll>true</scroll>
               <shadowcolor>text_shadow</shadowcolor>
             </control>
-            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+            <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
           </control>
           <control type="group">
             <control type="image">
@@ -35,7 +35,7 @@
               <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main)"/>
               <texture colordiffuse="dialog_fg_100">$PARAM[icon]</texture>
             </control>
-            <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
+            <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
           </control>
         </control>
       </focusedlayout>
@@ -59,7 +59,7 @@
               <include content="submenuClassicLabelLayout" condition="Skin.HasSetting(Classic_Main)"/>
               <include content="submenuHorizontalLabelLayout" condition="Skin.HasSetting(Horizontal_Main)"/>
             </control>
-            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+            <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
           </control>
           <control type="group">
             <control type="image">
@@ -67,7 +67,7 @@
               <include content="submenuClassicIconLayout" condition="Skin.HasSetting(Classic_Main)"/>
               <texture colordiffuse="44FFFFFF">$PARAM[icon]</texture>
             </control>
-            <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
+            <visible>!Skin.HasSetting(Horizontal_Main) + [String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))]</visible>
           </control>
         </control>
       </itemlayout>

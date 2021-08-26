@@ -96,13 +96,13 @@
           <control type="button" id="603" description="Home Menu Style">
             <include>DefaultSettingButton</include>
             <label>$LOCALIZE[31304]</label>
-            <label2>$INFO[Skin.String(MenuStyle)]</label2>
+            <label2>$VAR[menuStyle]</label2>
             <onclick>SetProperty(Context.1.Label,$LOCALIZE[31305])</onclick>
-            <onclick>SetProperty(Context.1.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31305]))</onclick>
+            <onclick>SetProperty(Context.1.BuiltIn,Skin.SetString(MenuStyle,Icons))</onclick>
             <onclick>SetProperty(Context.2.Label,$LOCALIZE[31306])</onclick>
-            <onclick>SetProperty(Context.2.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31306]))</onclick>
+            <onclick>SetProperty(Context.2.BuiltIn,Skin.SetString(MenuStyle,IconsText))</onclick>
             <onclick>SetProperty(Context.3.Label,$LOCALIZE[31307])</onclick>
-            <onclick>SetProperty(Context.3.BuiltIn,Skin.SetString(MenuStyle,$LOCALIZE[31307]))</onclick>
+            <onclick>SetProperty(Context.3.BuiltIn,Skin.SetString(MenuStyle,Text))</onclick>
             <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
           </control>
           <control type="radiobutton" id="604" description="Hide submenu in horizontal">

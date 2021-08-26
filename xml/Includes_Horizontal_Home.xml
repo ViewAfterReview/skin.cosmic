@@ -148,7 +148,7 @@
               <centertop>50%</centertop>
               <texture>$INFO[ListItem.Art(thumb)]</texture>
             </control>
-            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+            <visible>String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))</visible>
           </control>
           <control type="group">
             <control type="label">
@@ -163,7 +163,7 @@
               <label>$INFO[ListItem.Label]</label>
               <shadowcolor>text_shadow</shadowcolor>
             </control>
-            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+            <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
           </control>
         </focusedlayout>
         <itemlayout height="95" width="384">
@@ -182,7 +182,7 @@
               <height>64</height>
               <texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
             </control>
-            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31305]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+            <visible>String.IsEqual(Skin.String(MenuStyle),Icons) | String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEmpty(Skin.String(MenuStyle))</visible>
           </control>
           <control type="group">
             <control type="label">
@@ -197,7 +197,7 @@
               <label>$INFO[ListItem.Label]</label>
               <shadowcolor>text_shadow</shadowcolor>
             </control>
-            <visible>String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31306]) | String.IsEqual(Skin.String(MenuStyle),$LOCALIZE[31307]) | String.IsEmpty(Skin.String(MenuStyle))</visible>
+            <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
           </control>
         </itemlayout>
         <content>
