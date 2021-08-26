@@ -48,14 +48,7 @@
       <property name="widgetPath2" tag="property" attribute="name|list" value="DefaultSearch-MusicVideoArtists">%22%5d%7d%5d%7d%2c%22type%22%3a%22musicvideos%22%7d</property>
       <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-Youtube">plugin://plugin.video.youtube/search/?q=</property>
       <property name="widgetPath2" tag="property" attribute="name|list" value="DefaultSearch-Youtube">&amp;search_type=notvalid</property>
-      <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-Netflix">plugin://plugin.video.netflix/directory/search/search/</property>
-      <property name="widgetPath2" tag="property" attribute="name|list" value="DefaultSearch-Netflix">/</property>
       <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-Addons">addons://search/</property>
-      <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-SpotifyArtists">plugin://plugin.audio.spotify/?action=search_artists&amp;artistid=</property>
-      <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-SpotifyAlbums">plugin://plugin.audio.spotify/?action=search_albums&amp;albumid=</property>
-      <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-SpotifySongs">plugin://plugin.audio.spotify/?action=search_albums&amp;songid=</property>
-      <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-SpotifyPlaylists">plugin://plugin.audio.spotify/?action=search_songs&amp;playlistid=</property>
-      <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-SpotifyPlaylists">plugin://plugin.audio.spotify/?action=search_playlists&amp;playlistid=</property>
       <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-TMDBMovies">plugin://plugin.video.themoviedb.helper?info=search&amp;type=movie&amp;query=</property>
       <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-TMDBShows">plugin://plugin.video.themoviedb.helper?info=search&amp;type=tv&amp;query=</property>
       <property name="widgetPath" tag="property" attribute="name|list" value="DefaultSearch-TMDBPeople">plugin://plugin.video.themoviedb.helper?info=search&amp;type=person&amp;query=</property>
@@ -65,10 +58,6 @@
       <property name="widgetTarget" tag="property" attribute="name|list" value="DefaultSearch-Artists">music</property>
       <property name="widgetTarget" tag="property" attribute="name|list" value="DefaultSearch-Songs">music</property>
       <property name="widgetTarget" tag="property" attribute="name|list" value="DefaultSearch-Addons">addons</property>
-      <property name="widgetTarget" tag="property" attribute="name|list" value="DefaultSearch-SpotifyArtists">music</property>
-      <property name="widgetTarget" tag="property" attribute="name|list" value="DefaultSearch-SpotifyAlbums">music</property>
-      <property name="widgetTarget" tag="property" attribute="name|list" value="DefaultSearch-SpotifySongs">music</property>
-      <property name="widgetTarget" tag="property" attribute="name|list" value="DefaultSearch-SpotifyPlaylists">music</property>
       <property name="widgetTarget" tag="property" attribute="name|widgetTarget" />
       <property name="widgetTarget">videos</property>
       <property name="widgetAspect" tag="property" attribute="name|widgetAspect"/>
