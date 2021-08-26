@@ -9,9 +9,9 @@
       <visible>!Window.IsVisible(numericinput)</visible>
       <include>Animation_DialogPopupVisible</include>
       <centerleft>50%</centerleft>
-      <centertop>60%</centertop>
-      <height>522</height>
-      <width>1530</width>
+      <bottom>0</bottom>
+      <height>631</height>
+      <width>1920</width>
       <control type="image">
         <texture border="16" colordiffuse="dialog_bg_100">common/dialog.png</texture>
       </control>
@@ -23,23 +23,13 @@
         <aspectratio>stretch</aspectratio>
         <texture border="5" colordiffuse="dialog_bg_100">common/box.png</texture>
       </control>
-      <!-- <control type="label" id="311">
-				<description>Heading</description>
-				<left>30</left>
-				<right>30</right>
-				<top>-86</top>
-				<height>75</height>
-				<align>center</align>
-				<font>font13</font>
-				<textcolor>FFededed</textcolor>
-			</control> -->
       <control type="edit" id="312">
         <description>Edit Text</description>
-        <left>10</left>
+        <left>195</left>
         <right>10</right>
         <top>11</top>
         <height>75</height>
-        <align>center</align>
+        <width>1530</width>
         <ondown>3100</ondown>
         <onup>8000</onup>
         <textcolor>B3ededed</textcolor>
@@ -48,7 +38,7 @@
         </include>
       </control>
       <control type="group">
-        <left>10</left>
+        <left>195</left>
         <top>96</top>
         <control type="grouplist" description="toprow" id="3100">
           <orientation>horizontal</orientation>
@@ -448,7 +438,7 @@
       <control type="group">
         <width>100%</width>
         <height>89</height>
-        <bottom>-129</bottom>
+        <bottom>10</bottom>
         <control type="image">
           <bottom>-8</bottom>
           <top>-8</top>
