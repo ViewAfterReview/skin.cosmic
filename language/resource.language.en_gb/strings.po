@@ -1840,3 +1840,33 @@ msgstr ""
 msgctxt "#31378"
 msgid "Target"
 msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31379"
+msgid "years old"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31380"
+msgid "hr"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31381"
+msgid "mins"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31382"
+msgid "on"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31383"
+msgid "Last aired"
+msgstr ""
+
+#: /xml/Includes_Object.xml
+msgctxt "#31384"
+msgid "Match"
+msgstr ""

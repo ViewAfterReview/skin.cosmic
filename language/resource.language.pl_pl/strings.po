@@ -1664,3 +1664,33 @@ msgstr "Białe"
 msgctxt "#31378"
 msgid "Target"
 msgstr "Typ"
+
+#: /xml/Variables.xml
+msgctxt "#31379"
+msgid "years old"
+msgstr "lat"
+
+#: /xml/Variables.xml
+msgctxt "#31380"
+msgid "hr"
+msgstr "godz"
+
+#: /xml/Variables.xml
+msgctxt "#31381"
+msgid "mins"
+msgstr "min"
+
+#: /xml/Variables.xml
+msgctxt "#31382"
+msgid "on"
+msgstr "w"
+
+#: /xml/Variables.xml
+msgctxt "#31383"
+msgid "Last aired"
+msgstr "Ostatnio emitowany"
+
+#: /xml/Includes_Object.xml
+msgctxt "#31384"
+msgid "Match"
+msgstr "Trafność"

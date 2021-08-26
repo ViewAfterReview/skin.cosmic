@@ -74,6 +74,48 @@
     <value condition="Skin.HasSetting(EnableDarkVolumeSlider)">FF1A2123</value>
     <value>ffffffff</value>
   </variable>
+  <variable name="Image_VideoQuality">
+    <value condition="ListItem.IsCollection">flags/quality/sets.png</value>
+    <value condition="Integer.IsGreater(ListItem.VideoResolution,1080) | String.IsEqual(ListItem.VideoResolution,4K)">flags/quality/4k.png</value>
+    <value condition="Integer.IsGreater(ListItem.VideoResolution,719)">flags/quality/hd.png</value>
+    <value condition="!String.IsEmpty(ListItem.VideoResolution)">flags/quality/sd.png</value>
+    <value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)">flags/quality/web.png</value>
+    <value>flags/quality/info.png</value>
+  </variable>
+  <variable name="Label_Info_NextAired_Status">
+    <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Status)]$VAR[Label_Info_NextAired_Date]</value>
+  </variable>
+  <variable name="Label_Info_NextAired_Date">
+    <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Status),Returning Series) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired), $LOCALIZE[31382] ,]</value>
+    <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Status),Returning Series) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired))">[COLOR=$VAR[ColorHighlight]]  |  [/COLOR]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired),$LOCALIZE[31383] ,]</value>
+    <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Status),Ended) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired), $LOCALIZE[31382] ,]</value>
+    <value condition="String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Status),Canceled) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired))">[COLOR=$VAR[ColorHighlight]]  |  [/COLOR]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired),$LOCALIZE[31383] ,]</value>
+  </variable>
+  <variable name="Label_PVR_EpisodeName">
+    <value condition="!String.IsEmpty(ListItem.EpisodeName) + !String.IsEqual(ListItem.EpisodeName,ListItem.Title) + !String.IsEqual(ListItem.EpisodeName,ListItem.Plot)">$INFO[ListItem.EpisodeName]</value>
+    <value condition="!String.IsEmpty(ListItem.NextEpisodeName) + !String.IsEqual(ListItem.NextEpisodeName,ListItem.NextTitle) + !String.IsEqual(ListItem.NextEpisodeName,ListItem.NextPlot)">$INFO[ListItem.NextEpisodeName]</value>
+  </variable>
+  <variable name="Label_PVR_EPGEventTitle">
+    <value condition="!String.IsEmpty(ListItem.EPGEventTitle) + !String.IsEqual(ListItem.EPGEventTitle,ListItem.Title) + !String.IsEqual(ListItem.EPGEventTitle,ListItem.Plot)">$INFO[ListItem.EPGEventTitle]</value>
+    <value condition="!String.IsEmpty(ListItem.NextEPGEventTitle) + !String.IsEqual(ListItem.NextEPGEventTitle,ListItem.NextTitle) + !String.IsEqual(ListItem.NextEPGEventTitle,ListItem.NextPlot)">$INFO[ListItem.NextEPGEventTitle]</value>
+  </variable>
+  <variable name="Label_Duration">
+    <value condition="!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration(h),0)">$INFO[ListItem.Duration(h),, $LOCALIZE[31380] ]$INFO[ListItem.Duration(mm),, $LOCALIZE[31381]]</value>
+    <value condition="!String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration(mins),, $LOCALIZE[31381]]</value>
+  </variable>
+  <variable name="Label_InfoLine">
+    <value condition="[String.IsEqual(ListItem.DBType,set) | ListItem.IsCollection] + !String.IsEmpty(ListItem.DBID) + Window.IsMedia">$INFO[ListItem.Year,[COLOR=main_fg_100] - ,[/COLOR]]</value>
+    <value condition="[String.IsEqual(ListItem.DBType,set) | ListItem.IsCollection] + !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Set.Years))">$INFO[Window(Home).Property(TMDBHelper.ListItem.Set.Years),  |  [COLOR=main_fg_100],[/COLOR]]$INFO[Window(Home).Property(TMDBHelper.ListItem.Set.NumItems),  |  [COLOR=main_fg_100], $LOCALIZE[342][/COLOR]]</value>
+    <value condition="String.IsEqual(ListItem.DBType,movie)">$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.MPAA,  |  [COLOR=main_fg_100],[/COLOR]]$VAR[Label_Duration,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.EndTime,  |  [COLOR=main_fg_100]$LOCALIZE[31080] ,[/COLOR]]</value>
+    <value condition="String.IsEqual(ListItem.DBType,tvshow)">$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.MPAA,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(WatchedEpisodes),  |  [COLOR=main_fg_100]$LOCALIZE[16102] , $LOCALIZE[20163] [/COLOR]]$INFO[ListItem.Property(TotalEpisodes),[COLOR=main_fg_100],[/COLOR]]$VAR[Label_Info_NextAired_Status,  |  [COLOR=main_fg_100],[/COLOR]]</value>
+    <value condition="String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Season,  |  [COLOR=main_fg_100]$LOCALIZE[20373] ,[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.MPAA,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(WatchedEpisodes),  |  [COLOR=main_fg_100]$LOCALIZE[16102] , $LOCALIZE[20163] [/COLOR]]$INFO[ListItem.Property(TotalEpisodes),[COLOR=main_fg_100],[/COLOR]]$VAR[Label_Info_NextAired_Status,  |  [COLOR=main_fg_100],[/COLOR]]</value>
+    <value condition="String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)">$INFO[ListItem.Season,  |  [COLOR=main_fg_100]$LOCALIZE[20373] ,[/COLOR]]$INFO[ListItem.Episode,  |  [COLOR=main_fg_100]$LOCALIZE[20359] ,[/COLOR]]$INFO[ListItem.MPAA,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Premiered,  |  [COLOR=main_fg_100],[/COLOR]]$VAR[Label_Duration,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.EndTime,  |  [COLOR=main_fg_100]$LOCALIZE[31080] ,[/COLOR]]</value>
+    <value condition="String.IsEqual(ListItem.DBType,actor) + [!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Birthday)) | !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Born)) | !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Age))]">$INFO[Window(Home).Property(TMDBHelper.ListItem.Birthday),  |  [COLOR=main_fg_100],[/COLOR]]$INFO[Window(Home).Property(TMDBHelper.ListItem.Born),  |  [COLOR=main_fg_100],[/COLOR]]$INFO[Window(Home).Property(TMDBHelper.ListItem.Age),  |  [COLOR=main_fg_100], $LOCALIZE[31379][/COLOR]]</value>
+    <value condition="String.IsEqual(ListItem.DBType,artist) + [!String.IsEmpty(ListItem.Property(Artist_Genre)) | !String.IsEmpty(ListItem.Property(Artist_YearsActive)) | !String.IsEmpty(ListItem.Property(Artist_Born))]">$INFO[ListItem.Property(Artist_Genre),  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(Artist_YearsActive),  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(Artist_Born),  |  [COLOR=main_fg_100],[/COLOR]]</value>
+    <value condition="[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + [!String.IsEmpty(ListItem.AlbumArtist) | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Property(Album_Label))]">$INFO[ListItem.AlbumArtist,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Property(Album_Label),  |  [COLOR=main_fg_100],[/COLOR]]</value>
+    <value condition="!String.IsEmpty(ListItem.AddonVersion)">$INFO[ListItem.AddonVersion,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.AddonType,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.AddonCreator,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Label2,  |  [COLOR=main_fg_100],[/COLOR]]</value>
+    <value condition="[!String.IsEmpty(ListItem.ChannelNumberLabel) | Window.IsVisible(DialogPVRInfo.xml)] + [!String.IsEmpty(ListItem.ChannelName) | !String.IsEmpty(ListITem.StartTime)]">$INFO[ListItem.ChannelName,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Season,  |  [COLOR=main_fg_100]S,[/COLOR]]$INFO[ListItem.Episode,  |  [COLOR=main_fg_100]E,[/COLOR]]$VAR[Label_PVR_EpisodeName,  |  [COLOR=main_fg_100],[/COLOR]]$VAR[Label_PVR_EPGEventTitle,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.Year,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.MPAA,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.StartTime,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[ListItem.EndTime,[COLOR=main_fg_100] - ,[/COLOR]]</value>
+  </variable>
   <variable name="Image_ClearLogo">
     <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
     <value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + !String.IsEqual(Container.ShowTitle,ListItem.TvShowTitle)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
