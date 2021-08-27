@@ -7,7 +7,7 @@
   <depth>DepthOSD</depth>
   <zorder>0</zorder>
   <controls>
-    <include>PVRChannelNumberInput</include>
+  <include>PVRChannelNumberInput</include>
     <control type="group">
       <control type="image">
         <height>480</height>
@@ -195,18 +195,24 @@
         </control>
         <control type="image">
           <left>380</left>
-          <top>-780</top>
+          <top>-880</top>
           <right>20</right>
           <width>480</width>
           <aspectratio>keep</aspectratio>
           <texture background="true">$VAR[Image_ClearLogo]</texture>
           <visible>!String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
         </control>
+        <control type="group">
+          <left>380</left>
+          <top>-250</top>
+          <width>66%</width>
+          <include>Object_Info_Line</include>
+        </control>
         <control type="textbox">
           <left>380</left>
           <top>-180</top>
           <right>20</right>
-          <height>160</height>
+          <height>150</height>
           <width>66%</width>
           <label fallback="19055">$INFO[VideoPlayer.Plot]</label>
           <align>justify</align>

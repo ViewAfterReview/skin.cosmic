@@ -897,7 +897,8 @@
         <visible>$PARAM[visible]</visible>
       </control>
       <control type="label" id="$PARAM[id]">
-        <width>auto</width>
+        <width>$PARAM[width]</width>
+        <scroll>true</scroll>
         <label fallback="$PARAM[fallback]">$PARAM[label]</label>
         <height>72</height>
         <aligny>bottom</aligny>
@@ -938,12 +939,21 @@
           <param name="divider" value="false"/>
           <param name="fallback" value="N/A"/>
           <param name="visible" value="!String.IsEmpty(ListItem.Rating) + Skin.HasSetting(Ratings.User)"/>
+          <param name="width" value="auto" />
         </include>
         <include content="Object_Info_Line_Label">
           <param name="label" value="$VAR[Label_InfoLine]"/>
           <param name="textcolor" value="$VAR[ColorHighlight]"/>
           <param name="divider" value="false"/>
-          <param name="visible" value="true"/>
+          <param name="visible" value="!Window.IsVisible(videoosd)"/>
+          <param name="width" value="auto" />
+        </include>
+        <include content="Object_Info_Line_Label">
+          <param name="label" value="$VAR[Label_OSD_InfoLine]"/>
+          <param name="textcolor" value="$VAR[ColorHighlight]"/>
+          <param name="divider" value="false"/>
+          <param name="visible" value="Window.IsVisible(videoosd)"/>
+          <param name="width" value="1200" />
         </include>
       </control>
     </definition>
