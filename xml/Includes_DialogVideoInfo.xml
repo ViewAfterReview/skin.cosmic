@@ -18,7 +18,7 @@
             <width>570</width>
             <height>830</height>
             <centertop>50%</centertop>
-            <texture>$INFO[ListItem.Art(poster)]</texture>
+            <texture>$VAR[Image_Poster]</texture>
             <bordertexture border="21">overlays/shadow.png</bordertexture>
             <bordersize>20</bordersize>
           </control>
