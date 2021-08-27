@@ -1367,7 +1367,7 @@
   </include>
   <include name="TrailerWindowDimensions">
     <top>-100</top>
-    <left>550</left>
+    <left>560</left>
     <width>1366</width>
     <height>768</height>
   </include>
