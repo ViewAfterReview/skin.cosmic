@@ -1890,3 +1890,13 @@ msgstr ""
 msgctxt "#31388"
 msgid "Disable clock on top"
 msgstr ""
+
+#: /xml/Includes_Object.xml
+msgctxt "#31389"
+msgid "CANNOT PLAY"
+msgstr ""
+
+#: /xml/Includes_Object.xml
+msgctxt "#31390"
+msgid "NO TRAILER"
+msgstr ""

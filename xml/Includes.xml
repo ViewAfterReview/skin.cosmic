@@ -1366,10 +1366,10 @@
     <height>100%</height>
   </include>
   <include name="TrailerWindowDimensions">
-    <top>0</top>
-    <left>500</left>
-    <width>1420</width>
-    <height>780</height>
+    <top>-100</top>
+    <left>550</left>
+    <width>1366</width>
+    <height>768</height>
   </include>
   <include name="FocusableProgressBar">
     <param name="width">100%</param>

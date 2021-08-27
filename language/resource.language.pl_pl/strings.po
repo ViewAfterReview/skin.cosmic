@@ -1712,5 +1712,15 @@ msgstr "Ukryj tag z informacjami w pionowym układzie"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31388"
-msgid "Wyłącz górny zegar"
-msgstr ""
+msgid "Disable clock on top"
+msgstr "Wyłącz górny zegar"
+
+#: /xml/Includes_Object.xml
+msgctxt "#31389"
+msgid "CANNOT PLAY"
+msgstr "NIE MOŻNA ODTWORZYĆ"
+
+#: /xml/Includes_Object.xml
+msgctxt "#31390"
+msgid "NO TRAILER"
+msgstr "BRAK ZWIASTUNA"

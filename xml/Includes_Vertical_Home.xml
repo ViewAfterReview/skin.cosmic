@@ -7,6 +7,7 @@
         <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
       </include>
       <visible>!$EXP[infodialog_active]</visible>
+      <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
     </control>
     <control type="group">
       <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -73,6 +74,7 @@
             <param name="directory" value="$INFO[Skin.String(Icons)]"/>
             <param name="align" value="right"/>
           </include>
+          <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
         </control>
       </control>
       <control type="group">
