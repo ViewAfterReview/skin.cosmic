@@ -70,6 +70,12 @@
       <linespacing>0.8</linespacing>
     </font>
     <font>
+      <name>font25_headertitle</name>
+      <filename>RobotoCondensed-Regular.ttf</filename>
+      <size>25</size>
+      <style>uppercase bold</style>
+    </font>
+    <font>
       <name>font27</name>
       <filename>RobotoCondensed-Regular.ttf</filename>
       <size>27</size>

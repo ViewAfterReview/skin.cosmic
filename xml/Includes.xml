@@ -850,8 +850,8 @@
         <top>0</top>
         <right>100</right>
         <height>70</height>
-        <font>font32_title</font>
-        <textcolor>B3ededed</textcolor>
+        <font>font25_headertitle</font>
+        <textcolor>dialog_fg_70</textcolor>
         <label>$PARAM[header_label]</label>
         <aligny>center</aligny>
       </control>
