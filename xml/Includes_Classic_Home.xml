@@ -52,14 +52,6 @@
       <control type="group">
         <top>255</top>
         <left>450</left>
-        <include content="ProgressGradient">
-          <param name="id" value="29999"/>
-          <param name="top" value="0"/>
-          <width>880</width>
-          <height>16</height>
-          <info>ListItem.Progress</info>
-        </include>
-        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
         <control type="group">
           <control type="image">
             <top>-125</top>

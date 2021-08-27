@@ -38,13 +38,6 @@
       <control type="group">
         <top>250</top>
         <left>150</left>
-        <include content="ProgressGradient">
-          <param name="id" value="29999"/>
-          <param name="top" value="0"/>
-          <width>920</width>
-          <height>16</height>
-          <info>ListItem.Progress</info>
-        </include>
         <control type="group">
           <control type="image">
             <top>-75</top>

@@ -110,15 +110,15 @@
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
             <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
           </control>
-          <control type="label">
-            <top>20</top>
-            <width>auto</width>
-            <label>$INFO[ListItem.ChannelName]</label>
-            <aligny>center</aligny>
-            <textcolor>dialog_fg_100</textcolor>
-            <font>$PARAM[font]</font>
-            <height>24</height>
-            <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+          <control type="group">
+            <top>24</top>
+            <include content="ProgressGradient">
+              <param name="id" value="29999"/>
+              <param name="top" value="0"/>
+              <width>480</width>
+              <height>16</height>
+              <info>ListItem.Progress</info>
+            </include>
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
             <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
           </control>
@@ -169,15 +169,15 @@
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
             <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
           </control>
-          <control type="label">
-            <top>0</top>
-            <width>auto</width>
-            <label>$INFO[ListItem.ChannelName]</label>
-            <aligny>center</aligny>
-            <textcolor>dialog_fg_100</textcolor>
-            <font>font27_bold</font>
-            <height>42</height>
-            <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
+          <control type="group">
+            <top>12</top>
+            <include content="ProgressGradient">
+              <param name="id" value="29999"/>
+              <param name="top" value="0"/>
+              <width>480</width>
+              <height>16</height>
+              <info>ListItem.Progress</info>
+            </include>
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
             <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
           </control>
