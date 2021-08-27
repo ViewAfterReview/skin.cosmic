@@ -450,13 +450,25 @@
             <onclick>Skin.ToggleSetting(autoscroll)</onclick>
             <selected>Skin.HasSetting(autoscroll)</selected>
           </control>
-          <control type="radiobutton" id="912" description="Show music posters instead of thumb">
+          <control type="radiobutton" id="912" description="Hide plot">
+            <label>$LOCALIZE[31386]</label>
+            <include>DefaultSettingButton</include>
+            <onclick>Skin.ToggleSetting(HidePlot)</onclick>
+            <selected>Skin.HasSetting(HidePlot)</selected>
+          </control>
+          <control type="radiobutton" id="913" description="Hide cycling info">
+            <label>$LOCALIZE[31387]</label>
+            <include>DefaultSettingButton</include>
+            <onclick>Skin.ToggleSetting(HideInfoTag)</onclick>
+            <selected>Skin.HasSetting(HideInfoTag)</selected>
+          </control>
+          <control type="radiobutton" id="914" description="Show music posters instead of thumb">
             <label>$LOCALIZE[31168]</label>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(show_musicvideoposter)</onclick>
             <selected>Skin.HasSetting(show_musicvideoposter)</selected>
           </control>
-          <control type="button" id="913" description="Switch rating icons colour">
+          <control type="button" id="915" description="Switch rating icons colour">
             <include>DefaultSettingButton</include>
             <label>$LOCALIZE[31293]</label>
             <label2>$INFO[Skin.String(icons.label)]</label2>
@@ -466,7 +478,7 @@
             <onclick>SetProperty(Context.2.BuiltIn, Skin.SetString(Icons, monochrome) || Skin.SetString(icons.label, $LOCALIZE[31294]))</onclick>
             <onclick>RunScript(script.embuary.helper,action=createcontext)</onclick>
           </control>
-          <control type="radiobutton" id="914" description="Landscape art">
+          <control type="radiobutton" id="916" description="Landscape art">
             <label>$LOCALIZE[31351]</label>
             <include>DefaultSettingButton</include>
             <selected>Skin.HasSetting(LandscapeArt)</selected>

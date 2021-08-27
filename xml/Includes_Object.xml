@@ -119,6 +119,7 @@
               <height>16</height>
               <info>ListItem.Progress</info>
             </include>
+            <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) + !Container($PARAM[id]).IsUpdating</visible>
             <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
           </control>
@@ -766,9 +767,10 @@
             <font>font32</font>
             <shadowcolor>black</shadowcolor>
             <autoscroll delay="4000" time="4500" repeat="7000">Control.IsVisible(5600) + Skin.HasSetting(autoscroll)</autoscroll>
+            <visible>!Skin.HasSetting(HidePlot)</visible>
           </control>
         </control>
-        <include content="CyclingInfo">
+        <include content="CyclingInfo" condition="!Skin.HasSetting(HideInfoTag)">
           <param name="visible2" value="!String.IsEmpty(ListItem.Studio)"/>
           <param name="visible1" value="!String.IsEmpty(ListItem.Genre)"/>
           <param name="visible3" value="!String.IsEmpty(ListItem.Cast)"/>

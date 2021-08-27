@@ -1699,3 +1699,13 @@ msgstr "Trafność"
 msgctxt "#31385"
 msgid "Latest changes"
 msgstr "Ostatnie zmiany"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31386"
+msgid "Hide plot"
+msgstr "Ukryj fabułę"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31387"
+msgid "Hide info tag in vertical layout"
+msgstr "Ukryj tag z informacjami w pionowym układzie"
