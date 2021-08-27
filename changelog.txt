@@ -1,3 +1,11 @@
+1.0.32
+    Changed: Plot variable
+    Changed: Position of PVR Progress bar in widget label
+    Added: PlotOutline
+    Fixed: Poster image in DialogVideoInfo
+    Changed: Dialog header title font
+    Added: Video OSD info line
+    Added: Options to hide Info tags and Plot
 1.0.31
     Removed: Broken default entries in SearchList
     Changed: Improvements for Info Line
