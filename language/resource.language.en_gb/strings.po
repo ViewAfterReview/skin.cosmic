@@ -1870,3 +1870,8 @@ msgstr ""
 msgctxt "#31384"
 msgid "Match"
 msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#31385"
+msgid "Latest changes"
+msgstr ""

@@ -4,7 +4,7 @@
     <control type="group" id="5600">
       <include content="Object_Item_Showcase">
         <param name="title" value="$INFO[ListItem.Title]"/>
-        <param name="plot" value="$VAR[PlotTextBoxVar]"/>
+        <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
       </include>
       <visible>!$EXP[infodialog_active]</visible>
     </control>
@@ -83,14 +83,6 @@
               <height>16</height>
               <info>ListItem.Progress</info>
             </include>
-            <control type="label">
-              <top>-12</top>
-              <left>490</left>
-              <font>font27</font>
-              <width>auto</width>
-              <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
-              <visible>!Pvr.IsTimeShift</visible>
-            </control>
             <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
           </control>
         </control>

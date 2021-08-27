@@ -29,7 +29,7 @@
       <include content="Object_Item_Showcase">
         <param name="title" value="$INFO[ListItem.Title]"/>
         <param name="title_width" value="1000"/>
-        <param name="plot" value="$VAR[PlotTextBoxVar]"/>
+        <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
         <param name="top" value="0"/>
         <param name="info_line_top" value="190"/>
         <param name="plot_top" value="285"/>
@@ -41,18 +41,10 @@
         <include content="ProgressGradient">
           <param name="id" value="29999"/>
           <param name="top" value="0"/>
-          <width>480</width>
+          <width>920</width>
           <height>16</height>
           <info>ListItem.Progress</info>
         </include>
-        <control type="label">
-          <top>-12</top>
-          <left>490</left>
-          <font>font27</font>
-          <width>auto</width>
-          <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
-          <visible>!Pvr.IsTimeShift</visible>
-        </control>
         <control type="group">
           <control type="image">
             <top>-75</top>

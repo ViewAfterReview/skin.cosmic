@@ -1694,3 +1694,8 @@ msgstr "Ostatnio emitowany"
 msgctxt "#31384"
 msgid "Match"
 msgstr "Trafność"
+
+#: /xml/Variables.xml
+msgctxt "#31385"
+msgid "Latest changes"
+msgstr "Ostatnie zmiany"
