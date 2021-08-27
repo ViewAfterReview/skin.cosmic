@@ -186,7 +186,7 @@
         </control>
         <control type="label">
           <left>380</left>
-          <top>-260</top>
+          <top>-380</top>
           <right>20</right>
           <height>160</height>
           <font>font52_title</font>
