@@ -1,3 +1,7 @@
+1.0.33
+    Fixed: Poster image aspectratio in DialogVideoInfo
+    Fixed: Video title position in Video OSD
+    Added: Option to disable clock on top
 1.0.32
     Changed: Plot variable
     Changed: Position of PVR Progress bar in widget label
