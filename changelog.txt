@@ -1,3 +1,5 @@
+1.0.34
+    Improved: Background trailers
 1.0.33
     Fixed: Poster image aspectratio in DialogVideoInfo
     Fixed: Video title position in Video OSD
