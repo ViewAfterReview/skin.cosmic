@@ -11,6 +11,7 @@
         <label>$INFO[System.Time]</label>
         <visible>!$EXP[infodialog_active]</visible>
       </control>
+      <visible>!Skin.HasSetting(DisableClock)</visible>
     </control>
     <control type="group">
       <animation effect="slide" start="0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="ControlGroup(3000).HasFocus">Conditional</animation>
@@ -186,8 +187,7 @@
               <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
             </control>
             <control type="group">
-              <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional
-                            </animation>
+              <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
               <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
               <animation effect="slide" start="0" end="-280,0" time="0" reversible="false" condition="String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
               <control type="image">
@@ -217,8 +217,7 @@
               <visible>String.IsEqual(Skin.String(MenuStyle),IconsText) | String.IsEqual(Skin.String(MenuStyle),Text) | String.IsEmpty(Skin.String(MenuStyle))</visible>
             </control>
             <control type="group">
-              <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional
-                            </animation>
+              <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
               <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
               <animation effect="slide" start="0" end="-280,0" time="0" reversible="false" condition="String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
               <control type="image">

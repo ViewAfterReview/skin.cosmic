@@ -24,6 +24,7 @@
           <label>$INFO[System.Time]</label>
         </control>
       </control>
+      <visible>!Skin.HasSetting(DisableClock)</visible>
     </control>
     <control type="group" id="5600">
       <include content="Object_Item_Showcase">

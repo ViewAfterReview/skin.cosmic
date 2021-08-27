@@ -1885,3 +1885,8 @@ msgstr ""
 msgctxt "#31387"
 msgid "Hide info tag in vertical layout"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31388"
+msgid "Disable clock on top"
+msgstr ""

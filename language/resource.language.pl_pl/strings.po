@@ -1709,3 +1709,8 @@ msgstr "Ukryj fabułę"
 msgctxt "#31387"
 msgid "Hide info tag in vertical layout"
 msgstr "Ukryj tag z informacjami w pionowym układzie"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31388"
+msgid "Wyłącz górny zegar"
+msgstr ""

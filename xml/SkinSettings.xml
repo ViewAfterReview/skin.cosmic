@@ -145,7 +145,13 @@
             <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
             <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31340])</onclick>
           </control>
-          <control type="label" id="609">
+          <control type="radiobutton" id="609" description="Disable clock">
+            <label>$LOCALIZE[31388]</label>
+            <include>DefaultSettingButton</include>
+            <selected>Skin.HasSetting(DisableClock)</selected>
+            <onclick>Skin.ToggleSetting(DisableClock)</onclick>
+          </control>
+          <control type="label" id="610">
             <textoffsetx>30</textoffsetx>
             <width>470</width>
             <height>80</height>
@@ -154,7 +160,7 @@
             <font>font27</font>
             <aligny>center</aligny>
           </control>
-          <control type="button" id="610" description="Customize shutdown menu">
+          <control type="button" id="611" description="Customize shutdown menu">
             <label>$LOCALIZE[31180]</label>
             <include>DefaultSettingButton</include>
             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>
