@@ -32,7 +32,7 @@
       <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="Control.HasFocus(9001)">Conditional</animation>
       <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
       <include content="Object_Item_Showcase">
-        <param name="title" value="$INFO[ListItem.Title]"/>
+        <param name="title" value="$VAR[Label_Title]"/>
         <param name="title_width" value="930"/>
         <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
         <param name="plot_height" value="200"/>

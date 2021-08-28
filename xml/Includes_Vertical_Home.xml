@@ -3,7 +3,7 @@
   <include name="Vertical_Main">
     <control type="group" id="5600">
       <include content="Object_Item_Showcase">
-        <param name="title" value="$INFO[ListItem.Title]"/>
+        <param name="title" value="$VAR[Label_Title]"/>
         <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
       </include>
       <visible>!$EXP[infodialog_active]</visible>
