@@ -108,9 +108,8 @@
           <bottom>-40</bottom>
           <movement>7</movement>
           <focusposition>0</focusposition>
-          <onup>700</onup>
-          <!-- <ondown>700</ondown> -->
           <onleft>9001</onleft>
+          <onup condition="!Skin.HasSetting(DisabledProfileInfo)">700</onup>
           <onright condition="!String.IsEqual(Container(9989).ListItem.Property(list),Settings) + !String.IsEqual(Container(9989).ListItem.Property(list),Weather)">3000</onright>
           <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Weather)">4000</onright>
           <onright condition="String.IsEqual(Container(9989).ListItem.Property(list),Settings)">5000</onright>
