@@ -1226,7 +1226,7 @@
             <aspectratio aligny="center">scale</aspectratio>
             <fadetime>400</fadetime>
             <animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
-            <imagepath background="true">common/vignette-vert-main.png</imagepath>
+            <imagepath background="true">common/vert-vignette-new.png</imagepath>
             <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main)</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
@@ -1240,7 +1240,7 @@
           <aspectratio aligny="center">scale</aspectratio>
           <fadetime>400</fadetime>
           <animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
-          <imagepath background="true">common/vignette-vert-main.png</imagepath>
+          <imagepath background="true">common/vert-vignette-new.png</imagepath>
           <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers)</visible>
         </control>
       </control>
