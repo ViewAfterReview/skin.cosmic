@@ -1191,9 +1191,9 @@
           <animation effect="fade" time="400">VisibleChange</animation>
           <control type="multiimage" id="32111">
             <include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]">FullScreenDimensions</include>
-            <left>500</left>
-            <width>1420</width>
-            <height>780</height>
+            <left>560</left>
+            <width>1366</width>
+            <height>768</height>
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
