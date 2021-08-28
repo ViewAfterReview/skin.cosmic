@@ -165,7 +165,7 @@
       </control>
       <control type="label" id="40000">
         <centerleft>50%</centerleft>
-        <centertop>50%</centertop>
+        <centertop>-180</centertop>
         <width>50%</width>
         <height>1080</height>
         <align>center</align>
