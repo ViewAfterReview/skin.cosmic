@@ -1724,3 +1724,8 @@ msgstr "NIE MOŻNA ODTWORZYĆ"
 msgctxt "#31390"
 msgid "NO TRAILER"
 msgstr "BRAK ZWIASTUNA"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31391"
+msgid "Animate ClearLogo"
+msgstr "Animuj ClearLogo"
