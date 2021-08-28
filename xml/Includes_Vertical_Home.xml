@@ -102,6 +102,7 @@
           </control>
         </control>
         <control type="fixedlist" id="9000">
+          <animation effect="slide" start="0,0" end="0,-125" time="0" reversible="false" condition="Skin.HasSetting(DisabledProfileInfo)">Conditional</animation>
           <left>92</left>
           <top>285</top>
           <width>462</width>
