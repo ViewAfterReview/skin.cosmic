@@ -1,3 +1,5 @@
+1.0.36
+    Fixed: SearchList feature
 1.0.35
     Fixed: Small fix for background trailers
     Fixed: SeekLabel position
