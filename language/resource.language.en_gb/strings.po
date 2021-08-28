@@ -1905,3 +1905,8 @@ msgstr ""
 msgctxt "#31391"
 msgid "Animate ClearLogo"
 msgstr ""
+
+#: /xml/View_510_Flix.xml
+msgctxt "#31392"
+msgid "Flix View"
+msgstr ""

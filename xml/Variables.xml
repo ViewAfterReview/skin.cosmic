@@ -61,6 +61,7 @@
   </variable>
   <variable name="BackgroundOverlay">
     <value condition="Control.HasFocus(57)">FFFFFFFF</value>
+    <value condition="Control.HasFocus(510)">$VAR[AlphaPercentage]</value>
     <value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
   </variable>
   <variable name="HighlightOverlay">

@@ -526,7 +526,7 @@
         <width>276</width>
         <height>1</height>
         <texturebg>
-				</texturebg>
+        </texturebg>
         <midtexture colordiffuse="$VAR[ColorHighlight]" border="3">progress/texturebg_alt_white.png</midtexture>
         <info>ListItem.PercentPlayed</info>
         <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -662,7 +662,7 @@
         <width>250</width>
         <height>1</height>
         <texturebg>
-				</texturebg>
+        </texturebg>
         <midtexture colordiffuse="$VAR[ColorHighlight]" border="3">progress/texturebg_alt_white.png</midtexture>
         <info>ListItem.PercentPlayed</info>
         <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -875,6 +875,7 @@
           <font>font20_title</font>
           <shadowcolor>text_shadow</shadowcolor>
           <align>right</align>
+          <visible>!Control.HasFocus(510)</visible>
         </control>
         <control type="image">
           <left>254</left>
@@ -882,6 +883,7 @@
           <width>24</width>
           <height>24</height>
           <texture>lists/played-total.png</texture>
+          <visible>!Control.HasFocus(510)</visible>
         </control>
       </control>
       <control type="image">
@@ -903,7 +905,7 @@
         <width>250</width>
         <height>1</height>
         <texturebg>
-				</texturebg>
+        </texturebg>
         <midtexture colordiffuse="$VAR[ColorHighlight]" border="3">progress/texturebg_alt_white.png</midtexture>
         <info>ListItem.PercentPlayed</info>
         <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>

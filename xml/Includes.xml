@@ -31,6 +31,7 @@
   <include file="View_500_Wall.xml"/>
   <include file="View_501_Banner.xml"/>
   <include file="View_502_FanArt.xml"/>
+  <include file="View_510_Flix.xml"/>
   <include file="Variables.xml"/>
   <constant name="DepthDialog">0.50</constant>
   <constant name="DepthDialog+">0.52</constant>
@@ -1190,10 +1191,8 @@
           <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
           <animation effect="fade" time="400">VisibleChange</animation>
           <control type="multiimage" id="32111">
-            <include condition="!Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]">FullScreenDimensions</include>
-            <left>560</left>
-            <width>1366</width>
-            <height>768</height>
+            <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]" />
+            <include content="FanartDimensions" condition="[Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)]" />
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
             <timeperimage>6000</timeperimage>
@@ -1227,7 +1226,7 @@
             <fadetime>400</fadetime>
             <animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
             <imagepath background="true">common/vert-vignette-new.png</imagepath>
-            <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
+            <visible>[[Window.IsVisible(Home) | Control.IsVisible(510)] + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main)</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
           </control>
@@ -1364,6 +1363,11 @@
     <top>0</top>
     <width>100%</width>
     <height>100%</height>
+  </include>
+  <include name="FanartDimensions">
+    <left>560</left>
+    <width>1366</width>
+    <height>768</height>
   </include>
   <include name="TrailerWindowDimensions">
     <top>-100</top>
