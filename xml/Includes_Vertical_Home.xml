@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="Vertical_Main">
+    <control type="group">
+      <left>100</left>
+      <control type="label">
+        <top>35</top>
+        <right>75</right>
+        <align>right</align>
+        <font>font_clock</font>
+        <label>$INFO[System.Time]</label>
+        <visible>!$EXP[infodialog_active]</visible>
+      </control>
+      <visible>!Skin.HasSetting(DisableClock)</visible>
+      <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
+    </control>
     <control type="group" id="5600">
       <include content="Object_Item_Showcase">
         <param name="title" value="$VAR[Label_Title]"/>
