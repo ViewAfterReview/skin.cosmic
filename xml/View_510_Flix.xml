@@ -42,6 +42,9 @@
         <scrolltime tween="cubic" easing="out">500</scrolltime>
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
+        <onup>9000</onup>
+        <ondown>511</ondown>
+        <pagecontrol>511</pagecontrol>
         <viewtype label="$LOCALIZE[31392]">icon</viewtype>
         <include content="View_Forced">
           <param name="string" value="$LOCALIZE[31392]"/>
@@ -83,6 +86,16 @@
             </include>
           </control>
         </itemlayout>
+      </control>
+      <control type="scrollbar" id="511">
+        <onup>510</onup>
+        <left>0</left>
+        <bottom>0</bottom>
+        <height>12</height>
+        <width>100%</width>
+        <orientation>horizontal</orientation>
+        <animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(511)">Conditional</animation>
+        <animation effect="fade" start="0" end="100" time="200" condition="Control.HasFocus(511)">Conditional</animation>
       </control>
     </control>
   </include>
