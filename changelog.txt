@@ -1,3 +1,7 @@
+1.0.37
+    Fixed: Background colour in Vertical layout
+    Added: Scrollbar to Flix view
+    Removed: Vignette from Flix view
 1.0.36
     Fixed: SearchList feature
 1.0.35
