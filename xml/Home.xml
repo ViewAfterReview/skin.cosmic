@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol>9000</defaultcontrol>
-  <backgroundcolor>Background</backgroundcolor>
+  <backgroundcolor>$VAR[HomeBackgroundColor]</backgroundcolor>
   <onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
   <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=3&amp;group=mainmenu|shutdown|searchmenu)</onload>
   <!-- set default home layout if none is set -->
