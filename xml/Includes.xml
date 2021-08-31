@@ -1198,12 +1198,12 @@
             <timeperimage>6000</timeperimage>
             <randomize>true</randomize>
             <loop>yes</loop>
-            <animation effect="fade" time="400">VisibleChange</animation>
             <imagepath background="true" colordiffuse="$VAR[BackgroundOverlay]">$VAR[BlurBackground]</imagepath>
             <visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
             <animation effect="fade" end="0" start="100" time="50" reversible="true" condition="$EXP[infodialog_active]">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
+            <include>OpenClose_Fade</include>
           </control>
           <control type="image">
             <left>-3</left>
@@ -1218,10 +1218,7 @@
             <visible>!Control.IsVisible(32111)</visible>
           </control>
           <control type="image">
-            <left>0</left>
-            <top>0</top>
-            <width>1920</width>
-            <height>1080</height>
+            <include>FullScreenDimensions</include>
             <aspectratio aligny="center">scale</aspectratio>
             <animation effect="fade" time="400" delay="600">Hidden</animation>
             <texture background="true">common/vert-vignette-new.png</texture>
@@ -1231,10 +1228,7 @@
           </control>
         </control>
         <control type="image">
-          <left>0</left>
-          <top>0</top>
-          <width>1920</width>
-          <height>1080</height>
+          <include>FullScreenDimensions</include>
           <aspectratio aligny="center">scale</aspectratio>
           <animation effect="fade" time="400">VisibleChange</animation>
           <texture background="true">common/vert-vignette-new.png</texture>
