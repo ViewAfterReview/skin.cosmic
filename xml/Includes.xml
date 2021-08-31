@@ -1187,11 +1187,10 @@
         <control type="group" id="31111">
           <visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
           <depth>DepthBackground</depth>
-          <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-          <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-          <animation effect="fade" time="400">VisibleChange</animation>
+          <include>OpenClose_Fade</include>
+          <animation effect="fade" time="100">VisibleChange</animation>
           <control type="multiimage" id="32111">
-            <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)]" />
+            <include content="FullScreenDimensions" condition="[Skin.HasSetting(Classic_Main) | Skin.HasSetting(Horizontal_Main)] | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | ![Skin.HasSetting(Vertical_Main) | Window.IsVisible(home)]" />
             <include content="FanartDimensions" condition="[Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)]" />
             <aspectratio>scale</aspectratio>
             <fadetime>600</fadetime>
@@ -1220,7 +1219,7 @@
           <control type="image">
             <include>FullScreenDimensions</include>
             <aspectratio aligny="center">scale</aspectratio>
-            <animation effect="fade" time="400" delay="600">Hidden</animation>
+            <animation effect="fade" time="100" delay="600">Hidden</animation>
             <texture background="true">common/vert-vignette-new.png</texture>
             <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main) + !Control.HasFocus(510)</visible>
@@ -1230,7 +1229,7 @@
         <control type="image">
           <include>FullScreenDimensions</include>
           <aspectratio aligny="center">scale</aspectratio>
-          <animation effect="fade" time="400">VisibleChange</animation>
+          <animation effect="fade" time="100">VisibleChange</animation>
           <texture background="true">common/vert-vignette-new.png</texture>
           <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers)</visible>
         </control>
