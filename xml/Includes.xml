@@ -1217,29 +1217,27 @@
             <texture background="true" colordiffuse="$VAR[HighlightOverlay]">$VAR[PosterVar]</texture>
             <visible>!Control.IsVisible(32111)</visible>
           </control>
-          <control type="multiimage">
+          <control type="image">
             <left>0</left>
             <top>0</top>
             <width>1920</width>
             <height>1080</height>
             <aspectratio aligny="center">scale</aspectratio>
-            <fadetime>400</fadetime>
-            <animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
-            <imagepath background="true">common/vert-vignette-new.png</imagepath>
-             <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
+            <animation effect="fade" time="400" delay="600">Hidden</animation>
+            <texture background="true">common/vert-vignette-new.png</texture>
+            <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main) + !Control.HasFocus(510)</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
           </control>
         </control>
-        <control type="multiimage">
+        <control type="image">
           <left>0</left>
           <top>0</top>
           <width>1920</width>
           <height>1080</height>
           <aspectratio aligny="center">scale</aspectratio>
-          <fadetime>400</fadetime>
-          <animation effect="fade" time="400" end="100" start="0">VisibleChange</animation>
-          <imagepath background="true">common/vert-vignette-new.png</imagepath>
+          <animation effect="fade" time="400">VisibleChange</animation>
+          <texture background="true">common/vert-vignette-new.png</texture>
           <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers)</visible>
         </control>
       </control>
