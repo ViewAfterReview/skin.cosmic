@@ -73,7 +73,7 @@
         <animation effect="fade" start="100" end="0" time="200" easing="inout" condition="ControlGroup(100).HasFocus">Conditional</animation>
         <control type="grouplist" id="99">
           <top>500</top>
-          <left>690</left>
+          <left>620</left>
           <height>142</height>
           <ondown>100</ondown>
           <orientation>horizontal</orientation>
