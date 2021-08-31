@@ -958,7 +958,7 @@
           <height>24</height>
           <aspectratio align="left">keep</aspectratio>
           <texture colordiffuse="$PARAM[textcolor]">$VAR[Image_VideoQuality]</texture>
-          <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !Container(7502).IsUpdating + [!Control.HasFocus(9000) + !Control.HasFocus(9001)]</visible>
+          <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !Container(7502).IsUpdating + [!Control.HasFocus(9000) + !Control.HasFocus(9001)] + !String.StartsWith(ListItem.FolderPath,favourites://)</visible>
         </control>
         <include content="Object_Info_Line_Label">
           <param name="label" value="  $VAR[PercentageRating]% $LOCALIZE[31384]"/>
