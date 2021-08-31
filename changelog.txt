@@ -1,3 +1,18 @@
+1.0.38
+    Fixed: Vignette visibility
+    Changed: DialogAddonInfo appearance
+    Changed: DialogFavourites appearance
+    Added: Greek translation (thanks to ViewAfterReview!)
+    Fixed: Dont show VideoQuality flag icon in favourites widget
+    Fixed: Hide system clock from weather and settings widget in vertical layout
+    Fixed: Vignette animation
+    Fixed: Watchlist button in Info Dialog
+    Removed: Left margin from widgets in Flix view
+    Changed: Viewtypes order
+    Fixed: DialogAddonInfo description background
+    Improved: DefaultBackground
+    Changed: Default font
+    Changed: InfoButtons position in Info Dialog
 1.0.37
     Fixed: Background colour in Vertical layout
     Added: Scrollbar to Flix view
