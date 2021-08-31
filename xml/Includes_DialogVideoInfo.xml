@@ -97,9 +97,9 @@
             <param name="icon" value="special://skin/extras/icons/watchlist.png"/>
             <param name="label" value="$LOCALIZE[31317]"/>
             <param name="onclick_1_condition" value="!String.IsEmpty(ListItem.Property(tmdb_id))"/>
-            <param name="onclick_1" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[TMDB_TYPE],cache_refresh)"/>
+            <param name="onclick_1" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[ListItem.Property(tmdb_id)],type=$VAR[TMDB_TYPE],cache_refresh)"/>
             <param name="onclick_2_condition" value="String.IsEmpty(ListItem.Property(tmdb_id))"/>
-            <param name="onclick_2" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(TMDbHelper.listitem.tmdb_id)],$VAR[TMDB_TYPE],cache_refresh)"/>
+            <param name="onclick_2" value="RunScript(plugin.video.themoviedb.helper,sync_trakt=watchlist,tmdb_id=$INFO[window(home).property(TMDbHelper.listitem.tmdb_id)],type=$VAR[TMDB_TYPE],cache_refresh)"/>
             <param name="visible" value="Control.IsVisible(8897)"/>
           </include>
           <include content="InfoButton">
