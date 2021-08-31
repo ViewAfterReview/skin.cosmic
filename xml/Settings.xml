@@ -28,7 +28,7 @@
         <height>400</height>
         <label>$LOCALIZE[5]</label>
         <align>center</align>
-        <font>font37</font>
+        <font>font27</font>
       </control>
       <control type="panel" id="9000">
         <left>0</left>

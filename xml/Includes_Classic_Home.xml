@@ -150,7 +150,7 @@
             <height>400</height>
             <label>$LOCALIZE[5]</label>
             <align>center</align>
-            <font>font37</font>
+            <font>font27</font>
           </control>
           <include>View_Settings</include>
         </control>
@@ -180,7 +180,7 @@
                 <width>280</width>
                 <aligny>center</aligny>
                 <align>right</align>
-                <font>font45_title</font>
+                <font>font32_bold</font>
                 <textcolor>dialog_fg_100</textcolor>
                 <label>$INFO[ListItem.Label]</label>
                 <shadowcolor>text_shadow</shadowcolor>
@@ -211,7 +211,7 @@
                 <width>280</width>
                 <aligny>center</aligny>
                 <align>right</align>
-                <font>font37</font>
+                <font>font32</font>
                 <label>$INFO[ListItem.Label]</label>
                 <shadowcolor>text_shadow</shadowcolor>
               </control>

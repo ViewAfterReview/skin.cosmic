@@ -49,7 +49,7 @@
         <textoffsetx>20</textoffsetx>
         <align>center</align>
         <aligny>center</aligny>
-        <font>font25_title</font>
+        <font>font27</font>
         <texturefocus/>
         <texturenofocus/>
       </control>

@@ -974,7 +974,7 @@
           <param name="textcolor" value="$VAR[ColorHighlight]"/>
           <param name="divider" value="false"/>
           <param name="visible" value="!Window.IsVisible(videoosd)"/>
-          <param name="width" value="auto" />
+          <param name="width" value="1125" />
         </include>
         <include content="Object_Info_Line_Label">
           <param name="label" value="$VAR[Label_OSD_InfoLine]"/>

@@ -132,7 +132,7 @@
           <width>470</width>
           <textoffsetx>40</textoffsetx>
           <aligny>center</aligny>
-          <font>font37</font>
+          <font>font27</font>
           <texturefocus colordiffuse="00ffffff">lists/focus-rounded.png</texturefocus>
           <texturenofocus/>
         </control>

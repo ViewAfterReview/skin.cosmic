@@ -768,7 +768,7 @@
               <width>470</width>
               <height>85</height>
               <label>$INFO[ListItem.Label]</label>
-              <font>font37</font>
+              <font>font27</font>
               <aligny>center</aligny>
             </control>
           </itemlayout>
