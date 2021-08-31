@@ -6,12 +6,12 @@
     <control type="group">
       <centertop>50%</centertop>
       <centerleft>50%</centerleft>
-      <width>1540</width>
+      <width>1400</width>
       <height>858</height>
       <include content="DialogBackgroundCommons">
-        <param name="width" value="1540"/>
+        <param name="width" value="1400"/>
         <param name="height" value="858"/>
-        <param name="header_label" value="$LOCALIZE[1036]"/>
+        <param name="header_label" value="[COLOR dialog_fg_30]$LOCALIZE[1036]  [/COLOR]$INFO[ListItem.Label]"/>
         <param name="header_id" value="2"/>
       </include>
       <include content="UpDownArrows">
@@ -30,9 +30,9 @@
         <orientation>vertical</orientation>
       </control>
       <control type="panel" id="450">
-        <left>10</left>
+        <left>25</left>
         <top>70</top>
-        <width>1600</width>
+        <width>1400</width>
         <bottom>0</bottom>
         <onleft>60</onleft>
         <onright>60</onright>
@@ -40,35 +40,47 @@
         <ondown>450</ondown>
         <preloaditems>2</preloaditems>
         <pagecontrol>60</pagecontrol>
-        <scrolltime tween="sine">200</scrolltime>
+        <scrolltime tween="sine">400</scrolltime>
         <orientation>vertical</orientation>
-        <itemlayout width="300" height="380">
-          <control type="group">
-            <top>10</top>
-            <include content="InfoWallMusicLayout">
-              <param name="fallback_image" value="DefaultFavourites.png"/>
-            </include>
-          </control>
+        <itemlayout height="382.5" width="270" condition="$PARAM[postercondition]">
+          <include content="ViewPosterItemLayout" />
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="-25"/>
+            <param name="right" value="44"/>
+            <param name="visible" value="false"/>
+          </include>
         </itemlayout>
-        <focusedlayout width="300">
-          <control type="group">
-            <top>10</top>
-            <include content="InfoWallMusicLayout">
-              <param name="fallback_image" value="DefaultFavourites.png"/>
-              <param name="focused" value="true"/>
-            </include>
-          </control>
+        <focusedlayout height="382.5" width="270" condition="$PARAM[postercondition]">
+          <include content="ViewPosterItemLayout">
+          </include>
+          <include content="Selectbox">
+            <param name="pad_top_b" value="-15"/>
+            <param name="pad_bottom_b" value="-22"/>
+            <param name="pad_left_b" value="-15"/>
+            <param name="pad_right_b" value="-5"/>
+            <param name="pad_top_t" value="-10"/>
+            <param name="pad_bottom_t" value="-16"/>
+            <param name="pad_left_t" value="-10"/>
+            <param name="pad_right_t" value="0"/>
+            <param name="visible_posters" value="true"/>
+            <param name="visible_squares" value="false"/>
+            <param name="visible_landscapes" value="false"/>
+          </include>
+          <include content="View_WatchedOverlay">
+            <param name="bottom" value="-25"/>
+            <param name="right" value="44"/>
+            <param name="visible" value="true"/>
+          </include>
         </focusedlayout>
       </control>
       <control type="textbox">
         <left>300</left>
-        <top>90</top>
         <width>900</width>
         <bottom>0</bottom>
         <aligny>center</aligny>
         <align>center</align>
         <label>$LOCALIZE[31025]</label>
-        <font>font45_title</font>
+        <font>font37</font>
         <visible>Integer.IsEqual(Container(450).NumItems,0)</visible>
       </control>
     </control>
