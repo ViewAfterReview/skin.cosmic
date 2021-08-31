@@ -9,7 +9,7 @@
         <align>right</align>
         <font>font_clock</font>
         <label>$INFO[System.Time]</label>
-        <visible>!$EXP[infodialog_active]</visible>
+        <visible>!$EXP[infodialog_active] + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
       </control>
       <visible>!Skin.HasSetting(DisableClock)</visible>
       <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
