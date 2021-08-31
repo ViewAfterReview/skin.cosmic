@@ -37,7 +37,6 @@
         <visible>!$EXP[infodialog_active]</visible>
       </control>
       <control type="list" id="510">
-        <left>100</left>
         <top>610</top>
         <scrolltime tween="cubic" easing="out">500</scrolltime>
         <orientation>horizontal</orientation>
