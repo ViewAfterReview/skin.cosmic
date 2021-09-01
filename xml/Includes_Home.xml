@@ -354,7 +354,7 @@
               <width>240</width>
               <height>70</height>
               <label>$INFO[ListItem.Label]</label>
-              <font>font25_narrow</font>
+              <font>font12</font>
               <shadowcolor>text_shadow</shadowcolor>
               <align>center</align>
               <aligny>center</aligny>
@@ -399,7 +399,7 @@
               <width>240</width>
               <height>70</height>
               <label>$INFO[ListItem.Label]</label>
-              <font>font25_narrow</font>
+              <font>font12</font>
               <shadowcolor>text_shadow</shadowcolor>
               <align>center</align>
               <aligny>center</aligny>

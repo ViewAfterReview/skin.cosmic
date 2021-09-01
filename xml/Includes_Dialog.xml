@@ -91,7 +91,7 @@
           <label>$PARAM[label]</label>
           <align>right</align>
           <width max="500">auto</width>
-          <font>font13_bold</font>
+          <font>font_small_notify_main_bold</font>
           <textcolor>$PARAM[fgcolor]_100</textcolor>
         </control>
         <control type="grouplist">

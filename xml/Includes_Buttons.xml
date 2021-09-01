@@ -129,7 +129,7 @@
     <label/>
     <textoffsetx>40</textoffsetx>
     <aligny>center</aligny>
-    <font>font_hintlabel</font>
+    <font>font_tiny_hintlabel</font>
     <textcolor>dialog_fg_30</textcolor>
   </include>
   <include name="SettingsItemCommon">
@@ -155,7 +155,7 @@
     <param name="width">270</param>
     <param name="height">70</param>
     <param name="wrapmultiline">false</param>
-    <param name="font">font23_narrow</param>
+    <param name="font">font12</param>
     <param name="visible">true</param>
     <param name="texturenofocus">common/white.png</param>
     <param name="onclick" default="" />
@@ -411,7 +411,7 @@
         <height>100</height>
         <texturenofocus border="0,50,50,50" flipx="true" colordiffuse="main_fg_12">common/button-view-nf.png</texturenofocus>
         <texturefocus border="0,50,50,50" flipx="true" colordiffuse="selected">common/button-view-fo.png</texturefocus>
-        <font>font10</font>
+        <font>font_tiny10</font>
         <label>[UPPERCASE]$PARAM[label][COLOR=00ffffff]------[/COLOR][/UPPERCASE]</label>
         <align>left</align>
         <textoffsetx>10</textoffsetx>

@@ -404,7 +404,7 @@
           <top>300</top>
           <width>260</width>
           <label>$PARAM[sub_label]</label>
-          <font>font10</font>
+          <font>font_tiny10</font>
           <shadowcolor>text_shadow</shadowcolor>
           <scroll>$PARAM[focused]</scroll>
           <align>center</align>
@@ -514,7 +514,7 @@
           <top>240</top>
           <width>260</width>
           <label>$PARAM[main_label]</label>
-          <font>font10</font>
+          <font>font_tiny10</font>
           <shadowcolor>text_shadow</shadowcolor>
           <scroll>$PARAM[focused]</scroll>
           <align>center</align>

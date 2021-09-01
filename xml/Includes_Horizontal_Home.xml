@@ -145,7 +145,7 @@
               <scroll>true</scroll>
               <aligny>center</aligny>
               <align>left</align>
-              <font>font27</font>
+              <font>font_menu</font>
               <label>$INFO[ListItem.Label]</label>
               <shadowcolor>text_shadow</shadowcolor>
             </control>
@@ -179,7 +179,7 @@
               <scroll>true</scroll>
               <aligny>center</aligny>
               <align>left</align>
-              <font>font27</font>
+              <font>font_menu</font>
               <label>$INFO[ListItem.Label]</label>
               <shadowcolor>text_shadow</shadowcolor>
             </control>

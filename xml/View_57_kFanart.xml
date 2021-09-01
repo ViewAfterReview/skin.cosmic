@@ -70,7 +70,7 @@
               <width>180</width>
               <height>35</height>
               <aligny>center</aligny>
-              <font>font10</font>
+              <font>font_tiny10</font>
               <textcolor>ff181818</textcolor>
               <label>$INFO[ListItem.Label]</label>
             </control>
@@ -100,7 +100,7 @@
               <width>180</width>
               <height>35</height>
               <aligny>center</aligny>
-              <font>font10</font>
+              <font>font_tiny10</font>
               <label>$INFO[ListItem.Label]</label>
               <autoscroll delay="3000" time="1000" repeat="3000">Skin.HasSetting(autoscroll)</autoscroll>
             </control>
@@ -132,7 +132,7 @@
           <left>1360</left>
           <width>420</width>
           <scroll>true</scroll>
-          <font>font23_narrow</font>
+          <font>font12</font>
           <textcolor>B3181818</textcolor>
           <label>$INFO[ListItem.Genre]</label>
         </control>
@@ -156,7 +156,7 @@
           <top>625</top>
           <left>1360</left>
           <align>justify</align>
-          <font>font10</font>
+          <font>font_tiny10</font>
           <width>500</width>
           <height>140</height>
           <textcolor>B3181818</textcolor>
@@ -168,7 +168,7 @@
           <left>1360</left>
           <align>left</align>
           <width>120</width>
-          <font>font10_bold</font>
+          <font>font_tiny_match</font>
           <textcolor>ff27ae60</textcolor>
           <label>$VAR[PercentageRating]% Match</label>
         </control>
@@ -176,7 +176,7 @@
           <top>785</top>
           <right>60</right>
           <align>right</align>
-          <font>font10</font>
+          <font>font_tiny10</font>
           <textcolor>ff181818</textcolor>
           <label>$INFO[ListItem.Duration(mins),, $LOCALIZE[31191]]</label>
         </control>

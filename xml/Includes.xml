@@ -851,7 +851,7 @@
         <top>0</top>
         <right>100</right>
         <height>70</height>
-        <font>font25_headertitle</font>
+        <font>font_small_header</font>
         <textcolor>dialog_fg_70</textcolor>
         <label>$PARAM[header_label]</label>
         <aligny>center</aligny>
@@ -1074,7 +1074,7 @@
           <top>0</top>
           <left>0</left>
           <label>$INFO[ListItem.SortLetter]</label>
-          <font>font_MainMenu</font>
+          <font>font60</font>
           <width>100%</width>
           <height>80</height>
           <align>center</align>
@@ -2322,7 +2322,7 @@
     </include>
   </include>
   <include name="submenuFont">
-    <font>font37</font>
+    <font>font32</font>
   </include>
   <include name="submenuVerticalParams">
     <definition>
@@ -2343,7 +2343,7 @@
       <width>280</width>
       <aligny>center</aligny>
       <align>left</align>
-      <font>font45_title</font>
+      <font>font_menu</font>
     </definition>
   </include>
   <include name="submenuVerticalIconLayout">
@@ -2352,7 +2352,7 @@
       <align>left</align>
       <width>95</width>
       <height>95</height>
-      <font>font45_title</font>
+      <font>font_menu</font>
     </definition>
   </include>
   <include name="submenuClassicParams">
@@ -2371,7 +2371,7 @@
       <width>280</width>
       <aligny>center</aligny>
       <align>right</align>
-      <font>font45_title</font>
+      <font>font_menu</font>
     </definition>
   </include>
   <include name="submenuClassicIconLayout">
@@ -2405,7 +2405,7 @@
       <height>95</height>
       <align>center</align>
       <aligny>center</aligny>
-      <font>font27</font>
+      <font>font_menu</font>
     </definition>
   </include>
   <include name="View_UnwatchedEpisodes_Visible">

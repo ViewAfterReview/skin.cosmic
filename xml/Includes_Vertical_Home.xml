@@ -135,7 +135,7 @@
                 <height>95</height>
                 <width>560</width>
                 <aligny>center</aligny>
-                <font>font32_bold</font>
+                <font>font_menu_focus</font>
                 <textcolor>dialog_fg_100</textcolor>
                 <label>$INFO[ListItem.Label]</label>
                 <shadowcolor>text_shadow</shadowcolor>
@@ -164,7 +164,7 @@
                 <height>95</height>
                 <width>560</width>
                 <aligny>center</aligny>
-                <font>font32</font>
+                <font>font_menu</font>
                 <label>$INFO[ListItem.Label]</label>
                 <shadowcolor>text_shadow</shadowcolor>
               </control>

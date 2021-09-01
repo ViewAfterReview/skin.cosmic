@@ -59,67 +59,67 @@
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="3">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="4">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="5">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="6">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="7">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="8">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="9">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="10">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="11">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
           <control type="label" id="12">
             <height>37</height>
             <width>auto</width>
             <scroll>true</scroll>
-            <font>Mono26</font>
+            <font>font_system_info</font>
           </control>
         </control>
         <control type="textbox" id="30">

@@ -13,7 +13,7 @@
   <default type="label">
     <label/>
     <align>left</align>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <textcolor>dialog_fg_70</textcolor>
     <focusedcolor>dialog_fg_70</focusedcolor>
     <selectedcolor>selected</selectedcolor>
@@ -23,7 +23,7 @@
   </default>
   <default type="fadelabel">
     <align>left</align>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <textcolor>dialog_fg_70</textcolor>
     <focusedcolor>selected</focusedcolor>
     <selectedcolor>$VAR[ColorHighlight]</selectedcolor>
@@ -31,7 +31,7 @@
   </default>
   <default type="button">
     <aligny>center</aligny>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <textoffsetx>30</textoffsetx>
     <textcolor>dialog_fg_70</textcolor>
     <focusedcolor>selected</focusedcolor>
@@ -51,12 +51,12 @@
     <alttexturefocus colordiffuse="dialog_bg_12">common/white.png</alttexturefocus>
     <alttexturenofocus/>
     <pulseonselect>false</pulseonselect>
-    <font>font12</font>
+    <font>font_small_defaults</font>
   </default>
   <default type="textbox">
     <align>left</align>
     <textcolor>white</textcolor>
-    <font>font12</font>
+    <font>font_small_defaults</font>
   </default>
   <default type="progress">
     <texturebg colordiffuse="2f5f5f5f" border="4">diffuse/progress-bg.png</texturebg>
@@ -75,7 +75,7 @@
     <align>right</align>
     <width>77</width>
     <height>33</height>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <reverse>yes</reverse>
     <textcolor>dialog_fg_70</textcolor>
     <disabledcolor>dialog_fg_12</disabledcolor>
@@ -95,7 +95,7 @@
     <texturedownfocus>buttons/spinctrl/arrow-light-down.png</texturedownfocus>
     <textureupdisabled colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
     <texturedowndisabled colordiffuse="dialog_fg_30">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <textcolor>dialog_fg_70</textcolor>
     <disabledcolor>dialog_fg_12</disabledcolor>
     <textoffsetx>7</textoffsetx>
@@ -114,7 +114,7 @@
     <textureradiooffdisabled colordiffuse="dialog_fg_12">buttons/radio-button-off.png</textureradiooffdisabled>
     <texturefocus border="21" colordiffuse="$VAR[ColorHighlight]">buttons/button-fo.png</texturefocus>
     <texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <textcolor>dialog_fg_70</textcolor>
     <disabledcolor>dialog_fg_12</disabledcolor>
     <textoffsetx>7</textoffsetx>
@@ -152,7 +152,7 @@
     <texturesliderbar>buttons/slider-back.png</texturesliderbar>
     <textureslidernib>buttons/slider-nib.png</textureslidernib>
     <textureslidernibfocus colordiffuse="$VAR[ColorHighlight]">buttons/slider-nib.png</textureslidernibfocus>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <textcolor>dialog_fg_70</textcolor>
     <disabledcolor>dialog_fg_12</disabledcolor>
   </default>
@@ -167,7 +167,7 @@
   <default type="edit">
     <align>center</align>
     <aligny>center</aligny>
-    <font>font12</font>
+    <font>font_small_defaults</font>
     <textoffsetx>30</textoffsetx>
     <textcolor>dialog_fg_70</textcolor>
     <focusedcolor>Selected</focusedcolor>

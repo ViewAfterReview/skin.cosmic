@@ -21,7 +21,7 @@
         <shadowcolor>black</shadowcolor>
         <pagecontrol>3000</pagecontrol>
         <font>font14</font>
-        <monofont>Mono26</monofont>
+        <monofont>font_system_info</monofont>
       </control>
       <control type="scrollbar" id="3000">
         <include>HiddenObject</include>

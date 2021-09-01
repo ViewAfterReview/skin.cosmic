@@ -157,7 +157,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31300]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="button" id="611" description="Customize shutdown menu">
@@ -191,7 +191,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="radiobutton" id="702" description="Colored background">
@@ -270,7 +270,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31301]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="button" id="802" description="Title colour">
@@ -320,7 +320,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="radiobutton" id="809" description="Disable slide animations">
@@ -374,7 +374,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31327]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="radiobutton" id="902" description="Enable trailers in background">
@@ -420,7 +420,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="button" id="906" description="Search lists">
@@ -523,7 +523,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="button" id="1002" description="Close OSD Auto">
@@ -577,7 +577,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31299]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="radiobutton" id="1102">
@@ -612,7 +612,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31297]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="button" id="1202" description="Reset">
@@ -627,7 +627,7 @@
             <height>80</height>
             <textcolor>dialog_fg_30</textcolor>
             <label>$LOCALIZE[31298]</label>
-            <font>font27</font>
+            <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
           <control type="radiobutton" id="1204">
@@ -768,7 +768,7 @@
               <width>470</width>
               <height>85</height>
               <label>$INFO[ListItem.Label]</label>
-              <font>font27</font>
+              <font>font_small_defaults</font>
               <aligny>center</aligny>
             </control>
           </itemlayout>
@@ -788,7 +788,7 @@
               <textoffsetx>30</textoffsetx>
               <width>470</width>
               <height>85</height>
-              <font>font37</font>
+              <font>font_small_defaults</font>
               <aligny>center</aligny>
               <label>$INFO[ListItem.Label]</label>
             </control>
