@@ -1,3 +1,11 @@
+1.0.39
+    Fixed: Weather
+    Fixed: Default and Arial fonts
+    Removed: Roboto font
+    Fixed: Some tweaks to Fonts
+    Changed: Settings appearance
+    Added: Option to show EPG Event Icon on home screen
+    Tweaks: To DialogSelect window
 1.0.38
     Fixed: Vignette visibility
     Changed: DialogAddonInfo appearance
