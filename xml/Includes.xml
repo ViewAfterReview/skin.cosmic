@@ -219,13 +219,13 @@
     <param name="align">left</param>
     <param name="height">70</param>
     <param name="font">font13</param>
-    <param name="fontcolor">grey</param>
+    <param name="fontcolor">dialog_fg_70</param>
     <definition>
       <itemlayout width="$PARAM[width]" height="$PARAM[height]">
         <control type="group">
           <visible>ListItem.Property(PVR.IsRecordingTimer) | ListItem.Property(PVR.IsRemindingTimer)</visible>
           <control type="image">
-            <left>20</left>
+            <left>40</left>
             <width>40</width>
             <aspectratio align="left">keep</aspectratio>
             <aligny>center</aligny>
@@ -233,7 +233,7 @@
             <visible>ListItem.Property(PVR.IsRecordingTimer)</visible>
           </control>
           <control type="image">
-            <left>20</left>
+            <left>40</left>
             <width>40</width>
             <aspectratio align="left">keep</aspectratio>
             <aligny>center</aligny>
@@ -241,7 +241,7 @@
             <visible>ListItem.Property(PVR.IsRemindingTimer)</visible>
           </control>
           <control type="label">
-            <left>80</left>
+            <left>100</left>
             <top>0</top>
             <right>20</right>
             <bottom>0</bottom>
@@ -255,7 +255,7 @@
         <control type="group">
           <visible>!ListItem.Property(PVR.IsRecordingTimer) + !ListItem.Property(PVR.IsRemindingTimer)</visible>
           <control type="label">
-            <left>20</left>
+            <left>40</left>
             <top>0</top>
             <right>20</right>
             <bottom>0</bottom>
@@ -284,7 +284,7 @@
         <control type="group">
           <visible>ListItem.Property(PVR.IsRecordingTimer) | ListItem.Property(PVR.IsRemindingTimer)</visible>
           <control type="image">
-            <left>20</left>
+            <left>40</left>
             <width>40</width>
             <aspectratio align="left">keep</aspectratio>
             <aligny>center</aligny>
@@ -292,7 +292,7 @@
             <visible>ListItem.Property(PVR.IsRecordingTimer)</visible>
           </control>
           <control type="image">
-            <left>20</left>
+            <left>40</left>
             <width>40</width>
             <aspectratio align="left">keep</aspectratio>
             <aligny>center</aligny>
@@ -300,7 +300,7 @@
             <visible>ListItem.Property(PVR.IsRemindingTimer)</visible>
           </control>
           <control type="label">
-            <left>80</left>
+            <left>100</left>
             <top>0</top>
             <right>20</right>
             <bottom>0</bottom>
@@ -314,7 +314,7 @@
         <control type="group">
           <visible>!ListItem.Property(PVR.IsRecordingTimer) + !ListItem.Property(PVR.IsRemindingTimer)</visible>
           <control type="label">
-            <left>20</left>
+            <left>40</left>
             <top>0</top>
             <right>20</right>
             <bottom>0</bottom>

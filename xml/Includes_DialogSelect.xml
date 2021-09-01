@@ -13,9 +13,9 @@
         <param name="header_id" value="1"/>
       </include>
       <control type="list" id="3">
-        <left>20</left>
+        <left>0</left>
         <top>100</top>
-        <width>860</width>
+        <width>890</width>
         <bottom>20</bottom>
         <onup>3</onup>
         <ondown>3</ondown>
@@ -24,14 +24,14 @@
         <pagecontrol>61</pagecontrol>
         <scrolltime>200</scrolltime>
         <include content="DefaultSimpleListLayout">
-          <param name="width" value="860"/>
+          <param name="width" value="890"/>
           <param name="list_id" value="3"/>
         </include>
       </control>
       <control type="list" id="6">
-        <left>20</left>
+        <left>0</left>
         <top>100</top>
-        <width>860</width>
+        <width>890</width>
         <bottom>20</bottom>
         <onup>6</onup>
         <ondown>6</ondown>
@@ -39,9 +39,9 @@
         <onright>61</onright>
         <pagecontrol>61</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="125" width="860">
+        <itemlayout height="125" width="890">
           <control type="image">
-            <left>12</left>
+            <left>32</left>
             <top>7</top>
             <width>110</width>
             <height>110</height>
@@ -49,7 +49,7 @@
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <left>135</left>
+            <left>155</left>
             <top>0</top>
             <right>20</right>
             <height>60</height>
@@ -58,7 +58,7 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="textbox">
-            <left>135</left>
+            <left>155</left>
             <top>50</top>
             <right>20</right>
             <height>67</height>
@@ -67,7 +67,7 @@
             <label>$INFO[ListItem.Label2]</label>
           </control>
         </itemlayout>
-        <focusedlayout height="125" width="860">
+        <focusedlayout height="125" width="890">
           <control type="group">
             <left>0</left>
             <top>0</top>
@@ -82,7 +82,7 @@
             <visible>Control.HasFocus(6)</visible>
           </control>
           <control type="image">
-            <left>12</left>
+            <left>32</left>
             <top>7</top>
             <width>110</width>
             <height>110</height>
@@ -90,7 +90,7 @@
             <aspectratio>keep</aspectratio>
           </control>
           <control type="label">
-            <left>135</left>
+            <left>155</left>
             <top>0</top>
             <right>20</right>
             <height>60</height>
@@ -100,7 +100,7 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="textbox">
-            <left>135</left>
+            <left>155</left>
             <top>50</top>
             <right>20</right>
             <height>67</height>
