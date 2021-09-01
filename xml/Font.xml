@@ -24,7 +24,6 @@
       <name>font_tiny10</name>
       <filename>Inter-Regular.ttf</filename>
       <size>20</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font_tiny_match</name>
@@ -49,13 +48,11 @@
       <name>font_small_defaults</name>
       <filename>Inter-Regular.ttf</filename>
       <size>25</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font12</name>
       <filename>Inter-Regular.ttf</filename>
       <size>25</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font_small_header</name>
@@ -67,13 +64,11 @@
       <name>font27</name>
       <filename>Inter-Regular.ttf</filename>
       <size>27</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font27_narrow</name>
       <filename>Inter-Regular.ttf</filename>
       <size>27</size>
-      <style>lighten</style>
       <linespacing>0.8</linespacing>
     </font>
     <font>
@@ -92,7 +87,6 @@
       <name>font14</name>
       <filename>Inter-Regular.ttf</filename>
       <size>33</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font32</name>
@@ -108,13 +102,11 @@
       <name>font37</name>
       <filename>Inter-Regular.ttf</filename>
       <size>37</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font45</name>
       <filename>Inter-Regular.ttf</filename>
       <size>45</size>
-      <style>lighten</style>
     </font>
     <!-- Big Fonts -->
     <font>
@@ -151,7 +143,6 @@
       <name>font_menu_focus</name>
       <filename>Inter-Bold.ttf</filename>
       <size>30</size>
-      <style>bold</style>
     </font>
     <!-- Title Fonts -->
     <font>
@@ -210,7 +201,6 @@
     </font>
   </fontset>
   <fontset id="Arial" idloc="31053">
-    <!-- Arial Font better for non English -->
     <!-- Required Font -->
     <font>
       <name>font13</name>
@@ -234,7 +224,6 @@
       <name>font_tiny10</name>
       <filename>arial.ttf</filename>
       <size>20</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font_tiny_match</name>
@@ -259,13 +248,11 @@
       <name>font_small_defaults</name>
       <filename>arial.ttf</filename>
       <size>25</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font12</name>
       <filename>arial.ttf</filename>
       <size>25</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font_small_header</name>
@@ -277,13 +264,11 @@
       <name>font27</name>
       <filename>arial.ttf</filename>
       <size>27</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font27_narrow</name>
       <filename>arial.ttf</filename>
       <size>27</size>
-      <style>lighten</style>
       <linespacing>0.8</linespacing>
     </font>
     <font>
@@ -302,7 +287,6 @@
       <name>font14</name>
       <filename>arial.ttf</filename>
       <size>33</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font32</name>
@@ -318,13 +302,11 @@
       <name>font37</name>
       <filename>arial.ttf</filename>
       <size>37</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font45</name>
       <filename>arial.ttf</filename>
       <size>45</size>
-      <style>lighten</style>
     </font>
     <!-- Big Fonts -->
     <font>
@@ -361,7 +343,6 @@
       <name>font_menu_focus</name>
       <filename>arial.ttf</filename>
       <size>30</size>
-      <style>bold</style>
     </font>
     <!-- Title Fonts -->
     <font>
@@ -443,7 +424,6 @@
       <name>font_tiny10</name>
       <filename>ARIALUNI.TTF</filename>
       <size>20</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font_tiny_match</name>
@@ -468,13 +448,11 @@
       <name>font_small_defaults</name>
       <filename>ARIALUNI.TTF</filename>
       <size>25</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font12</name>
       <filename>ARIALUNI.TTF</filename>
       <size>25</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font_small_header</name>
@@ -486,13 +464,11 @@
       <name>font27</name>
       <filename>ARIALUNI.TTF</filename>
       <size>27</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font27_narrow</name>
       <filename>ARIALUNI.TTF</filename>
       <size>27</size>
-      <style>lighten</style>
       <linespacing>0.8</linespacing>
     </font>
     <font>
@@ -511,7 +487,6 @@
       <name>font14</name>
       <filename>ARIALUNI.TTF</filename>
       <size>33</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font32</name>
@@ -527,13 +502,11 @@
       <name>font37</name>
       <filename>ARIALUNI.TTF</filename>
       <size>37</size>
-      <style>lighten</style>
     </font>
     <font>
       <name>font45</name>
       <filename>ARIALUNI.TTF</filename>
       <size>45</size>
-      <style>lighten</style>
     </font>
     <!-- Big Fonts -->
     <font>
@@ -570,7 +543,6 @@
       <name>font_menu_focus</name>
       <filename>ARIALUNI.TTF</filename>
       <size>30</size>
-      <style>bold</style>
     </font>
     <!-- Title Fonts -->
     <font>
