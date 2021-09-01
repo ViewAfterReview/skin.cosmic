@@ -4,7 +4,7 @@
     <control type="panel" id="5001">
       <left>0</left>
       <width>100%</width>
-      <top>120</top>
+      <top>170</top>
       <height>300</height>
       <onup>noop</onup>
       <onleft condition="Window.IsVisible(Home)">9000</onleft>
@@ -16,7 +16,7 @@
     <control type="panel" id="5002">
       <left>0</left>
       <right>0</right>
-      <top>470</top>
+      <top>520</top>
       <bottom>0</bottom>
       <onleft condition="Window.IsVisible(Home)">9000</onleft>
       <onback condition="Window.IsVisible(Home)">9000</onback>

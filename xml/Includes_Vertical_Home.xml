@@ -74,7 +74,7 @@
           <control type="label">
             <left>0</left>
             <right>0</right>
-            <top>420</top>
+            <top>440</top>
             <height>400</height>
             <label>$LOCALIZE[5]</label>
             <align>center</align>

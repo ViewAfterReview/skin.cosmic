@@ -18,13 +18,13 @@
     <control type="group">
       <centerleft>50%</centerleft>
       <width>1600</width>
-      <top>0</top>
+      <top>50</top>
       <bottom>0</bottom>
       <include>OpenClose_Right</include>
       <control type="label">
         <left>0</left>
         <right>0</right>
-        <top>420</top>
+        <top>395</top>
         <height>400</height>
         <label>$LOCALIZE[5]</label>
         <align>center</align>
