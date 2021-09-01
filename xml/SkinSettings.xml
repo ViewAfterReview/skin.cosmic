@@ -586,6 +586,21 @@
             <onclick>Skin.ToggleSetting(LegacyPVR)</onclick>
             <selected>Skin.HasSetting(LegacyPVR)</selected>
           </control>
+          <control type="label" id="1103">
+            <textoffsetx>30</textoffsetx>
+            <width>470</width>
+            <height>80</height>
+            <textcolor>dialog_fg_30</textcolor>
+            <label>$LOCALIZE[31394]</label>
+            <font>font_small_defaults</font>
+            <aligny>center</aligny>
+          </control>
+          <control type="radiobutton" id="1104">
+            <label>$LOCALIZE[31395]</label>
+            <include>DefaultSettingButton</include>
+            <onclick>Skin.ToggleSetting(ShowEPGEventIcon)</onclick>
+            <selected>Skin.HasSetting(ShowEPGEventIcon)</selected>
+          </control>
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="1200"/>

@@ -1739,3 +1739,13 @@ msgstr "Widok Flix"
 msgctxt "#31393"
 msgid "Roboto Condensed"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31394"
+msgid "Widgets"
+msgstr "Widgety"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31395"
+msgid "Show EPG Event icon on home screen"
+msgstr "Pokaż ikonę z EPG na stronie głównej"

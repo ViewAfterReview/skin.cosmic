@@ -73,7 +73,7 @@
           </include>
           <visible>!String.IsEmpty(Listitem.EpgEventIcon)</visible>
         </control>
-        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+        <visible>String.StartsWith(ListItem.FolderPath,pvr://) + Skin.HasSetting(ShowEPGEventIcon)</visible>
       </control>
     </control>
     <animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
