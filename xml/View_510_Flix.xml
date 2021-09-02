@@ -31,8 +31,17 @@
       <control type="group" id="5600">
         <include content="Object_Item_Showcase">
           <param name="title" value="$VAR[Label_Title]"/>
-          <param name="title_width" value="1200" />
+          <param name="title_width" value="930"/>
           <param name="plot" value="$VAR[Label_PlotTextBoxVar]"/>
+          <param name="plot_height" value="200"/>
+          <param name="info_line_top" value="180"/>
+          <param name="plot_top" value="300"/>
+        </include>
+        <include content="Object_Ratings_Content">
+          <param name="top" value="240"/>
+          <param name="left" value="150"/>
+          <param name="align" value="left"/>
+          <param name="directory" value="$INFO[Skin.String(Icons)]"/>
         </include>
         <visible>!$EXP[infodialog_active]</visible>
       </control>
