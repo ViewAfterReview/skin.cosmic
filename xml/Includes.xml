@@ -1205,6 +1205,12 @@
             <include>OpenClose_Fade</include>
           </control>
           <control type="image">
+            <include>FullScreenDimensions</include>
+            <aspectratio aligny="center">scale</aspectratio>
+            <texture colordiffuse="$VAR[ColorsOverlay]">common/overlay.png</texture>
+            <visible>Skin.HasSetting(TMDbHelper.EnableColors)</visible>
+          </control>
+          <control type="image">
             <left>-3</left>
             <top>0</top>
             <right>1193</right>
@@ -1220,7 +1226,7 @@
             <include>FullScreenDimensions</include>
             <aspectratio aligny="center">scale</aspectratio>
             <animation effect="fade" time="100" delay="600">Hidden</animation>
-            <texture background="true">common/vert-vignette-new.png</texture>
+            <texture background="true">common/vignette-vert-main.png</texture>
             <visible>[Window.IsVisible(Home) + !Window.IsVisible(movieinformation)] + [!Skin.HasSetting(TMDbHelper.EnableBlur) | Skin.HasSetting(DontBlurHome)]</visible>
             <visible>Skin.HasSetting(Vertical_Main) + !Skin.HasSetting(Classic_Main) + !Skin.HasSetting(Horizontal_Main) + !Control.HasFocus(510)</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
@@ -1230,7 +1236,7 @@
           <include>FullScreenDimensions</include>
           <aspectratio aligny="center">scale</aspectratio>
           <animation effect="fade" time="100">VisibleChange</animation>
-          <texture background="true">common/vert-vignette-new.png</texture>
+          <texture background="true">common/vignette-vert-main.png</texture>
           <visible>Player.HasVideo + Skin.HasSetting(BackgroundPlayingTrailers)</visible>
         </control>
       </control>

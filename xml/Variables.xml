@@ -79,7 +79,7 @@
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.20)">20%</value>
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.15)">15%</value>
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.10)">10%</value>
-    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.5)">5%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.05)">5%</value>
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.0)">0%</value>
     <value>Null</value>
   </variable>
@@ -103,15 +103,17 @@
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.20)">20%</value>
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.15)">15%</value>
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.10)">10%</value>
-    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.5)">5%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.05)">5%</value>
     <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.0)">0%</value>
     <value>Null</value>
   </variable>
   <variable name="BackgroundOverlay">
     <value condition="Control.HasFocus(57)">FFFFFFFF</value>
     <value condition="Control.HasFocus(510)">$VAR[AlphaPercentage]</value>
+    <value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main) + !Skin.HasSetting(TMDbHelper.EnableColors)">$VAR[AlphaPercentage]</value>
+  </variable>
+  <variable name="ColorsOverlay">
     <value condition="Skin.HasSetting(TMDbHelper.EnableColors)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
-    <value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
   </variable>
   <variable name="HighlightOverlay">
     <value condition="!Window.IsVisible(Home)">$VAR[AlphaPercentage]</value>
