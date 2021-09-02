@@ -1,3 +1,11 @@
+1.0.40
+    Fixed: DialogAddonInfo buttons background position
+    Added: Option to match colours of image on overlay
+    Added: New textures
+    Fixed: Vignette in Vertical layout
+    Fixed: Skin settings descriptions
+    Added: Ratings to Flix view
+    Improved: Flix view
 1.0.39
     Fixed: Weather
     Fixed: Default and Arial fonts
