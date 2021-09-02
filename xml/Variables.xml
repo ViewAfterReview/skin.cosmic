@@ -59,9 +59,58 @@
     <value condition="String.IsEqual(Skin.String(AlphaValue),0)">00FFFFFF</value>
     <value>37FFFFFF</value>
   </variable>
+  <variable name="LuminanceVariable">
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),1.0)">100%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.95)">95%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.90)">90%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.85)">85%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.80)">80%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.75)">75%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.70)">70%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.65)">65%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.60)">60%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.55)">55%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.50)">50%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.45)">45%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.40)">40%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.35)">35%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.30)">30%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.25)">25%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.20)">20%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.15)">15%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.10)">10%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.5)">5%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Luminance),0.0)">0%</value>
+    <value>Null</value>
+  </variable>
+  <variable name="SaturationVariable">
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),1.0)">100%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.95)">95%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.90)">90%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.85)">85%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.80)">80%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.75)">75%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.70)">70%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.65)">65%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.60)">60%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.55)">55%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.50)">50%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.45)">45%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.40)">40%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.35)">35%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.30)">30%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.25)">25%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.20)">20%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.15)">15%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.10)">10%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.5)">5%</value>
+    <value condition="String.IsEqual(Skin.String(TMDbHelper.Colors.Saturation),0.0)">0%</value>
+    <value>Null</value>
+  </variable>
   <variable name="BackgroundOverlay">
     <value condition="Control.HasFocus(57)">FFFFFFFF</value>
     <value condition="Control.HasFocus(510)">$VAR[AlphaPercentage]</value>
+    <value condition="Skin.HasSetting(TMDbHelper.EnableColors)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
     <value condition="Window.IsVisible(movieinformation) | [Skin.HasSetting(TMDbHelper.EnableBlur) + !Skin.HasSetting(DontBlurHome)] | !Window.IsVisible(Home) | Skin.HasSetting(Horizontal_Main) | Skin.HasSetting(Classic_Main)">$VAR[AlphaPercentage]</value>
   </variable>
   <variable name="HighlightOverlay">

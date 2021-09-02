@@ -200,38 +200,44 @@
             <selected>Skin.HasSetting(EnableColoredBackground)</selected>
             <onclick>Skin.ToggleSetting(EnableColoredBackground)</onclick>
           </control>
-          <control type="button" id="703" description="Overlay alpha">
-            <label>$LOCALIZE[31347]</label>
-            <label2>$INFO[Skin.String(AlphaValue),,%]</label2>
+          <control type="radiobutton" id="703" description="Match overlay colour from image">
+            <label>$LOCALIZE[31396]</label>
+            <include>DefaultSettingButton</include>
+            <selected>Skin.HasSetting(TMDbHelper.EnableColors)</selected>
+            <onclick>Skin.ToggleSetting(TMDbHelper.EnableColors)</onclick>
+          </control>
+          <control type="button" id="704" description="Overlay alpha">
+            <label>$LOCALIZE[31397]</label>
+            <label2>$INFO[Skin.String(AlphaValue),A: (,%) ]$VAR[LuminanceVariable,L: (,) ]$VAR[SaturationVariable,S: (,) ]</label2>
             <include>DefaultSettingButton</include>
             <onclick>ActivateWindow(1111)</onclick>
           </control>
-          <control type="radiobutton" id="704" description="Enable blur">
+          <control type="radiobutton" id="705" description="Enable blur">
             <label>$LOCALIZE[31251]</label>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(TMDbHelper.EnableBlur)</onclick>
             <selected>Skin.HasSetting(TMDbHelper.EnableBlur)</selected>
           </control>
-          <control type="radiobutton" id="705" description="Enable blur, no home">
+          <control type="radiobutton" id="706" description="Enable blur, no home">
             <label>$LOCALIZE[31252]</label>
             <include>DefaultSettingButton</include>
             <enable>Skin.HasSetting(TMDbHelper.EnableBlur)</enable>
             <onclick>Skin.ToggleSetting(DontBlurHome)</onclick>
             <selected>Skin.HasSetting(DontBlurHome)</selected>
           </control>
-          <control type="radiobutton" id="706" description="Animate background using Ken Burns Effect">
+          <control type="radiobutton" id="707" description="Animate background using Ken Burns Effect">
             <label>$LOCALIZE[31247]</label>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(KenBurnsEffect)</onclick>
             <selected>Skin.HasSetting(KenBurnsEffect)</selected>
           </control>
-          <control type="radiobutton" id="707" description="Show media fanart as background">
+          <control type="radiobutton" id="708" description="Show media fanart as background">
             <label>$LOCALIZE[31002]</label>
             <include>DefaultSettingButton</include>
             <onclick>Skin.ToggleSetting(no_fanart)</onclick>
             <selected>!Skin.HasSetting(no_fanart)</selected>
           </control>
-          <control type="button" id="708" description="Background type">
+          <control type="button" id="709" description="Background type">
             <label>$LOCALIZE[31156]</label>
             <label2>$VAR[BackgroundOverlayTypeVar]</label2>
             <include>DefaultSettingButton</include>
