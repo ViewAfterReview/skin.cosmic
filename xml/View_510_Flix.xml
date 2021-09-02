@@ -66,11 +66,6 @@
             <include content="View_56_Posters_Layout">
               <param name="WallWatchedIconVar_visible" value="false"/>
             </include>
-            <include content="View_WatchedOverlay">
-              <param name="bottom" value="-12"/>
-              <param name="right" value="20"/>
-              <param name="visible" value="true"/>
-            </include>
           </control>
         </focusedlayout>
         <itemlayout height="382.5" width="270" condition="Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
@@ -78,11 +73,11 @@
             <include content="View_56_Posters_Layout">
               <param name="WallWatchedIconVar_visible" value="false"/>
             </include>
-            <include content="View_WatchedOverlay">
+            <!-- <include content="View_WatchedOverlay">
               <param name="bottom" value="-12"/>
               <param name="right" value="20"/>
               <param name="visible" value="false"/>
-            </include>
+            </include> -->
           </control>
         </itemlayout>
       </control>
@@ -104,6 +99,11 @@
           <param name="visible_squares" value="false"/>
           <param name="visible_landscapes" value="false"/>
           <param name="focusbounce" value="false" />
+        </include>
+        <include content="View_WatchedOverlay">
+          <param name="bottom" value="-12"/>
+          <param name="right" value="20"/>
+          <param name="visible" value="true"/>
         </include>
       </control>
       <control type="group">
