@@ -446,12 +446,12 @@ msgid "Contributors"
 msgstr "Współpracownicy"
 
 msgctxt "#31129"
-msgid "Just a description and debugging option"
-msgstr "Po prostu opis skórki i opcja debugowania"
+msgid "Some basic options to tweak a home screen"
+msgstr "Kilka podstawowych opcji dotyczących strony głównej"
 
 msgctxt "#31130"
-msgid "The place from where you should start"
-msgstr "Miejsce, od którego powinieneś zacząć"
+msgid "Settings related to background"
+msgstr "Ustawienia dotyczące tła"
 
 msgctxt "#31131"
 msgid "Choose skin fanart pack"
@@ -612,8 +612,8 @@ msgstr "Pokaż plakaty zamiast miniaturek dla teledysków"
 #. Description label for skin settings area
 #: /xml/Variables.xml
 msgctxt "#31169"
-msgid "Background settings and miscellaneous as well"
-msgstr "Ustawienia tła i inne również"
+msgid "Some miscellaneous settings"
+msgstr "Ustawienia różnorodne"
 
 #. Label of skin shortcuts Submenu
 #: /xml/script-skinshortcuts.xml

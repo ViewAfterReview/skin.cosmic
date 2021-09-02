@@ -585,12 +585,12 @@ msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31129"
-msgid "Just a description and debugging option"
+msgid "Some basic options to tweak a home screen"
 msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31130"
-msgid "The place from where you should start"
+msgid "Settings related to background"
 msgstr ""
 
 #: /xml/SkinSettings.xml
@@ -789,7 +789,7 @@ msgstr ""
 #. Description label for skin settings area
 #: /xml/Variables.xml
 msgctxt "#31169"
-msgid "Background settings and miscellaneous as well"
+msgid "Some miscellaneous settings"
 msgstr ""
 
 #. Label of skin shortcuts Submenu
