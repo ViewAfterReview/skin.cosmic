@@ -45,14 +45,18 @@
         </include>
         <visible>!$EXP[infodialog_active]</visible>
       </control>
-      <control type="list" id="510">
+      <control type="fixedlist" id="510">
         <top>610</top>
-        <scrolltime tween="cubic" easing="out">500</scrolltime>
+        <left>-120</left>
+        <width>2400</width>
+        <scrolltime tween="linear" easing="inout">400</scrolltime>
         <orientation>horizontal</orientation>
         <onleft>9000</onleft>
         <onup>9000</onup>
         <ondown>511</ondown>
         <pagecontrol>511</pagecontrol>
+        <focusposition>1</focusposition>
+        <animation effect="slide" time="0" start="0" end="-100,0" condition="true">Conditional</animation>
         <viewtype label="$LOCALIZE[31392]">icon</viewtype>
         <include content="View_Forced">
           <param name="string" value="$LOCALIZE[31392]"/>
@@ -61,19 +65,6 @@
           <control type="group">
             <include content="View_56_Posters_Layout">
               <param name="WallWatchedIconVar_visible" value="false"/>
-            </include>
-            <include content="Selectbox">
-              <param name="pad_top_b" value="-13"/>
-              <param name="pad_bottom_b" value="-10"/>
-              <param name="pad_left_b" value="17"/>
-              <param name="pad_right_b" value="-32"/>
-              <param name="pad_top_t" value="-8"/>
-              <param name="pad_bottom_t" value="20"/>
-              <param name="pad_left_t" value="17"/>
-              <param name="pad_right_t" value="14"/>
-              <param name="visible_posters" value="true"/>
-              <param name="visible_squares" value="false"/>
-              <param name="visible_landscapes" value="false"/>
             </include>
             <include content="View_WatchedOverlay">
               <param name="bottom" value="-12"/>
@@ -94,6 +85,37 @@
             </include>
           </control>
         </itemlayout>
+      </control>
+      <control type="group">
+        <top>610</top>
+        <left>50</left>
+        <width>270</width>
+        <height>382.5</height>
+        <include content="Selectbox">
+          <param name="pad_top_b" value="-13"/>
+          <param name="pad_bottom_b" value="-10"/>
+          <param name="pad_left_b" value="17"/>
+          <param name="pad_right_b" value="-32"/>
+          <param name="pad_top_t" value="-8"/>
+          <param name="pad_bottom_t" value="-4"/>
+          <param name="pad_left_t" value="17"/>
+          <param name="pad_right_t" value="-32"/>
+          <param name="visible_posters" value="true"/>
+          <param name="visible_squares" value="false"/>
+          <param name="visible_landscapes" value="false"/>
+          <param name="focusbounce" value="false" />
+        </include>
+      </control>
+      <control type="group">
+        <top>620</top>
+        <left>0</left>
+        <width>65</width>
+        <height>362</height>
+        <control type="image">
+          <texture colordiffuse="BFFFFFFF">colors/black.png</texture>
+        </control>
+        <animation effect="fade" time="400">VisibleChange</animation>
+        <visible>Integer.IsGreater(Container(510).CurrentItem,1)</visible>
       </control>
       <control type="scrollbar" id="511">
         <onup>510</onup>
