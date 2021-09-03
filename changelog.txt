@@ -1,3 +1,7 @@
+1.0.42
+    Added: Early version of Flixed scrolling
+    Updated: Greek translation
+    Improved: Colored background
 1.0.41
     Fixed: Watched indicators in Flix view
 1.0.40
