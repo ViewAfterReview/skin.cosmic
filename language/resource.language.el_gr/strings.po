@@ -1911,3 +1911,48 @@ msgstr "Animate ClearLogo"
 msgctxt "#31392"
 msgid "Flix View"
 msgstr "Flix View"
+
+#: /fonts/Font.xml
+msgctxt "#31393"
+msgid "Roboto Condensed"
+msgstr "Roboto Condensed"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31394"
+msgid "Widgets"
+msgstr "Widgets"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31395"
+msgid "Show EPG Event icon on home screen"
+msgstr "Εμφάνιση του εικονιδίου συμβάντος EPG στην αρχική οθόνη"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31396"
+msgid "Match overlay colour from image"
+msgstr "Αντιστοιχία του χρώματος επικάλυψης απο την εικόνα"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31397"
+msgid "Overlay Playground"
+msgstr "Playground για Επικάλυψη"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31398"
+msgid "Alpha"
+msgstr "Alpha"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31399"
+msgid "Luminance"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31400"
+msgid "Saturation"
+msgstr "Saturation"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31401"
+msgid "Enable Flixed Scrolling"
+msgstr "Ενεργοποίηση κύλισης Flixed"
