@@ -1945,7 +1945,7 @@ msgstr "Alpha"
 #: /xml/SkinSettings.xml
 msgctxt "#31399"
 msgid "Luminance"
-msgstr ""
+msgstr "Luminance"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31400"
