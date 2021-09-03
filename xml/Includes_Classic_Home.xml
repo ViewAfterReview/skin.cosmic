@@ -14,18 +14,6 @@
       <visible>!Skin.HasSetting(DisableClock)</visible>
       <animation effect="fade" start="100" end="0" time="650" tween="sine" condition="Player.HasVideo">Conditional</animation>
     </control>
-    <control type="group">
-      <animation effect="slide" start="0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="ControlGroup(3000).HasFocus">Conditional</animation>
-      <control type="label">
-        <left>100</left>
-        <top>35</top>
-        <right>75</right>
-        <font>font_clock</font>
-        <label>$INFO[ListItem.Label]</label>
-        <shadowcolor>text_shadow</shadowcolor>
-      </control>
-      <visible>String.IsEqual(Skin.String(MenuStyle),Icons) + Control.HasFocus(9000)</visible>
-    </control>
     <control type="group" id="5600">
       <left>300</left>
       <animation effect="slide" start="0,0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) | String.IsEqual(Skin.String(MenuStyle),Icons)">Conditional</animation>
@@ -147,7 +135,7 @@
           <width>135</width>
           <height>1080</height>
           <control type="image">
-            <texture colordiffuse="D9FFFFFF">colors/black.png</texture>
+            <texture colordiffuse="$VAR[ColorsOverlay]">common/overlay.png</texture>
           </control>
           <visible>[ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))] + !String.IsEqual(Skin.String(MenuStyle),Text)</visible>
           <animation effect="slide" start="0,0" end="-860,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))">Conditional</animation>
@@ -258,6 +246,17 @@
       <control type="group">
         <depth>DepthContentPanel</depth>
         <include>OpenClose_Left</include>
+        <control type="group">
+          <top>0</top>
+          <left>0</left>
+          <width>430</width>
+          <height>1080</height>
+          <control type="image">
+            <texture colordiffuse="$VAR[ColorsOverlay]">common/overlay.png</texture>
+          </control>
+          <visible>[Control.HasFocus(9000) | Control.HasFocus(9001)] + !String.IsEqual(Skin.String(MenuStyle),Icons)</visible>
+          <animation effect="slide" start="0,0" end="-714,0" time="350" reversible="true" tween="cubic" easing="inout" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001)">Conditional</animation>
+        </control>
         <control type="fixedlist" id="9000">
           <!-- <left>92</left> -->
           <top>180</top>
@@ -337,6 +336,18 @@
           </content>
         </control>
         <include>skinshortcuts-template-submenu</include>
+      </control>
+      <control type="group">
+        <animation effect="slide" start="0" end="-280,0" time="350" reversible="true" tween="cubic" easing="inout" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+        <control type="label">
+          <left>100</left>
+          <top>35</top>
+          <right>75</right>
+          <font>font_clock</font>
+          <label>$INFO[ListItem.Label]</label>
+          <shadowcolor>text_shadow</shadowcolor>
+        </control>
+        <visible>String.IsEqual(Skin.String(MenuStyle),Icons) + [Control.HasFocus(9000) | Control.HasFocus(9001)]</visible>
       </control>
     </control>
   </include>
