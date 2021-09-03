@@ -230,6 +230,7 @@
     <param name="affix" default=""/>
     <param name="listitem" default="ListItem"/>
     <param name="selected" default="false"/>
+    <param name="visible" default="!Skin.HasSetting(DisableWatchedOverlay)" />
     <definition>
       <control type="group">
         <nested/>
@@ -237,7 +238,7 @@
         <right>$PARAM[right]</right>
         <width>44</width>
         <height>44</height>
-        <visible>!Skin.HasSetting(DisableWatchedOverlay)</visible>
+        <visible>$PARAM[visible]</visible>
         <include content="WatchedOverlay_Focus">
           <param name="visible" value="$PARAM[visible]"/>
         </include>

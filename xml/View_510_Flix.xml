@@ -110,7 +110,7 @@
         <top>620</top>
         <left>0</left>
         <width>65</width>
-        <height>362</height>
+        <height>360</height>
         <control type="image">
           <texture colordiffuse="BFFFFFFF">colors/black.png</texture>
         </control>

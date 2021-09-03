@@ -186,6 +186,45 @@
       </include>
     </controls>
   </submenuOther>
+  <submenuOther include="vertical-flix" level="1">
+    <!-- <condition tag="property" attribute="name|path" /> -->
+    <condition tag="property" attribute="name|list"/>
+    <property name="id" tag="mainmenuid"/>
+    <property name="path" tag="property" attribute="name|list"/>
+    <property name="sortby" tag="property" attribute="name|widgetSortBy"/>
+    <property name="sortdirection" tag="property" attribute="name|widgetSortDirection"/>
+    <property name="limit" tag="property" attribute="name|widgetLimit"/>
+    <property name="aspect" tag="property" attribute="name|widgetAspect"/>
+    <property name="aspect">Poster</property>
+    <propertyGroup>mainmenuWidgets</propertyGroup>
+    <controls>
+      <include content="Object_Widget_Content_FlixScroll">
+        <param name="controltype" value="fixedlist"/>
+        <param name="name" value="$SKINSHORTCUTS[label]"/>
+        <param name="id" value="$PYTHON[int(id) + 7501]"/>
+        <param name="target" value="$SKINSHORTCUTS[target]"/>
+        <param name="sortby" value="$SKINSHORTCUTS[sortby]"/>
+        <param name="sortdirection" value="$SKINSHORTCUTS[sortdirection]"/>
+        <param name="limit" value="$SKINSHORTCUTS[limit]"/>
+        <param name="path" value="$SKINSHORTCUTS[path]"/>
+        <param name="image" value="$SKINSHORTCUTS[artwork]"/>
+        <param name="postercondition" value="$PYTHON['true' if aspect in 'Poster' else 'false']"/>
+        <param name="squarecondition" value="$PYTHON['true' if aspect in 'Square' else 'false']"/>
+        <param name="landscapecondition" value="$PYTHON['true' if aspect in 'Landscape' else 'false']"/>
+        <param name="fanartcondition" value="$PYTHON['true' if aspect in 'Fanart' else 'false']"/>
+        <onunfocus>ClearProperty(TMDbHelper.WidgetContainer,home)</onunfocus>
+        <onunfocus>ClearProperty(currentPoster,home)</onunfocus>
+        <onunfocus>ClearProperty(currentSquare,home)</onunfocus>
+        <onunfocus>ClearProperty(currentLandscape,home)</onunfocus>
+        <onunfocus>ClearProperty(currentFanart,home)</onunfocus>
+        <onfocus>SetProperty(currentPoster,$PYTHON['true' if aspect in 'Poster' else 'false'],home)</onfocus>
+        <onfocus>SetProperty(currentLandscape,$PYTHON['true' if aspect in 'Landscape' else 'false'],home)</onfocus>
+        <onfocus>SetProperty(currentFanart,$PYTHON['true' if aspect in 'Fanart' else 'false'],home)</onfocus>
+        <onfocus>SetProperty(currentSquare,$PYTHON['true' if aspect in 'Square' else 'false'],home)</onfocus>
+        <skinshortcuts>visibility</skinshortcuts>
+      </include>
+    </controls>
+  </submenuOther>
   <submenuOther include="horizontal" level="1">
     <!-- <condition tag="property" attribute="name|path" /> -->
     <condition tag="property" attribute="name|list"/>

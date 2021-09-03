@@ -1774,3 +1774,8 @@ msgstr "Jasność"
 msgctxt "#31400"
 msgid "Saturation"
 msgstr "Nasycenie"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31401"
+msgid "Enable Flixed Scrolling"
+msgstr "Włącz scrollowanie Flixed"

@@ -130,10 +130,18 @@
             <label>$LOCALIZE[31348]</label>
             <label2>$VAR[widgetScrollingType]</label2>
             <include>DefaultSettingButton</include>
-            <selected>Skin.HasSetting(DisableFixedScrolling)</selected>
             <onclick>Skin.ToggleSetting(DisableFixedScrolling)</onclick>
+            <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
           </control>
-          <control type="button" id="608" description="Set Fallback Image">
+          <control type="button" id="608" description="Flixed scrolling">
+            <label>$LOCALIZE[31401]</label>
+            <label2>$INFO[Skin.String(FlixedScrolling)]</label2>
+            <include>DefaultSettingButton</include>
+            <enable>!Skin.HasSetting(DisableFixedScrolling)</enable>
+            <onclick condition="!String.IsEmpty(Skin.String(FlixedScrolling))">Skin.Reset(FlixedScrolling)</onclick>
+            <onclick condition="String.IsEmpty(Skin.String(FlixedScrolling))">Skin.SetString(FlixedScrolling,Flix It!)</onclick>
+          </control>
+          <control type="button" id="609" description="Set Fallback Image">
             <include>DefaultSettingButton</include>
             <label>$LOCALIZE[31340]</label>
             <label2>$INFO[Skin.String(HomeBackgroundImage)]</label2>
@@ -145,13 +153,13 @@
             <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(HomeBackgroundImage))</onclick>
             <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[31340])</onclick>
           </control>
-          <control type="radiobutton" id="609" description="Disable clock">
+          <control type="radiobutton" id="610" description="Disable clock">
             <label>$LOCALIZE[31388]</label>
             <include>DefaultSettingButton</include>
             <selected>Skin.HasSetting(DisableClock)</selected>
             <onclick>Skin.ToggleSetting(DisableClock)</onclick>
           </control>
-          <control type="label" id="610">
+          <control type="label" id="611">
             <textoffsetx>30</textoffsetx>
             <width>470</width>
             <height>80</height>
@@ -160,7 +168,7 @@
             <font>font_small_defaults</font>
             <aligny>center</aligny>
           </control>
-          <control type="button" id="611" description="Customize shutdown menu">
+          <control type="button" id="612" description="Customize shutdown menu">
             <label>$LOCALIZE[31180]</label>
             <include>DefaultSettingButton</include>
             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdown)</onclick>

@@ -87,7 +87,102 @@
           <include content="Animation_Widget_Slide">
             <param name="container" value="3000" />
           </include>
-          <include>skinshortcuts-template-vertical</include>
+          <include condition="String.IsEmpty(Skin.String(FlixedScrolling))">skinshortcuts-template-vertical</include>
+          <visible>String.IsEmpty(Skin.String(FlixedScrolling))</visible>
+        </control>
+        <control type="grouplist" id="3000">
+          <visible>!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
+          <top>595</top>
+          <left>-215</left>
+          <height>9999</height>
+          <width>2300</width>
+          <usecontrolcoords>false</usecontrolcoords>
+          <include content="Animation_Widget_Slide">
+            <param name="container" value="3000" />
+          </include>
+          <include condition="!String.IsEmpty(Skin.String(FlixedScrolling))">skinshortcuts-template-vertical-flix</include>
+          <visible>!String.IsEmpty(Skin.String(FlixedScrolling))</visible>
+        </control>
+        <control type="group">
+          <top>0</top>
+          <left>-135</left>
+          <width>135</width>
+          <height>1080</height>
+          <control type="image">
+            <texture colordiffuse="BFFFFFFF">colors/black.png</texture>
+          </control>
+          <visible>ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling))</visible>
+        </control>
+        <control type="group">
+          <top>595</top>
+          <left>0</left>
+          <visible>ControlGroup(3000).HasFocus + !String.IsEmpty(Skin.String(FlixedScrolling)) + !Container(7502).IsUpdating</visible>
+          <control type="group">
+            <width>270</width>
+            <height>382</height>
+            <include content="Selectbox">
+              <param name="pad_top_b" value="-15"/>
+              <param name="pad_bottom_b" value="-22"/>
+              <param name="pad_left_b" value="-15"/>
+              <param name="pad_right_b" value="-5"/>
+              <param name="pad_top_t" value="-10"/>
+              <param name="pad_bottom_t" value="-16"/>
+              <param name="pad_left_t" value="-15"/>
+              <param name="pad_right_t" value="0"/>
+              <param name="visible_posters" value="String.IsEqual(Window(home).Property(currentPoster),true)"/>
+              <param name="visible_squares" value="false"/>
+              <param name="visible_landscapes" value="false"/>
+            </include>
+            <include content="View_WatchedOverlay">
+              <param name="bottom" value="-25"/>
+              <param name="right" value="44"/>
+              <param name="visible" value="String.IsEqual(Window(home).Property(currentPoster),true) + !Skin.HasSetting(DisableWatchedOverlay)"/>
+            </include>
+          </control>
+          <control type="group">
+            <width>360</width>
+            <height>382</height>
+            <include content="Selectbox">
+              <param name="pad_top_b" value="-15"/>
+              <param name="pad_bottom_b" value="-23"/>
+              <param name="pad_left_b" value="-15"/>
+              <param name="pad_right_b" value="17"/>
+              <param name="pad_top_t" value="-8"/>
+              <param name="pad_bottom_t" value="-18"/>
+              <param name="pad_left_t" value="-10"/>
+              <param name="pad_right_t" value="22"/>
+              <param name="visible_posters" value="false"/>
+              <param name="visible_squares" value="String.IsEqual(Window(home).Property(currentSquare),true)"/>
+              <param name="visible_landscapes" value="false"/>
+            </include>
+            <include content="View_WatchedOverlay">
+              <param name="bottom" value="-25"/>
+              <param name="right" value="72"/>
+              <param name="visible" value="String.IsEqual(Window(home).Property(currentSquare),true) + !Skin.HasSetting(DisableWatchedOverlay)"/>
+            </include>
+          </control>
+          <control type="group">
+            <width>590</width>
+            <height>375</height>
+            <include content="Selectbox">
+              <param name="pad_top_b" value="-8"/>
+              <param name="pad_bottom_b" value="18"/>
+              <param name="pad_left_b" value="-8"/>
+              <param name="pad_right_b" value="10"/>
+              <param name="pad_top_t" value="-3"/>
+              <param name="pad_bottom_t" value="23"/>
+              <param name="pad_left_t" value="-5"/>
+              <param name="pad_right_t" value="13"/>
+              <param name="visible_posters" value="false"/>
+              <param name="visible_squares" value="false"/>
+              <param name="visible_landscapes" value="[String.IsEqual(Window(home).Property(currentLandscape),true) | String.IsEqual(Window(home).Property(currentFanart),true)] + !Skin.HasSetting(DisableWatchedOverlay)"/>
+            </include>
+            <include content="View_WatchedOverlay">
+              <param name="bottom" value="18"/>
+              <param name="right" value="72"/>
+              <param name="visible" value="String.IsEqual(Window(home).Property(currentLandscape),true) | String.IsEqual(Window(home).Property(currentFanart),true)"/>
+            </include>
+          </control>
         </control>
         <control type="group" id="4000">
           <visible>String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)</visible>
