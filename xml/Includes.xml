@@ -1228,7 +1228,7 @@
             <animation effect="fade" time="200" end="90" condition="String.IsEqual(Skin.String(AlphaValue),10)">Conditional</animation>
             <animation effect="fade" time="200" end="95" condition="String.IsEqual(Skin.String(AlphaValue),5)">Conditional</animation>
             <animation effect="fade" time="200" end="100" condition="String.IsEqual(Skin.String(AlphaValue),0)">Conditional</animation>
-            <visible>Skin.HasSetting(TMDbHelper.EnableColors) + Skin.HasSetting(Vertical_Main) + ControlGroup(3000).HasFocus</visible>
+            <visible>Skin.HasSetting(TMDbHelper.EnableColors) + Skin.HasSetting(Vertical_Main) + Window.IsVisible(home)</visible>
             <visible>[!String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings)] | !String.IsEmpty(Skin.String(HomeBackgroundImage))</visible>
           </control>
           <control type="image">
