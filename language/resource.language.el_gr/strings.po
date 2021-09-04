@@ -1956,3 +1956,8 @@ msgstr "Saturation"
 msgctxt "#31401"
 msgid "Enable Flixed Scrolling"
 msgstr "Ενεργοποίηση κύλισης Flixed"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31402"
+msgid "Disable clearlogo"
+msgstr "Απενεργοποίηση του clearlogo"
