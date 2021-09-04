@@ -856,7 +856,7 @@
             <shadowcolor>black</shadowcolor>
             <label>$PARAM[title]</label>
             <font>font_title_bold</font>
-            <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
+            <visible>[[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)] + [!Control.HasFocus(9000) + !Control.HasFocus(9001) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Settings) + !String.IsEqual(Container(9989).ListItemAbsolute(0).Property(list),Weather)]</visible>
             <animation type="Conditional" condition="Player.HasVideo + Skin.HasSetting(AnimateClearLogo)" reversible="false">
               <effect type="fade" start="100" end="0" time="300"/>
               <effect type="slide" start="0" end="-1400,0" time="600"/>
@@ -868,7 +868,7 @@
             <width>480</width>
             <aspectratio>keep</aspectratio>
             <texture background="true">$VAR[Image_ClearLogo]</texture>
-            <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+            <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
             <animation type="Conditional" condition="Player.HasVideo + Skin.HasSetting(AnimateClearLogo)" reversible="false">
               <effect type="slide" start="0" end="0,140" time="350" delay="300"/>
               <effect type="slide" start="0" end="40,0" time="350" delay="600"/>

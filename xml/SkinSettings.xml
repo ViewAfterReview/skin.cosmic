@@ -511,6 +511,12 @@
             <selected>Skin.HasSetting(LandscapeArt)</selected>
             <onclick>Skin.ToggleSetting(LandscapeArt)</onclick>
           </control>
+          <control type="radiobutton" id="918" description="Clearlogo">
+            <label>$LOCALIZE[31402]</label>
+            <include>DefaultSettingButton</include>
+            <selected>Skin.HasSetting(DisableClearlogo)</selected>
+            <onclick>Skin.ToggleSetting(DisableClearlogo)</onclick>
+          </control>
         </control>
         <include content="DefaultSettingButtonGradient">
           <param name="id" value="1000"/>

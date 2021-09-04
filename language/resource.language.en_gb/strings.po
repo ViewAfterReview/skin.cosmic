@@ -1955,3 +1955,8 @@ msgstr ""
 msgctxt "#31401"
 msgid "Enable Flixed Scrolling"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31402"
+msgid "Disable clearlogo"
+msgstr ""

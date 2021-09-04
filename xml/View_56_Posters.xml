@@ -25,7 +25,7 @@
           <label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
           <font>font45_title</font>
           <shadowcolor>text_shadow</shadowcolor>
-          <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+          <visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | Skin.HasSetting(DisableClearlogo)</visible>
         </control>
         <control type="image">
           <left>695</left>
@@ -34,7 +34,7 @@
           <width>480</width>
           <aspectratio>keep</aspectratio>
           <texture background="true">$VAR[Image_ClearLogo]</texture>
-          <visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+          <visible>[!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(DisableClearlogo)</visible>
         </control>
       </control>
       <control type="group">
